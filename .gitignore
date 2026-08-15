@@ -1,0 +1,13 @@
+# 构建产物
+*.exe
+*.obj
+*.o
+*.out
+*.a
+*.d
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*~
