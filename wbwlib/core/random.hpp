@@ -17,7 +17,7 @@
 #include <iterator>
 #include <random>
 #include <vector>
-#include "base.hpp"
+#include "wbwlib/core/base.hpp"
 
 namespace wbwlib {
 namespace core {

@@ -20,8 +20,8 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
-#include "base.hpp"
-#include "random.hpp"
+#include "wbwlib/core/base.hpp"
+#include "wbwlib/core/random.hpp"
 
 namespace wbwlib {
 namespace core {
