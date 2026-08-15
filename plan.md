@@ -55,7 +55,7 @@ tests/
 - [x] 2. math/*（数论、质数/Miller-Rabin/Pollard-Rho、ModInt、组合、矩阵、线性代数、BSGS、整除分块、原根、分数、FFT/NTT、FWT、多项式）——已提交
 - [x] 3. datastruct/*（BIT、线段树、吉司机、主席树、ST 表、FHQ/隐式 Treap、Splay、左偏树、并查集、莫队、分块、单调栈队列、李超树、笛卡尔树）——已提交 `329db80`
 - [x] 4. string/*（kmp、z、manacher、trie/01trie、ac-automaton、suffix-array、suffix-automaton、palindromic-pam、rolling-hash、minimal-string）——全部 10 文件已写，`-std=c++14` 零警告零错误
-- [ ] 5. graph/*
+- [x] 5. graph/*（adjacency、shortest-path、mst、topo、tarjan、euler-path、bipartite、network-flow、min-cost-flow、lca、tree-dp、hld、virtual-tree、link-cut-tree）——全部 14 文件已写，`-std=c++14` 零警告零错误
 - [ ] 6. dp/*、geo/*、misc/big-int
 - [ ] 7. wbwlib.h 聚合 + wbwlib.hpp + tests/ 冒烟测试
 
@@ -65,6 +65,7 @@ tests/
 - LiChaoTree 查询为迭代式，需测试确认正确性
 - string/：SA（倍增计数排序）、SAM、PAM 仅语法通过，需运行时验证（SA 的 lcp 为朴素 O(n) 区间 min，正式 OI 需配 ST 表）
 - ac-automaton：失配指针现直接暴露为 public `fail` 数组，build() 中填充
+- graph/：虚树、LCT、HLD、换根 DP 模板仅语法通过需运行时验证；LCT 的 cut 依赖形态判断；WeightedLCA 需要在 WMST 前验证
 
 ## 验证
 - 本机 mingw g++ 8.1.0；分别以 `-std=c++14` 与 `-std=c++17` 编译冒烟测试。
