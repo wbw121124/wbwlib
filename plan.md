@@ -50,6 +50,22 @@ tests/
 6. `dp/*`、`geo/*`、`misc/big-int`
 7. `wbwlib.h` 聚合 + `tests/` 冒烟测试编译运行并修复
 
+## 进度追踪（每次 commit 前更新）
+- [x] 1. plan.md / README.md / core/*（base、fastio、random、hash、utils）——已提交 `8db58d5`
+- [x] 2. math/*（数论、质数/Miller-Rabin/Pollard-Rho、ModInt、组合、矩阵、线性代数、BSGS、整除分块、原根、分数、FFT/NTT、FWT、多项式）——已提交
+- [x] 3. datastruct/*（BIT、线段树、吉司机、主席树、ST 表、FHQ/隐式 Treap、Splay、左偏树、并查集、莫队、分块、单调栈队列、李超树、笛卡尔树）——已提交 `329db80`
+- [x] 4. string/*（kmp、z、manacher、trie/01trie、ac-automaton、suffix-array、suffix-automaton、palindromic-pam、rolling-hash、minimal-string）——全部 10 文件已写，`-std=c++14` 零警告零错误
+- [ ] 5. graph/*
+- [ ] 6. dp/*、geo/*、misc/big-int
+- [ ] 7. wbwlib.h 聚合 + wbwlib.hpp + tests/ 冒烟测试
+
+### 已知待办（最终统一测试时处理）
+- 各文件仅通过 `-fsyntax-only` 语法检查；功能断言测试统一在 tests/ 阶段完成
+- Splay/FHQ 的 0 号哑节点与 vector 重分配悬空引用已修复，需运行时验证
+- LiChaoTree 查询为迭代式，需测试确认正确性
+- string/：SA（倍增计数排序）、SAM、PAM 仅语法通过，需运行时验证（SA 的 lcp 为朴素 O(n) 区间 min，正式 OI 需配 ST 表）
+- ac-automaton：失配指针现直接暴露为 public `fail` 数组，build() 中填充
+
 ## 验证
 - 本机 mingw g++ 8.1.0；分别以 `-std=c++14` 与 `-std=c++17` 编译冒烟测试。
 - C++20 分支仅宏保护，不在 g++8.1 本地测试。
