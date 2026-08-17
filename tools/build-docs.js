@@ -24,6 +24,17 @@ if (isWin) {
     console.error('doxygen 未安装：请先执行 npm install（需要 node_modules/doxygen/dist/1.9.1/doxygen.exe）');
     process.exit(1);
   }
+} else {
+  // 用系统 doxygen（apt/brew），避免命中 node_modules/.bin 里的 npm 包装器
+  const r = spawnSync('which', ['-a', 'doxygen'], { encoding: 'utf8' });
+  const candidates = r.status === 0
+    ? r.stdout.trim().split('\n').filter(p => p && !p.includes('node_modules'))
+    : [];
+  if (candidates.length === 0) {
+    console.error('未找到系统 doxygen：请先安装（Ubuntu: sudo apt-get install -y doxygen）');
+    process.exit(1);
+  }
+  exe = candidates[0];
 }
 
 // Linux 上用 PATH 里的 dot，无需 Doxyfile 里 Windows 专用 DOT_PATH
