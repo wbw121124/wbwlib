@@ -1,7 +1,0 @@
-digraph "wbwlib::ds::ImplicitTreap&lt; T &gt;"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::ds::ImplicitTreap\< T \>\n|- pool_\l- root_\l|+ ImplicitTreap()\l+ ImplicitTreap()\l+ build()\l+ size()\l+ empty()\l+ insert()\l+ push_back()\l+ erase()\l+ add()\l+ reverse()\l+ sum()\l+ get()\l+ to_vector()\l- newnode()\l- apply_add()\l- apply_rev()\l- push()\l- pull()\l- split()\l- merge()\l- collect()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="隐式 Treap（序列模式）：按位置维护序列，支持区间加、区间翻转、区间和。"];
-}

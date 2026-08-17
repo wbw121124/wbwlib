@@ -1,7 +1,0 @@
-digraph "wbwlib::math::Mat&lt; T &gt;"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::math::Mat\< T \>\n|- r_\l- c_\l- a_\l|+ Mat()\l+ Mat()\l+ rows()\l+ cols()\l+ operator()()\l+ operator()()\l+ transpose_inplace()\l+ transposed()\l+ operator+()\l+ operator-()\l+ operator*()\l+ pow()\l+ operator*()\l+ identity()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="稠密矩阵类：加/减/乘、快速幂、转置、单位阵与向量乘法。"];
-}

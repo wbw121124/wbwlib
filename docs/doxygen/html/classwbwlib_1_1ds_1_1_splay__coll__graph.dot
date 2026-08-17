@@ -1,7 +1,0 @@
-digraph "wbwlib::ds::Splay&lt; T &gt;"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::ds::Splay\< T \>\n|- p_\l- root_\l|+ Splay()\l+ Splay()\l+ build()\l+ size()\l+ empty()\l+ insert()\l+ push_back()\l+ erase()\l+ reverse()\l+ add()\l+ sum()\l+ get()\l+ to_vector()\l- newnode()\l- push()\l- pull()\l- rotate()\l- splay()\l- kth()\l- cut()\l- restore()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="伸展树 Splay（序列模式，文艺平衡树）：按位置维护序列。"];
-}

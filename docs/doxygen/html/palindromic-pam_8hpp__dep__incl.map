@@ -1,6 +1,0 @@
-<map id="wbwlib/string/palindromic&#45;pam.hpp" name="wbwlib/string/palindromic&#45;pam.hpp">
-<area shape="rect" id="node1" title="回文自动机（回文树）PAM：模板化字符类型 / 字母表 / 字符映射。" alt="" coords="77,5,245,49"/>
-<area shape="rect" id="node2" href="$manacher_8hpp.html" title="Manacher 回文算法。" alt="" coords="5,97,189,125"/>
-<area shape="rect" id="node3" href="$string_8hpp.html" title="string 模块聚合头：一次引入本模块全部头文件。" alt="" coords="82,173,240,201"/>
-<area shape="rect" id="node4" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="96,249,226,277"/>
-</map>

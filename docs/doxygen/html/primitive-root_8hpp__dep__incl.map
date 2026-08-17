@@ -1,5 +1,0 @@
-<map id="wbwlib/math/primitive&#45;root.hpp" name="wbwlib/math/primitive&#45;root.hpp">
-<area shape="rect" id="node1" title="原根求解：求模 p 意义下的最小原根（常用 NTT 前置，p 为质数）。" alt="" coords="8,5,155,49"/>
-<area shape="rect" id="node2" href="$math_8hpp.html" title="math 模块聚合头：一次引入本模块全部头文件。" alt="" coords="5,97,158,125"/>
-<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="16,173,147,201"/>
-</map>

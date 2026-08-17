@@ -1,7 +1,0 @@
-digraph "wbwlib::str::Trie&lt; Char, ALPHA, CharMap &gt;"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::str::Trie\<\l Char, ALPHA, CharMap \>\n|- tr_\l|+ Trie()\l+ insert()\l+ count()\l+ count_prefix()\l+ search()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="模板化字典树：字符类型、字母表大小、字符映射均可自定义。"];
-}

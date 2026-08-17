@@ -1,7 +1,0 @@
-digraph "wbwlib::ds::LeftistHeap&lt; T, Cmp &gt;"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::ds::LeftistHeap\l\< T, Cmp \>\n|- root_\l- cmp_\l- p_\l|+ push()\l+ merge()\l+ empty()\l+ size()\l+ top()\l+ pop()\l- merge()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="左偏树（可并堆），支持合并、插入、取堆顶、弹出堆顶。"];
-}

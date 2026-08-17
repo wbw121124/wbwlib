@@ -1,7 +1,0 @@
-digraph "wbwlib::dp::MonoCHT"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::dp::MonoCHT\n|- hull\l- head\l|+ MonoCHT()\l+ clear()\l+ add()\l+ query()\l- bad()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="斜率单调递增、查询 x 单调不减的最小值 CHT（双端队列维护）。"];
-}

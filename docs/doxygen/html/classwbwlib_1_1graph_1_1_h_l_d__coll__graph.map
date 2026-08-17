@@ -1,3 +1,0 @@
-<map id="wbwlib::graph::HLD" name="wbwlib::graph::HLD">
-<area shape="rect" id="node1" title="树链剖分 HLD：轻重链剖分，把路径/子树映射为基础数组区间，供线段树等配合。" alt="" coords="5,5,142,279"/>
-</map>

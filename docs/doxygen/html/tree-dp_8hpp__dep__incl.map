@@ -1,5 +1,0 @@
-<map id="wbwlib/graph/tree&#45;dp.hpp" name="wbwlib/graph/tree&#45;dp.hpp">
-<area shape="rect" id="node1" title="树上 DP 套路：直径、中心、换根 DP 模板。" alt="" coords="5,5,172,33"/>
-<area shape="rect" id="node2" href="$graph_8hpp.html" title="graph 模块聚合头：一次引入本模块全部头文件。" alt="" coords="9,81,168,109"/>
-<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="23,157,154,185"/>
-</map>

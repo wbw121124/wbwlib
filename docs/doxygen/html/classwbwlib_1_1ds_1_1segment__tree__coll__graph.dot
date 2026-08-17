@@ -1,7 +1,0 @@
-digraph "wbwlib::ds::segment_tree&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::ds::segment\l_tree\< Tval, Ttag, pushup,\l addtag, hastag, merge,\l nullval, compose_tag \>\n|- n_\l- val_\l- tag_\l|+ segment_tree()\l+ build()\l+ range_apply()\l+ set()\l+ query()\l+ all()\l- apply_node()\l- push()\l- pull()\l- build()\l- apply()\l- point_set()\l- query()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="泛型懒标记线段树（递归实现，4n 空间）：策略全部固化在模板参数中。"];
-}

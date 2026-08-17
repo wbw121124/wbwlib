@@ -1,9 +1,0 @@
-digraph "wbwlib::ds::RangeBIT&lt; T &gt;"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::ds::RangeBIT\< T \>\n|- n_\l|+ RangeBIT()\l+ add()\l+ sum()\l+ range_sum()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="区间加 + 区间和的差分树状数组（双 BIT）。"];
-  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -b1_\n-b2_" ,arrowhead="odiamond",fontname="Helvetica"];
-  Node2 [label="{wbwlib::ds::Fenwick\l\< i64 \>\n|- n_\l- tr_\l|+ Fenwick()\l+ Fenwick()\l+ init()\l+ add()\l+ sum()\l+ range_sum()\l+ build()\l+ lower_bound()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwbwlib_1_1ds_1_1_fenwick.html",tooltip=" "];
-}

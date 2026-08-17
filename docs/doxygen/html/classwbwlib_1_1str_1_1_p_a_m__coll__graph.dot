@@ -1,7 +1,0 @@
-digraph "wbwlib::str::PAM&lt; Char, ALPHA, CharMap &gt;"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::str::PAM\< Char,\l ALPHA, CharMap \>\n|+ node_\l+ last_\l+ sz_\l+ n_\l+ s_\l|+ PAM()\l+ reset()\l+ get_fail()\l+ extend()\l+ build()\l+ size()\l+ distinct()\l+ len()\l+ occ()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="回文自动机（回文树）PAM：每个节点代表一个本质不同的回文串。"];
-}

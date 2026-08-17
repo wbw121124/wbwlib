@@ -1,5 +1,0 @@
-<map id="wbwlib/math/fwt.hpp" name="wbwlib/math/fwt.hpp">
-<area shape="rect" id="node1" title="快速沃尔什变换 FWT：集合幂级数的 OR / AND / XOR 卷积。" alt="" coords="11,5,152,33"/>
-<area shape="rect" id="node2" href="$math_8hpp.html" title="math 模块聚合头：一次引入本模块全部头文件。" alt="" coords="5,81,158,109"/>
-<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="16,157,147,185"/>
-</map>

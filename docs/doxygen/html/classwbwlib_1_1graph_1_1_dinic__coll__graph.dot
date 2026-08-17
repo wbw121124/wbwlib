@@ -1,7 +1,0 @@
-digraph "wbwlib::graph::Dinic&lt; F &gt;"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::graph::Dinic\< F \>\n|- g_\l- level_\l- iter_\l- n_\l|+ Dinic()\l+ add_edge()\l+ maxflow()\l+ mincut()\l- bfs()\l- dfs()\l- build_cut()\l- max_val()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="最大流：Dinic 算法（BFS 分层 + DFS 多路增广 + 当前弧优化）。"];
-}

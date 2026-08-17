@@ -1,7 +1,0 @@
-digraph "wbwlib::str::SuffixArray"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::str::SuffixArray\n|+ sa\l+ rank\l+ height\l- n_\l- cnt_\l|+ SuffixArray()\l+ build()\l+ size()\l+ lcp()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="后缀数组：倍增 + 计数排序构造，附 rank、height（LCP）数组。"];
-}

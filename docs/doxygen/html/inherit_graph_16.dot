@@ -1,8 +1,0 @@
-digraph "类继承关系图"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="wbwlib::ds::ImplicitTreap\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwbwlib_1_1ds_1_1_implicit_treap.html",tooltip="隐式 Treap（序列模式）：按位置维护序列，支持区间加、区间翻转、区间和。"];
-}

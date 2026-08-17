@@ -1,8 +1,0 @@
-digraph "类继承关系图"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="wbwlib::math::modint\l\< MOD, Base \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwbwlib_1_1math_1_1modint.html",tooltip="固定模数的模整数类：所有运算自动取模，支持与原生整数混合运算。"];
-}

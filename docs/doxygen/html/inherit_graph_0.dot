@@ -1,8 +1,0 @@
-digraph "类继承关系图"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="wbwlib::core::FastIO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwbwlib_1_1core_1_1_fast_i_o.html",tooltip="快速输入输出类：带缓冲的 stdin/stdout（或文件）读写，支持整数、字符串与 char。"];
-}

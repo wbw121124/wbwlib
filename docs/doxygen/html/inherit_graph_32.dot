@@ -1,8 +1,0 @@
-digraph "类继承关系图"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="wbwlib::ds::Splay\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwbwlib_1_1ds_1_1_splay.html",tooltip="伸展树 Splay（序列模式，文艺平衡树）：按位置维护序列。"];
-}

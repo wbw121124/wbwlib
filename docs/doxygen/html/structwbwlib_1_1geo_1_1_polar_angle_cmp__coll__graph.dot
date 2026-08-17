@@ -1,7 +1,0 @@
-digraph "wbwlib::geo::PolarAngleCmp&lt; T &gt;"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::geo::PolarAngleCmp\< T \>\n|+ ox\l+ oy\l|+ PolarAngleCmp()\l+ operator()()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="极角排序比较器：按相对中心 (ox, oy) 的幅角  升序，同角按距离升序。"];
-}

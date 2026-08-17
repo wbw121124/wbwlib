@@ -1,3 +1,0 @@
-<map id="wbwlib::core::Stopwatch" name="wbwlib::core::Stopwatch">
-<area shape="rect" id="node1" title="计时器（本地调试用）：基于 steady_clock 测量耗时。" alt="" coords="5,5,170,119"/>
-</map>

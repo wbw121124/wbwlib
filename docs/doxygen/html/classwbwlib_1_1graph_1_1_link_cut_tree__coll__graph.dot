@@ -1,7 +1,0 @@
-digraph "wbwlib::graph::LinkCutTree&lt; T &gt;"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::graph::LinkCutTree\< T \>\n|- fa_\l- ch0_\l- ch1_\l- rev_\l- siz_\l- val_\l- sum_\l- add_\l|+ LinkCutTree()\l+ splay()\l+ access()\l+ makeroot()\l+ findroot()\l+ link()\l+ cut()\l+ split()\l+ path_query()\l+ path_add()\l+ set()\l- is_root()\l- push_up()\l- apply_add()\l- apply_rev()\l- push_down()\l- rotate()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="动态树 LCT：支持 link/cut/makeroot/findroot、路径和查询、路径加、单点赋权。"];
-}

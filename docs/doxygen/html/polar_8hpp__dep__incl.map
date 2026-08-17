@@ -1,5 +1,0 @@
-<map id="wbwlib/geo/polar.hpp" name="wbwlib/geo/polar.hpp">
-<area shape="rect" id="node1" title="极角相关工具：按极角排序、角度转弧度、坐标→极角。" alt="" coords="5,5,149,33"/>
-<area shape="rect" id="node2" href="$geo_8hpp.html" title="geo 模块聚合头：一次引入本模块全部头文件。" alt="" coords="9,81,145,109"/>
-<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="12,157,142,185"/>
-</map>

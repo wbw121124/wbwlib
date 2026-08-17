@@ -1,7 +1,0 @@
-digraph "wbwlib::core::FastIO"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::core::FastIO\n|- inbuf_\l- outbuf_\l- inp\l- inend\l- outp\l- outend\l- ownin\l- ownout\l- fin\l- fout\l- bufsz\l|+ FastIO()\l+ FastIO()\l+ reset_to_stdio()\l+ ~FastIO()\l+ eof()\l+ read()\l+ read()\l+ read()\l+ read()\l+ write()\l和 8 更多...\l- getc()\l- putc()\l- flsh()\l- readi()\l- readi()\l- writei()\l- writei()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="快速输入输出类：带缓冲的 stdin/stdout（或文件）读写，支持整数、字符串与 char。"];
-}

@@ -1,3 +1,0 @@
-<map id="wbwlib::ds::RollbackDSU" name="wbwlib::ds::RollbackDSU">
-<area shape="rect" id="node1" title="可撤销并查集：按大小合并（不做路径压缩），支持栈式回滚。" alt="" coords="5,5,177,215"/>
-</map>

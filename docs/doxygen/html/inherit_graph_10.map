@@ -1,4 +1,0 @@
-<map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="node1" href="$classwbwlib_1_1ds_1_1_d_s_u.html" title="标准并查集：路径压缩 + 按秩合并。" alt="" coords="5,5,126,33"/>
-<area shape="rect" id="node2" href="$classwbwlib_1_1ds_1_1_d_s_u_wave.html" title="维护连通块大小的并查集（路径压缩 + 按秩合并）。" alt="" coords="174,5,327,33"/>
-</map>

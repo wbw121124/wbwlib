@@ -2,4 +2,10 @@ node_modules/
 
 wbwlib_t.exe
 *.exe
+*.o
+*.obj
 
+_site/
+docs/doxygen/
+docs/doxygen-warnings.log
+.doxyfile-tmp

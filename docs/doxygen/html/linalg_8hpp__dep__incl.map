@@ -1,5 +1,0 @@
-<map id="wbwlib/math/linalg.hpp" name="wbwlib/math/linalg.hpp">
-<area shape="rect" id="node1" title="线性代数：高斯消元（复杂类型通用，支持浮点/模）、异或线性基。" alt="" coords="5,5,159,33"/>
-<area shape="rect" id="node2" href="$math_8hpp.html" title="math 模块聚合头：一次引入本模块全部头文件。" alt="" coords="6,81,158,109"/>
-<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="17,157,147,185"/>
-</map>

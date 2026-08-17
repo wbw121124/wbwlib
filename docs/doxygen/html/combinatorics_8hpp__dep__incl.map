@@ -1,5 +1,0 @@
-<map id="wbwlib/math/combinatorics.hpp" name="wbwlib/math/combinatorics.hpp">
-<area shape="rect" id="node1" title="组合计数工具：阶乘/逆元预计算、组合数、排列数、Lucas、卡特兰、 两型斯特林数、错排数。" alt="" coords="5,5,210,33"/>
-<area shape="rect" id="node2" href="$math_8hpp.html" title="math 模块聚合头：一次引入本模块全部头文件。" alt="" coords="31,81,184,109"/>
-<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="42,157,173,185"/>
-</map>

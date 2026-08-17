@@ -1,3 +1,0 @@
-<map id="wbwlib::dp::LineContainer::Line" name="wbwlib::dp::LineContainer::Line">
-<area shape="rect" id="node1" title="一条直线 y = k*x + m；p 为该直线成为最优的 x 区间下界（交点阈值）" alt="" coords="5,5,177,151"/>
-</map>

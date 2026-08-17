@@ -1,7 +1,0 @@
-digraph "wbwlib::ds::WeightedDSU"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::ds::WeightedDSU\n|- fa_\l- wt_\l- mod_mode_\l- mod_\l|+ WeightedDSU()\l+ find()\l+ to_root()\l+ unite()\l+ same()\l+ diff()\l- norm()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="带权并查集：维护每个元素到根的权值差。"];
-}

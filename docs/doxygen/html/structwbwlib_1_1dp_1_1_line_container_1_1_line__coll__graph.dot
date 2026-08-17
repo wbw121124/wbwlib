@@ -1,7 +1,0 @@
-digraph "wbwlib::dp::LineContainer::Line"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::dp::LineContainer\l::Line\n|+ k\l+ m\l+ p\l|+ operator\<()\l+ operator\<()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="一条直线 y = k*x + m；p 为该直线成为最优的 x 区间下界（交点阈值）"];
-}

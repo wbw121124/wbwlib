@@ -1,3 +1,0 @@
-<map id="wbwlib::misc::BigInt" name="wbwlib::misc::BigInt">
-<area shape="rect" id="node1" title="高精度整数：符号 + 幅值，十进制 &#160;基（每 9 位一组，小端存储）。" alt="" coords="5,5,145,407"/>
-</map>

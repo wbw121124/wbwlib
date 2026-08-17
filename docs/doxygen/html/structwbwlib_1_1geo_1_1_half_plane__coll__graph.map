@@ -1,4 +1,0 @@
-<map id="wbwlib::geo::HalfPlane" name="wbwlib::geo::HalfPlane">
-<area shape="rect" id="node1" title="半平面：有向直线 a→b 的左侧（含直线）为可行区域。" alt="" coords="5,375,161,488"/>
-<area shape="rect" id="node2" href="$structwbwlib_1_1geo_1_1_point.html" title=" " alt="" coords="19,5,147,295"/>
-</map>

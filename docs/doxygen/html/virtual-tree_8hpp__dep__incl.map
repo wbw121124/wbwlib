@@ -1,5 +1,0 @@
-<map id="wbwlib/graph/virtual&#45;tree.hpp" name="wbwlib/graph/virtual&#45;tree.hpp">
-<area shape="rect" id="node1" title="虚树：保留关键点及其两两 LCA，压缩成 O(k) 规模的树。" alt="" coords="16,5,153,49"/>
-<area shape="rect" id="node2" href="$graph_8hpp.html" title="graph 模块聚合头：一次引入本模块全部头文件。" alt="" coords="5,97,164,125"/>
-<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="19,173,150,201"/>
-</map>

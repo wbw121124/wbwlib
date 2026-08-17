@@ -1,7 +1,0 @@
-digraph "wbwlib::ds::PersistentSegTree&lt; T &gt;"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{wbwlib::ds::PersistentSeg\lTree\< T \>\n|+ roots\l- pool_\l- n_\l|+ build()\l+ update()\l+ update_latest()\l+ query_kth()\l+ query_count()\l- newnode()\l- upd()\l- kth()\l- qcnt()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="可持久化线段树（主席树）：版本化点更新 + 两版本差值的区间查询。"];
-}

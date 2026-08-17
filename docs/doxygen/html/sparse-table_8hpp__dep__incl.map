@@ -1,5 +1,0 @@
-<map id="wbwlib/datastruct/sparse&#45;table.hpp" name="wbwlib/datastruct/sparse&#45;table.hpp">
-<area shape="rect" id="node1" title="Sparse Table ST 表：静态区间幂等查询（取 min/max/gcd/…），O(1) 查询。" alt="" coords="27,5,194,49"/>
-<area shape="rect" id="node2" href="$datastruct_8hpp.html" title="datastruct 模块聚合头：一次引入本模块全部头文件。" alt="" coords="5,97,216,125"/>
-<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="45,173,176,201"/>
-</map>
