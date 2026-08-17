@@ -39,7 +39,7 @@
  *
  * @dot 懒标记下传示意（区间加后查询触发 push）
  * digraph pushdown {
- *   rankdir=TB; node [shape=box, style="rounded,filled", fillcolor="#fef3c7"];
+ *   rankdir=TB; node [shape=box, style="rounded,filled", fillcolor="#fef3c7", fontname="Noto Sans CJK SC"];
  *   root [label="[1,4]  sum+=2\n标记 tag=2"];
  *   lc   [label="[1,2]  sum+=2\n标记 tag=2"];
  *   rc   [label="[3,4]  sum+=2\n标记 tag=2"];

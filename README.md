@@ -37,7 +37,7 @@ g++ -O2 -std=c++14 -Wall -I D:/wbwlib main.cpp
 @dot 模块依赖总览
 digraph wbwlib {
   rankdir=LR;
-  node [shape=box, style="rounded,filled", fillcolor="#eef2ff", fontname="Microsoft YaHei"];
+  node [shape=box, style="rounded,filled", fillcolor="#eef2ff", fontname="Noto Sans CJK SC"];
   "core" [label="core\n基础"];
   "math" [label="math\n数学"];
   "ds"   [label="datastruct\n数据结构"];

@@ -31,7 +31,7 @@
  *
  * @dot 版本链示意（每次 update 沿路径新建结点）
  * digraph pst {
- *   rankdir=LR; node [shape=box, style="rounded,filled", fillcolor="#dcfce7"];
+ *   rankdir=LR; node [shape=box, style="rounded,filled", fillcolor="#dcfce7", fontname="Noto Sans CJK SC"];
  *   v0 [label="版本0 根"];
  *   v1 [label="版本1 根"]; v2 [label="版本2 根"];
  *   n1 [label="新结点"]; n2 [label="新结点"];

@@ -23,6 +23,7 @@ MATHJAX_RELPATH        = ../../mathjax
 # Graphviz 图形（类图/协作图/内联 @dot）
 HAVE_DOT               = YES
 DOT_PATH               = tools/graphviz/bin
+DOT_FONTPATH           = tools/fonts
 DOT_IMAGE_FORMAT       = png
 DOT_NUM_THREADS        = 4
 DOT_GRAPH_MAX_NODES    = 100

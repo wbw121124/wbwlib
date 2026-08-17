@@ -25,10 +25,10 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: 安装 doxygen / graphviz（系统包）
+      - name: 安装 doxygen / graphviz / 中文字体（系统包）
         run: |
           sudo apt-get update
-          sudo apt-get install -y doxygen graphviz
+          sudo apt-get install -y doxygen graphviz fonts-noto-cjk
 
       - name: npm ci
         run: npm ci
