@@ -1,0 +1,152 @@
+#ifndef WBWLIB_CRYPTO_SM4_HPP
+#define WBWLIB_CRYPTO_SM4_HPP
+
+/**
+ * @file sm4.hpp
+ * @brief SM4 分组密码（GB/T 32907-2016）：128 位分组 / 128 位密钥，32 轮。
+ *
+ * @par 依赖
+ * wbwlib/core/base.hpp
+ *
+ * @par 复杂度
+ * 单块加密/解密 O(1)：固定 32 轮。
+ *
+ * @par 示例
+ * @code{.cpp}
+ *   u8 key[16] = {0x01,0x23,...};          // 16 字节密钥
+ *   wbwlib::crypto::SM4 sm4(key);
+ *   u8 in[16] = {...}, out[16], back[16];
+ *   sm4.encrypt_block(in, out);            // 加密
+ *   sm4.decrypt_block(out, back);          // 解密
+ *   sm4.ecb_encrypt(in2, out2, 2);         // ECB 模式多块
+ * @endcode
+ *
+ * @attention 块级算法；多块加密需自行选择模式（ECB 已提供，CBC/CTR 可基于块接口扩展）。
+ */
+
+#include <cstring>
+#include "wbwlib/core/base.hpp"
+
+namespace wbwlib {
+namespace crypto {
+
+namespace sm4detail {
+
+/// SM4 S 盒（GB/T 32907-2016）
+inline u8 sbox(u8 x) {
+  static const u8 T[256] = {
+    0xd6,0x90,0xe9,0xfe,0xcc,0xe1,0x3d,0xb7,0x16,0xb6,0x14,0xc2,0x28,0xfb,0x2c,0x05,
+    0x2b,0x67,0x9a,0x76,0x2a,0xbe,0x04,0xc3,0xaa,0x44,0x13,0x26,0x49,0x86,0x06,0x99,
+    0x9c,0x42,0x50,0xf4,0x91,0xef,0x98,0x7a,0x33,0x54,0x0b,0x43,0xed,0xcf,0xac,0x62,
+    0xe4,0xb3,0x1c,0xa9,0xc9,0x08,0xe8,0x95,0x80,0xdf,0x94,0xfa,0x75,0x8f,0x3f,0xa6,
+    0x47,0x07,0xa7,0xfc,0xf3,0x73,0x17,0xba,0x83,0x59,0x3c,0x19,0xe6,0x85,0x4f,0xa8,
+    0x68,0x6b,0x81,0xb2,0x71,0x64,0xda,0x8b,0xf8,0xeb,0x0f,0x4b,0x70,0x56,0x9d,0x35,
+    0x1e,0x24,0x0e,0x5e,0x63,0x58,0xd1,0xa2,0x25,0x22,0x7c,0x3b,0x01,0x21,0x78,0x87,
+    0xd4,0x00,0x46,0x57,0x9f,0xd3,0x27,0x52,0x4c,0x36,0x02,0xe7,0xa0,0xc4,0xc8,0x9e,
+    0xea,0xbf,0x8a,0xd2,0x40,0xc7,0x38,0xb5,0xa3,0xf7,0xf2,0xce,0xf9,0x61,0x15,0xa1,
+    0xe0,0xae,0x5d,0xa4,0x9b,0x34,0x1a,0x55,0xad,0x93,0x32,0x30,0xf5,0x8c,0xb1,0xe3,
+    0x1d,0xf6,0xe2,0x2e,0x82,0x66,0xca,0x60,0xc0,0x29,0x23,0xab,0x0d,0x53,0x4e,0x6f,
+    0xd5,0xdb,0x37,0x45,0xde,0xfd,0x8e,0x2f,0x03,0xff,0x6a,0x72,0x6d,0x6c,0x5b,0x51,
+    0x8d,0x1b,0xaf,0x92,0xbb,0xdd,0xbc,0x7f,0x11,0xd9,0x5c,0x41,0x1f,0x10,0x5a,0xd8,
+    0x0a,0xc1,0x31,0x88,0xa5,0xcd,0x7b,0xbd,0x2d,0x74,0xd0,0x12,0xb8,0xe5,0xb4,0xb0,
+    0x89,0x69,0x97,0x4a,0x0c,0x96,0x77,0x7e,0x65,0xb9,0xf1,0x09,0xc5,0x6e,0xc6,0x84,
+    0x18,0xf0,0x7d,0xec,0x3a,0xdc,0x4d,0x20,0x79,0xee,0x5f,0x3e,0xd7,0xcb,0x39,0x48
+  };
+  return T[x];
+}
+
+/// 线性变换 L：\f$x \oplus rotl(x,2) \oplus rotl(x,10) \oplus rotl(x,18) \oplus rotl(x,24)\f$
+inline u32 L(u32 x) { return x ^ (x << 2 | x >> 30) ^ (x << 10 | x >> 22) ^ (x << 18 | x >> 14) ^ (x << 24 | x >> 8); }
+/// 密钥扩展线性变换 L'
+inline u32 L2(u32 x) { return x ^ (x << 13 | x >> 19) ^ (x << 23 | x >> 9); }
+/// 非线性变换 τ（S 盒逐字节）
+inline u32 tau(u32 x) {
+  return (u32)sbox((u8)(x >> 24)) << 24 | (u32)sbox((u8)(x >> 16)) << 16 |
+         (u32)sbox((u8)(x >> 8)) << 8 | (u32)sbox((u8)x);
+}
+/// 系统参数 FK
+inline u32 fk(int i) {
+  static const u32 FK[4] = {0xa3b1bac6, 0x56aa3350, 0x677d9197, 0xb27022dc};
+  return FK[i];
+}
+/// 固定参数 CK：第 i 个字的第 j 字节为 \f$(4i+j)\cdot 7 \bmod 256\f$
+inline u32 ck(int i) {
+  return ((u32)(((4 * i + 0) * 7) & 0xff) << 24) | ((u32)(((4 * i + 1) * 7) & 0xff) << 16) |
+         ((u32)(((4 * i + 2) * 7) & 0xff) << 8) | (u32)(((4 * i + 3) * 7) & 0xff);
+}
+
+} // namespace sm4detail
+
+/// SM4：128 位分组 / 128 位密钥分组密码（国密）。
+class SM4 {
+  u32 rk_[32];   ///< 轮密钥
+
+  u32 get_word(const u8 p[4]) const {
+    return (u32)p[0] << 24 | (u32)p[1] << 16 | (u32)p[2] << 8 | p[3];
+  }
+  void put_word(u8 p[4], u32 v) const {
+    p[0] = (u8)(v >> 24); p[1] = (u8)(v >> 16); p[2] = (u8)(v >> 8); p[3] = (u8)v;
+  }
+  void crypt(const u8 in[16], u8 out[16], bool decrypt) const {
+    u32 x[36];
+    for (int i = 0; i < 4; ++i) x[i] = get_word(in + 4 * i);
+    for (int i = 0; i < 32; ++i) {
+      u32 k = decrypt ? rk_[31 - i] : rk_[i];
+      x[i + 4] = x[i] ^ sm4detail::L(sm4detail::tau(x[i + 1] ^ x[i + 2] ^ x[i + 3] ^ k));
+    }
+    for (int i = 0; i < 4; ++i) put_word(out + 4 * i, x[35 - i]);
+  }
+
+ public:
+  /**
+   * @brief 以 16 字节密钥构造（执行密钥扩展）。
+   * @param key 密钥（16 字节）
+   */
+  explicit SM4(const u8 key[16]) {
+    u32 k[36];
+    for (int i = 0; i < 4; ++i) k[i] = get_word(key + 4 * i) ^ sm4detail::fk(i);
+    for (int i = 0; i < 32; ++i) {
+      k[i + 4] = k[i] ^ sm4detail::L2(sm4detail::tau(k[i + 1] ^ k[i + 2] ^ k[i + 3] ^ sm4detail::ck(i)));
+      rk_[i] = k[i + 4];
+    }
+  }
+
+  /**
+   * @brief 加密一个 128 位分组。
+   * @param in  输入明文（16 字节）
+   * @param out 输出密文（16 字节，可与 in 重叠）
+   */
+  void encrypt_block(const u8 in[16], u8 out[16]) const { crypt(in, out, false); }
+
+  /**
+   * @brief 解密一个 128 位分组。
+   * @param in  输入密文（16 字节）
+   * @param out 输出明文（16 字节，可与 in 重叠）
+   */
+  void decrypt_block(const u8 in[16], u8 out[16]) const { crypt(in, out, true); }
+
+  /**
+   * @brief ECB 模式加密（等长，无填充）。
+   * @param in   输入明文指针
+   * @param out  输出密文指针（可与 in 重叠）
+   * @param nblocks 分组数
+   */
+  void ecb_encrypt(const u8* in, u8* out, size_t nblocks) const {
+    for (size_t i = 0; i < nblocks; ++i) encrypt_block(in + 16 * i, out + 16 * i);
+  }
+
+  /**
+   * @brief ECB 模式解密（等长，无填充）。
+   * @param in   输入密文指针
+   * @param out  输出明文指针（可与 in 重叠）
+   * @param nblocks 分组数
+   */
+  void ecb_decrypt(const u8* in, u8* out, size_t nblocks) const {
+    for (size_t i = 0; i < nblocks; ++i) decrypt_block(in + 16 * i, out + 16 * i);
+  }
+};
+
+} // namespace crypto
+} // namespace wbwlib
+
+#endif // WBWLIB_CRYPTO_SM4_HPP

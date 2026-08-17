@@ -100,6 +100,31 @@ class BigInt {
   BigInt(const std::string& s) { parse(s); }
 
   /**
+   * @brief 从十六进制字符串构造（可含前导零，大小写均可；负号不支持，前缀 0x 会自动跳过）。
+   * @param s 十六进制数字串。
+   * @return 对应的大整数。
+   */
+  static BigInt from_hex(const std::string& s) {
+    std::string dec = "0";
+    size_t p = 0;
+    if (s.size() >= 2 && s[0] == '0' && (s[1] == 'x' || s[1] == 'X')) p = 2;
+    for (; p < s.size(); ++p) {
+      char ch = s[p];
+      int v = (ch >= '0' && ch <= '9') ? ch - '0'
+            : (ch >= 'a' && ch <= 'f') ? ch - 'a' + 10
+            : (ch >= 'A' && ch <= 'F') ? ch - 'A' + 10 : 0;
+      int carry = v;
+      for (int i = (int)dec.size() - 1; i >= 0; --i) {
+        int t = (dec[i] - '0') * 16 + carry;
+        dec[i] = (char)('0' + t % 10);
+        carry = t / 10;
+      }
+      while (carry) { dec.insert(dec.begin(), (char)('0' + carry % 10)); carry /= 10; }
+    }
+    return BigInt(dec);
+  }
+
+  /**
    * @brief 取负。
    * @return 相反数；0 取负仍为 0。
    */

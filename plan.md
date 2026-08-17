@@ -29,6 +29,7 @@ wbwlib/
   dp/     cht divide-conquer-dp digit-dp state-compress
   geo/    point convex-hull polygon polar half-plane circle
   misc/   big-int
+  crypto/ md5 sm3 sm4 aes zuc rsa ecc sm2 sm9(待写)
 tests/
   compile-test.cpp
   run-tests.ps1
@@ -57,8 +58,10 @@ tests/
 - [x] 3. datastruct/*（BIT、线段树、吉司机、主席树、ST 表、FHQ/隐式 Treap、Splay、左偏树、并查集、莫队、分块、单调栈队列、李超树、笛卡尔树）——已提交 `329db80`
 - [x] 4. string/*（kmp、z、manacher、trie/01trie、ac-automaton、suffix-array、suffix-automaton、palindromic-pam、rolling-hash、minimal-string）——全部 10 文件已写，`-std=c++14` 零警告零错误
 - [x] 5. graph/*（adjacency、shortest-path、mst、topo、tarjan、euler-path、bipartite、network-flow、min-cost-flow、lca、tree-dp、hld、virtual-tree、link-cut-tree）——全部 14 文件已写，`-std=c++14` 零警告零错误
-- [ ] 6. dp/*、geo/*、misc/big-int
-- [ ] 7. wbwlib.h 聚合 + wbwlib.hpp + tests/ 冒烟测试
+- [x] 6. dp/*、geo/*、misc/big-int
+- [x] 7. wbwlib.h 聚合 + wbwlib.hpp + tests/ 冒烟测试（333 checks 双标准通过）
+- [x] 8. crypto/*（md5、sm3、sm4、aes、zuc、rsa、ecc/ECDSA、sm2 国密）——全部经标准向量与交叉验证通过（FIPS-197、GB/T 32905/32907/33133、gmssl 对照）；聚合头 crypto.hpp + 测试小节已并入
+- [ ] 9. crypto/sm9（标识密码，双线性配对，最复杂）+ geo 3D 凸包
 
 ### 已知待办（最终统一测试时处理）
 - 各文件仅通过 `-fsyntax-only` 语法检查；功能断言测试统一在 tests/ 阶段完成

@@ -893,9 +893,111 @@ static void test_misc() {
   CHECK(oss.str() == "12345");
 }
 
+// ================= crypto =================
+static void test_crypto() {
+  using namespace crypto;
+  using BI = misc::BigInt;
+  // MD5（RFC 1321 向量）
+  CHECK_EQ(MD5::hex("abc"), "900150983cd24fb0d6963f7d28e17f72");
+  CHECK_EQ(MD5::hex(""), "d41d8cd98f00b204e9800998ecf8427e");
+  // SM3（GB/T 32905 向量）
+  CHECK_EQ(SM3::hex(""), "1ab21d8355cfa17f8e61194831e81a8f22bec8c728fefb747ed035eb5082aa2b");
+  { std::string x; for (int i = 0; i < 16; ++i) x += "abcd";
+    CHECK_EQ(SM3::hex(x), "debe9ff92275b8a138604889c18e5a4d6fdb70e5387e5765293dcba39c0c5732"); }
+  // SM4（标准向量 + 往返）
+  {
+    u8 key[16] = {1, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef, 0xfe, 0xdc, 0xba, 0x98, 0x76, 0x54, 0x32, 0x10};
+    u8 pt[16] = {1, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef, 0xfe, 0xdc, 0xba, 0x98, 0x76, 0x54, 0x32, 0x10};
+    SM4 sm4(key);
+    u8 ct[16], back[16];
+    sm4.encrypt_block(pt, ct);
+    const u8 exp[16] = {0x68, 0x1e, 0xdf, 0x34, 0xd2, 0x06, 0x96, 0x5e, 0x86, 0xb3, 0xe9, 0x4f, 0x53, 0x6e, 0x42, 0x46};
+    CHECK(std::memcmp(ct, exp, 16) == 0);
+    sm4.decrypt_block(ct, back);
+    CHECK(std::memcmp(back, pt, 16) == 0);
+  }
+  // AES-128（FIPS-197 C.1）
+  {
+    u8 key[16], pt[16], ct[16], back[16];
+    for (int i = 0; i < 16; ++i) key[i] = (u8)i;
+    for (int i = 0; i < 16; ++i) pt[i] = (u8)(0x11 * i);
+    AES<4> aes(key);
+    aes.encrypt_block(pt, ct);
+    const u8 exp[16] = {0x69, 0xc4, 0xe0, 0xd8, 0x6a, 0x7b, 0x04, 0x30, 0xd8, 0xcd, 0xb7, 0x80, 0x70, 0xb4, 0xc5, 0x5a};
+    CHECK(std::memcmp(ct, exp, 16) == 0);
+    aes.decrypt_block(ct, back);
+    CHECK(std::memcmp(back, pt, 16) == 0);
+  }
+  // ZUC（GB/T 33133 向量）
+  {
+    u8 key[16], iv[16];
+    for (int i = 0; i < 16; ++i) { key[i] = 0; iv[i] = 0; }
+    ZUC z1(key, iv);
+    u32 ks[8];
+    z1.generate_keystream(ks, 8);
+    CHECK_EQ(ks[0], 0x27BEDE74u);
+    CHECK_EQ(ks[1], 0x018082DAu);
+    CHECK_EQ(ks[2], 0x87D4E5B6u);
+    CHECK_EQ(ks[3], 0x9F18BF66u);
+    for (int i = 0; i < 16; ++i) { key[i] = 0xff; iv[i] = 0xff; }
+    ZUC z2(key, iv);
+    z2.generate_keystream(ks, 2);
+    CHECK_EQ(ks[0], 0x0657CFA0u);
+    CHECK_EQ(ks[1], 0x7096398Bu);
+  }
+  // RSA（经典小例子 + 512 位生成往返）
+  {
+    RSA fixed(BI(3233), BI(17), BI(2753));
+    BI c = fixed.encrypt(BI(65));
+    CHECK(c == BI(2790));
+    CHECK(fixed.decrypt(c) == BI(65));
+    CHECK(fixed.verify(BI(65), fixed.sign(BI(65))));
+    RSA rsa = RSA::generate(512);
+    BI m("987654321987654321987654321");
+    CHECK(rsa.decrypt(rsa.encrypt(m)) == m);
+    CHECK(rsa.verify(m, rsa.sign(m)));
+  }
+  // ECC：小曲线 ECDSA 往返 + 分配律
+  {
+    struct C128 {
+      static BI P()  { return BI::from_hex("FFFFFFFDFFFFFFFFFFFFFFFFFFFFFFFF"); }
+      static BI A()  { return BI::from_hex("FFFFFFFDFFFFFFFFFFFFFFFFFFFFFFFC"); }
+      static BI B()  { return BI::from_hex("E87579C11079F43DD824993C2CEE5ED3"); }
+      static BI GX() { return BI::from_hex("161FF7528B899B2D0C28607CA52C5B86"); }
+      static BI GY() { return BI::from_hex("CF5AC8395BAFEB13C02DA292DDED7A83"); }
+      static BI N()  { return BI::from_hex("FFFFFFFE0000000075A30D1B9038A115"); }
+    };
+    using EC = ECC<C128>;
+    EC::Point g = EC::base();
+    CHECK(EC::mul(BI(1), g) == g);
+    BI d("A1B2C3D4E5F60718293A4B5C6D7E8F9");
+    EC::Point q = EC::mul(d, g);
+    auto rs = EC::sign(d, BI("0123456789abcdef0123456789abcdef"));
+    CHECK(!rs.first.is_zero() && !rs.second.is_zero());
+    CHECK(EC::verify(q, BI("0123456789abcdef0123456789abcdef"), rs.first, rs.second));
+    CHECK(!EC::verify(g, BI("0123456789abcdef0123456789abcdef"), rs.first, rs.second));
+    CHECK(EC::add(EC::mul(BI(12345), g), EC::mul(BI(67890), g)) == EC::mul(BI(12345 + 67890), g));
+  }
+  // SM2（标准固定 k 向量 + 加密解密往返）
+  {
+    BI d = BI::from_hex("3945208F7B2144B13F36E38AC6D39F95889393692860B51A42FB81EF4DF7C5B8");
+    BI k = BI::from_hex("59276E27D506861A16680F3AD9C02DCCEF3CC1FA3CDBE4CE6D54B80DEAC1BC21");
+    auto rs = SM2::sign_k(d, "message digest", k);
+    CHECK(rs.first == BI::from_hex("F5A03B0648D2C4630EEAC513E1BB81A15944DA3827D5B74143AC7EACEEE720B3"));
+    CHECK(rs.second == BI::from_hex("B1B6AA29DF212FD8763182BC0D421CA1BB9038FD1F7F42D4840B69C485BBC1AA"));
+    auto q = SM2::public_key(d);
+    CHECK(SM2::verify(q, "message digest", rs.first, rs.second));
+    CHECK(!SM2::verify(q, "message digest!", rs.first, rs.second));
+    std::string pt = "SM2 encrypt test";
+    std::string ct = SM2::encrypt(q, pt);
+    CHECK_EQ((int)ct.size(), (int)(pt.size() + 96));
+    CHECK(SM2::decrypt(d, ct) == pt);
+  }
+}
+
 // 小节名（main 的 argv[1] 用逗号分隔，只跑指定小节；空则全部）
-static const char* k_sections[] = {"core", "math", "ds", "str", "graph", "dp", "geo", "misc"};
-static bool g_want[8];
+static const char* k_sections[] = {"core", "math", "ds", "str", "graph", "dp", "geo", "misc", "crypto"};
+static bool g_want[9];
 
 static bool section_enabled(const char* name, const std::string& filter) {
   if (filter.empty() || filter == "all") return true;
@@ -912,10 +1014,10 @@ static bool section_enabled(const char* name, const std::string& filter) {
 
 int main(int argc, char** argv) {
   std::string filter = argc > 1 ? argv[1] : "";
-  for (int i = 0; i < 8; ++i)
+  for (int i = 0; i < 9; ++i)
     g_want[i] = section_enabled(k_sections[i], filter);
   if (!filter.empty() && filter != "all") {
-    for (int i = 0; i < 8; ++i)
+    for (int i = 0; i < 9; ++i)
       if (g_want[i]) std::printf("+ %s\n", k_sections[i]);
   }
   std::printf("start core\n"); std::fflush(stdout);
@@ -934,6 +1036,8 @@ int main(int argc, char** argv) {
   if (g_want[6]) test_geo();
   std::printf("start misc\n"); std::fflush(stdout);
   if (g_want[7]) test_misc();
+  std::printf("start crypto\n"); std::fflush(stdout);
+  if (g_want[8]) test_crypto();
   std::printf("%d checks, %d failures\n", g_cnt, g_fail);
   return g_fail == 0 ? 0 : 1;
 }

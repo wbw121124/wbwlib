@@ -32,6 +32,7 @@ g++ -O2 -std=c++14 -Wall -I D:/wbwlib main.cpp
 | `dp/` | 斜率优化 CHT、决策单调性分治 DP、数位 DP、状压辅助 |
 | `geo/` | 点/向量、凸包、多边形、极角排序、半平面交、圆 |
 | `misc/` | 压位大整数 |
+| `crypto/` | 密码学：MD5、SM3、SM4、AES、ZUC、RSA、ECC（ECDSA）、SM2（国密） |
 | `tests/` | 冒烟测试与批量编译脚本 |
 
 @dot 模块依赖总览
@@ -46,11 +47,12 @@ digraph wbwlib {
   "dp"   [label="dp\n动态规划"];
   "geo"  [label="geo\n计算几何"];
   "misc" [label="misc\n大整数"];
+  "crypto"[label="crypto\n密码学", fillcolor="#fef3c7"];
   "wbw"  [label="wbwlib.hpp\n聚合入口", fillcolor="#dbeafe"];
-  "math" -> "core"; "ds" -> "core"; "str" -> "core"; "graph" -> "core"; "dp" -> "core"; "geo" -> "core"; "misc" -> "core";
+  "math" -> "core"; "ds" -> "core"; "str" -> "core"; "graph" -> "core"; "dp" -> "core"; "geo" -> "core"; "misc" -> "core"; "crypto" -> "core"; "crypto" -> "misc";
   "graph" -> "ds"; "graph" -> "str";
   "dp" -> "ds"; "dp" -> "geo";
-  "wbw" -> {"core" "math" "ds" "str" "graph" "dp" "geo" "misc"};
+  "wbw" -> {"core" "math" "ds" "str" "graph" "dp" "geo" "misc" "crypto"};
 }
 @enddot
 

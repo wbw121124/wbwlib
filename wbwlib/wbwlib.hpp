@@ -16,12 +16,12 @@
  * @endcode
  *
  * 命名空间：wbwlib::core / wbwlib::math / wbwlib::ds / wbwlib::str /
- *            wbwlib::graph / wbwlib::dp / wbwlib::geo / wbwlib::misc
+ *            wbwlib::graph / wbwlib::dp / wbwlib::geo / wbwlib::misc / wbwlib::crypto
  *
  * 模块聚合头（按需引入）：
  *   wbwlib/core/core.hpp、wbwlib/math/math.hpp、wbwlib/datastruct/datastruct.hpp、
  *   wbwlib/string/string.hpp、wbwlib/graph/graph.hpp、wbwlib/dp/dp.hpp、
- *   wbwlib/geo/geo.hpp、wbwlib/misc/misc.hpp
+ *   wbwlib/geo/geo.hpp、wbwlib/misc/misc.hpp、wbwlib/crypto/crypto.hpp
  */
 
 #include "wbwlib/core/core.hpp"
@@ -32,5 +32,6 @@
 #include "wbwlib/dp/dp.hpp"
 #include "wbwlib/geo/geo.hpp"
 #include "wbwlib/misc/misc.hpp"
+#include "wbwlib/crypto/crypto.hpp"
 
 #endif // WBWLIB_WBWLIB_HPP
