@@ -5,9 +5,11 @@
  * @file mo-algo.hpp
  * @brief 莫队算法：离线处理静态区间查询（可加分可删）。
  *
- * 依赖：wbwlib/core/base.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp
  *
- * 复杂度：O((n+q)·sqrt(n)·转移代价)。
+ * @par 复杂度
+ * O((n+q)·sqrt(n)·转移代价)。
  *
  * 用法（区间颜色数）：
  *   int cnt[MAXV];  int cur = 0;
@@ -31,7 +33,20 @@
 namespace wbwlib {
 namespace ds {
 
-/// 多询问莫队；l,r 为 1 基闭区间，add/del 接收元素下标 idx，get 返回当前答案
+/**
+ * @brief 多询问莫队：离线处理若干静态区间查询（元素可加可删）。
+ *
+ * 排序采用奇偶优化；复杂度 \f$O((n + q) \sqrt{n})\f$ 次 add/del。
+ * @tparam AddF 添加函数类型（接收元素下标 idx）
+ * @tparam DelF 删除函数类型（接收元素下标 idx）
+ * @tparam GetF 求当前答案的函数类型（无参，返回答案）
+ * @param qs 询问集合（1 基闭区间 [l, r]）
+ * @param add 添加下标 idx 对应的元素后更新状态
+ * @param del 删除下标 idx 对应的元素后更新状态
+ * @param get 返回当前区间对应的答案
+ * @param n 序列长度（下标范围 [1, n]）
+ * @return 与 qs 顺序一一对应的答案数组
+ */
 template<class AddF, class DelF, class GetF>
 std::vector<typename std::decay<typename std::result_of<GetF()>::type>::type>
 mo_queries(const std::vector<std::pair<int, int>>& qs,

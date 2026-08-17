@@ -1,0 +1,7 @@
+digraph "wbwlib::misc::BigInt"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::misc::BigInt\n|- d\l- neg\l- BASE\l- WIDTH\l|+ BigInt()\l+ BigInt()\l+ BigInt()\l+ operator-()\l+ is_zero()\l+ operator+()\l+ operator-()\l+ operator*()\l+ operator/()\l+ operator%()\l+ mod_small()\l+ operator/()\l+ operator%()\l+ pow()\l+ to_string()\l- trim()\l- abs_cmp()\l- parse()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="高精度整数：符号 + 幅值，十进制  基（每 9 位一组，小端存储）。"];
+}

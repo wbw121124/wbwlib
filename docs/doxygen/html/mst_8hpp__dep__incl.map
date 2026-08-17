@@ -1,0 +1,5 @@
+<map id="wbwlib/graph/mst.hpp" name="wbwlib/graph/mst.hpp">
+<area shape="rect" id="node1" title="最小生成树：Kruskal（并查集）+ Prim（堆）。" alt="" coords="10,5,159,33"/>
+<area shape="rect" id="node2" href="$graph_8hpp.html" title="graph 模块聚合头：一次引入本模块全部头文件。" alt="" coords="5,81,164,109"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="19,157,150,185"/>
+</map>

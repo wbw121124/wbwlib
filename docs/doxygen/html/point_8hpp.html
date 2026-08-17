@@ -1,0 +1,214 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/geo/point.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_2ecdf383c720a2d71ee413e323799741.html">geo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">point.hpp 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>计算几何基础：二维点/向量，整数坐标（默认 i64）+ double 变体。  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &quot;<a class="el" href="base_8hpp_source.html">wbwlib/core/base.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+point.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="point_8hpp__incl.png" border="0" usemap="#awbwlib_2geo_2point_8hpp" alt=""/></div>
+<map name="awbwlib_2geo_2point_8hpp" id="awbwlib_2geo_2point_8hpp">
+<area shape="rect" title="计算几何基础：二维点/向量，整数坐标（默认 i64）+ double 变体。" alt="" coords="52,5,195,33"/>
+<area shape="rect" title=" " alt="" coords="6,81,63,109"/>
+<area shape="rect" title=" " alt="" coords="86,81,161,109"/>
+<area shape="rect" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="185,81,332,109"/>
+<area shape="rect" title=" " alt="" coords="5,157,66,185"/>
+<area shape="rect" title=" " alt="" coords="90,157,154,185"/>
+<area shape="rect" title=" " alt="" coords="178,157,242,185"/>
+<area shape="rect" title=" " alt="" coords="267,157,345,185"/>
+<area shape="rect" title=" " alt="" coords="369,157,451,185"/>
+<area shape="rect" title=" " alt="" coords="476,157,528,185"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="point_8hpp__dep__incl.png" border="0" usemap="#awbwlib_2geo_2point_8hppdep" alt=""/></div>
+<map name="awbwlib_2geo_2point_8hppdep" id="awbwlib_2geo_2point_8hppdep">
+<area shape="rect" title="计算几何基础：二维点/向量，整数坐标（默认 i64）+ double 变体。" alt="" coords="346,5,489,33"/>
+<area shape="rect" href="circle_8hpp.html" title="圆：三点定圆、最小覆盖圆（随机增量）、点与圆位置、两圆关系。" alt="" coords="5,81,152,109"/>
+<area shape="rect" href="geo_8hpp.html" title="geo 模块聚合头：一次引入本模块全部头文件。" alt="" coords="349,157,485,185"/>
+<area shape="rect" href="convex-hull_8hpp.html" title="凸包：Andrew 单调链（整数坐标）。" alt="" coords="227,81,408,109"/>
+<area shape="rect" href="half-plane_8hpp.html" title="半平面交：极角排序 + 双端队列（实数版）。" alt="" coords="432,81,603,109"/>
+<area shape="rect" href="polar_8hpp.html" title="极角相关工具：按极角排序、角度转弧度、坐标→极角。" alt="" coords="627,81,770,109"/>
+<area shape="rect" href="polygon_8hpp.html" title="多边形工具：有向面积/法面积、点包含、周长、凸多边形判断。" alt="" coords="794,81,955,109"/>
+<area shape="rect" href="wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="352,233,482,261"/>
+</map>
+</div>
+</div>
+<p><a href="point_8hpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">二维点/向量，整数与浮点坐标通用。  <a href="structwbwlib_1_1geo_1_1_point.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1geo_1_1_polar_angle_cmp.html">wbwlib::geo::PolarAngleCmp&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">极角排序比较器：按相对中心 (ox, oy) 的幅角 \(\theta \in [-\pi, \pi)\) 升序，同角按距离升序。  <a href="structwbwlib_1_1geo_1_1_polar_angle_cmp.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacewbwlib"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib.html">wbwlib</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacewbwlib_1_1geo"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1geo.html">wbwlib::geo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a6b46d6c424d9f7f285a634d5ecb09a46"><td class="memItemLeft" align="right" valign="top">typedef Point&lt; i64 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1geo.html#a6b46d6c424d9f7f285a634d5ecb09a46">wbwlib::geo::PointI</a></td></tr>
+<tr class="separator:a6b46d6c424d9f7f285a634d5ecb09a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c2a89f2c8a9e2f2b1a4b640121e3987"><td class="memItemLeft" align="right" valign="top">typedef Point&lt; long double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1geo.html#a3c2a89f2c8a9e2f2b1a4b640121e3987">wbwlib::geo::PointD</a></td></tr>
+<tr class="separator:a3c2a89f2c8a9e2f2b1a4b640121e3987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a40d95f6ebdfc8c0b5e40ee7b15a42e54"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a40d95f6ebdfc8c0b5e40ee7b15a42e54"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1geo.html#a40d95f6ebdfc8c0b5e40ee7b15a42e54">wbwlib::geo::cross</a> (const Point&lt; T &gt; &amp;a, const Point&lt; T &gt; &amp;b)</td></tr>
+<tr class="memdesc:a40d95f6ebdfc8c0b5e40ee7b15a42e54"><td class="mdescLeft">&#160;</td><td class="mdescRight">向量叉积（自由函数版）。  <a href="namespacewbwlib_1_1geo.html#a40d95f6ebdfc8c0b5e40ee7b15a42e54">更多...</a><br /></td></tr>
+<tr class="separator:a40d95f6ebdfc8c0b5e40ee7b15a42e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a769f7eed196de6f8607b41d8972ddca2"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a769f7eed196de6f8607b41d8972ddca2"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1geo.html#a769f7eed196de6f8607b41d8972ddca2">wbwlib::geo::dot</a> (const Point&lt; T &gt; &amp;a, const Point&lt; T &gt; &amp;b)</td></tr>
+<tr class="memdesc:a769f7eed196de6f8607b41d8972ddca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">向量点乘（自由函数版）。  <a href="namespacewbwlib_1_1geo.html#a769f7eed196de6f8607b41d8972ddca2">更多...</a><br /></td></tr>
+<tr class="separator:a769f7eed196de6f8607b41d8972ddca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50538d58e234ce0a1cbb01f80f5a4506"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a50538d58e234ce0a1cbb01f80f5a4506"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1geo.html#a50538d58e234ce0a1cbb01f80f5a4506">wbwlib::geo::orient</a> (const Point&lt; T &gt; &amp;a, const Point&lt; T &gt; &amp;b, const Point&lt; T &gt; &amp;c)</td></tr>
+<tr class="memdesc:a50538d58e234ce0a1cbb01f80f5a4506"><td class="mdescLeft">&#160;</td><td class="mdescRight">三点叉积的方向性判断。  <a href="namespacewbwlib_1_1geo.html#a50538d58e234ce0a1cbb01f80f5a4506">更多...</a><br /></td></tr>
+<tr class="separator:a50538d58e234ce0a1cbb01f80f5a4506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a762f57c821566f430883484a5346b848"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a762f57c821566f430883484a5346b848"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1geo.html#a762f57c821566f430883484a5346b848">wbwlib::geo::collinear</a> (const Point&lt; T &gt; &amp;a, const Point&lt; T &gt; &amp;b, const Point&lt; T &gt; &amp;c)</td></tr>
+<tr class="memdesc:a762f57c821566f430883484a5346b848"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断三点是否共线。  <a href="namespacewbwlib_1_1geo.html#a762f57c821566f430883484a5346b848">更多...</a><br /></td></tr>
+<tr class="separator:a762f57c821566f430883484a5346b848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81760fb6129a779c3b88e1dce4423def"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a81760fb6129a779c3b88e1dce4423def"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1geo.html#a81760fb6129a779c3b88e1dce4423def">wbwlib::geo::dist2</a> (const Point&lt; T &gt; &amp;a, const Point&lt; T &gt; &amp;b)</td></tr>
+<tr class="memdesc:a81760fb6129a779c3b88e1dce4423def"><td class="mdescLeft">&#160;</td><td class="mdescRight">两点间距离的平方。  <a href="namespacewbwlib_1_1geo.html#a81760fb6129a779c3b88e1dce4423def">更多...</a><br /></td></tr>
+<tr class="separator:a81760fb6129a779c3b88e1dce4423def"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>计算几何基础：二维点/向量，整数坐标（默认 i64）+ double 变体。 </p>
+<dl class="section user"><dt>依赖</dt><dd><a class="el" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。">wbwlib/core/base.hpp</a></dd></dl>
+<p>提供的运算符：+ - * /（标量）、点乘 dot、叉乘 cross、模长平方 norm2、 比较、向量夹角工具、共线判断。 </p>
+</div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

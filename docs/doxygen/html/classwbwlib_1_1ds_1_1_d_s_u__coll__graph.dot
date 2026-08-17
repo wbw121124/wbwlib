@@ -1,0 +1,7 @@
+digraph "wbwlib::ds::DSU"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::ds::DSU\n|+ fa_\l+ rk_\l|+ DSU()\l+ init()\l+ find()\l+ unite()\l+ same()\l+ rank_of()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="标准并查集：路径压缩 + 按秩合并。"];
+}

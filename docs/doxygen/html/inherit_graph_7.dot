@@ -1,0 +1,8 @@
+digraph "类继承关系图"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="wbwlib::dp::MonoCHT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwbwlib_1_1dp_1_1_mono_c_h_t.html",tooltip="斜率单调递增、查询 x 单调不减的最小值 CHT（双端队列维护）。"];
+}

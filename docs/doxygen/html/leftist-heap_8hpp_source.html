@@ -1,0 +1,199 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/datastruct/leftist-heap.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_8d69220e0774a19b26f749e5403d9fea.html">datastruct</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">leftist-heap.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="leftist-heap_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_DS_LEFTIST_HEAP_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_DS_LEFTIST_HEAP_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span>ds {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T, <span class="keyword">class</span> Cmp = std::less&lt;T&gt;&gt;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_leftist_heap.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html">LeftistHeap</a> {</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structwbwlib_1_1ds_1_1_leftist_heap_1_1_node.html">   41</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structwbwlib_1_1ds_1_1_leftist_heap_1_1_node.html">Node</a> {</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structwbwlib_1_1ds_1_1_leftist_heap_1_1_node.html#a8aca9c214d560498e59eb1d76520db07">   42</a></span>&#160;    T <a class="code" href="structwbwlib_1_1ds_1_1_leftist_heap_1_1_node.html#a8aca9c214d560498e59eb1d76520db07">val</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structwbwlib_1_1ds_1_1_leftist_heap_1_1_node.html#a25ac3a61f896e398d7a5fbebba6f1a71">   43</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structwbwlib_1_1ds_1_1_leftist_heap_1_1_node.html#a82213829e07400e5f98ee796750a964d">l</a>, <a class="code" href="structwbwlib_1_1ds_1_1_leftist_heap_1_1_node.html#a075409aaa3e0340e4b1d547c33dfc003">r</a>, <a class="code" href="structwbwlib_1_1ds_1_1_leftist_heap_1_1_node.html#a25ac3a61f896e398d7a5fbebba6f1a71">dist</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  };</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">   45</a></span>&#160;  <span class="keyword">static</span> std::vector&lt;Node&gt; <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>;   <span class="comment">// 全局节点池（同类型所有堆共享），0 号哑节点</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_leftist_heap.html#addfbf896bf9cd6a684bf0616556b9e9c">   46</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#addfbf896bf9cd6a684bf0616556b9e9c">root_</a> = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_leftist_heap.html#aca0383de503ec397374855a44073ddc0">   47</a></span>&#160;  Cmp <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#aca0383de503ec397374855a44073ddc0">cmp_</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_leftist_heap.html#ac1229bf78f765b114a0537265cfb705a">   50</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#ac1229bf78f765b114a0537265cfb705a">merge</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> (!a || !b) <span class="keywordflow">return</span> a ? a : b;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#aca0383de503ec397374855a44073ddc0">cmp_</a>(<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[b].val, <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[a].val)) std::swap(a, b);   <span class="comment">// 保证根是最小</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[a].r = <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#ac1229bf78f765b114a0537265cfb705a">merge</a>(<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[a].r, b);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[a].l].dist &lt; <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[a].r].dist) std::swap(<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[a].l, <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[a].r);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[a].dist = <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[a].r].dist + 1;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_leftist_heap.html#a8a5bc5dc2ec6488342ee1d78eff28e77">   65</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#a8a5bc5dc2ec6488342ee1d78eff28e77">push</a>(<span class="keyword">const</span> T&amp; v) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>.push_back({v, 0, 0, 1});</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> n = (int)<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>.size() - 1;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#addfbf896bf9cd6a684bf0616556b9e9c">root_</a> = <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#ac1229bf78f765b114a0537265cfb705a">merge</a>(<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#addfbf896bf9cd6a684bf0616556b9e9c">root_</a>, n);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> n;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_leftist_heap.html#a366d5e2c85d31029ca9f1fd2d142c2e6">   76</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#a366d5e2c85d31029ca9f1fd2d142c2e6">merge</a>(<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html">LeftistHeap</a>&amp; o) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#addfbf896bf9cd6a684bf0616556b9e9c">root_</a> = <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#ac1229bf78f765b114a0537265cfb705a">merge</a>(<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#addfbf896bf9cd6a684bf0616556b9e9c">root_</a>, o.<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#addfbf896bf9cd6a684bf0616556b9e9c">root_</a>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    o.<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#addfbf896bf9cd6a684bf0616556b9e9c">root_</a> = 0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_leftist_heap.html#a76a00574049d241f6ea08038d6d65c86">   82</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#a76a00574049d241f6ea08038d6d65c86">empty</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#addfbf896bf9cd6a684bf0616556b9e9c">root_</a> == 0; }</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_leftist_heap.html#a43993b749a409a998a0e01bc8b4fe0a7">   84</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#a43993b749a409a998a0e01bc8b4fe0a7">size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#addfbf896bf9cd6a684bf0616556b9e9c">root_</a> == 0 ? 0 : 1; }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_leftist_heap.html#a0e2835589a37282db800a3134ca97c48">   87</a></span>&#160;  <span class="keyword">const</span> T&amp; <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#a0e2835589a37282db800a3134ca97c48">top</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#addfbf896bf9cd6a684bf0616556b9e9c">root_</a>].val; }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_leftist_heap.html#ae7c99217892eb11807ffc92c8a76f82f">   93</a></span>&#160;  T <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#ae7c99217892eb11807ffc92c8a76f82f">pop</a>() {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    T v = <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#addfbf896bf9cd6a684bf0616556b9e9c">root_</a>].val;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">int</span> nr = <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#ac1229bf78f765b114a0537265cfb705a">merge</a>(<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#addfbf896bf9cd6a684bf0616556b9e9c">root_</a>].l, <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">p_</a>[<a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#addfbf896bf9cd6a684bf0616556b9e9c">root_</a>].r);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html#addfbf896bf9cd6a684bf0616556b9e9c">root_</a> = nr;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> v;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;} <span class="comment">// namespace ds</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T, <span class="keyword">class</span> Cmp&gt;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;std::vector&lt;typename wbwlib::ds::LeftistHeap&lt;T, Cmp&gt;::Node&gt;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_leftist_heap.html">wbwlib::ds::LeftistHeap&lt;T, Cmp&gt;::p_</a> = {{T(), 0, 0, 0}};</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_DS_LEFTIST_HEAP_HPP</span></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_leftist_heap_html"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_leftist_heap.html">wbwlib::ds::LeftistHeap</a></div><div class="ttdoc">左偏树（可并堆），支持合并、插入、取堆顶、弹出堆顶。</div><div class="ttdef"><b>Definition:</b> leftist-heap.hpp:40</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_leftist_heap_html_a0e2835589a37282db800a3134ca97c48"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_leftist_heap.html#a0e2835589a37282db800a3134ca97c48">wbwlib::ds::LeftistHeap::top</a></div><div class="ttdeci">const T &amp; top() const</div><div class="ttdoc">返回堆顶元素（要求非空）</div><div class="ttdef"><b>Definition:</b> leftist-heap.hpp:87</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_leftist_heap_html_a366d5e2c85d31029ca9f1fd2d142c2e6"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_leftist_heap.html#a366d5e2c85d31029ca9f1fd2d142c2e6">wbwlib::ds::LeftistHeap::merge</a></div><div class="ttdeci">void merge(LeftistHeap &amp;o)</div><div class="ttdoc">把堆 o 并入当前堆（o 被清空）。</div><div class="ttdef"><b>Definition:</b> leftist-heap.hpp:76</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_leftist_heap_html_a43993b749a409a998a0e01bc8b4fe0a7"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_leftist_heap.html#a43993b749a409a998a0e01bc8b4fe0a7">wbwlib::ds::LeftistHeap::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">返回是否非空（左偏树未维护 size 统计，仅指示 0/1）</div><div class="ttdef"><b>Definition:</b> leftist-heap.hpp:84</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_leftist_heap_html_a76a00574049d241f6ea08038d6d65c86"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_leftist_heap.html#a76a00574049d241f6ea08038d6d65c86">wbwlib::ds::LeftistHeap::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdoc">返回是否为空</div><div class="ttdef"><b>Definition:</b> leftist-heap.hpp:82</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_leftist_heap_html_a8a5bc5dc2ec6488342ee1d78eff28e77"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_leftist_heap.html#a8a5bc5dc2ec6488342ee1d78eff28e77">wbwlib::ds::LeftistHeap::push</a></div><div class="ttdeci">int push(const T &amp;v)</div><div class="ttdoc">插入一个值，返回节点编号（可用作句柄）。</div><div class="ttdef"><b>Definition:</b> leftist-heap.hpp:65</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_leftist_heap_html_ac1229bf78f765b114a0537265cfb705a"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_leftist_heap.html#ac1229bf78f765b114a0537265cfb705a">wbwlib::ds::LeftistHeap::merge</a></div><div class="ttdeci">int merge(int a, int b)</div><div class="ttdoc">合并两棵左偏树，返回新根（保证根为最值）</div><div class="ttdef"><b>Definition:</b> leftist-heap.hpp:50</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_leftist_heap_html_aca0383de503ec397374855a44073ddc0"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_leftist_heap.html#aca0383de503ec397374855a44073ddc0">wbwlib::ds::LeftistHeap::cmp_</a></div><div class="ttdeci">Cmp cmp_</div><div class="ttdef"><b>Definition:</b> leftist-heap.hpp:47</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_leftist_heap_html_addfbf896bf9cd6a684bf0616556b9e9c"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_leftist_heap.html#addfbf896bf9cd6a684bf0616556b9e9c">wbwlib::ds::LeftistHeap::root_</a></div><div class="ttdeci">int root_</div><div class="ttdef"><b>Definition:</b> leftist-heap.hpp:46</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_leftist_heap_html_ae7c99217892eb11807ffc92c8a76f82f"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_leftist_heap.html#ae7c99217892eb11807ffc92c8a76f82f">wbwlib::ds::LeftistHeap::pop</a></div><div class="ttdeci">T pop()</div><div class="ttdoc">弹出堆顶元素并返回其值。</div><div class="ttdef"><b>Definition:</b> leftist-heap.hpp:93</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_leftist_heap_html_af4823998aab7f1fe2d6ee9cbac100034"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_leftist_heap.html#af4823998aab7f1fe2d6ee9cbac100034">wbwlib::ds::LeftistHeap::p_</a></div><div class="ttdeci">static std::vector&lt; Node &gt; p_</div><div class="ttdef"><b>Definition:</b> leftist-heap.hpp:45</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+<div class="ttc" id="astructwbwlib_1_1ds_1_1_leftist_heap_1_1_node_html"><div class="ttname"><a href="structwbwlib_1_1ds_1_1_leftist_heap_1_1_node.html">wbwlib::ds::LeftistHeap::Node</a></div><div class="ttdef"><b>Definition:</b> leftist-heap.hpp:41</div></div>
+<div class="ttc" id="astructwbwlib_1_1ds_1_1_leftist_heap_1_1_node_html_a075409aaa3e0340e4b1d547c33dfc003"><div class="ttname"><a href="structwbwlib_1_1ds_1_1_leftist_heap_1_1_node.html#a075409aaa3e0340e4b1d547c33dfc003">wbwlib::ds::LeftistHeap::Node::r</a></div><div class="ttdeci">int r</div><div class="ttdef"><b>Definition:</b> leftist-heap.hpp:43</div></div>
+<div class="ttc" id="astructwbwlib_1_1ds_1_1_leftist_heap_1_1_node_html_a25ac3a61f896e398d7a5fbebba6f1a71"><div class="ttname"><a href="structwbwlib_1_1ds_1_1_leftist_heap_1_1_node.html#a25ac3a61f896e398d7a5fbebba6f1a71">wbwlib::ds::LeftistHeap::Node::dist</a></div><div class="ttdeci">int dist</div><div class="ttdef"><b>Definition:</b> leftist-heap.hpp:43</div></div>
+<div class="ttc" id="astructwbwlib_1_1ds_1_1_leftist_heap_1_1_node_html_a82213829e07400e5f98ee796750a964d"><div class="ttname"><a href="structwbwlib_1_1ds_1_1_leftist_heap_1_1_node.html#a82213829e07400e5f98ee796750a964d">wbwlib::ds::LeftistHeap::Node::l</a></div><div class="ttdeci">int l</div><div class="ttdef"><b>Definition:</b> leftist-heap.hpp:43</div></div>
+<div class="ttc" id="astructwbwlib_1_1ds_1_1_leftist_heap_1_1_node_html_a8aca9c214d560498e59eb1d76520db07"><div class="ttname"><a href="structwbwlib_1_1ds_1_1_leftist_heap_1_1_node.html#a8aca9c214d560498e59eb1d76520db07">wbwlib::ds::LeftistHeap::Node::val</a></div><div class="ttdeci">T val</div><div class="ttdef"><b>Definition:</b> leftist-heap.hpp:42</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

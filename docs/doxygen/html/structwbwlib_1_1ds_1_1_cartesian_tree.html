@@ -1,0 +1,214 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::ds::CartesianTree结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1ds.html">ds</a></li><li class="navelem"><a class="el" href="structwbwlib_1_1ds_1_1_cartesian_tree.html">CartesianTree</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structwbwlib_1_1ds_1_1_cartesian_tree-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::ds::CartesianTree结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>笛卡尔树构建结果：根下标及每个节点的左右孩子、父节点（0 表示无）。  
+ <a href="structwbwlib_1_1ds_1_1_cartesian_tree.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="cartesian-tree_8hpp_source.html">cartesian-tree.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::ds::CartesianTree 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="structwbwlib_1_1ds_1_1_cartesian_tree__coll__graph.png" border="0" usemap="#awbwlib_1_1ds_1_1_cartesian_tree_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1ds_1_1_cartesian_tree_coll__map" id="awbwlib_1_1ds_1_1_cartesian_tree_coll__map">
+<area shape="rect" title="笛卡尔树构建结果：根下标及每个节点的左右孩子、父节点（0 表示无）。" alt="" coords="5,5,179,135"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a4ca5d358c5cbece2e7f0aaab8a30e2a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1ds_1_1_cartesian_tree.html#a4ca5d358c5cbece2e7f0aaab8a30e2a1">root</a> = 0</td></tr>
+<tr class="memdesc:a4ca5d358c5cbece2e7f0aaab8a30e2a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">根的下标（1 基）  <a href="structwbwlib_1_1ds_1_1_cartesian_tree.html#a4ca5d358c5cbece2e7f0aaab8a30e2a1">更多...</a><br /></td></tr>
+<tr class="separator:a4ca5d358c5cbece2e7f0aaab8a30e2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd9256cde60b4c8b529a3090e19898c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1ds_1_1_cartesian_tree.html#aabd9256cde60b4c8b529a3090e19898c">l</a></td></tr>
+<tr class="separator:aabd9256cde60b4c8b529a3090e19898c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd564ed91a7b22d3e6497962b9f30db7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1ds_1_1_cartesian_tree.html#afd564ed91a7b22d3e6497962b9f30db7">r</a></td></tr>
+<tr class="separator:afd564ed91a7b22d3e6497962b9f30db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81a4531605a684680c6d869219985910"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1ds_1_1_cartesian_tree.html#a81a4531605a684680c6d869219985910">fa</a></td></tr>
+<tr class="memdesc:a81a4531605a684680c6d869219985910"><td class="mdescLeft">&#160;</td><td class="mdescRight">左孩子、右孩子、父节点（无则 0）  <a href="structwbwlib_1_1ds_1_1_cartesian_tree.html#a81a4531605a684680c6d869219985910">更多...</a><br /></td></tr>
+<tr class="separator:a81a4531605a684680c6d869219985910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>笛卡尔树构建结果：根下标及每个节点的左右孩子、父节点（0 表示无）。 </p>
+</div><h2 class="groupheader">类成员变量说明</h2>
+<a id="a81a4531605a684680c6d869219985910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a4531605a684680c6d869219985910">&#9670;&nbsp;</a></span>fa</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::ds::CartesianTree::fa</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>左孩子、右孩子、父节点（无则 0） </p>
+
+</div>
+</div>
+<a id="aabd9256cde60b4c8b529a3090e19898c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabd9256cde60b4c8b529a3090e19898c">&#9670;&nbsp;</a></span>l</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::ds::CartesianTree::l</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd564ed91a7b22d3e6497962b9f30db7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd564ed91a7b22d3e6497962b9f30db7">&#9670;&nbsp;</a></span>r</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::ds::CartesianTree::r</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ca5d358c5cbece2e7f0aaab8a30e2a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ca5d358c5cbece2e7f0aaab8a30e2a1">&#9670;&nbsp;</a></span>root</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wbwlib::ds::CartesianTree::root = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根的下标（1 基） </p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>wbwlib/datastruct/<a class="el" href="cartesian-tree_8hpp_source.html">cartesian-tree.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<map id="wbwlib/core/utils.hpp" name="wbwlib/core/utils.hpp">
+<area shape="rect" id="node1" title="通用小工具：多变元 min/max、clamp、离散化（坐标压缩）、计时器。" alt="" coords="104,5,248,33"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,81,80,109"/>
+<area shape="rect" id="node3" title=" " alt="" coords="104,81,165,109"/>
+<area shape="rect" id="node4" title=" " alt="" coords="189,81,246,109"/>
+<area shape="rect" id="node5" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="270,81,418,109"/>
+<area shape="rect" id="node6" title=" " alt="" coords="91,157,151,185"/>
+<area shape="rect" id="node7" title=" " alt="" coords="176,157,240,185"/>
+<area shape="rect" id="node8" title=" " alt="" coords="264,157,328,185"/>
+<area shape="rect" id="node9" title=" " alt="" coords="353,157,431,185"/>
+<area shape="rect" id="node10" title=" " alt="" coords="455,157,537,185"/>
+<area shape="rect" id="node11" title=" " alt="" coords="562,157,614,185"/>
+</map>

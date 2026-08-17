@@ -1,0 +1,5 @@
+<map id="wbwlib/math/fraction.hpp" name="wbwlib/math/fraction.hpp">
+<area shape="rect" id="node1" title="精确有理数（分数）类：自动约分，支持全部算术/比较/输出。" alt="" coords="5,5,172,33"/>
+<area shape="rect" id="node2" href="$math_8hpp.html" title="math 模块聚合头：一次引入本模块全部头文件。" alt="" coords="12,81,165,109"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="23,157,154,185"/>
+</map>

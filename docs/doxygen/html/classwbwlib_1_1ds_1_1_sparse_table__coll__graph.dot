@@ -1,0 +1,7 @@
+digraph "wbwlib::ds::SparseTable&lt; T, Op &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::ds::SparseTable\l\< T, Op \>\n|- f_\l- op_\l|+ SparseTable()\l+ SparseTable()\l+ query()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Sparse Table（ST 表）：静态区间幂等查询（min/max/gcd/…），查询 O(1)。"];
+}

@@ -1,0 +1,185 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/graph/hld.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_eb5e8cb22b4df04bf6d97bd1e7f427e8.html">graph</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle">
+<div class="title">hld.hpp 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>树链剖分（HLD）：剖分 + 路径/子树区间映射，供线段树等配合。  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &quot;<a class="el" href="base_8hpp_source.html">wbwlib/core/base.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="adjacency_8hpp_source.html">wbwlib/graph/adjacency.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+hld.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="hld_8hpp__incl.png" border="0" usemap="#awbwlib_2graph_2hld_8hpp" alt=""/></div>
+<map name="awbwlib_2graph_2hld_8hpp" id="awbwlib_2graph_2hld_8hpp">
+<area shape="rect" title="树链剖分（HLD）：剖分 + 路径/子树区间映射，供线段树等配合。" alt="" coords="170,5,314,33"/>
+<area shape="rect" title=" " alt="" coords="5,157,63,185"/>
+<area shape="rect" title=" " alt="" coords="409,81,486,109"/>
+<area shape="rect" title=" " alt="" coords="86,157,161,185"/>
+<area shape="rect" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="310,157,457,185"/>
+<area shape="rect" href="adjacency_8hpp.html" title="图表示约定：1 基邻接表 + 常用辅助。" alt="" coords="150,81,334,109"/>
+<area shape="rect" title=" " alt="" coords="449,233,510,261"/>
+<area shape="rect" title=" " alt="" coords="534,233,598,261"/>
+<area shape="rect" title=" " alt="" coords="622,233,686,261"/>
+<area shape="rect" title=" " alt="" coords="240,233,319,261"/>
+<area shape="rect" title=" " alt="" coords="342,233,425,261"/>
+<area shape="rect" title=" " alt="" coords="164,233,216,261"/>
+<area shape="rect" title=" " alt="" coords="236,157,285,185"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="hld_8hpp__dep__incl.png" border="0" usemap="#awbwlib_2graph_2hld_8hppdep" alt=""/></div>
+<map name="awbwlib_2graph_2hld_8hppdep" id="awbwlib_2graph_2hld_8hppdep">
+<area shape="rect" title="树链剖分（HLD）：剖分 + 路径/子树区间映射，供线段树等配合。" alt="" coords="13,5,156,33"/>
+<area shape="rect" href="graph_8hpp.html" title="graph 模块聚合头：一次引入本模块全部头文件。" alt="" coords="5,81,164,109"/>
+<area shape="rect" href="wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="19,157,150,185"/>
+</map>
+</div>
+</div>
+<p><a href="hld_8hpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_h_l_d.html">wbwlib::graph::HLD</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">树链剖分 HLD：轻重链剖分，把路径/子树映射为基础数组区间，供线段树等配合。  <a href="classwbwlib_1_1graph_1_1_h_l_d.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacewbwlib"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib.html">wbwlib</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacewbwlib_1_1graph"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1graph.html">wbwlib::graph</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>树链剖分（HLD）：剖分 + 路径/子树区间映射，供线段树等配合。 </p>
+<dl class="section user"><dt>依赖</dt><dd><a class="el" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。">wbwlib/core/base.hpp</a>、wbwlib/graph/adjacency.hpp</dd></dl>
+<dl class="section user"><dt>复杂度</dt><dd>预处理 O(n)，单次路径 O(log^2 n) 段，子树 O(1) 区间。</dd></dl>
+<dl class="section user"><dt>示例</dt><dd><div class="fragment"><div class="line"><a class="code" href="classwbwlib_1_1graph_1_1_h_l_d.html">wbwlib::graph::HLD</a> hld(g, 1);</div>
+<div class="line">hld.path(u, v, [&amp;](<span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r){ seg.update(l, r, x); });  <span class="comment">// 含重链区间，顺序为 u→v</span></div>
+<div class="line">hld.subtree(u, [&amp;](<span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r){ ... });                    <span class="comment">// 子树对应区间 [l,r]</span></div>
+<div class="line">节点权值直接用 posIn[u]（轻链底端朝上）；边权把权挂到子节点。</div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_h_l_d_html"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_h_l_d.html">wbwlib::graph::HLD</a></div><div class="ttdoc">树链剖分 HLD：轻重链剖分，把路径/子树映射为基础数组区间，供线段树等配合。</div><div class="ttdef"><b>Definition:</b> hld.hpp:35</div></div>
+</div><!-- fragment --> </dd></dl>
+</div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

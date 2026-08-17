@@ -1,0 +1,11 @@
+
+digraph pst {
+  rankdir=LR; node [shape=box, style="rounded,filled", fillcolor="#dcfce7"];
+  v0 [label="版本0 根"];
+  v1 [label="版本1 根"]; v2 [label="版本2 根"];
+  n1 [label="新结点"]; n2 [label="新结点"];
+  v0 -> v1 [label="update(1)"];
+  v1 -> v2 [label="update(2)"];
+  v1 -> n1 [style=dashed, label="复制路径"];
+  v2 -> n2 [style=dashed, label="复制路径"];
+}

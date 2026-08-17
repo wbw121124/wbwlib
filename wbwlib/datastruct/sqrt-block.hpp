@@ -5,15 +5,19 @@
  * @file sqrt-block.hpp
  * @brief 序列分块：区间加 + 区间和 + 区间最值。
  *
- * 依赖：wbwlib/core/base.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp
  *
- * 复杂度：修改/查询 O(sqrt(n))。
+ * @par 复杂度
+ * 修改/查询 O(sqrt(n))。
  *
- * 用法：
+ * @par 示例
+ * @code{.cpp}
  *   std::vector<long long> a = {1,2,3};
  *   wbwlib::ds::SqrtDecomp<long long> sb(a);      // a 为 1 基（a[0] 占位）
  *   sb.add(2, 5, 10);          // [2,5] += 10
  *   sb.sum(1, n); sb.max(1, n);
+ * @endcode
  */
 
 #include <algorithm>
@@ -24,6 +28,10 @@
 namespace wbwlib {
 namespace ds {
 
+/**
+ * @brief 序列分块：区间加 + 区间和 + 区间最值，修改/查询 O(sqrt(n))。
+ * @tparam T 元素类型（默认 i64）
+ */
 template<class T = i64>
 class SqrtDecomp {
   int n_;
@@ -32,6 +40,7 @@ class SqrtDecomp {
   std::vector<T> sum_, mx_, lazy_;
   std::vector<int> bel_;
 
+  /// 重算块 b 的 sum 与 mx（结合懒标记）
   void rebuild(int b) {
     int l = b * B_ + 1, r = (std::min)(n_, (b + 1) * B_);
     sum_[b] = T(); mx_[b] = a_[l] + lazy_[b];   // 初始占位
@@ -46,6 +55,10 @@ class SqrtDecomp {
   }
 
  public:
+  /**
+   * @brief 由 1 基数组 a 构造分块（a[0] 占位）。
+   * @param a 1 基数组
+   */
   explicit SqrtDecomp(const std::vector<T>& a) : n_((int)a.size() - 1) {
     B_ = (int)std::max(1, (int)std::sqrt((double)n_));
     int nb = (n_ + B_ - 1) / B_;
@@ -58,7 +71,12 @@ class SqrtDecomp {
     for (int b = 0; b < nb; ++b) rebuild(b);
   }
 
-  /// 区间加 [l, r]
+  /**
+   * @brief 区间加：\f$a[l..r] += v\f$（整块打标记，散块暴力）。
+   * @param l 区间左端点（1 基闭区间）
+   * @param r 区间右端点（1 基闭区间）
+   * @param v 增加量
+   */
   void add(int l, int r, const T& v) {
     int bl = bel_[l], br = bel_[r];
     if (bl == br) {
@@ -77,7 +95,12 @@ class SqrtDecomp {
     rebuild(br);
   }
 
-  /// 区间和
+  /**
+   * @brief 区间和：\f$\sum_{i=l}^{r} a[i]\f$。
+   * @param l 区间左端点（1 基闭区间）
+   * @param r 区间右端点（1 基闭区间）
+   * @return 区间和
+   */
   T sum(int l, int r) {
     int bl = bel_[l], br = bel_[r];
     if (bl == br) {
@@ -92,7 +115,12 @@ class SqrtDecomp {
     return res;
   }
 
-  /// 区间最大值
+  /**
+   * @brief 区间最大值：\f$\max_{i=l}^{r} a[i]\f$。
+   * @param l 区间左端点（1 基闭区间）
+   * @param r 区间右端点（1 基闭区间）
+   * @return 区间最大值
+   */
   T max(int l, int r) {
     int bl = bel_[l], br = bel_[r];
     if (bl == br) {
@@ -109,6 +137,7 @@ class SqrtDecomp {
     return res;
   }
 
+  /// 返回块大小
   int block_size() const { return B_; }
 };
 

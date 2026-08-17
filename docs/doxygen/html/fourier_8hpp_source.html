@@ -1,0 +1,244 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/math/fourier.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_3daf11f4f079b8f8f9a94cd388c9bdee.html">math</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">fourier.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="fourier_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_MATH_FOURIER_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_MATH_FOURIER_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;complex&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="modular_8hpp.html">wbwlib/math/modular.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span>math {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// ================= 复数 FFT =================</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math.html#acb71ad2eda63f3c601fa936762f363f5">   43</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespacewbwlib_1_1math.html#acb71ad2eda63f3c601fa936762f363f5">fft</a>(std::vector&lt;std::complex&lt;double&gt;&gt;&amp; a, <span class="keywordtype">bool</span> invert) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">int</span> n = (int)a.size();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">// 位逆序置换</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1, j = 0; i &lt; n; ++i) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> bit = n &gt;&gt; 1;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">for</span> (; j &amp; bit; bit &gt;&gt;= 1) j ^= bit;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    j ^= bit;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (i &lt; j) std::swap(a[i], a[j]);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> len = 2; len &lt;= n; len &lt;&lt;= 1) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">double</span> ang = 2.0 * 3.14159265358979323846 / len * (invert ? -1 : 1);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::complex&lt;double&gt; wlen(std::cos(ang), std::sin(ang));</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += len) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      std::complex&lt;double&gt; w(1.0, 0.0);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; len / 2; ++j) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        std::complex&lt;double&gt; u = a[i + j], v = a[i + j + len / 2] * w;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        a[i + j] = u + v;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        a[i + j + len / 2] = u - v;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        w *= wlen;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">if</span> (invert) <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) a[i] /= n;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math.html#aa8a920f34ceb494af48ea20f96ce173d">   76</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;double&gt; <a class="code" href="namespacewbwlib_1_1math.html#aa8a920f34ceb494af48ea20f96ce173d">convolution_fft</a>(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; a,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                           <span class="keyword">const</span> std::vector&lt;double&gt;&amp; b) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">int</span> n = 1;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">while</span> (n &lt; (<span class="keywordtype">int</span>)(a.size() + b.size() - 1)) n &lt;&lt;= 1;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  std::vector&lt;std::complex&lt;double&gt;&gt; fa(n), fb(n);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; a.size(); ++i) fa[i] = a[i];</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; b.size(); ++i) fb[i] = b[i];</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="namespacewbwlib_1_1math.html#acb71ad2eda63f3c601fa936762f363f5">fft</a>(fa, <span class="keyword">false</span>); <a class="code" href="namespacewbwlib_1_1math.html#acb71ad2eda63f3c601fa936762f363f5">fft</a>(fb, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) fa[i] *= fb[i];</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <a class="code" href="namespacewbwlib_1_1math.html#acb71ad2eda63f3c601fa936762f363f5">fft</a>(fa, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  std::vector&lt;double&gt; res(a.size() + b.size() - 1);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; res.size(); ++i) res[i] = fa[i].real();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">// ================= NTT（模板模数版） =================</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1details.html">   92</a></span>&#160;<span class="keyword">namespace </span>details {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> M&gt;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1details.html#acd88516074a196ab585b1c7d1c285f94">   95</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespacewbwlib_1_1math_1_1details.html#acd88516074a196ab585b1c7d1c285f94">ntt_core</a>(std::vector&lt;M&gt;&amp; a, <span class="keywordtype">bool</span> invert, <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a> root) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordtype">int</span> n = (int)a.size();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> mod = (<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>)M::mod_value();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1, j = 0; i &lt; n; ++i) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">int</span> bit = n &gt;&gt; 1;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">for</span> (; j &amp; bit; bit &gt;&gt;= 1) j ^= bit;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    j ^= bit;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> (i &lt; j) std::swap(a[i], a[j]);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> len = 2; len &lt;= n; len &lt;&lt;= 1) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a> wlen = root.<a class="code" href="classwbwlib_1_1math_1_1modint.html#a8b97d6d1f2d5b016e4623e8c7d15e599">pow</a>((mod - 1) / len);   <span class="comment">// g^((mod-1)/len)</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">if</span> (invert) wlen = wlen.<a class="code" href="classwbwlib_1_1math_1_1modint.html#aa1bf5bd0d4cedcadc1df4d4c8d2914a6">inv</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i += len) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a> w = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(1);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; len / 2; ++j) {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a> u = a[i + j], v = a[i + j + len / 2] * w;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        a[i + j] = u + v;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        a[i + j + len / 2] = u - v;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        w *= wlen;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordflow">if</span> (invert) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a> inv_n = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(n).<a class="code" href="classwbwlib_1_1math_1_1modint.html#aa1bf5bd0d4cedcadc1df4d4c8d2914a6">inv</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) a[i] *= inv_n;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;} <span class="comment">// namespace details</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> M&gt;</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math.html#aca0ee61ac44883121f55d6da0abde743">  133</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespacewbwlib_1_1math.html#aca0ee61ac44883121f55d6da0abde743">ntt</a>(std::vector&lt;M&gt;&amp; a, <span class="keywordtype">bool</span> invert) {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <a class="code" href="namespacewbwlib_1_1math_1_1details.html#acd88516074a196ab585b1c7d1c285f94">details::ntt_core</a>(a, invert, <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(3));</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> M&gt;</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math.html#aeb0b8fce32f3bf2db9f775d047be4f25">  145</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespacewbwlib_1_1math.html#aeb0b8fce32f3bf2db9f775d047be4f25">ntt_g</a>(std::vector&lt;M&gt;&amp; a, <span class="keywordtype">bool</span> invert, <span class="keywordtype">int</span> g) {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <a class="code" href="namespacewbwlib_1_1math_1_1details.html#acd88516074a196ab585b1c7d1c285f94">details::ntt_core</a>(a, invert, <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(g));</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> M&gt;</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math.html#a74ef93a0142291ad1d6eb275055ec2a7">  157</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;M&gt; <a class="code" href="namespacewbwlib_1_1math.html#a74ef93a0142291ad1d6eb275055ec2a7">convolution_ntt</a>(std::vector&lt;M&gt; a, std::vector&lt;M&gt; b) {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordflow">if</span> (a.empty() || b.empty()) <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keywordtype">int</span> need = (int)a.size() + (int)b.size() - 1;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keywordtype">int</span> n = 1;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordflow">while</span> (n &lt; need) n &lt;&lt;= 1;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  a.resize(n); b.resize(n);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <a class="code" href="namespacewbwlib_1_1math.html#aca0ee61ac44883121f55d6da0abde743">ntt</a>(a, <span class="keyword">false</span>); <a class="code" href="namespacewbwlib_1_1math.html#aca0ee61ac44883121f55d6da0abde743">ntt</a>(b, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) a[i] *= b[i];</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <a class="code" href="namespacewbwlib_1_1math.html#aca0ee61ac44883121f55d6da0abde743">ntt</a>(a, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  a.resize(need);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;} <span class="comment">// namespace math</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_MATH_FOURIER_HPP</span></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1modint_html_a8b97d6d1f2d5b016e4623e8c7d15e599"><div class="ttname"><a href="classwbwlib_1_1math_1_1modint.html#a8b97d6d1f2d5b016e4623e8c7d15e599">wbwlib::math::modint::pow</a></div><div class="ttdeci">modint pow(i64 p) const</div><div class="ttdoc">快速幂：计算 。</div><div class="ttdef"><b>Definition:</b> modular.hpp:186</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1modint_html_aa1bf5bd0d4cedcadc1df4d4c8d2914a6"><div class="ttname"><a href="classwbwlib_1_1math_1_1modint.html#aa1bf5bd0d4cedcadc1df4d4c8d2914a6">wbwlib::math::modint::inv</a></div><div class="ttdeci">modint inv() const</div><div class="ttdoc">求逆元（扩展欧几里得；要求 ，与 mod 是否质数无关）。</div><div class="ttdef"><b>Definition:</b> modular.hpp:200</div></div>
+<div class="ttc" id="amodular_8hpp_html"><div class="ttname"><a href="modular_8hpp.html">modular.hpp</a></div><div class="ttdoc">模意义整数类 modint（固定模版）与动态模版。</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1details_html_acd88516074a196ab585b1c7d1c285f94"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1details.html#acd88516074a196ab585b1c7d1c285f94">wbwlib::math::details::ntt_core</a></div><div class="ttdeci">void ntt_core(std::vector&lt; M &gt; &amp;a, bool invert, M root)</div><div class="ttdoc">位逆序置换 + 蝶形运算；invert 为真时用根逆元并最后乘以 n 的逆</div><div class="ttdef"><b>Definition:</b> fourier.hpp:95</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1poly_html_ae4a100da6c5ade020129268cefb3fb3b"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">wbwlib::math::poly::M</a></div><div class="ttdeci">poly_mod M</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:42</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_html_a74ef93a0142291ad1d6eb275055ec2a7"><div class="ttname"><a href="namespacewbwlib_1_1math.html#a74ef93a0142291ad1d6eb275055ec2a7">wbwlib::math::convolution_ntt</a></div><div class="ttdeci">std::vector&lt; M &gt; convolution_ntt(std::vector&lt; M &gt; a, std::vector&lt; M &gt; b)</div><div class="ttdoc">模数卷积（NTT）： 。</div><div class="ttdef"><b>Definition:</b> fourier.hpp:157</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_html_aa8a920f34ceb494af48ea20f96ce173d"><div class="ttname"><a href="namespacewbwlib_1_1math.html#aa8a920f34ceb494af48ea20f96ce173d">wbwlib::math::convolution_fft</a></div><div class="ttdeci">std::vector&lt; double &gt; convolution_fft(const std::vector&lt; double &gt; &amp;a, const std::vector&lt; double &gt; &amp;b)</div><div class="ttdoc">两个双精度序列的卷积（FFT）： 。</div><div class="ttdef"><b>Definition:</b> fourier.hpp:76</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_html_aca0ee61ac44883121f55d6da0abde743"><div class="ttname"><a href="namespacewbwlib_1_1math.html#aca0ee61ac44883121f55d6da0abde743">wbwlib::math::ntt</a></div><div class="ttdeci">void ntt(std::vector&lt; M &gt; &amp;a, bool invert)</div><div class="ttdoc">标准 NTT：模 998244353，原根 3；a 长度必须是 2 的幂。</div><div class="ttdef"><b>Definition:</b> fourier.hpp:133</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_html_acb71ad2eda63f3c601fa936762f363f5"><div class="ttname"><a href="namespacewbwlib_1_1math.html#acb71ad2eda63f3c601fa936762f363f5">wbwlib::math::fft</a></div><div class="ttdeci">void fft(std::vector&lt; std::complex&lt; double &gt;&gt; &amp;a, bool invert)</div><div class="ttdoc">迭代版 Cooley-Tukey FFT：计算离散傅里叶变换 。</div><div class="ttdef"><b>Definition:</b> fourier.hpp:43</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_html_aeb0b8fce32f3bf2db9f775d047be4f25"><div class="ttname"><a href="namespacewbwlib_1_1math.html#aeb0b8fce32f3bf2db9f775d047be4f25">wbwlib::math::ntt_g</a></div><div class="ttdeci">void ntt_g(std::vector&lt; M &gt; &amp;a, bool invert, int g)</div><div class="ttdoc">通用 NTT：可指定原根 g（要求模数存在对应阶的单位根）。</div><div class="ttdef"><b>Definition:</b> fourier.hpp:145</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+<div class="ttc" id="anamespacewbwlib_html_a86ab7e3b77fa0c682d473301d8c617c6"><div class="ttname"><a href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">wbwlib::i64</a></div><div class="ttdeci">std::int64_t i64</div><div class="ttdoc">64 位有符号整数</div><div class="ttdef"><b>Definition:</b> base.hpp:98</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

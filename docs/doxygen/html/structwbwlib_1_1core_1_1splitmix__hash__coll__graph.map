@@ -1,0 +1,3 @@
+<map id="wbwlib::core::splitmix_hash" name="wbwlib::core::splitmix_hash">
+<area shape="rect" id="node1" title="通用整数/可哈希对象的 splitmix64 哈希器，可作 unordered_map 等容器的 Hash。" alt="" coords="5,5,188,87"/>
+</map>

@@ -1,0 +1,3 @@
+<map id="wbwlib::str::HashVal" name="wbwlib::str::HashVal">
+<area shape="rect" id="node1" title="双哈希值：两条路哈希以相等比较（a 路 mod MOD1，b 路 mod MOD2）。" alt="" coords="5,5,147,119"/>
+</map>

@@ -1,0 +1,145 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/string/string.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_afebc595d8b67017c6a69c4771c58b6b.html">string</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">string.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="string_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_STRING_STRING_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_STRING_STRING_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ac-automaton_8hpp.html">wbwlib/string/ac-automaton.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="char-map_8hpp.html">wbwlib/string/char-map.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kmp_8hpp.html">wbwlib/string/kmp.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="manacher_8hpp.html">wbwlib/string/manacher.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="minimal-string_8hpp.html">wbwlib/string/minimal-string.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="palindromic-pam_8hpp.html">wbwlib/string/palindromic-pam.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="rolling-hash_8hpp.html">wbwlib/string/rolling-hash.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="suffix-array_8hpp.html">wbwlib/string/suffix-array.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="suffix-automaton_8hpp.html">wbwlib/string/suffix-automaton.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="trie_8hpp.html">wbwlib/string/trie.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="z_8hpp.html">wbwlib/string/z.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_STRING_STRING_HPP</span></div>
+<div class="ttc" id="aac-automaton_8hpp_html"><div class="ttname"><a href="ac-automaton_8hpp.html">ac-automaton.hpp</a></div><div class="ttdoc">AC 自动机：多模式匹配（模板化字符类型 / 字母表 / 字符映射）。</div></div>
+<div class="ttc" id="achar-map_8hpp_html"><div class="ttname"><a href="char-map_8hpp.html">char-map.hpp</a></div><div class="ttdoc">字符 → 字母表下标映射策略（供 Trie / AC 自动机 / 后缀自动机 / 回文自动机模板化使用）。</div></div>
+<div class="ttc" id="akmp_8hpp_html"><div class="ttname"><a href="kmp_8hpp.html">kmp.hpp</a></div><div class="ttdoc">KMP 单模式匹配。</div></div>
+<div class="ttc" id="amanacher_8hpp_html"><div class="ttname"><a href="manacher_8hpp.html">manacher.hpp</a></div><div class="ttdoc">Manacher 回文算法。</div></div>
+<div class="ttc" id="aminimal-string_8hpp_html"><div class="ttname"><a href="minimal-string_8hpp.html">minimal-string.hpp</a></div><div class="ttdoc">最小表示法：求循环同构串中字典序最小的起始位置。</div></div>
+<div class="ttc" id="apalindromic-pam_8hpp_html"><div class="ttname"><a href="palindromic-pam_8hpp.html">palindromic-pam.hpp</a></div><div class="ttdoc">回文自动机（回文树）PAM：模板化字符类型 / 字母表 / 字符映射。</div></div>
+<div class="ttc" id="arolling-hash_8hpp_html"><div class="ttname"><a href="rolling-hash_8hpp.html">rolling-hash.hpp</a></div><div class="ttdoc">字符串双哈希（模板化双模数），取模 + 自然溢出可选。</div></div>
+<div class="ttc" id="asuffix-array_8hpp_html"><div class="ttname"><a href="suffix-array_8hpp.html">suffix-array.hpp</a></div><div class="ttdoc">后缀数组（倍增 + 计数排序，含身扩展：LCP、第 k 大）。</div></div>
+<div class="ttc" id="asuffix-automaton_8hpp_html"><div class="ttname"><a href="suffix-automaton_8hpp.html">suffix-automaton.hpp</a></div><div class="ttdoc">后缀自动机 SAM（模板化字符类型 / 字母表 / 字符映射）。</div></div>
+<div class="ttc" id="atrie_8hpp_html"><div class="ttname"><a href="trie_8hpp.html">trie.hpp</a></div><div class="ttdoc">字典树（Trie）：模板化字符映射与字母表大小；01-Trie 模板化位宽与值类型。</div></div>
+<div class="ttc" id="az_8hpp_html"><div class="ttname"><a href="z_8hpp.html">z.hpp</a></div><div class="ttdoc">Z 函数（扩展 KMP 基础）。</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

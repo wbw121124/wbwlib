@@ -1,0 +1,541 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::ds::Fenwick&lt; T &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1ds.html">ds</a></li><li class="navelem"><a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html">Fenwick</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classwbwlib_1_1ds_1_1_fenwick-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::ds::Fenwick&lt; T &gt; 模板类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>树状数组（Fenwick）：单点加、前缀和与区间和。  
+ <a href="classwbwlib_1_1ds_1_1_fenwick.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="bit_8hpp_source.html">bit.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::ds::Fenwick&lt; T &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwbwlib_1_1ds_1_1_fenwick__coll__graph.png" border="0" usemap="#awbwlib_1_1ds_1_1_fenwick_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1ds_1_1_fenwick_3_01_t_01_4_coll__map" id="awbwlib_1_1ds_1_1_fenwick_3_01_t_01_4_coll__map">
+<area shape="rect" title="树状数组（Fenwick）：单点加、前缀和与区间和。" alt="" coords="5,5,177,215"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a8b2f9926d1120c69ff76da336f06aca0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html#a8b2f9926d1120c69ff76da336f06aca0">Fenwick</a> ()</td></tr>
+<tr class="memdesc:a8b2f9926d1120c69ff76da336f06aca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造空树（n=0），使用前需调用 init。  <a href="classwbwlib_1_1ds_1_1_fenwick.html#a8b2f9926d1120c69ff76da336f06aca0">更多...</a><br /></td></tr>
+<tr class="separator:a8b2f9926d1120c69ff76da336f06aca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adca0be7d5b2f20fe18b7bf0f5887b481"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html#adca0be7d5b2f20fe18b7bf0f5887b481">Fenwick</a> (int n)</td></tr>
+<tr class="memdesc:adca0be7d5b2f20fe18b7bf0f5887b481"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造大小为 n 的树状数组（下标 1..n，元素初始为 0）。  <a href="classwbwlib_1_1ds_1_1_fenwick.html#adca0be7d5b2f20fe18b7bf0f5887b481">更多...</a><br /></td></tr>
+<tr class="separator:adca0be7d5b2f20fe18b7bf0f5887b481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9a264db5e06db5231292082611efdbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html#ad9a264db5e06db5231292082611efdbb">init</a> (int n)</td></tr>
+<tr class="memdesc:ad9a264db5e06db5231292082611efdbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">重置为大小为 n 的树状数组并清空所有元素。  <a href="classwbwlib_1_1ds_1_1_fenwick.html#ad9a264db5e06db5231292082611efdbb">更多...</a><br /></td></tr>
+<tr class="separator:ad9a264db5e06db5231292082611efdbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b3b40fdb40c6f335ef6d255f04c2a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html#a31b3b40fdb40c6f335ef6d255f04c2a7">add</a> (int i, const T &amp;v)</td></tr>
+<tr class="memdesc:a31b3b40fdb40c6f335ef6d255f04c2a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">单点加： \(a[i] += v\)。  <a href="classwbwlib_1_1ds_1_1_fenwick.html#a31b3b40fdb40c6f335ef6d255f04c2a7">更多...</a><br /></td></tr>
+<tr class="separator:a31b3b40fdb40c6f335ef6d255f04c2a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3b3f2844b5aec44c921a4d739d1766b"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html#ab3b3f2844b5aec44c921a4d739d1766b">sum</a> (int i) const</td></tr>
+<tr class="memdesc:ab3b3f2844b5aec44c921a4d739d1766b"><td class="mdescLeft">&#160;</td><td class="mdescRight">前缀和 \(sum(a[1..i])\)。  <a href="classwbwlib_1_1ds_1_1_fenwick.html#ab3b3f2844b5aec44c921a4d739d1766b">更多...</a><br /></td></tr>
+<tr class="separator:ab3b3f2844b5aec44c921a4d739d1766b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ab12300bb02c2213edd8db895f580f8"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html#a6ab12300bb02c2213edd8db895f580f8">range_sum</a> (int l, int r) const</td></tr>
+<tr class="memdesc:a6ab12300bb02c2213edd8db895f580f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">区间和 \(sum(a[l..r])\)。  <a href="classwbwlib_1_1ds_1_1_fenwick.html#a6ab12300bb02c2213edd8db895f580f8">更多...</a><br /></td></tr>
+<tr class="separator:a6ab12300bb02c2213edd8db895f580f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa46c61f2bcc96ce69bd046dc06fe7190"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html#aa46c61f2bcc96ce69bd046dc06fe7190">build</a> (const std::vector&lt; T &gt; &amp;a)</td></tr>
+<tr class="memdesc:aa46c61f2bcc96ce69bd046dc06fe7190"><td class="mdescLeft">&#160;</td><td class="mdescRight">由 1 基数组 a 构造（a[0] 占位，长度 n+1）。  <a href="classwbwlib_1_1ds_1_1_fenwick.html#aa46c61f2bcc96ce69bd046dc06fe7190">更多...</a><br /></td></tr>
+<tr class="separator:aa46c61f2bcc96ce69bd046dc06fe7190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d9874a39927a9c0eaebccd46b8c2b0b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html#a0d9874a39927a9c0eaebccd46b8c2b0b">lower_bound</a> (const T &amp;k) const</td></tr>
+<tr class="memdesc:a0d9874a39927a9c0eaebccd46b8c2b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">求最小的 i 使前缀和 \(sum(a[1..i]) \ge k\)（要求元素非负）。  <a href="classwbwlib_1_1ds_1_1_fenwick.html#a0d9874a39927a9c0eaebccd46b8c2b0b">更多...</a><br /></td></tr>
+<tr class="separator:a0d9874a39927a9c0eaebccd46b8c2b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ae3686ff507698bb1de42d364f34b18f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html#ae3686ff507698bb1de42d364f34b18f7">n_</a></td></tr>
+<tr class="separator:ae3686ff507698bb1de42d364f34b18f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e34c8626651eb0dd5e359f3b0351817"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html#a8e34c8626651eb0dd5e359f3b0351817">tr_</a></td></tr>
+<tr class="separator:a8e34c8626651eb0dd5e359f3b0351817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><h3>template&lt;class T = i64&gt;<br />
+class wbwlib::ds::Fenwick&lt; T &gt;</h3>
+
+<p>树状数组（Fenwick）：单点加、前缀和与区间和。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>元素类型（默认 i64），需支持 += 与 -=。 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a8b2f9926d1120c69ff76da336f06aca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b2f9926d1120c69ff76da336f06aca0">&#9670;&nbsp;</a></span>Fenwick() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html">wbwlib::ds::Fenwick</a>&lt; T &gt;::<a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html">Fenwick</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认构造空树（n=0），使用前需调用 init。 </p>
+
+</div>
+</div>
+<a id="adca0be7d5b2f20fe18b7bf0f5887b481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adca0be7d5b2f20fe18b7bf0f5887b481">&#9670;&nbsp;</a></span>Fenwick() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html">wbwlib::ds::Fenwick</a>&lt; T &gt;::<a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html">Fenwick</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造大小为 n 的树状数组（下标 1..n，元素初始为 0）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>元素个数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a31b3b40fdb40c6f335ef6d255f04c2a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b3b40fdb40c6f335ef6d255f04c2a7">&#9670;&nbsp;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html">wbwlib::ds::Fenwick</a>&lt; T &gt;::add </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>单点加： \(a[i] += v\)。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>下标（1 基） </td></tr>
+    <tr><td class="paramname">v</td><td>增加量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa46c61f2bcc96ce69bd046dc06fe7190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa46c61f2bcc96ce69bd046dc06fe7190">&#9670;&nbsp;</a></span>build()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html">wbwlib::ds::Fenwick</a>&lt; T &gt;::build </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>由 1 基数组 a 构造（a[0] 占位，长度 n+1）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>1 基数组，仅使用 a[1..n] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad9a264db5e06db5231292082611efdbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9a264db5e06db5231292082611efdbb">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html">wbwlib::ds::Fenwick</a>&lt; T &gt;::init </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重置为大小为 n 的树状数组并清空所有元素。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>元素个数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0d9874a39927a9c0eaebccd46b8c2b0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d9874a39927a9c0eaebccd46b8c2b0b">&#9670;&nbsp;</a></span>lower_bound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html">wbwlib::ds::Fenwick</a>&lt; T &gt;::lower_bound </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>求最小的 i 使前缀和 \(sum(a[1..i]) \ge k\)（要求元素非负）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>阈值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>满足条件的下标（1 基）；不存在时返回 n+1 </dd></dl>
+
+</div>
+</div>
+<a id="a6ab12300bb02c2213edd8db895f580f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ab12300bb02c2213edd8db895f580f8">&#9670;&nbsp;</a></span>range_sum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html">wbwlib::ds::Fenwick</a>&lt; T &gt;::range_sum </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>区间和 \(sum(a[l..r])\)。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>区间左端点（1 基） </td></tr>
+    <tr><td class="paramname">r</td><td>区间右端点（1 基） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(\sum_{j=l}^{r} a[j]\) </dd></dl>
+
+</div>
+</div>
+<a id="ab3b3f2844b5aec44c921a4d739d1766b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3b3f2844b5aec44c921a4d739d1766b">&#9670;&nbsp;</a></span>sum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html">wbwlib::ds::Fenwick</a>&lt; T &gt;::sum </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>前缀和 \(sum(a[1..i])\)。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>下标（1 基） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(\sum_{j=1}^{i} a[j]\) </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ae3686ff507698bb1de42d364f34b18f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3686ff507698bb1de42d364f34b18f7">&#9670;&nbsp;</a></span>n_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html">wbwlib::ds::Fenwick</a>&lt; T &gt;::n_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e34c8626651eb0dd5e359f3b0351817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e34c8626651eb0dd5e359f3b0351817">&#9670;&nbsp;</a></span>tr_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;T&gt; <a class="el" href="classwbwlib_1_1ds_1_1_fenwick.html">wbwlib::ds::Fenwick</a>&lt; T &gt;::tr_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>wbwlib/datastruct/<a class="el" href="bit_8hpp_source.html">bit.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

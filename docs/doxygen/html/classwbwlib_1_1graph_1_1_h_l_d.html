@@ -1,0 +1,566 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::graph::HLD类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1graph.html">graph</a></li><li class="navelem"><a class="el" href="classwbwlib_1_1graph_1_1_h_l_d.html">HLD</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="classwbwlib_1_1graph_1_1_h_l_d-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::graph::HLD类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>树链剖分 HLD：轻重链剖分，把路径/子树映射为基础数组区间，供线段树等配合。  
+ <a href="classwbwlib_1_1graph_1_1_h_l_d.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="hld_8hpp_source.html">hld.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::graph::HLD 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwbwlib_1_1graph_1_1_h_l_d__coll__graph.png" border="0" usemap="#awbwlib_1_1graph_1_1_h_l_d_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1graph_1_1_h_l_d_coll__map" id="awbwlib_1_1graph_1_1_h_l_d_coll__map">
+<area shape="rect" title="树链剖分 HLD：轻重链剖分，把路径/子树映射为基础数组区间，供线段树等配合。" alt="" coords="5,5,142,279"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa8fb3bafe2679bcde841c193e7fcfa32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_h_l_d.html#aa8fb3bafe2679bcde841c193e7fcfa32">HLD</a> (const <a class="el" href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">Adj</a> &amp;g, int root=1)</td></tr>
+<tr class="memdesc:aa8fb3bafe2679bcde841c193e7fcfa32"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建树链剖分。  <a href="classwbwlib_1_1graph_1_1_h_l_d.html#aa8fb3bafe2679bcde841c193e7fcfa32">更多...</a><br /></td></tr>
+<tr class="separator:aa8fb3bafe2679bcde841c193e7fcfa32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3d79acb0cd306343efd8ceba4bea29b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_h_l_d.html#ab3d79acb0cd306343efd8ceba4bea29b">build</a> (const <a class="el" href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">Adj</a> &amp;g, int root=1)</td></tr>
+<tr class="memdesc:ab3d79acb0cd306343efd8ceba4bea29b"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建：第一遍 DFS 求 fa/dep/sz/son，第二遍重儿子优先线性化。  <a href="classwbwlib_1_1graph_1_1_h_l_d.html#ab3d79acb0cd306343efd8ceba4bea29b">更多...</a><br /></td></tr>
+<tr class="separator:ab3d79acb0cd306343efd8ceba4bea29b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a795ab6f8f15ba81648d58ffcdbf90357"><td class="memTemplParams" colspan="2">template&lt;class F &gt; </td></tr>
+<tr class="memitem:a795ab6f8f15ba81648d58ffcdbf90357"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_h_l_d.html#a795ab6f8f15ba81648d58ffcdbf90357">subtree</a> (int u, F &amp;&amp;cb)</td></tr>
+<tr class="memdesc:a795ab6f8f15ba81648d58ffcdbf90357"><td class="mdescLeft">&#160;</td><td class="mdescRight">枚举 u 子树对应的区间，回调 cb(l, r)（连续区间 [pos[u], pos[u]+sz[u]-1]）。  <a href="classwbwlib_1_1graph_1_1_h_l_d.html#a795ab6f8f15ba81648d58ffcdbf90357">更多...</a><br /></td></tr>
+<tr class="separator:a795ab6f8f15ba81648d58ffcdbf90357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a778177faea19503d030f848c561df66f"><td class="memTemplParams" colspan="2">template&lt;class F &gt; </td></tr>
+<tr class="memitem:a778177faea19503d030f848c561df66f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_h_l_d.html#a778177faea19503d030f848c561df66f">path</a> (int u, int v, F &amp;&amp;cb)</td></tr>
+<tr class="memdesc:a778177faea19503d030f848c561df66f"><td class="mdescLeft">&#160;</td><td class="mdescRight">枚举 u→v 路径拆成的 [l,r] 段（重链顶端朝下递增），顺序为从 u 一直到 v。  <a href="classwbwlib_1_1graph_1_1_h_l_d.html#a778177faea19503d030f848c561df66f">更多...</a><br /></td></tr>
+<tr class="separator:a778177faea19503d030f848c561df66f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a834879b01fa118d3dd513f2d6b352ecf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_h_l_d.html#a834879b01fa118d3dd513f2d6b352ecf">lca</a> (int u, int v) const</td></tr>
+<tr class="memdesc:a834879b01fa118d3dd513f2d6b352ecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">求 u 与 v 的最近公共祖先（利用链顶跳跃）。  <a href="classwbwlib_1_1graph_1_1_h_l_d.html#a834879b01fa118d3dd513f2d6b352ecf">更多...</a><br /></td></tr>
+<tr class="separator:a834879b01fa118d3dd513f2d6b352ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a1cae5af078624e84383e5a7b1ee7b867"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_h_l_d.html#a1cae5af078624e84383e5a7b1ee7b867">fa</a></td></tr>
+<tr class="separator:a1cae5af078624e84383e5a7b1ee7b867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe3da7c786e78eb50cf0b349029eb54a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_h_l_d.html#abe3da7c786e78eb50cf0b349029eb54a">dep</a></td></tr>
+<tr class="separator:abe3da7c786e78eb50cf0b349029eb54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada2d6c2cba4aa14132a31597d2167634"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_h_l_d.html#ada2d6c2cba4aa14132a31597d2167634">sz</a></td></tr>
+<tr class="separator:ada2d6c2cba4aa14132a31597d2167634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a5408c1a0f8359bb4139e756f27c349"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_h_l_d.html#a0a5408c1a0f8359bb4139e756f27c349">son</a></td></tr>
+<tr class="separator:a0a5408c1a0f8359bb4139e756f27c349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ba4b59f85ad428714fe4e211c70bb48"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_h_l_d.html#a5ba4b59f85ad428714fe4e211c70bb48">top</a></td></tr>
+<tr class="separator:a5ba4b59f85ad428714fe4e211c70bb48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab362a18b16eea7b0ae4be0f61d9ee869"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_h_l_d.html#ab362a18b16eea7b0ae4be0f61d9ee869">pos</a></td></tr>
+<tr class="memdesc:ab362a18b16eea7b0ae4be0f61d9ee869"><td class="mdescLeft">&#160;</td><td class="mdescRight">pos = 点在基础数组中的下标（1 基）  <a href="classwbwlib_1_1graph_1_1_h_l_d.html#ab362a18b16eea7b0ae4be0f61d9ee869">更多...</a><br /></td></tr>
+<tr class="separator:ab362a18b16eea7b0ae4be0f61d9ee869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e7b23a10cc25e5c4c9679fd0d03c276"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_h_l_d.html#a7e7b23a10cc25e5c4c9679fd0d03c276">order</a></td></tr>
+<tr class="memdesc:a7e7b23a10cc25e5c4c9679fd0d03c276"><td class="mdescLeft">&#160;</td><td class="mdescRight">剖分顺序（按重链）  <a href="classwbwlib_1_1graph_1_1_h_l_d.html#a7e7b23a10cc25e5c4c9679fd0d03c276">更多...</a><br /></td></tr>
+<tr class="separator:a7e7b23a10cc25e5c4c9679fd0d03c276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a774e626d7997ac30915791f30e4c9b0a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_h_l_d.html#a774e626d7997ac30915791f30e4c9b0a">n</a></td></tr>
+<tr class="separator:a774e626d7997ac30915791f30e4c9b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd61ffb2737963e59f5df1b9df3b9bab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_h_l_d.html#acd61ffb2737963e59f5df1b9df3b9bab">timer</a></td></tr>
+<tr class="separator:acd61ffb2737963e59f5df1b9df3b9bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>树链剖分 HLD：轻重链剖分，把路径/子树映射为基础数组区间，供线段树等配合。 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aa8fb3bafe2679bcde841c193e7fcfa32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8fb3bafe2679bcde841c193e7fcfa32">&#9670;&nbsp;</a></span>HLD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wbwlib::graph::HLD::HLD </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">Adj</a> &amp;&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>root</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构建树链剖分。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>树的邻接表（无向，1 基） </td></tr>
+    <tr><td class="paramname">root</td><td>根节点，默认 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ab3d79acb0cd306343efd8ceba4bea29b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3d79acb0cd306343efd8ceba4bea29b">&#9670;&nbsp;</a></span>build()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::graph::HLD::build </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">Adj</a> &amp;&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>root</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构建：第一遍 DFS 求 fa/dep/sz/son，第二遍重儿子优先线性化。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>树的邻接表（无向，1 基） </td></tr>
+    <tr><td class="paramname">root</td><td>根节点，默认 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a834879b01fa118d3dd513f2d6b352ecf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a834879b01fa118d3dd513f2d6b352ecf">&#9670;&nbsp;</a></span>lca()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wbwlib::graph::HLD::lca </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>求 u 与 v 的最近公共祖先（利用链顶跳跃）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">u</td><td>点（1 基） </td></tr>
+    <tr><td class="paramname">v</td><td>点（1 基） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html" title="LCA：倍增法，O(n log n) 预处理、O(log n) 查询，附树深/子树大小/DFS 序/第 k 祖先。">LCA</a> 节点编号 </dd></dl>
+
+</div>
+</div>
+<a id="a778177faea19503d030f848c561df66f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a778177faea19503d030f848c561df66f">&#9670;&nbsp;</a></span>path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::graph::HLD::path </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F &amp;&amp;&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>枚举 u→v 路径拆成的 [l,r] 段（重链顶端朝下递增），顺序为从 u 一直到 v。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">F</td><td>回调类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">u</td><td>路径起点（1 基） </td></tr>
+    <tr><td class="paramname">v</td><td>路径终点（1 基） </td></tr>
+    <tr><td class="paramname">cb</td><td>按顺序接收每段区间 [l, r] 的回调 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a795ab6f8f15ba81648d58ffcdbf90357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a795ab6f8f15ba81648d58ffcdbf90357">&#9670;&nbsp;</a></span>subtree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::graph::HLD::subtree </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F &amp;&amp;&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>枚举 u 子树对应的区间，回调 cb(l, r)（连续区间 [pos[u], pos[u]+sz[u]-1]）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">F</td><td>回调类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">u</td><td>子树根（1 基） </td></tr>
+    <tr><td class="paramname">cb</td><td>接收区间 [l, r] 的回调 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="abe3da7c786e78eb50cf0b349029eb54a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe3da7c786e78eb50cf0b349029eb54a">&#9670;&nbsp;</a></span>dep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::graph::HLD::dep</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1cae5af078624e84383e5a7b1ee7b867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cae5af078624e84383e5a7b1ee7b867">&#9670;&nbsp;</a></span>fa</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::graph::HLD::fa</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a774e626d7997ac30915791f30e4c9b0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a774e626d7997ac30915791f30e4c9b0a">&#9670;&nbsp;</a></span>n</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wbwlib::graph::HLD::n</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e7b23a10cc25e5c4c9679fd0d03c276"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e7b23a10cc25e5c4c9679fd0d03c276">&#9670;&nbsp;</a></span>order</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::graph::HLD::order</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>剖分顺序（按重链） </p>
+
+</div>
+</div>
+<a id="ab362a18b16eea7b0ae4be0f61d9ee869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab362a18b16eea7b0ae4be0f61d9ee869">&#9670;&nbsp;</a></span>pos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::graph::HLD::pos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>pos = 点在基础数组中的下标（1 基） </p>
+
+</div>
+</div>
+<a id="a0a5408c1a0f8359bb4139e756f27c349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a5408c1a0f8359bb4139e756f27c349">&#9670;&nbsp;</a></span>son</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::graph::HLD::son</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada2d6c2cba4aa14132a31597d2167634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada2d6c2cba4aa14132a31597d2167634">&#9670;&nbsp;</a></span>sz</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::graph::HLD::sz</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd61ffb2737963e59f5df1b9df3b9bab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd61ffb2737963e59f5df1b9df3b9bab">&#9670;&nbsp;</a></span>timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wbwlib::graph::HLD::timer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ba4b59f85ad428714fe4e211c70bb48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ba4b59f85ad428714fe4e211c70bb48">&#9670;&nbsp;</a></span>top</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::graph::HLD::top</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>wbwlib/graph/<a class="el" href="hld_8hpp_source.html">hld.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

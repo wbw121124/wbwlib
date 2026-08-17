@@ -5,15 +5,19 @@
  * @file sparse-table.hpp
  * @brief Sparse Table ST 表：静态区间幂等查询（取 min/max/gcd/…），O(1) 查询。
  *
- * 依赖：wbwlib/core/base.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp
  *
- * 复杂度：预处理 O(n log n)，查询 O(1)。
+ * @par 复杂度
+ * 预处理 O(n log n)，查询 O(1)。
  * 限制：仅适用于「幂等半群」（联合两次不影响结果），即要求 f(f(a,b),b)=f(a,b)，
  *      区间最值、gcd、位与、位或均适用；区间和不可用（请用线段树/前缀和）。
  *
- * 用法：
+ * @par 示例
+ * @code{.cpp}
  *   wbwlib::ds::SparseTable<i64> st(a, [](i64 x, i64 y){ return std::min(x, y); });
  *   i64 ans = st.query(l, r);    // 1 基
+ * @endcode
  */
 
 #include <algorithm>
@@ -24,14 +28,25 @@
 namespace wbwlib {
 namespace ds {
 
+/**
+ * @brief Sparse Table（ST 表）：静态区间幂等查询（min/max/gcd/…），查询 O(1)。
+ *
+ * 要求 op 为幂等半群运算：\f$op(op(a,b),b) = op(a,b)\f$；区间和不可用。
+ * @tparam T 元素类型
+ * @tparam Op 幂等半群运算类型
+ */
 template<class T, class Op>
 class SparseTable {
   std::vector<std::vector<T>> f_;  ///< f_[k][i] = 区间 [i, i+2^k-1]
   Op op_;
 
  public:
+  /**
+   * @brief 默认构造空表，需用带参构造。
+   */
   SparseTable() {}
   /**
+   * @brief 由 1 基数组 a 构造
    * @param a 1 基数组（size = n+1）
    * @param op 幂等半群运算
    */
@@ -46,7 +61,12 @@ class SparseTable {
         f_[j][i] = op_(f_[j - 1][i], f_[j - 1][i + (1 << (j - 1))]);
   }
 
-  /// 查询 [l, r]（1 基闭区间）的 op 值
+  /**
+   * @brief 查询区间 [l, r] 的 op 聚合值（O(1)）。
+   * @param l 区间左端点（1 基闭区间）
+   * @param r 区间右端点（1 基闭区间）
+   * @return \f$op(a[l..r])\f$
+   */
   T query(int l, int r) const {
     int len = r - l + 1;
     int j = 0;

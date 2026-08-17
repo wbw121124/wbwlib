@@ -1,0 +1,7 @@
+digraph "wbwlib::math::modint_dyn"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::math::modint_dyn\n|- v_\l|+ modint_dyn()\l+ modint_dyn()\l+ val()\l+ operator i64()\l+ operator+()\l+ operator-()\l+ operator*()\l+ operator/()\l+ operator+=()\l+ operator-=()\l和 7 更多...\l+ mod_value()\l+ set_mod()\l+ get_mod()\l- m()\l- norm()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="动态模数的模整数类：模数可在运行时用 set_mod 设置。"];
+}

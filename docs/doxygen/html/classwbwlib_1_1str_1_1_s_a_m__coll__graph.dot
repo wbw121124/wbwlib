@@ -1,0 +1,7 @@
+digraph "wbwlib::str::SAM&lt; Char, ALPHA, CharMap &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::str::SAM\< Char,\l ALPHA, CharMap \>\n|+ st_\l+ last_\l|+ SAM()\l+ reset()\l+ extend()\l+ build()\l+ build_cnt()\l+ distinct_substr()\l+ count_occurrence()\l+ size()\l+ last()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="后缀自动机 SAM：线性构建，支持本质不同子串数、子串出现次数等查询。"];
+}

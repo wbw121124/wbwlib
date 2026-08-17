@@ -1,0 +1,11 @@
+<map id="wbwlib/math/number&#45;theory.hpp" name="wbwlib/math/number&#45;theory.hpp">
+<area shape="rect" id="node1" title="数论基础：快速幂、快速乘、gcd/lcm、扩展欧几里得、逆元、CRT/EXCRT、欧拉定理、整除分块。" alt="" coords="28,5,169,49"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,173,58,201"/>
+<area shape="rect" id="node3" title=" " alt="" coords="70,97,127,125"/>
+<area shape="rect" id="node4" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="151,97,299,125"/>
+<area shape="rect" id="node5" title=" " alt="" coords="81,173,142,201"/>
+<area shape="rect" id="node6" title=" " alt="" coords="166,173,230,201"/>
+<area shape="rect" id="node7" title=" " alt="" coords="254,173,318,201"/>
+<area shape="rect" id="node8" title=" " alt="" coords="343,173,421,201"/>
+<area shape="rect" id="node9" title=" " alt="" coords="445,173,527,201"/>
+</map>

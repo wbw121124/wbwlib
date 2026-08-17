@@ -1,0 +1,54 @@
+# wbwlib Doxygen 配置（npm run docs 调用 tools/build-docs.js）
+PROJECT_NAME           = "wbwlib"
+PROJECT_BRIEF          = "C++14 header-only 算法竞赛库"
+OUTPUT_LANGUAGE        = Chinese
+OUTPUT_DIRECTORY       = docs/doxygen
+INPUT                  = wbwlib README.md
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+SORT_MEMBER_DOCS       = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+MARKDOWN_SUPPORT       = YES
+AUTOLINK_SUPPORT       = YES
+USE_MDFILE_AS_MAINPAGE = README.md
+
+# MathJax 渲染公式（本地文件，不依赖 CDN；相对 docs/doxygen/html/ 的路径）
+USE_MATHJAX            = YES
+MATHJAX_RELPATH        = ../../mathjax
+
+
+# Graphviz 图形（类图/协作图/内联 @dot）
+HAVE_DOT               = YES
+DOT_PATH               = tools/graphviz/bin
+DOT_IMAGE_FORMAT       = png
+DOT_NUM_THREADS        = 4
+DOT_GRAPH_MAX_NODES    = 100
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO
+UML_LOOK               = YES
+DOT_CLEANUP            = NO
+
+# doxygen-awesome-css 主题
+HTML_EXTRA_STYLESHEET  = docs/doxygen-awesome/doxygen-awesome.css \
+                         docs/doxygen-awesome/wbwlib-fix.css \
+                         docs/doxygen-awesome/prism.css
+HTML_EXTRA_FILES       = docs/doxygen-awesome/doxygen-awesome-darkmode-toggle.js \
+                         docs/doxygen-awesome/doxygen-awesome-fragment-copy-button.js \
+                         docs/doxygen-awesome/doxygen-awesome-tabs.js \
+                         docs/doxygen-awesome/prism.min.js \
+                         docs/doxygen-awesome/prism-bash.min.js
+HTML_HEADER            = docs/doxygen-awesome/header.html
+HTML_FOOTER            = docs/doxygen-awesome/footer.html
+
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_LOGFILE           = docs/doxygen-warnings.log
+QUIET                  = NO

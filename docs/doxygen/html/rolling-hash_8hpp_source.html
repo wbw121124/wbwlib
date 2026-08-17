@@ -1,0 +1,197 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/string/rolling-hash.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_afebc595d8b67017c6a69c4771c58b6b.html">string</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">rolling-hash.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="rolling-hash_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_STR_ROLLING_HASH_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_STR_ROLLING_HASH_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>str {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structwbwlib_1_1str_1_1_hash_val.html">   33</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structwbwlib_1_1str_1_1_hash_val.html">HashVal</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structwbwlib_1_1str_1_1_hash_val.html#abe710a8b99d5417aabe81b4b2f40b0f4">   34</a></span>&#160;  <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> <a class="code" href="structwbwlib_1_1str_1_1_hash_val.html#abe710a8b99d5417aabe81b4b2f40b0f4">a</a>, <a class="code" href="structwbwlib_1_1str_1_1_hash_val.html#a425503aa47f3253c74c1aaf8c8543d7f">b</a>;                 </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structwbwlib_1_1str_1_1_hash_val.html#a4c0664ecaed59ea673a88f3dd8a916ad">   40</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structwbwlib_1_1str_1_1_hash_val.html#a4c0664ecaed59ea673a88f3dd8a916ad">operator==</a>(<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1str_1_1_hash_val.html">HashVal</a>&amp; o)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="structwbwlib_1_1str_1_1_hash_val.html#abe710a8b99d5417aabe81b4b2f40b0f4">a</a> == o.<a class="code" href="structwbwlib_1_1str_1_1_hash_val.html#abe710a8b99d5417aabe81b4b2f40b0f4">a</a> &amp;&amp; <a class="code" href="structwbwlib_1_1str_1_1_hash_val.html#a425503aa47f3253c74c1aaf8c8543d7f">b</a> == o.<a class="code" href="structwbwlib_1_1str_1_1_hash_val.html#a425503aa47f3253c74c1aaf8c8543d7f">b</a>; }</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structwbwlib_1_1str_1_1_hash_val.html#a7819d6f2d69689b2ab3bf1907afde37f">   46</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structwbwlib_1_1str_1_1_hash_val.html#a7819d6f2d69689b2ab3bf1907afde37f">operator!=</a>(<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1str_1_1_hash_val.html">HashVal</a>&amp; o)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == o); }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1str_1_1hashingdetail.html">   49</a></span>&#160;<span class="keyword">namespace </span>hashingdetail {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1str_1_1hashingdetail.html#a3dbdd8d90d009f1f0e2bec2d4570383b">   52</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> <a class="code" href="namespacewbwlib_1_1str_1_1hashingdetail.html#a3dbdd8d90d009f1f0e2bec2d4570383b">mulmod</a>(<a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> a, <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> b, <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> m) { <span class="keywordflow">return</span> (<a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>)((__int128)a * b % m); }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;} <span class="comment">// namespace hashingdetail</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">template</span>&lt;u64 MOD1 = 1000000007ULL, u64 MOD2 = 1000000009ULL&gt;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_string_hash.html">   62</a></span>&#160;<span class="keyword">class </span><a class="code" href="classwbwlib_1_1str_1_1_string_hash.html">StringHash</a> {</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_string_hash.html#a88cd031bc1d8201f3fc8b25cdc88fe54">   63</a></span>&#160;  std::vector&lt;u64&gt; <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a88cd031bc1d8201f3fc8b25cdc88fe54">h1_</a>, <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a71b26394eaa4027b79bef145dc5d0d8d">h2_</a>, <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a73c223693d6964787118c5e29d3ce87c">p1_</a>, <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a9b24b7c7d313c3b1b7f8cad39900ae44">p2_</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_string_hash.html#ac6271377f5c72692dc38becf17d77f96">   64</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#ac6271377f5c72692dc38becf17d77f96">n_</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_string_hash.html#a7acdf775229a935d84e7cfb728837755">   65</a></span>&#160;  <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a7acdf775229a935d84e7cfb728837755">base_</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_string_hash.html#a1e3bd00bdcefc917a737ae578cb380dc">   69</a></span>&#160;  <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a1e3bd00bdcefc917a737ae578cb380dc">StringHash</a>() {}</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_string_hash.html#a153cc0b2eab1e9981d10fbef0d5a0969">   75</a></span>&#160;  <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a153cc0b2eab1e9981d10fbef0d5a0969">StringHash</a>(<span class="keyword">const</span> std::string&amp; s, <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> base = 131ULL) { <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a2262d000378aa5f7ac31336dda4a4dcb">build</a>(s, base); }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_string_hash.html#a2262d000378aa5f7ac31336dda4a4dcb">   82</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a2262d000378aa5f7ac31336dda4a4dcb">build</a>(<span class="keyword">const</span> std::string&amp; s, <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> base = 131ULL) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#ac6271377f5c72692dc38becf17d77f96">n_</a> = s.size(); <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a7acdf775229a935d84e7cfb728837755">base_</a> = base % MOD1;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a88cd031bc1d8201f3fc8b25cdc88fe54">h1_</a>.assign(<a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#ac6271377f5c72692dc38becf17d77f96">n_</a> + 1, 0); <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a71b26394eaa4027b79bef145dc5d0d8d">h2_</a>.assign(<a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#ac6271377f5c72692dc38becf17d77f96">n_</a> + 1, 0);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a73c223693d6964787118c5e29d3ce87c">p1_</a>.assign(<a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#ac6271377f5c72692dc38becf17d77f96">n_</a> + 1, 1); <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a9b24b7c7d313c3b1b7f8cad39900ae44">p2_</a>.assign(<a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#ac6271377f5c72692dc38becf17d77f96">n_</a> + 1, 1);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#ac6271377f5c72692dc38becf17d77f96">n_</a>; ++i) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a88cd031bc1d8201f3fc8b25cdc88fe54">h1_</a>[i + 1] = (<a class="code" href="namespacewbwlib_1_1str_1_1hashingdetail.html#a3dbdd8d90d009f1f0e2bec2d4570383b">hashingdetail::mulmod</a>(<a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a88cd031bc1d8201f3fc8b25cdc88fe54">h1_</a>[i], <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a7acdf775229a935d84e7cfb728837755">base_</a>, MOD1) + (<a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>)s[i]) % MOD1;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a71b26394eaa4027b79bef145dc5d0d8d">h2_</a>[i + 1] = (<a class="code" href="namespacewbwlib_1_1str_1_1hashingdetail.html#a3dbdd8d90d009f1f0e2bec2d4570383b">hashingdetail::mulmod</a>(<a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a71b26394eaa4027b79bef145dc5d0d8d">h2_</a>[i], <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a7acdf775229a935d84e7cfb728837755">base_</a>, MOD2) + (<a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>)s[i]) % MOD2;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a73c223693d6964787118c5e29d3ce87c">p1_</a>[i + 1] = <a class="code" href="namespacewbwlib_1_1str_1_1hashingdetail.html#a3dbdd8d90d009f1f0e2bec2d4570383b">hashingdetail::mulmod</a>(<a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a73c223693d6964787118c5e29d3ce87c">p1_</a>[i], <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a7acdf775229a935d84e7cfb728837755">base_</a>, MOD1);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a9b24b7c7d313c3b1b7f8cad39900ae44">p2_</a>[i + 1] = <a class="code" href="namespacewbwlib_1_1str_1_1hashingdetail.html#a3dbdd8d90d009f1f0e2bec2d4570383b">hashingdetail::mulmod</a>(<a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a9b24b7c7d313c3b1b7f8cad39900ae44">p2_</a>[i], <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a7acdf775229a935d84e7cfb728837755">base_</a>, MOD2);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_string_hash.html#a7f4841aeaf3cd5a7fb7863f771e4e91c">  100</a></span>&#160;  <a class="code" href="structwbwlib_1_1str_1_1_hash_val.html">HashVal</a> <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a7f4841aeaf3cd5a7fb7863f771e4e91c">sub</a>(<span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> a = (<a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a88cd031bc1d8201f3fc8b25cdc88fe54">h1_</a>[r] + MOD1 - <a class="code" href="namespacewbwlib_1_1str_1_1hashingdetail.html#a3dbdd8d90d009f1f0e2bec2d4570383b">hashingdetail::mulmod</a>(<a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a88cd031bc1d8201f3fc8b25cdc88fe54">h1_</a>[l - 1], <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a73c223693d6964787118c5e29d3ce87c">p1_</a>[r - l + 1], MOD1)) % MOD1;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> b = (<a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a71b26394eaa4027b79bef145dc5d0d8d">h2_</a>[r] + MOD2 - <a class="code" href="namespacewbwlib_1_1str_1_1hashingdetail.html#a3dbdd8d90d009f1f0e2bec2d4570383b">hashingdetail::mulmod</a>(<a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a71b26394eaa4027b79bef145dc5d0d8d">h2_</a>[l - 1], <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a9b24b7c7d313c3b1b7f8cad39900ae44">p2_</a>[r - l + 1], MOD2)) % MOD2;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> {a, b};</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_string_hash.html#a4978d526358b50b6c2094877ba0aac22">  110</a></span>&#160;  <a class="code" href="structwbwlib_1_1str_1_1_hash_val.html">HashVal</a> <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a4978d526358b50b6c2094877ba0aac22">all</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> {<a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a88cd031bc1d8201f3fc8b25cdc88fe54">h1_</a>[<a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#ac6271377f5c72692dc38becf17d77f96">n_</a>], <a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#a71b26394eaa4027b79bef145dc5d0d8d">h2_</a>[<a class="code" href="classwbwlib_1_1str_1_1_string_hash.html#ac6271377f5c72692dc38becf17d77f96">n_</a>]}; }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;} <span class="comment">// namespace str</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_STR_ROLLING_HASH_HPP</span></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_string_hash_html"><div class="ttname"><a href="classwbwlib_1_1str_1_1_string_hash.html">wbwlib::str::StringHash</a></div><div class="ttdoc">字符串双哈希：模数模板化（默认 1e9+7 / 1e9+9），预处理 O(n) 后子串哈希 O(1)。</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:62</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_string_hash_html_a153cc0b2eab1e9981d10fbef0d5a0969"><div class="ttname"><a href="classwbwlib_1_1str_1_1_string_hash.html#a153cc0b2eab1e9981d10fbef0d5a0969">wbwlib::str::StringHash::StringHash</a></div><div class="ttdeci">StringHash(const std::string &amp;s, u64 base=131ULL)</div><div class="ttdoc">以 base 为基底构造哈希（s 下标按字符码）。</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:75</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_string_hash_html_a1e3bd00bdcefc917a737ae578cb380dc"><div class="ttname"><a href="classwbwlib_1_1str_1_1_string_hash.html#a1e3bd00bdcefc917a737ae578cb380dc">wbwlib::str::StringHash::StringHash</a></div><div class="ttdeci">StringHash()</div><div class="ttdoc">构造空哈希，需再调用 build。</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:69</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_string_hash_html_a2262d000378aa5f7ac31336dda4a4dcb"><div class="ttname"><a href="classwbwlib_1_1str_1_1_string_hash.html#a2262d000378aa5f7ac31336dda4a4dcb">wbwlib::str::StringHash::build</a></div><div class="ttdeci">void build(const std::string &amp;s, u64 base=131ULL)</div><div class="ttdoc">构建哈希前缀与基底幂表： 。</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:82</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_string_hash_html_a4978d526358b50b6c2094877ba0aac22"><div class="ttname"><a href="classwbwlib_1_1str_1_1_string_hash.html#a4978d526358b50b6c2094877ba0aac22">wbwlib::str::StringHash::all</a></div><div class="ttdeci">HashVal all() const</div><div class="ttdoc">整个字符串的哈希值（拼接子串哈希时用）。</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:110</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_string_hash_html_a71b26394eaa4027b79bef145dc5d0d8d"><div class="ttname"><a href="classwbwlib_1_1str_1_1_string_hash.html#a71b26394eaa4027b79bef145dc5d0d8d">wbwlib::str::StringHash::h2_</a></div><div class="ttdeci">std::vector&lt; u64 &gt; h2_</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:63</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_string_hash_html_a73c223693d6964787118c5e29d3ce87c"><div class="ttname"><a href="classwbwlib_1_1str_1_1_string_hash.html#a73c223693d6964787118c5e29d3ce87c">wbwlib::str::StringHash::p1_</a></div><div class="ttdeci">std::vector&lt; u64 &gt; p1_</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:63</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_string_hash_html_a7acdf775229a935d84e7cfb728837755"><div class="ttname"><a href="classwbwlib_1_1str_1_1_string_hash.html#a7acdf775229a935d84e7cfb728837755">wbwlib::str::StringHash::base_</a></div><div class="ttdeci">u64 base_</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:65</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_string_hash_html_a7f4841aeaf3cd5a7fb7863f771e4e91c"><div class="ttname"><a href="classwbwlib_1_1str_1_1_string_hash.html#a7f4841aeaf3cd5a7fb7863f771e4e91c">wbwlib::str::StringHash::sub</a></div><div class="ttdeci">HashVal sub(int l, int r) const</div><div class="ttdoc">子串 [l, r]（1 基闭区间）的双哈希： 。</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:100</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_string_hash_html_a88cd031bc1d8201f3fc8b25cdc88fe54"><div class="ttname"><a href="classwbwlib_1_1str_1_1_string_hash.html#a88cd031bc1d8201f3fc8b25cdc88fe54">wbwlib::str::StringHash::h1_</a></div><div class="ttdeci">std::vector&lt; u64 &gt; h1_</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:63</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_string_hash_html_a9b24b7c7d313c3b1b7f8cad39900ae44"><div class="ttname"><a href="classwbwlib_1_1str_1_1_string_hash.html#a9b24b7c7d313c3b1b7f8cad39900ae44">wbwlib::str::StringHash::p2_</a></div><div class="ttdeci">std::vector&lt; u64 &gt; p2_</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:63</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_string_hash_html_ac6271377f5c72692dc38becf17d77f96"><div class="ttname"><a href="classwbwlib_1_1str_1_1_string_hash.html#ac6271377f5c72692dc38becf17d77f96">wbwlib::str::StringHash::n_</a></div><div class="ttdeci">size_t n_</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:64</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1str_1_1hashingdetail_html_a3dbdd8d90d009f1f0e2bec2d4570383b"><div class="ttname"><a href="namespacewbwlib_1_1str_1_1hashingdetail.html#a3dbdd8d90d009f1f0e2bec2d4570383b">wbwlib::str::hashingdetail::mulmod</a></div><div class="ttdeci">u64 mulmod(u64 a, u64 b, u64 m)</div><div class="ttdoc">任意模数安全乘法：$ (a cdot b) &#x2408;mod m $（__int128 中间值，任意 64 位模数可用）</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:52</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+<div class="ttc" id="anamespacewbwlib_html_a03099a64026b5d6da75d85536641664e"><div class="ttname"><a href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">wbwlib::u64</a></div><div class="ttdeci">std::uint64_t u64</div><div class="ttdoc">64 位无符号整数</div><div class="ttdef"><b>Definition:</b> base.hpp:102</div></div>
+<div class="ttc" id="astructwbwlib_1_1str_1_1_hash_val_html"><div class="ttname"><a href="structwbwlib_1_1str_1_1_hash_val.html">wbwlib::str::HashVal</a></div><div class="ttdoc">双哈希值：两条路哈希以相等比较（a 路 mod MOD1，b 路 mod MOD2）。</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:33</div></div>
+<div class="ttc" id="astructwbwlib_1_1str_1_1_hash_val_html_a425503aa47f3253c74c1aaf8c8543d7f"><div class="ttname"><a href="structwbwlib_1_1str_1_1_hash_val.html#a425503aa47f3253c74c1aaf8c8543d7f">wbwlib::str::HashVal::b</a></div><div class="ttdeci">u64 b</div><div class="ttdoc">两条路哈希值</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:34</div></div>
+<div class="ttc" id="astructwbwlib_1_1str_1_1_hash_val_html_a4c0664ecaed59ea673a88f3dd8a916ad"><div class="ttname"><a href="structwbwlib_1_1str_1_1_hash_val.html#a4c0664ecaed59ea673a88f3dd8a916ad">wbwlib::str::HashVal::operator==</a></div><div class="ttdeci">bool operator==(const HashVal &amp;o) const</div><div class="ttdoc">判断两个哈希值是否相等。</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:40</div></div>
+<div class="ttc" id="astructwbwlib_1_1str_1_1_hash_val_html_a7819d6f2d69689b2ab3bf1907afde37f"><div class="ttname"><a href="structwbwlib_1_1str_1_1_hash_val.html#a7819d6f2d69689b2ab3bf1907afde37f">wbwlib::str::HashVal::operator!=</a></div><div class="ttdeci">bool operator!=(const HashVal &amp;o) const</div><div class="ttdoc">判断两个哈希值是否不等。</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:46</div></div>
+<div class="ttc" id="astructwbwlib_1_1str_1_1_hash_val_html_abe710a8b99d5417aabe81b4b2f40b0f4"><div class="ttname"><a href="structwbwlib_1_1str_1_1_hash_val.html#abe710a8b99d5417aabe81b4b2f40b0f4">wbwlib::str::HashVal::a</a></div><div class="ttdeci">u64 a</div><div class="ttdef"><b>Definition:</b> rolling-hash.hpp:34</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

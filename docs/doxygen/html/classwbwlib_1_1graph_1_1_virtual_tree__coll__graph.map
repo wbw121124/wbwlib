@@ -1,0 +1,4 @@
+<map id="wbwlib::graph::VirtualTree" name="wbwlib::graph::VirtualTree">
+<area shape="rect" id="node1" title="虚树：保留关键点及其两两 LCA，压缩成 O(k) 规模的树。" alt="" coords="5,311,178,424"/>
+<area shape="rect" id="node2" href="$classwbwlib_1_1graph_1_1_l_c_a.html" title="LCA：倍增法，O(n log n) 预处理、O(log n) 查询，附树深/子树大小/DFS 序/第 k 祖先。" alt="" coords="24,5,159,247"/>
+</map>

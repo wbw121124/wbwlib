@@ -1,0 +1,209 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/math/primes.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_3daf11f4f079b8f8f9a94cd388c9bdee.html">math</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">primes.hpp 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>质数工具：线性筛（素数/欧拉函数/莫比乌斯函数）、Miller-Rabin 素性测试、 Pollard-Rho 质因数分解。  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;random&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="base_8hpp_source.html">wbwlib/core/base.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="number-theory_8hpp_source.html">wbwlib/math/number-theory.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+primes.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="primes_8hpp__incl.png" border="0" usemap="#awbwlib_2math_2primes_8hpp" alt=""/></div>
+<map name="awbwlib_2math_2primes_8hpp" id="awbwlib_2math_2primes_8hpp">
+<area shape="rect" title="质数工具：线性筛（素数/欧拉函数/莫比乌斯函数）、Miller&#45;Rabin 素性测试、 Pollard&#45;Rho 质因数分解。" alt="" coords="149,5,312,33"/>
+<area shape="rect" title=" " alt="" coords="5,89,80,117"/>
+<area shape="rect" title=" " alt="" coords="104,89,168,117"/>
+<area shape="rect" title=" " alt="" coords="218,249,270,277"/>
+<area shape="rect" title=" " alt="" coords="254,173,311,201"/>
+<area shape="rect" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="394,173,542,201"/>
+<area shape="rect" href="number-theory_8hpp.html" title="数论基础：快速幂、快速乘、gcd/lcm、扩展欧几里得、逆元、CRT/EXCRT、欧拉定理、整除分块。" alt="" coords="293,81,435,125"/>
+<area shape="rect" title=" " alt="" coords="294,249,354,277"/>
+<area shape="rect" title=" " alt="" coords="378,249,443,277"/>
+<area shape="rect" title=" " alt="" coords="466,249,531,277"/>
+<area shape="rect" title=" " alt="" coords="555,249,634,277"/>
+<area shape="rect" title=" " alt="" coords="657,249,740,277"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="primes_8hpp__dep__incl.png" border="0" usemap="#awbwlib_2math_2primes_8hppdep" alt=""/></div>
+<map name="awbwlib_2math_2primes_8hppdep" id="awbwlib_2math_2primes_8hppdep">
+<area shape="rect" title="质数工具：线性筛（素数/欧拉函数/莫比乌斯函数）、Miller&#45;Rabin 素性测试、 Pollard&#45;Rho 质因数分解。" alt="" coords="5,5,168,33"/>
+<area shape="rect" href="math_8hpp.html" title="math 模块聚合头：一次引入本模块全部头文件。" alt="" coords="10,173,163,201"/>
+<area shape="rect" href="primitive-root_8hpp.html" title="原根求解：求模 p 意义下的最小原根（常用 NTT 前置，p 为质数）。" alt="" coords="69,81,216,125"/>
+<area shape="rect" href="wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="21,249,152,277"/>
+</map>
+</div>
+</div>
+<p><a href="primes_8hpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1math_1_1_sieve_result.html">wbwlib::math::SieveResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">线性筛的结果：素数列表、欧拉函数、莫比乌斯函数与素性标记（均含下标 0..n）。  <a href="structwbwlib_1_1math_1_1_sieve_result.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacewbwlib"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib.html">wbwlib</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacewbwlib_1_1math"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html">wbwlib::math</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ae5f3a90ec71723ca6895d9b4c1a89e8d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#ae5f3a90ec71723ca6895d9b4c1a89e8d">wbwlib::math::sieve</a> (int n)</td></tr>
+<tr class="memdesc:ae5f3a90ec71723ca6895d9b4c1a89e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">线性欧拉筛：返回 [2, n] 的所有素数。  <a href="namespacewbwlib_1_1math.html#ae5f3a90ec71723ca6895d9b4c1a89e8d">更多...</a><br /></td></tr>
+<tr class="separator:ae5f3a90ec71723ca6895d9b4c1a89e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3140b389bd34577156a10454a7a7f68"><td class="memItemLeft" align="right" valign="top">SieveResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#ad3140b389bd34577156a10454a7a7f68">wbwlib::math::linear_sieve</a> (int n)</td></tr>
+<tr class="memdesc:ad3140b389bd34577156a10454a7a7f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">线性筛同时求欧拉函数 phi 与莫比乌斯函数 mu（n &lt;= 1e7）。  <a href="namespacewbwlib_1_1math.html#ad3140b389bd34577156a10454a7a7f68">更多...</a><br /></td></tr>
+<tr class="separator:ad3140b389bd34577156a10454a7a7f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af9d76ca843ef0ded57d8ee91ccfc40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a8af9d76ca843ef0ded57d8ee91ccfc40">wbwlib::math::is_prime64</a> (u64 n)</td></tr>
+<tr class="memdesc:a8af9d76ca843ef0ded57d8ee91ccfc40"><td class="mdescLeft">&#160;</td><td class="mdescRight">对 64 位整数做确定性 Miller-Rabin 素性测试。  <a href="namespacewbwlib_1_1math.html#a8af9d76ca843ef0ded57d8ee91ccfc40">更多...</a><br /></td></tr>
+<tr class="separator:a8af9d76ca843ef0ded57d8ee91ccfc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa371fedd94ed8e074c30dcc407708134"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aa371fedd94ed8e074c30dcc407708134"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#aa371fedd94ed8e074c30dcc407708134">wbwlib::math::is_prime_small</a> (T n)</td></tr>
+<tr class="memdesc:aa371fedd94ed8e074c30dcc407708134"><td class="mdescLeft">&#160;</td><td class="mdescRight">试除法素性测试（适合小整数），复杂度 \(O(\sqrt n)\)。  <a href="namespacewbwlib_1_1math.html#aa371fedd94ed8e074c30dcc407708134">更多...</a><br /></td></tr>
+<tr class="separator:aa371fedd94ed8e074c30dcc407708134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4dfb14aa554cc767bb64bf4b1ab86da"><td class="memItemLeft" align="right" valign="top">u64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#ab4dfb14aa554cc767bb64bf4b1ab86da">wbwlib::math::pollard_rho</a> (u64 n)</td></tr>
+<tr class="memdesc:ab4dfb14aa554cc767bb64bf4b1ab86da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pollard-Rho 伪随机游走：找到 n 的一个非平凡因子。  <a href="namespacewbwlib_1_1math.html#ab4dfb14aa554cc767bb64bf4b1ab86da">更多...</a><br /></td></tr>
+<tr class="separator:ab4dfb14aa554cc767bb64bf4b1ab86da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475a0a40f86134abd4c957da6fbdd4cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a475a0a40f86134abd4c957da6fbdd4cd">wbwlib::math::rho_factor</a> (u64 n, std::vector&lt; u64 &gt; &amp;factors)</td></tr>
+<tr class="memdesc:a475a0a40f86134abd4c957da6fbdd4cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">递归分解：把 n 的所有质因子（含重数）放入 factors。  <a href="namespacewbwlib_1_1math.html#a475a0a40f86134abd4c957da6fbdd4cd">更多...</a><br /></td></tr>
+<tr class="separator:a475a0a40f86134abd4c957da6fbdd4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1d08082651e922d01afda5621b5479d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; u64 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#aa1d08082651e922d01afda5621b5479d">wbwlib::math::factorize</a> (u64 n)</td></tr>
+<tr class="memdesc:aa1d08082651e922d01afda5621b5479d"><td class="mdescLeft">&#160;</td><td class="mdescRight">分解质因数，返回排序后的质因子列表（含重复）。  <a href="namespacewbwlib_1_1math.html#aa1d08082651e922d01afda5621b5479d">更多...</a><br /></td></tr>
+<tr class="separator:aa1d08082651e922d01afda5621b5479d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a136e7706dcc601cf2b63c3a7a660616f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; u64, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a136e7706dcc601cf2b63c3a7a660616f">wbwlib::math::factor_exp</a> (u64 n)</td></tr>
+<tr class="memdesc:a136e7706dcc601cf2b63c3a7a660616f"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回 \((p, e)\) 形式的质因数分解（质因子去重，附指数）。  <a href="namespacewbwlib_1_1math.html#a136e7706dcc601cf2b63c3a7a660616f">更多...</a><br /></td></tr>
+<tr class="separator:a136e7706dcc601cf2b63c3a7a660616f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>质数工具：线性筛（素数/欧拉函数/莫比乌斯函数）、Miller-Rabin 素性测试、 Pollard-Rho 质因数分解。 </p>
+<dl class="section user"><dt>依赖</dt><dd><a class="el" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。">wbwlib/core/base.hpp</a>, <a class="el" href="number-theory_8hpp.html" title="数论基础：快速幂、快速乘、gcd/lcm、扩展欧几里得、逆元、CRT/EXCRT、欧拉定理、整除分块。">wbwlib/math/number-theory.hpp</a></dd></dl>
+<p>复杂度： 线性筛 O(n)；Miller-Rabin O(k log n)（64 位内确定性 7 基底）； Pollard-Rho 期望 O(n^{1/4})。 </p>
+</div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

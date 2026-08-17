@@ -1,0 +1,3 @@
+<map id="wbwlib::graph::LCA" name="wbwlib::graph::LCA">
+<area shape="rect" id="node1" title="LCA：倍增法，O(n log n) 预处理、O(log n) 查询，附树深/子树大小/DFS 序/第 k 祖先。" alt="" coords="5,5,141,247"/>
+</map>

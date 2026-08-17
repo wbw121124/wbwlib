@@ -1,0 +1,257 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/string/suffix-array.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_afebc595d8b67017c6a69c4771c58b6b.html">string</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">suffix-array.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="suffix-array_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_STR_SUFFIX_ARRAY_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_STR_SUFFIX_ARRAY_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span>str {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_suffix_array.html">   44</a></span>&#160;<span class="keyword">class </span><a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html">SuffixArray</a> {</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_suffix_array.html#afe632ce1698dacba9c483c6d459f1034">   45</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#afe632ce1698dacba9c483c6d459f1034">n_</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">   46</a></span>&#160;  std::vector&lt;int&gt; <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_suffix_array.html#acd618723f39011bdfcce20812b8b282d">   49</a></span>&#160;  std::vector&lt;int&gt; <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#a7cffd879d88c64072593a092199e012b">sa</a>, <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac17a8c38ff67a558c0c7bfa360884ec1">rank</a>, <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#acd618723f39011bdfcce20812b8b282d">height</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_suffix_array.html#acfafeb934fbc2b43b48898c383ebbdea">   55</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#acfafeb934fbc2b43b48898c383ebbdea">SuffixArray</a>(<span class="keyword">const</span> std::string&amp; s) { <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#a416a67ed470bca1f9a4dd102006ce761">build</a>(s); }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_suffix_array.html#a416a67ed470bca1f9a4dd102006ce761">   61</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#a416a67ed470bca1f9a4dd102006ce761">build</a>(<span class="keyword">const</span> std::string&amp; s) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> n = (int)s.size();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#afe632ce1698dacba9c483c6d459f1034">n_</a> = n;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> m = n + 1;                     <span class="comment">// 含哨兵，共 m 个后缀对象</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    std::vector&lt;int&gt; a(m);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) a[i] = (<span class="keywordtype">int</span>)(<span class="keywordtype">unsigned</span> char)s[i] + 1;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    a[n] = 0;                          <span class="comment">// 哨兵最小</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    std::vector&lt;int&gt; rk(m), init_ord(m);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// ---- 初始按第一字符计数排序 ----</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">int</span> K = 256;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m; ++i) init_ord[i] = i;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>.assign(K + 1, 0);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x : a) ++<a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>[x];</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= K; ++i) <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>[i] += <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>[i - 1];</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = m - 1; i &gt;= 0; --i) init_ord[--<a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>[a[i]]] = i;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">// 初始排名（字符类）</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">int</span> cls = 0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    rk[init_ord[0]] = 0;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; m; ++i) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">if</span> (a[init_ord[i]] == a[init_ord[i - 1]]) rk[init_ord[i]] = cls;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keywordflow">else</span> rk[init_ord[i]] = ++cls;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">// ---- 倍增 ----</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 1; k &lt; m &amp;&amp; cls &lt; m - 1; k &lt;&lt;= 1) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> K2 = cls;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      std::vector&lt;int&gt; ord(m);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m; ++i) ord[i] = i;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="comment">// 先按第二关键字（i+k 处排名，越界视为 -1 排最前）稳定排序</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      std::vector&lt;int&gt; key2(m);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m; ++i) key2[i] = (i + k &lt; m) ? rk[i + k] + 1 : 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>.assign(K2 + 2, 0);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x : key2) ++<a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>[x];</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= K2 + 1; ++i) <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>[i] += <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>[i - 1];</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = m - 1; i &gt;= 0; --i) ord[--<a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>[key2[i]]] = i;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="comment">// 再按第一关键字 rk[i] 稳定排序</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>.assign(cls + 2, 0);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m; ++i) ++<a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>[rk[i]];</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= cls + 1; ++i) <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>[i] += <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>[i - 1];</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      std::vector&lt;int&gt; tmp(m);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = m - 1; i &gt;= 0; --i) tmp[--<a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>[rk[ord[i]]]] = ord[i];</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      ord.swap(tmp);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="comment">// 重新分配类</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      std::vector&lt;int&gt; nrk(m);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      nrk[ord[0]] = 0;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keywordtype">int</span> cnew = 0;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; m; ++i) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordtype">int</span> x = ord[i - 1], y = ord[i];</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">if</span> (rk[x] == rk[y] &amp;&amp;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            ((x + k &lt; m ? rk[x + k] : -1) == (y + k &lt; m ? rk[y + k] : -1)))</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;          nrk[y] = cnew;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">else</span> nrk[y] = ++cnew;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      cls = cnew;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      rk.swap(nrk);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">// init_ord 已无意义，最终顺序存于 rk 对应的排序后数组；</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">// 重新生成最终顺序 ord（含哨兵）：</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    std::vector&lt;int&gt; ord2(m);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m; ++i) ord2[i] = i;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="comment">// 按 rk 排序即最终后缀顺序（哨兵排最前）</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>.assign(cls + 2, 0);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m; ++i) ++<a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>[rk[i]];</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= cls + 1; ++i) <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>[i] += <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>[i - 1];</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      std::vector&lt;int&gt; tmp(m);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = m - 1; i &gt;= 0; --i) tmp[--<a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a>[rk[ord2[i]]]] = ord2[i];</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      ord2.swap(tmp);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">// ord2[0] 为哨兵后缀</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#a7cffd879d88c64072593a092199e012b">sa</a>.assign(n + 1, 0);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac17a8c38ff67a558c0c7bfa360884ec1">rank</a>.assign(n + 1, 0);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p = 1; p &lt;= n; ++p) {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      <span class="keywordtype">int</span> pos = ord2[p];</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#a7cffd879d88c64072593a092199e012b">sa</a>[p] = pos;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac17a8c38ff67a558c0c7bfa360884ec1">rank</a>[pos] = p;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment">// ---- Kasai 求 height ----</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#acd618723f39011bdfcce20812b8b282d">height</a>.assign(n + 1, 0);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">int</span> h = 0;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac17a8c38ff67a558c0c7bfa360884ec1">rank</a>[i] == 1) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;      <span class="keywordtype">int</span> j = <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#a7cffd879d88c64072593a092199e012b">sa</a>[<a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac17a8c38ff67a558c0c7bfa360884ec1">rank</a>[i] - 1];</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <span class="keywordflow">while</span> (i + h &lt; n &amp;&amp; j + h &lt; n &amp;&amp; s[i + h] == s[j + h]) ++h;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#acd618723f39011bdfcce20812b8b282d">height</a>[<a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac17a8c38ff67a558c0c7bfa360884ec1">rank</a>[i]] = h;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      <span class="keywordflow">if</span> (h) --h;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_suffix_array.html#a47e4797b527964ff15d4c45067661dac">  151</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#a47e4797b527964ff15d4c45067661dac">size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#afe632ce1698dacba9c483c6d459f1034">n_</a>; }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="classwbwlib_1_1str_1_1_suffix_array.html#aaaadcf1d93d052949722beda651ccf0c">  159</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#aaaadcf1d93d052949722beda651ccf0c">lcp</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">if</span> (i == j) <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#afe632ce1698dacba9c483c6d459f1034">n_</a> - i;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">int</span> ri = <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac17a8c38ff67a558c0c7bfa360884ec1">rank</a>[i], rj = <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#ac17a8c38ff67a558c0c7bfa360884ec1">rank</a>[j];</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">if</span> (ri &gt; rj) std::swap(ri, rj);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">// 区间 height 最小值：[ri+1, rj]（朴素 O(n)；需要 O(1) 请配 ST 表）</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">int</span> res = 0x7fffffff;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p = ri + 1; p &lt;= rj; ++p) res = std::min(res, <a class="code" href="classwbwlib_1_1str_1_1_suffix_array.html#acd618723f39011bdfcce20812b8b282d">height</a>[p]);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;};</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;} <span class="comment">// namespace str</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_STR_SUFFIX_ARRAY_HPP</span></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_suffix_array_html"><div class="ttname"><a href="classwbwlib_1_1str_1_1_suffix_array.html">wbwlib::str::SuffixArray</a></div><div class="ttdoc">后缀数组：倍增 + 计数排序构造，附 rank、height（LCP）数组。</div><div class="ttdef"><b>Definition:</b> suffix-array.hpp:44</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_suffix_array_html_a416a67ed470bca1f9a4dd102006ce761"><div class="ttname"><a href="classwbwlib_1_1str_1_1_suffix_array.html#a416a67ed470bca1f9a4dd102006ce761">wbwlib::str::SuffixArray::build</a></div><div class="ttdeci">void build(const std::string &amp;s)</div><div class="ttdoc">构建后缀数组：倍增 + 计数排序，最后用 Kasai 求 height。</div><div class="ttdef"><b>Definition:</b> suffix-array.hpp:61</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_suffix_array_html_a47e4797b527964ff15d4c45067661dac"><div class="ttname"><a href="classwbwlib_1_1str_1_1_suffix_array.html#a47e4797b527964ff15d4c45067661dac">wbwlib::str::SuffixArray::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">返回字符串长度 n</div><div class="ttdef"><b>Definition:</b> suffix-array.hpp:151</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_suffix_array_html_a7cffd879d88c64072593a092199e012b"><div class="ttname"><a href="classwbwlib_1_1str_1_1_suffix_array.html#a7cffd879d88c64072593a092199e012b">wbwlib::str::SuffixArray::sa</a></div><div class="ttdeci">std::vector&lt; int &gt; sa</div><div class="ttdef"><b>Definition:</b> suffix-array.hpp:49</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_suffix_array_html_aaaadcf1d93d052949722beda651ccf0c"><div class="ttname"><a href="classwbwlib_1_1str_1_1_suffix_array.html#aaaadcf1d93d052949722beda651ccf0c">wbwlib::str::SuffixArray::lcp</a></div><div class="ttdeci">int lcp(int i, int j) const</div><div class="ttdoc">位置 i 与 j 两后缀的 LCP 长度（朴素区间 height 最小值，O(n)；需要 O(1) 请配 ST 表）。</div><div class="ttdef"><b>Definition:</b> suffix-array.hpp:159</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_suffix_array_html_ac17a8c38ff67a558c0c7bfa360884ec1"><div class="ttname"><a href="classwbwlib_1_1str_1_1_suffix_array.html#ac17a8c38ff67a558c0c7bfa360884ec1">wbwlib::str::SuffixArray::rank</a></div><div class="ttdeci">std::vector&lt; int &gt; rank</div><div class="ttdef"><b>Definition:</b> suffix-array.hpp:49</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_suffix_array_html_ac934f85c5ab23b59d26c169885008471"><div class="ttname"><a href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">wbwlib::str::SuffixArray::cnt_</a></div><div class="ttdeci">std::vector&lt; int &gt; cnt_</div><div class="ttdef"><b>Definition:</b> suffix-array.hpp:46</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_suffix_array_html_acd618723f39011bdfcce20812b8b282d"><div class="ttname"><a href="classwbwlib_1_1str_1_1_suffix_array.html#acd618723f39011bdfcce20812b8b282d">wbwlib::str::SuffixArray::height</a></div><div class="ttdeci">std::vector&lt; int &gt; height</div><div class="ttdef"><b>Definition:</b> suffix-array.hpp:49</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_suffix_array_html_acfafeb934fbc2b43b48898c383ebbdea"><div class="ttname"><a href="classwbwlib_1_1str_1_1_suffix_array.html#acfafeb934fbc2b43b48898c383ebbdea">wbwlib::str::SuffixArray::SuffixArray</a></div><div class="ttdeci">SuffixArray(const std::string &amp;s)</div><div class="ttdoc">由字符串 s 直接构造后缀数组。</div><div class="ttdef"><b>Definition:</b> suffix-array.hpp:55</div></div>
+<div class="ttc" id="aclasswbwlib_1_1str_1_1_suffix_array_html_afe632ce1698dacba9c483c6d459f1034"><div class="ttname"><a href="classwbwlib_1_1str_1_1_suffix_array.html#afe632ce1698dacba9c483c6d459f1034">wbwlib::str::SuffixArray::n_</a></div><div class="ttdeci">int n_</div><div class="ttdef"><b>Definition:</b> suffix-array.hpp:45</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

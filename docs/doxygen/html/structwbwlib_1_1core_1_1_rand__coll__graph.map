@@ -1,0 +1,3 @@
+<map id="wbwlib::core::Rand" name="wbwlib::core::Rand">
+<area shape="rect" id="node1" title="MT19937_64 无缝封装（线程不安全，OI 单线程足够）。" alt="" coords="5,5,139,215"/>
+</map>

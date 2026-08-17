@@ -1,0 +1,5 @@
+<map id="wbwlib/dp/digit&#45;dp.hpp" name="wbwlib/dp/digit&#45;dp.hpp">
+<area shape="rect" id="node1" title="数位 DP：经典统计模板（上限 ≤ N）。" alt="" coords="5,5,156,33"/>
+<area shape="rect" id="node2" href="$dp_8hpp.html" title="dp 模块聚合头：一次引入本模块全部头文件。" alt="" coords="19,81,142,109"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="15,157,146,185"/>
+</map>

@@ -5,9 +5,11 @@
  * @file euler-path.hpp
  * @brief 欧拉路径 / 欧拉回路（Hierholzer，有向/无向）。
  *
- * 依赖：wbwlib/core/base.hpp、wbwlib/graph/adjacency.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp、wbwlib/graph/adjacency.hpp
  *
- * 复杂度：O(V+E)。
+ * @par 复杂度
+ * O(V+E)。
  *
  * 用法（无向图，图需本身连通）：
  *   std::vector<int> path;
@@ -28,8 +30,12 @@
 namespace wbwlib {
 namespace graph {
 
-/// 无向图欧拉路径/回路。存在性由连通性 + 奇度点个数（≤2）决定。
-/// path 返回顶点行走序列（含首尾）。若无欧拉路径返回 false。
+/**
+ * @brief 无向图欧拉路径/回路（Hierholzer 删边式）。存在性由连通性 + 奇度点数（≤2）决定。
+ * @param g 无权邻接表（1 基，图需连通）
+ * @param path 输出参数，接收顶点行走序列（含首尾）
+ * @return 存在欧拉路径返回 true，否则 false
+ */
 inline bool euler_undirected(const Adj& g, std::vector<int>& path) {
   int n = (int)g.size() - 1;
   std::vector<int> deg(n + 1, 0);
@@ -66,7 +72,12 @@ inline bool euler_undirected(const Adj& g, std::vector<int>& path) {
   return true;
 }
 
-/// 有向图欧拉路径/回路。要求底图弱连通。
+/**
+ * @brief 有向图欧拉路径/回路（Hierholzer 删边式，要求底图弱连通）。判据：出度-入度均为 0，或恰一个 +1 起点与一个 -1 终点。
+ * @param g 无权邻接表（1 基）
+ * @param path 输出参数，接收顶点行走序列（含首尾）
+ * @return 存在欧拉路径返回 true，否则 false
+ */
 inline bool euler_directed(const Adj& g, std::vector<int>& path) {
   int n = (int)g.size() - 1;
   std::vector<int> indeg(n + 1, 0), outdeg(n + 1, 0);

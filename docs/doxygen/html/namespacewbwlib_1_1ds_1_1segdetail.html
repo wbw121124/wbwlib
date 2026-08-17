@@ -1,0 +1,386 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::ds::segdetail 命名空间参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1ds.html">ds</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1ds_1_1segdetail.html">segdetail</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::ds::segdetail 命名空间参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:aae45e775aee194a015b25168817cb871"><td class="memTemplParams" colspan="2">template&lt;class V &gt; </td></tr>
+<tr class="memitem:aae45e775aee194a015b25168817cb871"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds_1_1segdetail.html#aae45e775aee194a015b25168817cb871">def_pushup</a> (V &amp;o, const V &amp;a, const V &amp;b)</td></tr>
+<tr class="memdesc:aae45e775aee194a015b25168817cb871"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认 pushup：求和上拉  <a href="namespacewbwlib_1_1ds_1_1segdetail.html#aae45e775aee194a015b25168817cb871">更多...</a><br /></td></tr>
+<tr class="separator:aae45e775aee194a015b25168817cb871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9acc5426c3e14f8fef77a7ec3f1308ba"><td class="memTemplParams" colspan="2">template&lt;class V , class T &gt; </td></tr>
+<tr class="memitem:a9acc5426c3e14f8fef77a7ec3f1308ba"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds_1_1segdetail.html#a9acc5426c3e14f8fef77a7ec3f1308ba">def_addtag</a> (V &amp;o, const T &amp;t, int l, int r)</td></tr>
+<tr class="memdesc:a9acc5426c3e14f8fef77a7ec3f1308ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认 addtag：区间加（sum 语义，o += tag*(r-l+1)）  <a href="namespacewbwlib_1_1ds_1_1segdetail.html#a9acc5426c3e14f8fef77a7ec3f1308ba">更多...</a><br /></td></tr>
+<tr class="separator:a9acc5426c3e14f8fef77a7ec3f1308ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae44b61c1a8c754eea273e757ef0ff9ea"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ae44b61c1a8c754eea273e757ef0ff9ea"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds_1_1segdetail.html#ae44b61c1a8c754eea273e757ef0ff9ea">def_hastag</a> (const T &amp;t)</td></tr>
+<tr class="memdesc:ae44b61c1a8c754eea273e757ef0ff9ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认 hastag：tag != 0（数值型标记）  <a href="namespacewbwlib_1_1ds_1_1segdetail.html#ae44b61c1a8c754eea273e757ef0ff9ea">更多...</a><br /></td></tr>
+<tr class="separator:ae44b61c1a8c754eea273e757ef0ff9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64460d587cd7f6c5f0d8176de3a139c2"><td class="memTemplParams" colspan="2">template&lt;class V &gt; </td></tr>
+<tr class="memitem:a64460d587cd7f6c5f0d8176de3a139c2"><td class="memTemplItemLeft" align="right" valign="top">V&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds_1_1segdetail.html#a64460d587cd7f6c5f0d8176de3a139c2">def_merge</a> (const V &amp;a, const V &amp;b)</td></tr>
+<tr class="memdesc:a64460d587cd7f6c5f0d8176de3a139c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认 merge：求和  <a href="namespacewbwlib_1_1ds_1_1segdetail.html#a64460d587cd7f6c5f0d8176de3a139c2">更多...</a><br /></td></tr>
+<tr class="separator:a64460d587cd7f6c5f0d8176de3a139c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61f44a3df26ef7a1b6cb880624919056"><td class="memTemplParams" colspan="2">template&lt;class V &gt; </td></tr>
+<tr class="memitem:a61f44a3df26ef7a1b6cb880624919056"><td class="memTemplItemLeft" align="right" valign="top">V&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds_1_1segdetail.html#a61f44a3df26ef7a1b6cb880624919056">def_nullval</a> ()</td></tr>
+<tr class="memdesc:a61f44a3df26ef7a1b6cb880624919056"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认 nullval：0  <a href="namespacewbwlib_1_1ds_1_1segdetail.html#a61f44a3df26ef7a1b6cb880624919056">更多...</a><br /></td></tr>
+<tr class="separator:a61f44a3df26ef7a1b6cb880624919056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7a0170ef7538f37fe475ea832cf1239"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ad7a0170ef7538f37fe475ea832cf1239"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds_1_1segdetail.html#ad7a0170ef7538f37fe475ea832cf1239">def_compose</a> (T &amp;o, const T &amp;t)</td></tr>
+<tr class="memdesc:ad7a0170ef7538f37fe475ea832cf1239"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认 compose_tag：加法复合（区间加场景）  <a href="namespacewbwlib_1_1ds_1_1segdetail.html#ad7a0170ef7538f37fe475ea832cf1239">更多...</a><br /></td></tr>
+<tr class="separator:ad7a0170ef7538f37fe475ea832cf1239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a9acc5426c3e14f8fef77a7ec3f1308ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9acc5426c3e14f8fef77a7ec3f1308ba">&#9670;&nbsp;</a></span>def_addtag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class V , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::ds::segdetail::def_addtag </td>
+          <td>(</td>
+          <td class="paramtype">V &amp;&#160;</td>
+          <td class="paramname"><em>o</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认 addtag：区间加（sum 语义，o += tag*(r-l+1)） </p>
+
+</div>
+</div>
+<a id="ad7a0170ef7538f37fe475ea832cf1239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7a0170ef7538f37fe475ea832cf1239">&#9670;&nbsp;</a></span>def_compose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::ds::segdetail::def_compose </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>o</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认 compose_tag：加法复合（区间加场景） </p>
+
+</div>
+</div>
+<a id="ae44b61c1a8c754eea273e757ef0ff9ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae44b61c1a8c754eea273e757ef0ff9ea">&#9670;&nbsp;</a></span>def_hastag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wbwlib::ds::segdetail::def_hastag </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认 hastag：tag != 0（数值型标记） </p>
+
+</div>
+</div>
+<a id="a64460d587cd7f6c5f0d8176de3a139c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64460d587cd7f6c5f0d8176de3a139c2">&#9670;&nbsp;</a></span>def_merge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class V &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">V wbwlib::ds::segdetail::def_merge </td>
+          <td>(</td>
+          <td class="paramtype">const V &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const V &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认 merge：求和 </p>
+
+</div>
+</div>
+<a id="a61f44a3df26ef7a1b6cb880624919056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61f44a3df26ef7a1b6cb880624919056">&#9670;&nbsp;</a></span>def_nullval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class V &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">V wbwlib::ds::segdetail::def_nullval </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认 nullval：0 </p>
+
+</div>
+</div>
+<a id="aae45e775aee194a015b25168817cb871"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae45e775aee194a015b25168817cb871">&#9670;&nbsp;</a></span>def_pushup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class V &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::ds::segdetail::def_pushup </td>
+          <td>(</td>
+          <td class="paramtype">V &amp;&#160;</td>
+          <td class="paramname"><em>o</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const V &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const V &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认 pushup：求和上拉 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

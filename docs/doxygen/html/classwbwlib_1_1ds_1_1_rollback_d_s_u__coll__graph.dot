@@ -1,0 +1,7 @@
+digraph "wbwlib::ds::RollbackDSU"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::ds::RollbackDSU\n|- fa_\l- sz_\l- hist_\l|+ RollbackDSU()\l+ unite()\l+ same()\l+ rollback()\l+ snapshot()\l+ rollback_to()\l- find()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="可撤销并查集：按大小合并（不做路径压缩），支持栈式回滚。"];
+}

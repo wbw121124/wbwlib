@@ -1,0 +1,259 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/graph/lca.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_eb5e8cb22b4df04bf6d97bd1e7f427e8.html">graph</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">lca.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lca_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_GRAPH_LCA_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_GRAPH_LCA_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="adjacency_8hpp.html">wbwlib/graph/adjacency.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>graph {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_l_c_a.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html">LCA</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_l_c_a.html#a954c618ae1c18acab397398a19ebe355">   34</a></span>&#160;  std::vector&lt;int&gt; <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a7c18504eb3839ea97363d7a0acbf5d0f">fa</a>, <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a954c618ae1c18acab397398a19ebe355">dep</a>, <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a3f14cdbc601f57ebbe1dae712f93401b">sz</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_l_c_a.html#af93c17894521b3ee43fe18b3389ba8d0">   35</a></span>&#160;  std::vector&lt;int&gt; <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#af93c17894521b3ee43fe18b3389ba8d0">tin</a>, <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#aa466ce40d178aecc803cad65ee243198">tout</a>;     </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_l_c_a.html#a6c9ffe62e31a35e2a642dc12edc4b446">   36</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a6c9ffe62e31a35e2a642dc12edc4b446">LOG</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_l_c_a.html#a4b14c38d00e018c848aaffaaad26daaf">   43</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a4b14c38d00e018c848aaffaaad26daaf">LCA</a>(<span class="keyword">const</span> <a class="code" href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">Adj</a>&amp; g, <span class="keywordtype">int</span> root = 1) { <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a3561b7ecaf7477db57a5b762b71c158e">build</a>(g, root); }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_l_c_a.html#a3561b7ecaf7477db57a5b762b71c158e">   50</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a3561b7ecaf7477db57a5b762b71c158e">build</a>(<span class="keyword">const</span> <a class="code" href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">Adj</a>&amp; g, <span class="keywordtype">int</span> root = 1) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> n = (int)g.size() - 1;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a6c9ffe62e31a35e2a642dc12edc4b446">LOG</a> = 1;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">while</span> ((1 &lt;&lt; <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a6c9ffe62e31a35e2a642dc12edc4b446">LOG</a>) &lt;= n) ++<a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a6c9ffe62e31a35e2a642dc12edc4b446">LOG</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1294a069692b3301c519f3512bb6460d">up_</a>.assign(n + 1, std::vector&lt;int&gt;(<a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a6c9ffe62e31a35e2a642dc12edc4b446">LOG</a>, 0));</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a7c18504eb3839ea97363d7a0acbf5d0f">fa</a>.assign(n + 1, 0);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a954c618ae1c18acab397398a19ebe355">dep</a>.assign(n + 1, 0);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a3f14cdbc601f57ebbe1dae712f93401b">sz</a>.assign(n + 1, 0);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#af93c17894521b3ee43fe18b3389ba8d0">tin</a>.assign(n + 1, 0);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#aa466ce40d178aecc803cad65ee243198">tout</a>.assign(n + 1, 0);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> timer = 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    std::function&lt;void(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>)&gt; dfs = [&amp;](<span class="keywordtype">int</span> u, <span class="keywordtype">int</span> p) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a7c18504eb3839ea97363d7a0acbf5d0f">fa</a>[u] = p;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a954c618ae1c18acab397398a19ebe355">dep</a>[u] = <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a954c618ae1c18acab397398a19ebe355">dep</a>[p] + 1;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a3f14cdbc601f57ebbe1dae712f93401b">sz</a>[u] = 1;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#af93c17894521b3ee43fe18b3389ba8d0">tin</a>[u] = ++timer;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v : g[u]) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (v == p) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        dfs(v, u);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a3f14cdbc601f57ebbe1dae712f93401b">sz</a>[u] += <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a3f14cdbc601f57ebbe1dae712f93401b">sz</a>[v];</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#aa466ce40d178aecc803cad65ee243198">tout</a>[u] = ++timer;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    };</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    dfs(root, 0);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> u = 1; u &lt;= n; ++u) <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1294a069692b3301c519f3512bb6460d">up_</a>[u][0] = <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a7c18504eb3839ea97363d7a0acbf5d0f">fa</a>[u];</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 1; j &lt; <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a6c9ffe62e31a35e2a642dc12edc4b446">LOG</a>; ++j)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> u = 1; u &lt;= n; ++u)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1294a069692b3301c519f3512bb6460d">up_</a>[u][j] = <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1294a069692b3301c519f3512bb6460d">up_</a>[<a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1294a069692b3301c519f3512bb6460d">up_</a>[u][j - 1]][j - 1];</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_l_c_a.html#a9099e3c2a16b5bcfc0f126fda1674a1e">   86</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a9099e3c2a16b5bcfc0f126fda1674a1e">is_ancestor</a>(<span class="keywordtype">int</span> u, <span class="keywordtype">int</span> v)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#af93c17894521b3ee43fe18b3389ba8d0">tin</a>[u] &lt;= <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#af93c17894521b3ee43fe18b3389ba8d0">tin</a>[v] &amp;&amp; <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#aa466ce40d178aecc803cad65ee243198">tout</a>[v] &lt;= <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#aa466ce40d178aecc803cad65ee243198">tout</a>[u];</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1d38cb4021617936ac92035a7105e691">   96</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1d38cb4021617936ac92035a7105e691">query</a>(<span class="keywordtype">int</span> u, <span class="keywordtype">int</span> v)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a9099e3c2a16b5bcfc0f126fda1674a1e">is_ancestor</a>(u, v)) <span class="keywordflow">return</span> u;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a9099e3c2a16b5bcfc0f126fda1674a1e">is_ancestor</a>(v, u)) <span class="keywordflow">return</span> v;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a6c9ffe62e31a35e2a642dc12edc4b446">LOG</a> - 1; j &gt;= 0; --j)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1294a069692b3301c519f3512bb6460d">up_</a>[u][j] &amp;&amp; !<a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a9099e3c2a16b5bcfc0f126fda1674a1e">is_ancestor</a>(<a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1294a069692b3301c519f3512bb6460d">up_</a>[u][j], v)) u = <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1294a069692b3301c519f3512bb6460d">up_</a>[u][j];</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1294a069692b3301c519f3512bb6460d">up_</a>[u][0];</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_l_c_a.html#ad5fc2a5c84b03f7fced891641365dcda">  110</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#ad5fc2a5c84b03f7fced891641365dcda">kth</a>(<span class="keywordtype">int</span> u, <span class="keywordtype">int</span> k)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; k; ++j, k &gt;&gt;= 1)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keywordflow">if</span> (k &amp; 1) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        u = <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1294a069692b3301c519f3512bb6460d">up_</a>[u][j];</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">if</span> (u == 0) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> u;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1294a069692b3301c519f3512bb6460d">  121</a></span>&#160;  std::vector&lt;std::vector&lt;int&gt;&gt; <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1294a069692b3301c519f3512bb6460d">up_</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> W&gt;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html">  129</a></span>&#160;<span class="keyword">class </span><a class="code" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html">WeightedLCA</a> {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#a2612d3744259ed6422578eb214634f07">  131</a></span>&#160;  std::vector&lt;i64&gt; <a class="code" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#a2612d3744259ed6422578eb214634f07">dist_to_root</a>;   </div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#abb5e4959f5d5608a93abeafaae78f723">  132</a></span>&#160;  <a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html">LCA</a> <a class="code" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#abb5e4959f5d5608a93abeafaae78f723">lc</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#ab230b35b7b2f65fa884258f2b913dcd0">  139</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#ab230b35b7b2f65fa884258f2b913dcd0">WeightedLCA</a>(<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1graph_1_1_w_adj.html">WAdj&lt;W&gt;</a>&amp; g, <span class="keywordtype">int</span> root = 1) : <a class="code" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#abb5e4959f5d5608a93abeafaae78f723">lc</a>(<a class="code" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#a361c5751ee76ddc8d9fc1fa374ea8b83">unweighted</a>(g), root) {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">int</span> n = g.<a class="code" href="structwbwlib_1_1graph_1_1_w_adj.html#a30b4872dc580951253bb81dd317f1cfe">n</a>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#a2612d3744259ed6422578eb214634f07">dist_to_root</a>.assign(n + 1, 0);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    std::function&lt;void(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>)&gt; dfs = [&amp;](<span class="keywordtype">int</span> u, <span class="keywordtype">int</span> p, <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> d) {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;      <a class="code" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#a2612d3744259ed6422578eb214634f07">dist_to_root</a>[u] = d;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; e : g.<a class="code" href="structwbwlib_1_1graph_1_1_w_adj.html#a16d086e0e82fce6fbb6125ac9c11dc52">g</a>[u])</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">if</span> (e.first != p) dfs(e.first, u, d + e.second);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    };</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    dfs(root, 0, 0);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#a3fb8b769ccc67e03032bb5b47c58a104">  156</a></span>&#160;  <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#a3fb8b769ccc67e03032bb5b47c58a104">dist</a>(<span class="keywordtype">int</span> u, <span class="keywordtype">int</span> v)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">int</span> w = <a class="code" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#abb5e4959f5d5608a93abeafaae78f723">lc</a>.<a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1d38cb4021617936ac92035a7105e691">query</a>(u, v);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#a2612d3744259ed6422578eb214634f07">dist_to_root</a>[u] + <a class="code" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#a2612d3744259ed6422578eb214634f07">dist_to_root</a>[v] - 2 * <a class="code" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#a2612d3744259ed6422578eb214634f07">dist_to_root</a>[w];</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#ab7ca9969a6d90b08c35b30715b70c5b8">  167</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#ab7ca9969a6d90b08c35b30715b70c5b8">get_lca</a>(<span class="keywordtype">int</span> u, <span class="keywordtype">int</span> v)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#abb5e4959f5d5608a93abeafaae78f723">lc</a>.<a class="code" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1d38cb4021617936ac92035a7105e691">query</a>(u, v); }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#a361c5751ee76ddc8d9fc1fa374ea8b83">  171</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">Adj</a> <a class="code" href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#a361c5751ee76ddc8d9fc1fa374ea8b83">unweighted</a>(<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1graph_1_1_w_adj.html">WAdj&lt;W&gt;</a>&amp; g) {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">int</span> n = g.<a class="code" href="structwbwlib_1_1graph_1_1_w_adj.html#a30b4872dc580951253bb81dd317f1cfe">n</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">Adj</a> uw(n + 1);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> u = 1; u &lt;= n; ++u)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; e : g.<a class="code" href="structwbwlib_1_1graph_1_1_w_adj.html#a16d086e0e82fce6fbb6125ac9c11dc52">g</a>[u]) uw[u].push_back(e.first);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">return</span> uw;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;};</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;} <span class="comment">// namespace graph</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_GRAPH_LCA_HPP</span></div>
+<div class="ttc" id="aadjacency_8hpp_html"><div class="ttname"><a href="adjacency_8hpp.html">adjacency.hpp</a></div><div class="ttdoc">图表示约定：1 基邻接表 + 常用辅助。</div></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_l_c_a_html"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_l_c_a.html">wbwlib::graph::LCA</a></div><div class="ttdoc">LCA：倍增法，O(n log n) 预处理、O(log n) 查询，附树深/子树大小/DFS 序/第 k 祖先。</div><div class="ttdef"><b>Definition:</b> lca.hpp:32</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_l_c_a_html_a1294a069692b3301c519f3512bb6460d"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_l_c_a.html#a1294a069692b3301c519f3512bb6460d">wbwlib::graph::LCA::up_</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; int &gt; &gt; up_</div><div class="ttdoc">倍增表：up[u][j] 为 u 向上 2^j 层的祖先</div><div class="ttdef"><b>Definition:</b> lca.hpp:121</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_l_c_a_html_a1d38cb4021617936ac92035a7105e691"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_l_c_a.html#a1d38cb4021617936ac92035a7105e691">wbwlib::graph::LCA::query</a></div><div class="ttdeci">int query(int u, int v) const</div><div class="ttdoc">求 u 与 v 的最近公共祖先。</div><div class="ttdef"><b>Definition:</b> lca.hpp:96</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_l_c_a_html_a3561b7ecaf7477db57a5b762b71c158e"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_l_c_a.html#a3561b7ecaf7477db57a5b762b71c158e">wbwlib::graph::LCA::build</a></div><div class="ttdeci">void build(const Adj &amp;g, int root=1)</div><div class="ttdoc">构建：DFS 求 fa/dep/sz/tin/tout，再倍增填 up 表。</div><div class="ttdef"><b>Definition:</b> lca.hpp:50</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_l_c_a_html_a3f14cdbc601f57ebbe1dae712f93401b"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_l_c_a.html#a3f14cdbc601f57ebbe1dae712f93401b">wbwlib::graph::LCA::sz</a></div><div class="ttdeci">std::vector&lt; int &gt; sz</div><div class="ttdef"><b>Definition:</b> lca.hpp:34</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_l_c_a_html_a4b14c38d00e018c848aaffaaad26daaf"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_l_c_a.html#a4b14c38d00e018c848aaffaaad26daaf">wbwlib::graph::LCA::LCA</a></div><div class="ttdeci">LCA(const Adj &amp;g, int root=1)</div><div class="ttdoc">由树邻接表构建 LCA 倍增表。</div><div class="ttdef"><b>Definition:</b> lca.hpp:43</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_l_c_a_html_a6c9ffe62e31a35e2a642dc12edc4b446"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_l_c_a.html#a6c9ffe62e31a35e2a642dc12edc4b446">wbwlib::graph::LCA::LOG</a></div><div class="ttdeci">int LOG</div><div class="ttdef"><b>Definition:</b> lca.hpp:36</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_l_c_a_html_a7c18504eb3839ea97363d7a0acbf5d0f"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_l_c_a.html#a7c18504eb3839ea97363d7a0acbf5d0f">wbwlib::graph::LCA::fa</a></div><div class="ttdeci">std::vector&lt; int &gt; fa</div><div class="ttdef"><b>Definition:</b> lca.hpp:34</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_l_c_a_html_a9099e3c2a16b5bcfc0f126fda1674a1e"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_l_c_a.html#a9099e3c2a16b5bcfc0f126fda1674a1e">wbwlib::graph::LCA::is_ancestor</a></div><div class="ttdeci">bool is_ancestor(int u, int v) const</div><div class="ttdoc">判断 u 是否是 v 的祖先（含自身）。</div><div class="ttdef"><b>Definition:</b> lca.hpp:86</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_l_c_a_html_a954c618ae1c18acab397398a19ebe355"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_l_c_a.html#a954c618ae1c18acab397398a19ebe355">wbwlib::graph::LCA::dep</a></div><div class="ttdeci">std::vector&lt; int &gt; dep</div><div class="ttdef"><b>Definition:</b> lca.hpp:34</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_l_c_a_html_aa466ce40d178aecc803cad65ee243198"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_l_c_a.html#aa466ce40d178aecc803cad65ee243198">wbwlib::graph::LCA::tout</a></div><div class="ttdeci">std::vector&lt; int &gt; tout</div><div class="ttdoc">DFS 序（进出时间戳）</div><div class="ttdef"><b>Definition:</b> lca.hpp:35</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_l_c_a_html_ad5fc2a5c84b03f7fced891641365dcda"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_l_c_a.html#ad5fc2a5c84b03f7fced891641365dcda">wbwlib::graph::LCA::kth</a></div><div class="ttdeci">int kth(int u, int k) const</div><div class="ttdoc">u 向上第 k 个祖先。</div><div class="ttdef"><b>Definition:</b> lca.hpp:110</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_l_c_a_html_af93c17894521b3ee43fe18b3389ba8d0"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_l_c_a.html#af93c17894521b3ee43fe18b3389ba8d0">wbwlib::graph::LCA::tin</a></div><div class="ttdeci">std::vector&lt; int &gt; tin</div><div class="ttdef"><b>Definition:</b> lca.hpp:35</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_weighted_l_c_a_html"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html">wbwlib::graph::WeightedLCA</a></div><div class="ttdoc">带边权 LCA：额外维护各点到根的距离，支持 O(log n) 求树上任意两点距离。</div><div class="ttdef"><b>Definition:</b> lca.hpp:129</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_weighted_l_c_a_html_a2612d3744259ed6422578eb214634f07"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#a2612d3744259ed6422578eb214634f07">wbwlib::graph::WeightedLCA::dist_to_root</a></div><div class="ttdeci">std::vector&lt; i64 &gt; dist_to_root</div><div class="ttdoc">点到根的距离（边权和）</div><div class="ttdef"><b>Definition:</b> lca.hpp:131</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_weighted_l_c_a_html_a361c5751ee76ddc8d9fc1fa374ea8b83"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#a361c5751ee76ddc8d9fc1fa374ea8b83">wbwlib::graph::WeightedLCA::unweighted</a></div><div class="ttdeci">static Adj unweighted(const WAdj&lt; W &gt; &amp;g)</div><div class="ttdoc">由带权邻接表剥离出无权邻接表（仅保留邻点）</div><div class="ttdef"><b>Definition:</b> lca.hpp:171</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_weighted_l_c_a_html_a3fb8b769ccc67e03032bb5b47c58a104"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#a3fb8b769ccc67e03032bb5b47c58a104">wbwlib::graph::WeightedLCA::dist</a></div><div class="ttdeci">i64 dist(int u, int v) const</div><div class="ttdoc">求 u 与 v 的树上距离， 。</div><div class="ttdef"><b>Definition:</b> lca.hpp:156</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_weighted_l_c_a_html_ab230b35b7b2f65fa884258f2b913dcd0"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#ab230b35b7b2f65fa884258f2b913dcd0">wbwlib::graph::WeightedLCA::WeightedLCA</a></div><div class="ttdeci">WeightedLCA(const WAdj&lt; W &gt; &amp;g, int root=1)</div><div class="ttdoc">构建：由带权邻接表建无权 LCA，并 DFS 累计到根距离。</div><div class="ttdef"><b>Definition:</b> lca.hpp:139</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_weighted_l_c_a_html_ab7ca9969a6d90b08c35b30715b70c5b8"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#ab7ca9969a6d90b08c35b30715b70c5b8">wbwlib::graph::WeightedLCA::get_lca</a></div><div class="ttdeci">int get_lca(int u, int v) const</div><div class="ttdoc">求 u 与 v 的最近公共祖先。</div><div class="ttdef"><b>Definition:</b> lca.hpp:167</div></div>
+<div class="ttc" id="aclasswbwlib_1_1graph_1_1_weighted_l_c_a_html_abb5e4959f5d5608a93abeafaae78f723"><div class="ttname"><a href="classwbwlib_1_1graph_1_1_weighted_l_c_a.html#abb5e4959f5d5608a93abeafaae78f723">wbwlib::graph::WeightedLCA::lc</a></div><div class="ttdeci">LCA lc</div><div class="ttdef"><b>Definition:</b> lca.hpp:132</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1graph_html_ae493c082be88e701442a1a1630178911"><div class="ttname"><a href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">wbwlib::graph::Adj</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; int &gt; &gt; Adj</div><div class="ttdoc">无权邻接表（1 基）</div><div class="ttdef"><b>Definition:</b> adjacency.hpp:28</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+<div class="ttc" id="anamespacewbwlib_html_a86ab7e3b77fa0c682d473301d8c617c6"><div class="ttname"><a href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">wbwlib::i64</a></div><div class="ttdeci">std::int64_t i64</div><div class="ttdoc">64 位有符号整数</div><div class="ttdef"><b>Definition:</b> base.hpp:98</div></div>
+<div class="ttc" id="astructwbwlib_1_1graph_1_1_w_adj_html"><div class="ttname"><a href="structwbwlib_1_1graph_1_1_w_adj.html">wbwlib::graph::WAdj</a></div><div class="ttdoc">带权邻接表（1 基）：g[u] 为 (邻点 v, 边权 w) 列表。</div><div class="ttdef"><b>Definition:</b> adjacency.hpp:35</div></div>
+<div class="ttc" id="astructwbwlib_1_1graph_1_1_w_adj_html_a16d086e0e82fce6fbb6125ac9c11dc52"><div class="ttname"><a href="structwbwlib_1_1graph_1_1_w_adj.html#a16d086e0e82fce6fbb6125ac9c11dc52">wbwlib::graph::WAdj::g</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; std::pair&lt; int, W &gt; &gt; &gt; g</div><div class="ttdef"><b>Definition:</b> adjacency.hpp:37</div></div>
+<div class="ttc" id="astructwbwlib_1_1graph_1_1_w_adj_html_a30b4872dc580951253bb81dd317f1cfe"><div class="ttname"><a href="structwbwlib_1_1graph_1_1_w_adj.html#a30b4872dc580951253bb81dd317f1cfe">wbwlib::graph::WAdj::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition:</b> adjacency.hpp:36</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

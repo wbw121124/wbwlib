@@ -1,0 +1,15 @@
+<map id="wbwlib/graph/adjacency.hpp" name="wbwlib/graph/adjacency.hpp">
+<area shape="rect" id="node1" title="图表示约定：1 基邻接表 + 常用辅助。" alt="" coords="535,5,720,33"/>
+<area shape="rect" id="node2" href="$bipartite_8hpp.html" title="二分图判定（黑白染色）+ 最大匹配（匈牙利）+ 最小点覆盖/最大独立集。" alt="" coords="5,181,178,209"/>
+<area shape="rect" id="node3" href="$graph_8hpp.html" title="graph 模块聚合头：一次引入本模块全部头文件。" alt="" coords="518,265,676,293"/>
+<area shape="rect" id="node5" href="$euler-path_8hpp.html" title="欧拉路径 / 欧拉回路（Hierholzer，有向/无向）。" alt="" coords="259,173,388,217"/>
+<area shape="rect" id="node6" href="$hld_8hpp.html" title="树链剖分（HLD）：剖分 + 路径/子树区间映射，供线段树等配合。" alt="" coords="304,89,447,117"/>
+<area shape="rect" id="node7" href="$lca_8hpp.html" title="LCA：倍增法（O(n log n) 预处理，O(log n) 查询）+ 树深/距离/第 k 祖先。" alt="" coords="472,89,615,117"/>
+<area shape="rect" id="node9" href="$mst_8hpp.html" title="最小生成树：Kruskal（并查集）+ Prim（堆）。" alt="" coords="639,89,787,117"/>
+<area shape="rect" id="node10" href="$shortest-path_8hpp.html" title="最短路：Dijkstra（堆）/ SPFA（判负环）/ Floyd / 0&#45;1 BFS / 拓扑序 DAG。" alt="" coords="811,81,959,125"/>
+<area shape="rect" id="node11" href="$tarjan_8hpp.html" title="强连通分量 / 割点 / 桥（Tarjan）。" alt="" coords="790,181,948,209"/>
+<area shape="rect" id="node12" href="$topo_8hpp.html" title="拓扑排序（Kahn，返回字典序可选）+ 判环 + 关键路径。" alt="" coords="972,181,1123,209"/>
+<area shape="rect" id="node13" href="$tree-dp_8hpp.html" title="树上 DP 套路：直径、中心、换根 DP 模板。" alt="" coords="1084,89,1251,117"/>
+<area shape="rect" id="node4" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="532,341,662,369"/>
+<area shape="rect" id="node8" href="$virtual-tree_8hpp.html" title="虚树：保留关键点及其两两 LCA，压缩成 O(k) 规模的树。" alt="" coords="529,173,665,217"/>
+</map>

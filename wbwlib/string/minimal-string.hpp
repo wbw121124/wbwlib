@@ -5,13 +5,17 @@
  * @file minimal-string.hpp
  * @brief 最小表示法：求循环同构串中字典序最小的起始位置。
  *
- * 依赖：wbwlib/core/base.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp
  *
- * 复杂度：O(n)。
+ * @par 复杂度
+ * O(n)。
  *
- * 用法：
+ * @par 示例
+ * @code{.cpp}
  *   int p = wbwlib::str::minimal_rotation(s);        // 返回 0 基起始下标
  *   std::string t = s.substr(p) + s.substr(0, p);
+ * @endcode
  */
 
 #include <string>
@@ -20,6 +24,11 @@
 namespace wbwlib {
 namespace str {
 
+/**
+ * @brief 最小表示法：求循环同构串中字典序最小的起始位置。
+ * @param s 输入字符串
+ * @return 最小表示起始下标（0 基）；s 为空返回 -1
+ */
 inline int minimal_rotation(const std::string& s) {
   int n = (int)s.size();
   if (n == 0) return -1;

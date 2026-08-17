@@ -1,0 +1,666 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::geo::Point&lt; T &gt; 模板结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1geo.html">geo</a></li><li class="navelem"><a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structwbwlib_1_1geo_1_1_point-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::geo::Point&lt; T &gt; 模板结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>二维点/向量，整数与浮点坐标通用。  
+ <a href="structwbwlib_1_1geo_1_1_point.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="point_8hpp_source.html">point.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::geo::Point&lt; T &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="structwbwlib_1_1geo_1_1_point__coll__graph.png" border="0" usemap="#awbwlib_1_1geo_1_1_point_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1geo_1_1_point_3_01_t_01_4_coll__map" id="awbwlib_1_1geo_1_1_point_3_01_t_01_4_coll__map">
+<area shape="rect" title="二维点/向量，整数与浮点坐标通用。" alt="" coords="5,5,165,279"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a401575124e5cc995a8bfd5929e203f2d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1geo_1_1_point.html#a401575124e5cc995a8bfd5929e203f2d">Point</a> ()</td></tr>
+<tr class="memdesc:a401575124e5cc995a8bfd5929e203f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造，坐标零初始化。  <a href="structwbwlib_1_1geo_1_1_point.html#a401575124e5cc995a8bfd5929e203f2d">更多...</a><br /></td></tr>
+<tr class="separator:a401575124e5cc995a8bfd5929e203f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a5eece27982af999494cc8938d38ff6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1geo_1_1_point.html#a7a5eece27982af999494cc8938d38ff6">Point</a> (T x_, T y_)</td></tr>
+<tr class="memdesc:a7a5eece27982af999494cc8938d38ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">以给定坐标构造。  <a href="structwbwlib_1_1geo_1_1_point.html#a7a5eece27982af999494cc8938d38ff6">更多...</a><br /></td></tr>
+<tr class="separator:a7a5eece27982af999494cc8938d38ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa04c61094c4102682dc13796c73efda2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1geo_1_1_point.html#aa04c61094c4102682dc13796c73efda2">operator+</a> (const <a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a> &amp;o) const</td></tr>
+<tr class="memdesc:aa04c61094c4102682dc13796c73efda2"><td class="mdescLeft">&#160;</td><td class="mdescRight">向量加法。  <a href="structwbwlib_1_1geo_1_1_point.html#aa04c61094c4102682dc13796c73efda2">更多...</a><br /></td></tr>
+<tr class="separator:aa04c61094c4102682dc13796c73efda2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8d94e25f945473876855717c5b6ac30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1geo_1_1_point.html#ac8d94e25f945473876855717c5b6ac30">operator-</a> (const <a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a> &amp;o) const</td></tr>
+<tr class="memdesc:ac8d94e25f945473876855717c5b6ac30"><td class="mdescLeft">&#160;</td><td class="mdescRight">向量减法。  <a href="structwbwlib_1_1geo_1_1_point.html#ac8d94e25f945473876855717c5b6ac30">更多...</a><br /></td></tr>
+<tr class="separator:ac8d94e25f945473876855717c5b6ac30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a115d38c6e274ee8ca405fc61d60b28aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1geo_1_1_point.html#a115d38c6e274ee8ca405fc61d60b28aa">operator*</a> (T k) const</td></tr>
+<tr class="memdesc:a115d38c6e274ee8ca405fc61d60b28aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">数乘。  <a href="structwbwlib_1_1geo_1_1_point.html#a115d38c6e274ee8ca405fc61d60b28aa">更多...</a><br /></td></tr>
+<tr class="separator:a115d38c6e274ee8ca405fc61d60b28aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeacec4f74b0d16de101877800e95d581"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1geo_1_1_point.html#aeacec4f74b0d16de101877800e95d581">operator/</a> (T k) const</td></tr>
+<tr class="memdesc:aeacec4f74b0d16de101877800e95d581"><td class="mdescLeft">&#160;</td><td class="mdescRight">数除。  <a href="structwbwlib_1_1geo_1_1_point.html#aeacec4f74b0d16de101877800e95d581">更多...</a><br /></td></tr>
+<tr class="separator:aeacec4f74b0d16de101877800e95d581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45fa6e9367569e0b5d00a804c9c4edc2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1geo_1_1_point.html#a45fa6e9367569e0b5d00a804c9c4edc2">operator==</a> (const <a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a> &amp;o) const</td></tr>
+<tr class="memdesc:a45fa6e9367569e0b5d00a804c9c4edc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">相等比较。  <a href="structwbwlib_1_1geo_1_1_point.html#a45fa6e9367569e0b5d00a804c9c4edc2">更多...</a><br /></td></tr>
+<tr class="separator:a45fa6e9367569e0b5d00a804c9c4edc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a597915d5bbcee005100b1df8c3623bc0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1geo_1_1_point.html#a597915d5bbcee005100b1df8c3623bc0">operator&lt;</a> (const <a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a> &amp;o) const</td></tr>
+<tr class="memdesc:a597915d5bbcee005100b1df8c3623bc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">字典序比较（先横坐标后纵坐标）。  <a href="structwbwlib_1_1geo_1_1_point.html#a597915d5bbcee005100b1df8c3623bc0">更多...</a><br /></td></tr>
+<tr class="separator:a597915d5bbcee005100b1df8c3623bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a615df9310599cc01776fdc6ab019f950"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1geo_1_1_point.html#a615df9310599cc01776fdc6ab019f950">dot</a> (const <a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a> &amp;o) const</td></tr>
+<tr class="memdesc:a615df9310599cc01776fdc6ab019f950"><td class="mdescLeft">&#160;</td><td class="mdescRight">点乘（内积）。  <a href="structwbwlib_1_1geo_1_1_point.html#a615df9310599cc01776fdc6ab019f950">更多...</a><br /></td></tr>
+<tr class="separator:a615df9310599cc01776fdc6ab019f950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0116d437097698e6875c444d1b612bd1"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1geo_1_1_point.html#a0116d437097698e6875c444d1b612bd1">cross</a> (const <a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a> &amp;o) const</td></tr>
+<tr class="memdesc:a0116d437097698e6875c444d1b612bd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">叉积（二维标量形式）。  <a href="structwbwlib_1_1geo_1_1_point.html#a0116d437097698e6875c444d1b612bd1">更多...</a><br /></td></tr>
+<tr class="separator:a0116d437097698e6875c444d1b612bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03c1f81765deaae2bd0cd0987fcfb509"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1geo_1_1_point.html#a03c1f81765deaae2bd0cd0987fcfb509">norm2</a> () const</td></tr>
+<tr class="memdesc:a03c1f81765deaae2bd0cd0987fcfb509"><td class="mdescLeft">&#160;</td><td class="mdescRight">模长平方。  <a href="structwbwlib_1_1geo_1_1_point.html#a03c1f81765deaae2bd0cd0987fcfb509">更多...</a><br /></td></tr>
+<tr class="separator:a03c1f81765deaae2bd0cd0987fcfb509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a026b4448cce3c11001f03697ecbb711b"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1geo_1_1_point.html#a026b4448cce3c11001f03697ecbb711b">len</a> () const</td></tr>
+<tr class="memdesc:a026b4448cce3c11001f03697ecbb711b"><td class="mdescLeft">&#160;</td><td class="mdescRight">模长（欧氏长度）。  <a href="structwbwlib_1_1geo_1_1_point.html#a026b4448cce3c11001f03697ecbb711b">更多...</a><br /></td></tr>
+<tr class="separator:a026b4448cce3c11001f03697ecbb711b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a6dc3f48aff7297f17de31316254ad3de"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1geo_1_1_point.html#a6dc3f48aff7297f17de31316254ad3de">x</a></td></tr>
+<tr class="separator:a6dc3f48aff7297f17de31316254ad3de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a910d502bad9af5c3c88127ec8e39afb4"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1geo_1_1_point.html#a910d502bad9af5c3c88127ec8e39afb4">y</a></td></tr>
+<tr class="memdesc:a910d502bad9af5c3c88127ec8e39afb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">坐标分量  <a href="structwbwlib_1_1geo_1_1_point.html#a910d502bad9af5c3c88127ec8e39afb4">更多...</a><br /></td></tr>
+<tr class="separator:a910d502bad9af5c3c88127ec8e39afb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><h3>template&lt;class T = i64&gt;<br />
+struct wbwlib::geo::Point&lt; T &gt;</h3>
+
+<p>二维点/向量，整数与浮点坐标通用。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>坐标类型，默认 i64（整数）；浮点场景显式指定 long double。 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a401575124e5cc995a8bfd5929e203f2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a401575124e5cc995a8bfd5929e203f2d">&#9670;&nbsp;</a></span>Point() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point</a>&lt; T &gt;::<a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认构造，坐标零初始化。 </p>
+
+</div>
+</div>
+<a id="a7a5eece27982af999494cc8938d38ff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a5eece27982af999494cc8938d38ff6">&#9670;&nbsp;</a></span>Point() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point</a>&lt; T &gt;::<a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a> </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>y_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>以给定坐标构造。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x_</td><td>横坐标。 </td></tr>
+    <tr><td class="paramname">y_</td><td>纵坐标。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a0116d437097698e6875c444d1b612bd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0116d437097698e6875c444d1b612bd1">&#9670;&nbsp;</a></span>cross()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point</a>&lt; T &gt;::cross </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>叉积（二维标量形式）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>另一向量。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(x \cdot o.y - y \cdot o.x\)（大于 0 表示 o 在逆时针方向）。 </dd></dl>
+
+</div>
+</div>
+<a id="a615df9310599cc01776fdc6ab019f950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a615df9310599cc01776fdc6ab019f950">&#9670;&nbsp;</a></span>dot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point</a>&lt; T &gt;::dot </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>点乘（内积）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>另一向量。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(x \cdot o.x + y \cdot o.y\)。 </dd></dl>
+
+</div>
+</div>
+<a id="a026b4448cce3c11001f03697ecbb711b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a026b4448cce3c11001f03697ecbb711b">&#9670;&nbsp;</a></span>len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double <a class="el" href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point</a>&lt; T &gt;::len </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>模长（欧氏长度）。 </p>
+<dl class="section return"><dt>返回</dt><dd>\(\sqrt{x^2 + y^2}\)。 </dd></dl>
+
+</div>
+</div>
+<a id="a03c1f81765deaae2bd0cd0987fcfb509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03c1f81765deaae2bd0cd0987fcfb509">&#9670;&nbsp;</a></span>norm2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point</a>&lt; T &gt;::norm2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>模长平方。 </p>
+<dl class="section return"><dt>返回</dt><dd>\(x^2 + y^2\)。 </dd></dl>
+
+</div>
+</div>
+<a id="a115d38c6e274ee8ca405fc61d60b28aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a115d38c6e274ee8ca405fc61d60b28aa">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a> <a class="el" href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point</a>&lt; T &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>数乘。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>标量。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>各分量乘以 k。 </dd></dl>
+
+</div>
+</div>
+<a id="aa04c61094c4102682dc13796c73efda2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa04c61094c4102682dc13796c73efda2">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a> <a class="el" href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point</a>&lt; T &gt;::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向量加法。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>另一向量。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>两向量之和。 </dd></dl>
+
+</div>
+</div>
+<a id="ac8d94e25f945473876855717c5b6ac30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8d94e25f945473876855717c5b6ac30">&#9670;&nbsp;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a> <a class="el" href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point</a>&lt; T &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向量减法。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>另一向量。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>两向量之差。 </dd></dl>
+
+</div>
+</div>
+<a id="aeacec4f74b0d16de101877800e95d581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeacec4f74b0d16de101877800e95d581">&#9670;&nbsp;</a></span>operator/()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a> <a class="el" href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point</a>&lt; T &gt;::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>数除。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>标量（非零）。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>各分量除以 k。 </dd></dl>
+
+</div>
+</div>
+<a id="a597915d5bbcee005100b1df8c3623bc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a597915d5bbcee005100b1df8c3623bc0">&#9670;&nbsp;</a></span>operator&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point</a>&lt; T &gt;::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>字典序比较（先横坐标后纵坐标）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>另一向量。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>x 较小，或 x 相等时 y 较小，则返回 true。 </dd></dl>
+
+</div>
+</div>
+<a id="a45fa6e9367569e0b5d00a804c9c4edc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45fa6e9367569e0b5d00a804c9c4edc2">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point</a>&lt; T &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structwbwlib_1_1geo_1_1_point.html">Point</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>相等比较。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>另一向量。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>各分量均相等时返回 true。 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a6dc3f48aff7297f17de31316254ad3de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dc3f48aff7297f17de31316254ad3de">&#9670;&nbsp;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point</a>&lt; T &gt;::x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a910d502bad9af5c3c88127ec8e39afb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a910d502bad9af5c3c88127ec8e39afb4">&#9670;&nbsp;</a></span>y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point</a>&lt; T &gt;::y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>坐标分量 </p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>wbwlib/geo/<a class="el" href="point_8hpp_source.html">point.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

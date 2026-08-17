@@ -1,0 +1,215 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/geo/circle.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_2ecdf383c720a2d71ee413e323799741.html">geo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">circle.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="circle_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_GEO_CIRCLE_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_GEO_CIRCLE_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="point_8hpp.html">wbwlib/geo/point.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1geo.html">   22</a></span>&#160;<span class="keyword">namespace </span>geo {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structwbwlib_1_1geo_1_1_circle.html">   27</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structwbwlib_1_1geo_1_1_circle.html">Circle</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structwbwlib_1_1geo_1_1_circle.html#addd3867d2cbcc7cb194624ba3c2d5d91">   28</a></span>&#160;  <a class="code" href="structwbwlib_1_1geo_1_1_point.html">PointD</a> <a class="code" href="structwbwlib_1_1geo_1_1_circle.html#addd3867d2cbcc7cb194624ba3c2d5d91">c</a>;         </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structwbwlib_1_1geo_1_1_circle.html#a06b393ce82a67769607e421558c9991d">   29</a></span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> <a class="code" href="structwbwlib_1_1geo_1_1_circle.html#a06b393ce82a67769607e421558c9991d">r</a>;    </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structwbwlib_1_1geo_1_1_circle.html#aa1fb75da39c7113aa02ebec51cea32f5">   33</a></span>&#160;  <a class="code" href="structwbwlib_1_1geo_1_1_circle.html#aa1fb75da39c7113aa02ebec51cea32f5">Circle</a>() : <a class="code" href="structwbwlib_1_1geo_1_1_circle.html#addd3867d2cbcc7cb194624ba3c2d5d91">c</a>(), <a class="code" href="structwbwlib_1_1geo_1_1_circle.html#a06b393ce82a67769607e421558c9991d">r</a>(0) {}</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structwbwlib_1_1geo_1_1_circle.html#ae0ac212535841a3839d54b6a89e6c6e5">   39</a></span>&#160;  <a class="code" href="structwbwlib_1_1geo_1_1_circle.html#ae0ac212535841a3839d54b6a89e6c6e5">Circle</a>(<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1geo_1_1_point.html">PointD</a>&amp; c_, <span class="keywordtype">long</span> <span class="keywordtype">double</span> r_) : <a class="code" href="structwbwlib_1_1geo_1_1_circle.html#addd3867d2cbcc7cb194624ba3c2d5d91">c</a>(c_), <a class="code" href="structwbwlib_1_1geo_1_1_circle.html#a06b393ce82a67769607e421558c9991d">r</a>(r_) {}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structwbwlib_1_1geo_1_1_circle.html#ae0c7968e0a41a6ce32d29c241f609cd5">   46</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structwbwlib_1_1geo_1_1_circle.html#ae0c7968e0a41a6ce32d29c241f609cd5">contains</a>(<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1geo_1_1_point.html">PointD</a>&amp; p)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> (p - <a class="code" href="structwbwlib_1_1geo_1_1_circle.html#addd3867d2cbcc7cb194624ba3c2d5d91">c</a>).norm2() &lt;= <a class="code" href="structwbwlib_1_1geo_1_1_circle.html#a06b393ce82a67769607e421558c9991d">r</a> * <a class="code" href="structwbwlib_1_1geo_1_1_circle.html#a06b393ce82a67769607e421558c9991d">r</a> + 1e-12L;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1geo.html#a8200dbc119073456c481c3ab12b5ebe3">   58</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structwbwlib_1_1geo_1_1_circle.html">Circle</a> <a class="code" href="namespacewbwlib_1_1geo.html#a8200dbc119073456c481c3ab12b5ebe3">circle_from_three_points</a>(<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1geo_1_1_point.html">PointD</a>&amp; a, <span class="keyword">const</span> <a class="code" href="structwbwlib_1_1geo_1_1_point.html">PointD</a>&amp; b, <span class="keyword">const</span> <a class="code" href="structwbwlib_1_1geo_1_1_point.html">PointD</a>&amp; c) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> d = (a - c).<a class="code" href="namespacewbwlib_1_1geo.html#a40d95f6ebdfc8c0b5e40ee7b15a42e54">cross</a>(b - c);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> ax = (a.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a6dc3f48aff7297f17de31316254ad3de">x</a> - c.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a6dc3f48aff7297f17de31316254ad3de">x</a>), ay = (a.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a910d502bad9af5c3c88127ec8e39afb4">y</a> - c.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a910d502bad9af5c3c88127ec8e39afb4">y</a>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> bx = (b.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a6dc3f48aff7297f17de31316254ad3de">x</a> - c.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a6dc3f48aff7297f17de31316254ad3de">x</a>), by = (b.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a910d502bad9af5c3c88127ec8e39afb4">y</a> - c.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a910d502bad9af5c3c88127ec8e39afb4">y</a>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> A = ax * ax + ay * ay;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> B = bx * bx + by * by;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> u = (by * A - ay * B) / (2 * d);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> v = (ax * B - bx * A) / (2 * d);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="structwbwlib_1_1geo_1_1_point.html">PointD</a> center(u + c.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a6dc3f48aff7297f17de31316254ad3de">x</a>, v + c.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a910d502bad9af5c3c88127ec8e39afb4">y</a>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="structwbwlib_1_1geo_1_1_circle.html">Circle</a>(center, std::sqrt((center - a).norm2()));</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1geo.html#ad6d2df6243f2aa14ce530432b43813b8">   76</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structwbwlib_1_1geo_1_1_circle.html">Circle</a> <a class="code" href="namespacewbwlib_1_1geo.html#ad6d2df6243f2aa14ce530432b43813b8">circle_from_two_points</a>(<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1geo_1_1_point.html">PointD</a>&amp; a, <span class="keyword">const</span> <a class="code" href="structwbwlib_1_1geo_1_1_point.html">PointD</a>&amp; b) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <a class="code" href="structwbwlib_1_1geo_1_1_point.html">PointD</a> mid((a.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a6dc3f48aff7297f17de31316254ad3de">x</a> + b.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a6dc3f48aff7297f17de31316254ad3de">x</a>) * 0.5L, (a.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a910d502bad9af5c3c88127ec8e39afb4">y</a> + b.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a910d502bad9af5c3c88127ec8e39afb4">y</a>) * 0.5L);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="structwbwlib_1_1geo_1_1_circle.html">Circle</a>(mid, std::sqrt((a - b).norm2()) * 0.5L);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1geo.html#a3723ef10427b18bbe586877270883482">   86</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structwbwlib_1_1geo_1_1_circle.html">Circle</a> <a class="code" href="namespacewbwlib_1_1geo.html#a3723ef10427b18bbe586877270883482">min_enclosing_circle</a>(std::vector&lt;PointD&gt; ps) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">int</span> n = (int)ps.size();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">if</span> (n == 0) <span class="keywordflow">return</span> <a class="code" href="structwbwlib_1_1geo_1_1_circle.html">Circle</a>(<a class="code" href="namespacewbwlib_1_1geo.html#a3c2a89f2c8a9e2f2b1a4b640121e3987">PointD</a>(), 0);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordflow">if</span> (n == 1) <span class="keywordflow">return</span> <a class="code" href="structwbwlib_1_1geo_1_1_circle.html">Circle</a>(ps[0], 0);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="comment">// 伪随机洗牌（确定性，无需 &lt;random&gt;）：期望线性</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = n - 1; i &gt; 0; --i) {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::swap(ps[i], ps[2654435761u * (<span class="keywordtype">unsigned</span>)i % (i + 1)]);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="structwbwlib_1_1geo_1_1_circle.html">Circle</a> cur = <a class="code" href="namespacewbwlib_1_1geo.html#ad6d2df6243f2aa14ce530432b43813b8">circle_from_two_points</a>(ps[0], ps[1]);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 2; i &lt; n; ++i) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">if</span> (cur.<a class="code" href="structwbwlib_1_1geo_1_1_circle.html#ae0c7968e0a41a6ce32d29c241f609cd5">contains</a>(ps[i])) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    cur = <a class="code" href="namespacewbwlib_1_1geo.html#ad6d2df6243f2aa14ce530432b43813b8">circle_from_two_points</a>(ps[0], ps[i]);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 1; j &lt; i; ++j) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <span class="keywordflow">if</span> (cur.<a class="code" href="structwbwlib_1_1geo_1_1_circle.html#ae0c7968e0a41a6ce32d29c241f609cd5">contains</a>(ps[j])) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      cur = <a class="code" href="namespacewbwlib_1_1geo.html#ad6d2df6243f2aa14ce530432b43813b8">circle_from_two_points</a>(ps[i], ps[j]);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; j; ++k) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">if</span> (cur.<a class="code" href="structwbwlib_1_1geo_1_1_circle.html#ae0c7968e0a41a6ce32d29c241f609cd5">contains</a>(ps[k])) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        cur = <a class="code" href="namespacewbwlib_1_1geo.html#a8200dbc119073456c481c3ab12b5ebe3">circle_from_three_points</a>(ps[i], ps[j], ps[k]);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordflow">return</span> cur;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1geo.html#a0fcd4b8a8131e54378c50088e1b834da">  117</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespacewbwlib_1_1geo.html#a0fcd4b8a8131e54378c50088e1b834da">circle_relation</a>(<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1geo_1_1_circle.html">Circle</a>&amp; A, <span class="keyword">const</span> <a class="code" href="structwbwlib_1_1geo_1_1_circle.html">Circle</a>&amp; B) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> d = std::sqrt((A.<a class="code" href="structwbwlib_1_1geo_1_1_circle.html#addd3867d2cbcc7cb194624ba3c2d5d91">c</a> - B.<a class="code" href="structwbwlib_1_1geo_1_1_circle.html#addd3867d2cbcc7cb194624ba3c2d5d91">c</a>).norm2());</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> sum = A.<a class="code" href="structwbwlib_1_1geo_1_1_circle.html#a06b393ce82a67769607e421558c9991d">r</a> + B.<a class="code" href="structwbwlib_1_1geo_1_1_circle.html#a06b393ce82a67769607e421558c9991d">r</a>, dif = std::fabs(A.<a class="code" href="structwbwlib_1_1geo_1_1_circle.html#a06b393ce82a67769607e421558c9991d">r</a> - B.<a class="code" href="structwbwlib_1_1geo_1_1_circle.html#a06b393ce82a67769607e421558c9991d">r</a>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordflow">if</span> (std::fabs(d) &lt; 1e-12L &amp;&amp; std::fabs(A.<a class="code" href="structwbwlib_1_1geo_1_1_circle.html#a06b393ce82a67769607e421558c9991d">r</a> - B.<a class="code" href="structwbwlib_1_1geo_1_1_circle.html#a06b393ce82a67769607e421558c9991d">r</a>) &lt; 1e-12L) <span class="keywordflow">return</span> 5;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordflow">if</span> (d &gt; sum + 1e-12L) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordflow">if</span> (std::fabs(d - sum) &lt;= 1e-12L) <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">if</span> (d &gt; dif + 1e-12L) <span class="keywordflow">return</span> 2;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordflow">if</span> (std::fabs(d - dif) &lt;= 1e-12L) <span class="keywordflow">return</span> 3;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordflow">return</span> 4;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;} <span class="comment">// namespace geo</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_GEO_CIRCLE_HPP</span></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1geo_html_a0fcd4b8a8131e54378c50088e1b834da"><div class="ttname"><a href="namespacewbwlib_1_1geo.html#a0fcd4b8a8131e54378c50088e1b834da">wbwlib::geo::circle_relation</a></div><div class="ttdeci">int circle_relation(const Circle &amp;A, const Circle &amp;B)</div><div class="ttdoc">判断两圆的位置关系。</div><div class="ttdef"><b>Definition:</b> circle.hpp:117</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1geo_html_a3723ef10427b18bbe586877270883482"><div class="ttname"><a href="namespacewbwlib_1_1geo.html#a3723ef10427b18bbe586877270883482">wbwlib::geo::min_enclosing_circle</a></div><div class="ttdeci">Circle min_enclosing_circle(std::vector&lt; PointD &gt; ps)</div><div class="ttdoc">求点集的最小覆盖圆（随机增量法，期望 O(n)）。</div><div class="ttdef"><b>Definition:</b> circle.hpp:86</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1geo_html_a3c2a89f2c8a9e2f2b1a4b640121e3987"><div class="ttname"><a href="namespacewbwlib_1_1geo.html#a3c2a89f2c8a9e2f2b1a4b640121e3987">wbwlib::geo::PointD</a></div><div class="ttdeci">Point&lt; long double &gt; PointD</div><div class="ttdef"><b>Definition:</b> point.hpp:123</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1geo_html_a40d95f6ebdfc8c0b5e40ee7b15a42e54"><div class="ttname"><a href="namespacewbwlib_1_1geo.html#a40d95f6ebdfc8c0b5e40ee7b15a42e54">wbwlib::geo::cross</a></div><div class="ttdeci">T cross(const Point&lt; T &gt; &amp;a, const Point&lt; T &gt; &amp;b)</div><div class="ttdoc">向量叉积（自由函数版）。</div><div class="ttdef"><b>Definition:</b> point.hpp:111</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1geo_html_a8200dbc119073456c481c3ab12b5ebe3"><div class="ttname"><a href="namespacewbwlib_1_1geo.html#a8200dbc119073456c481c3ab12b5ebe3">wbwlib::geo::circle_from_three_points</a></div><div class="ttdeci">Circle circle_from_three_points(const PointD &amp;a, const PointD &amp;b, const PointD &amp;c)</div><div class="ttdoc">由三点确定外接圆。</div><div class="ttdef"><b>Definition:</b> circle.hpp:58</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1geo_html_ad6d2df6243f2aa14ce530432b43813b8"><div class="ttname"><a href="namespacewbwlib_1_1geo.html#ad6d2df6243f2aa14ce530432b43813b8">wbwlib::geo::circle_from_two_points</a></div><div class="ttdeci">Circle circle_from_two_points(const PointD &amp;a, const PointD &amp;b)</div><div class="ttdoc">以两点为直径端点构造圆。</div><div class="ttdef"><b>Definition:</b> circle.hpp:76</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+<div class="ttc" id="apoint_8hpp_html"><div class="ttname"><a href="point_8hpp.html">point.hpp</a></div><div class="ttdoc">计算几何基础：二维点/向量，整数坐标（默认 i64）+ double 变体。</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_circle_html"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_circle.html">wbwlib::geo::Circle</a></div><div class="ttdoc">圆：圆心 + 半径。</div><div class="ttdef"><b>Definition:</b> circle.hpp:27</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_circle_html_a06b393ce82a67769607e421558c9991d"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_circle.html#a06b393ce82a67769607e421558c9991d">wbwlib::geo::Circle::r</a></div><div class="ttdeci">long double r</div><div class="ttdoc">半径</div><div class="ttdef"><b>Definition:</b> circle.hpp:29</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_circle_html_aa1fb75da39c7113aa02ebec51cea32f5"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_circle.html#aa1fb75da39c7113aa02ebec51cea32f5">wbwlib::geo::Circle::Circle</a></div><div class="ttdeci">Circle()</div><div class="ttdoc">默认构造（圆心原点，半径 0）。</div><div class="ttdef"><b>Definition:</b> circle.hpp:33</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_circle_html_addd3867d2cbcc7cb194624ba3c2d5d91"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_circle.html#addd3867d2cbcc7cb194624ba3c2d5d91">wbwlib::geo::Circle::c</a></div><div class="ttdeci">PointD c</div><div class="ttdoc">圆心</div><div class="ttdef"><b>Definition:</b> circle.hpp:28</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_circle_html_ae0ac212535841a3839d54b6a89e6c6e5"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_circle.html#ae0ac212535841a3839d54b6a89e6c6e5">wbwlib::geo::Circle::Circle</a></div><div class="ttdeci">Circle(const PointD &amp;c_, long double r_)</div><div class="ttdoc">以圆心与半径构造圆。</div><div class="ttdef"><b>Definition:</b> circle.hpp:39</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_circle_html_ae0c7968e0a41a6ce32d29c241f609cd5"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_circle.html#ae0c7968e0a41a6ce32d29c241f609cd5">wbwlib::geo::Circle::contains</a></div><div class="ttdeci">bool contains(const PointD &amp;p) const</div><div class="ttdoc">判断点是否在圆内（含边界，带容差）。</div><div class="ttdef"><b>Definition:</b> circle.hpp:46</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_point_html"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point&lt; long double &gt;</a></div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_point_html_a6dc3f48aff7297f17de31316254ad3de"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_point.html#a6dc3f48aff7297f17de31316254ad3de">wbwlib::geo::Point::x</a></div><div class="ttdeci">T x</div><div class="ttdef"><b>Definition:</b> point.hpp:28</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_point_html_a910d502bad9af5c3c88127ec8e39afb4"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_point.html#a910d502bad9af5c3c88127ec8e39afb4">wbwlib::geo::Point::y</a></div><div class="ttdeci">T y</div><div class="ttdoc">坐标分量</div><div class="ttdef"><b>Definition:</b> point.hpp:28</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

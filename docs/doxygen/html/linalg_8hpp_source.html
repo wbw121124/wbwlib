@@ -1,0 +1,318 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/math/linalg.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_3daf11f4f079b8f8f9a94cd388c9bdee.html">math</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">linalg.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="linalg_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_MATH_LINALG_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_MATH_LINALG_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>math {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// ================= 高斯消元 =================</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"></span><span class="keyword">namespace </span>details {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">inline</span> enable_if_t&lt;std::is_arithmetic&lt;T&gt;::value, <span class="keywordtype">int</span>&gt;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1details.html#a743cefce941d41bed11aff0ba60a5426">   34</a></span>&#160;<a class="code" href="namespacewbwlib_1_1math_1_1details.html#a743cefce941d41bed11aff0ba60a5426">gauss_impl</a>(std::vector&lt;std::vector&lt;T&gt;&gt;&amp; a, <span class="keywordtype">double</span> fp_eps) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">int</span> n = (int)a.size(), m = (int)a[0].size();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">int</span> rank = 0;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> col = 0; col &lt; m - 1 &amp;&amp; rank &lt; n; ++col) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> piv = rank;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">double</span> best = (fp_eps &gt; 0) ? fp_eps : 1e-9;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = rank; i &lt; n; ++i) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keywordtype">double</span> cur = std::fabs(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(a[i][col]));</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keywordflow">if</span> (cur &gt; best) { best = cur; piv = i; }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">if</span> (std::fabs(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(a[piv][col])) &lt;= best) <span class="keywordflow">continue</span>;  <span class="comment">// 整列为 0 → 自由列</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    std::swap(a[piv], a[rank]);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    T div = a[rank][col];</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = col; j &lt; m; ++j) a[rank][j] = a[rank][j] / div;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keywordflow">if</span> (i == rank) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      T coef = a[i][col];</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keywordflow">if</span> (coef == T()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = col; j &lt; m; ++j) a[i][j] = a[i][j] - coef * a[rank][j];</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ++rank;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">return</span> rank;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">inline</span> <a class="code" href="namespacewbwlib.html#af575e236563e733e414b698ed407f1e8">enable_if_t&lt;!std::is_arithmetic&lt;T&gt;::value</a>, <span class="keywordtype">int</span>&gt;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1details.html#aa1259bef3ccdd248fe9fe938fce02432">   62</a></span>&#160;<a class="code" href="namespacewbwlib_1_1math_1_1details.html#a743cefce941d41bed11aff0ba60a5426">gauss_impl</a>(std::vector&lt;std::vector&lt;T&gt;&gt;&amp; a, <span class="keywordtype">double</span>) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">int</span> n = (int)a.size(), m = (int)a[0].size();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">int</span> rank = 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> col = 0; col &lt; m - 1 &amp;&amp; rank &lt; n; ++col) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">int</span> piv = -1;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = rank; i &lt; n; ++i)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">if</span> (a[i][col] != T()) { piv = i; <span class="keywordflow">break</span>; }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (piv == -1) <span class="keywordflow">continue</span>;               <span class="comment">// 自由列</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span> (piv != rank) std::swap(a[piv], a[rank]);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    T div = a[rank][col];</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = col; j &lt; m; ++j) a[rank][j] = a[rank][j] / div;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">if</span> (i == rank) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      T coef = a[i][col];</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordflow">if</span> (coef == T()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = col; j &lt; m; ++j) a[i][j] = a[i][j] - coef * a[rank][j];</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    ++rank;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordflow">return</span> rank;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;} <span class="comment">// namespace details</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math.html#a99b29de3f85cc3bee9c7d18550fa5915">   98</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespacewbwlib_1_1math.html#a99b29de3f85cc3bee9c7d18550fa5915">gauss_elim</a>(std::vector&lt;std::vector&lt;T&gt;&gt;&amp; a, <span class="keywordtype">double</span> fp_eps = 1e-9) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacewbwlib_1_1math_1_1details.html#a743cefce941d41bed11aff0ba60a5426">details::gauss_impl</a>(a, fp_eps);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math.html#a471123643b46d93051d7d1c2a688237c">  113</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespacewbwlib_1_1math.html#a471123643b46d93051d7d1c2a688237c">solve_linear</a>(std::vector&lt;std::vector&lt;T&gt;&gt; A, std::vector&lt;T&gt; b, std::vector&lt;T&gt;&amp; x) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">int</span> n = (int)A.size();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <a class="code" href="base_8hpp.html#a06d1d05da6faf7bea328563c9bada928">WBWLIB_ASSERT</a>(n &gt; 0);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) A[i].push_back(b[i]);  <span class="comment">// 增广</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordtype">int</span> rank = <a class="code" href="namespacewbwlib_1_1math.html#a99b29de3f85cc3bee9c7d18550fa5915">gauss_elim</a>(A, 0.0);                     <span class="comment">// 精确消元（模意义下）</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="comment">// 检查无解：存在全零行但常数列非零</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">bool</span> allz = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; n; ++j) <span class="keywordflow">if</span> (A[i][j] != T()) { allz = <span class="keyword">false</span>; <span class="keywordflow">break</span>; }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">if</span> (allz &amp;&amp; A[i][n] != T()) <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordflow">if</span> (rank &lt; n) <span class="keywordflow">return</span> 1;   <span class="comment">// 无穷解</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  x.assign(n, T());</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) x[i] = A[i][n];</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math.html#adfb8bbec9329926e0739a8ab02445aee">  139</a></span>&#160;T <a class="code" href="namespacewbwlib_1_1math.html#adfb8bbec9329926e0739a8ab02445aee">det</a>(std::vector&lt;std::vector&lt;T&gt;&gt; a) {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordtype">int</span> n = (int)a.size();</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  T d = T(1);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> col = 0; col &lt; n; ++col) {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">int</span> piv = col;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">while</span> (piv &lt; n &amp;&amp; a[piv][col] == T()) ++piv;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">if</span> (piv == n) <span class="keywordflow">return</span> T(0);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">if</span> (piv != col) { std::swap(a[piv], a[col]); d = -d; }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    T div = a[col][col];</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    d = d * div;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = col + 1; i &lt; n; ++i) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      T coef = a[i][col];</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      <span class="keywordflow">if</span> (coef == T()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = col; j &lt; n; ++j)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        a[i][j] = a[i][j] - coef / div * a[col][j];</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordflow">return</span> d;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">// ================= 异或线性基 =================</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="classwbwlib_1_1math_1_1_xor_basis.html">  169</a></span>&#160;<span class="comment"></span><span class="keyword">class </span><a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html">XorBasis</a> {</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classwbwlib_1_1math_1_1_xor_basis.html#a91c2d4d1f1012e17da846b65fa09ccb1">  170</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a91c2d4d1f1012e17da846b65fa09ccb1">B</a> = 63;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">  171</a></span>&#160;  <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[<a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a91c2d4d1f1012e17da846b65fa09ccb1">B</a>];            </div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classwbwlib_1_1math_1_1_xor_basis.html#ac1ada9dffead6d604c51d4b756086b81">  172</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#ac1ada9dffead6d604c51d4b756086b81">ok_kth_</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="classwbwlib_1_1math_1_1_xor_basis.html#aa383d016ab837160e4b53b14e6d55a4c">  173</a></span>&#160;  std::vector&lt;u64&gt; <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#aa383d016ab837160e4b53b14e6d55a4c">kth_</a>;  </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="classwbwlib_1_1math_1_1_xor_basis.html#a4e35e6274d87dcc9e12d423defaa360f">  178</a></span>&#160;  <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a4e35e6274d87dcc9e12d423defaa360f">XorBasis</a>() : <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#ac1ada9dffead6d604c51d4b756086b81">ok_kth_</a>(false) { <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a4a48f7869818591b0cfb009a83c469db">reset</a>(); }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classwbwlib_1_1math_1_1_xor_basis.html#a4a48f7869818591b0cfb009a83c469db">  183</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a4a48f7869818591b0cfb009a83c469db">reset</a>() { <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a91c2d4d1f1012e17da846b65fa09ccb1">B</a>; ++i) <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[i] = 0; <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#ac1ada9dffead6d604c51d4b756086b81">ok_kth_</a> = <span class="keyword">false</span>; <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#aa383d016ab837160e4b53b14e6d55a4c">kth_</a>.clear(); }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="classwbwlib_1_1math_1_1_xor_basis.html#a4767302d841393e6da8d4956aba88555">  190</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a4767302d841393e6da8d4956aba88555">insert</a>(<a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> x) {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#ac1ada9dffead6d604c51d4b756086b81">ok_kth_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> b = <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a91c2d4d1f1012e17da846b65fa09ccb1">B</a> - 1; b &gt;= 0; --b) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="keywordflow">if</span> (!((x &gt;&gt; b) &amp; 1)) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      <span class="keywordflow">if</span> (!<a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[b]) { <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[b] = x; <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      x ^= <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[b];</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="classwbwlib_1_1math_1_1_xor_basis.html#a55af2a1c299dfedc517d9940f5df9864">  205</a></span>&#160;  <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a55af2a1c299dfedc517d9940f5df9864">max_xor</a>(<a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> base = 0)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> r = base;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> b = <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a91c2d4d1f1012e17da846b65fa09ccb1">B</a> - 1; b &gt;= 0; --b)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[b] &amp;&amp; (r ^ <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[b]) &gt; r) r ^= <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[b];</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">return</span> r;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="classwbwlib_1_1math_1_1_xor_basis.html#af66bc8ab8dcadf83293c8eb310830406">  217</a></span>&#160;  <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#af66bc8ab8dcadf83293c8eb310830406">min_xor</a>(<a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> base = 0)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> r = base;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> b = <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a91c2d4d1f1012e17da846b65fa09ccb1">B</a> - 1; b &gt;= 0; --b)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[b] &amp;&amp; (r ^ <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[b]) &lt; r) r ^= <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[b];</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">return</span> r == base ? 0 : r;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="classwbwlib_1_1math_1_1_xor_basis.html#a1303dde4118f95f13306d5197bc5b1a1">  229</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a1303dde4118f95f13306d5197bc5b1a1">has</a>(<a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> x)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> b = <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a91c2d4d1f1012e17da846b65fa09ccb1">B</a> - 1; b &gt;= 0; --b)</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      <span class="keywordflow">if</span> ((x &gt;&gt; b) &amp; 1) x ^= <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[b];</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">return</span> x == 0;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="classwbwlib_1_1math_1_1_xor_basis.html#a1d8cf76b242e9861ca80582c3f3ed966">  236</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a1d8cf76b242e9861ca80582c3f3ed966">rank</a>()<span class="keyword"> const </span>{ <span class="keywordtype">int</span> r = 0; <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a91c2d4d1f1012e17da846b65fa09ccb1">B</a>; ++i) <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[i]) ++r; <span class="keywordflow">return</span> r; }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="classwbwlib_1_1math_1_1_xor_basis.html#a3308549234ab6e372ab66967aee47a50">  241</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a3308549234ab6e372ab66967aee47a50">build_kth</a>() {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#ac1ada9dffead6d604c51d4b756086b81">ok_kth_</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#aa383d016ab837160e4b53b14e6d55a4c">kth_</a>.clear();</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a91c2d4d1f1012e17da846b65fa09ccb1">B</a>; ++i) {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      <span class="keywordflow">if</span> (!<a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[i]) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = i - 1; j &gt;= 0; --j)</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[j] &amp;&amp; ((<a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[i] &gt;&gt; j) &amp; 1)) <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[i] ^= <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[j];</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    }</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a91c2d4d1f1012e17da846b65fa09ccb1">B</a>; ++i) <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[i]) <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#aa383d016ab837160e4b53b14e6d55a4c">kth_</a>.push_back(<a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a>[i]);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="classwbwlib_1_1math_1_1_xor_basis.html#ae509e5555e899bc3b34ed03c6044c9c7">  257</a></span>&#160;  <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#ae509e5555e899bc3b34ed03c6044c9c7">kth_min</a>(<a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> k)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#ac1ada9dffead6d604c51d4b756086b81">ok_kth_</a>) <a class="code" href="namespacewbwlib.html#a8de3fe2c83b81136ab5d970ef004c7b2">wbw_error</a>(<span class="stringliteral">&quot;kth_min 前需先调用 build_kth&quot;</span>);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> r = 0;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <a class="code" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> idx = k - 1;              <span class="comment">// 0 一定可表示（线性基包含零向量）</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#aa383d016ab837160e4b53b14e6d55a4c">kth_</a>.size(); ++i)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      <span class="keywordflow">if</span> (idx &amp; (1ULL &lt;&lt; i)) r ^= <a class="code" href="classwbwlib_1_1math_1_1_xor_basis.html#aa383d016ab837160e4b53b14e6d55a4c">kth_</a>[i];</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordflow">return</span> r;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;};</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;} <span class="comment">// namespace math</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_MATH_LINALG_HPP</span></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="abase_8hpp_html_a06d1d05da6faf7bea328563c9bada928"><div class="ttname"><a href="base_8hpp.html#a06d1d05da6faf7bea328563c9bada928">WBWLIB_ASSERT</a></div><div class="ttdeci">#define WBWLIB_ASSERT(cond)</div><div class="ttdef"><b>Definition:</b> base.hpp:91</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1_xor_basis_html"><div class="ttname"><a href="classwbwlib_1_1math_1_1_xor_basis.html">wbwlib::math::XorBasis</a></div><div class="ttdoc">64 位异或线性基。</div><div class="ttdef"><b>Definition:</b> linalg.hpp:169</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1_xor_basis_html_a1303dde4118f95f13306d5197bc5b1a1"><div class="ttname"><a href="classwbwlib_1_1math_1_1_xor_basis.html#a1303dde4118f95f13306d5197bc5b1a1">wbwlib::math::XorBasis::has</a></div><div class="ttdeci">bool has(u64 x) const</div><div class="ttdoc">判断 x 是否可被线性基表示。</div><div class="ttdef"><b>Definition:</b> linalg.hpp:229</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1_xor_basis_html_a1d8cf76b242e9861ca80582c3f3ed966"><div class="ttname"><a href="classwbwlib_1_1math_1_1_xor_basis.html#a1d8cf76b242e9861ca80582c3f3ed966">wbwlib::math::XorBasis::rank</a></div><div class="ttdeci">int rank() const</div><div class="ttdoc">返回线性基的秩（主元个数），线性基张成的可表示数共有  种（含 0）</div><div class="ttdef"><b>Definition:</b> linalg.hpp:236</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1_xor_basis_html_a3308549234ab6e372ab66967aee47a50"><div class="ttname"><a href="classwbwlib_1_1math_1_1_xor_basis.html#a3308549234ab6e372ab66967aee47a50">wbwlib::math::XorBasis::build_kth</a></div><div class="ttdeci">void build_kth()</div><div class="ttdoc">构建第 k 小查询所需的化简基（需在 kth_min 前调用一次）。</div><div class="ttdef"><b>Definition:</b> linalg.hpp:241</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1_xor_basis_html_a4767302d841393e6da8d4956aba88555"><div class="ttname"><a href="classwbwlib_1_1math_1_1_xor_basis.html#a4767302d841393e6da8d4956aba88555">wbwlib::math::XorBasis::insert</a></div><div class="ttdeci">bool insert(u64 x)</div><div class="ttdoc">向线性基插入 x。</div><div class="ttdef"><b>Definition:</b> linalg.hpp:190</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1_xor_basis_html_a4a48f7869818591b0cfb009a83c469db"><div class="ttname"><a href="classwbwlib_1_1math_1_1_xor_basis.html#a4a48f7869818591b0cfb009a83c469db">wbwlib::math::XorBasis::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">清空线性基（并作废 kth 构建结果）。</div><div class="ttdef"><b>Definition:</b> linalg.hpp:183</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1_xor_basis_html_a4e35e6274d87dcc9e12d423defaa360f"><div class="ttname"><a href="classwbwlib_1_1math_1_1_xor_basis.html#a4e35e6274d87dcc9e12d423defaa360f">wbwlib::math::XorBasis::XorBasis</a></div><div class="ttdeci">XorBasis()</div><div class="ttdoc">构造空线性基。</div><div class="ttdef"><b>Definition:</b> linalg.hpp:178</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1_xor_basis_html_a55af2a1c299dfedc517d9940f5df9864"><div class="ttname"><a href="classwbwlib_1_1math_1_1_xor_basis.html#a55af2a1c299dfedc517d9940f5df9864">wbwlib::math::XorBasis::max_xor</a></div><div class="ttdeci">u64 max_xor(u64 base=0) const</div><div class="ttdoc">求 。</div><div class="ttdef"><b>Definition:</b> linalg.hpp:205</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1_xor_basis_html_a5e94633fec5f4aa445c3c0ba3226558d"><div class="ttname"><a href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">wbwlib::math::XorBasis::p_</a></div><div class="ttdeci">u64 p_[B]</div><div class="ttdoc">主元数组</div><div class="ttdef"><b>Definition:</b> linalg.hpp:171</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1_xor_basis_html_a91c2d4d1f1012e17da846b65fa09ccb1"><div class="ttname"><a href="classwbwlib_1_1math_1_1_xor_basis.html#a91c2d4d1f1012e17da846b65fa09ccb1">wbwlib::math::XorBasis::B</a></div><div class="ttdeci">static const int B</div><div class="ttdef"><b>Definition:</b> linalg.hpp:170</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1_xor_basis_html_aa383d016ab837160e4b53b14e6d55a4c"><div class="ttname"><a href="classwbwlib_1_1math_1_1_xor_basis.html#aa383d016ab837160e4b53b14e6d55a4c">wbwlib::math::XorBasis::kth_</a></div><div class="ttdeci">std::vector&lt; u64 &gt; kth_</div><div class="ttdoc">用于第 k 小查询的化简基</div><div class="ttdef"><b>Definition:</b> linalg.hpp:173</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1_xor_basis_html_ac1ada9dffead6d604c51d4b756086b81"><div class="ttname"><a href="classwbwlib_1_1math_1_1_xor_basis.html#ac1ada9dffead6d604c51d4b756086b81">wbwlib::math::XorBasis::ok_kth_</a></div><div class="ttdeci">bool ok_kth_</div><div class="ttdef"><b>Definition:</b> linalg.hpp:172</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1_xor_basis_html_ae509e5555e899bc3b34ed03c6044c9c7"><div class="ttname"><a href="classwbwlib_1_1math_1_1_xor_basis.html#ae509e5555e899bc3b34ed03c6044c9c7">wbwlib::math::XorBasis::kth_min</a></div><div class="ttdeci">u64 kth_min(u64 k) const</div><div class="ttdoc">第 k 小（1 基，0 计入第 1 小）的可表示数。</div><div class="ttdef"><b>Definition:</b> linalg.hpp:257</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1_xor_basis_html_af66bc8ab8dcadf83293c8eb310830406"><div class="ttname"><a href="classwbwlib_1_1math_1_1_xor_basis.html#af66bc8ab8dcadf83293c8eb310830406">wbwlib::math::XorBasis::min_xor</a></div><div class="ttdeci">u64 min_xor(u64 base=0) const</div><div class="ttdoc">求 。</div><div class="ttdef"><b>Definition:</b> linalg.hpp:217</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1details_html_a743cefce941d41bed11aff0ba60a5426"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1details.html#a743cefce941d41bed11aff0ba60a5426">wbwlib::math::details::gauss_impl</a></div><div class="ttdeci">enable_if_t&lt; std::is_arithmetic&lt; T &gt;::value, int &gt; gauss_impl(std::vector&lt; std::vector&lt; T &gt;&gt; &amp;a, double fp_eps)</div><div class="ttdoc">算术类型专用：绝对值部分主元高斯消元（增强浮点数值稳定性）</div><div class="ttdef"><b>Definition:</b> linalg.hpp:34</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_html_a471123643b46d93051d7d1c2a688237c"><div class="ttname"><a href="namespacewbwlib_1_1math.html#a471123643b46d93051d7d1c2a688237c">wbwlib::math::solve_linear</a></div><div class="ttdeci">int solve_linear(std::vector&lt; std::vector&lt; T &gt;&gt; A, std::vector&lt; T &gt; b, std::vector&lt; T &gt; &amp;x)</div><div class="ttdoc">求解 n 元线性方程组 （A 为方阵）。</div><div class="ttdef"><b>Definition:</b> linalg.hpp:113</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_html_a99b29de3f85cc3bee9c7d18550fa5915"><div class="ttname"><a href="namespacewbwlib_1_1math.html#a99b29de3f85cc3bee9c7d18550fa5915">wbwlib::math::gauss_elim</a></div><div class="ttdeci">int gauss_elim(std::vector&lt; std::vector&lt; T &gt;&gt; &amp;a, double fp_eps=1e-9)</div><div class="ttdoc">对增广矩阵 a（n 行 × (m+1) 列，最后一列为常数列）做高斯消元，返回秩。</div><div class="ttdef"><b>Definition:</b> linalg.hpp:98</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_html_adfb8bbec9329926e0739a8ab02445aee"><div class="ttname"><a href="namespacewbwlib_1_1math.html#adfb8bbec9329926e0739a8ab02445aee">wbwlib::math::det</a></div><div class="ttdeci">T det(std::vector&lt; std::vector&lt; T &gt;&gt; a)</div><div class="ttdoc">行列式：高斯消元后取对角元乘积， （消元后）。</div><div class="ttdef"><b>Definition:</b> linalg.hpp:139</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+<div class="ttc" id="anamespacewbwlib_html_a03099a64026b5d6da75d85536641664e"><div class="ttname"><a href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">wbwlib::u64</a></div><div class="ttdeci">std::uint64_t u64</div><div class="ttdoc">64 位无符号整数</div><div class="ttdef"><b>Definition:</b> base.hpp:102</div></div>
+<div class="ttc" id="anamespacewbwlib_html_a8de3fe2c83b81136ab5d970ef004c7b2"><div class="ttname"><a href="namespacewbwlib.html#a8de3fe2c83b81136ab5d970ef004c7b2">wbwlib::wbw_error</a></div><div class="ttdeci">void wbw_error(const char *msg)</div><div class="ttdoc">报告错误：断言失败并中止程序（默认模式）。</div><div class="ttdef"><b>Definition:</b> base.hpp:87</div></div>
+<div class="ttc" id="anamespacewbwlib_html_af575e236563e733e414b698ed407f1e8"><div class="ttname"><a href="namespacewbwlib.html#af575e236563e733e414b698ed407f1e8">wbwlib::enable_if_t</a></div><div class="ttdeci">typename std::enable_if&lt; B, T &gt;::type enable_if_t</div><div class="ttdef"><b>Definition:</b> base.hpp:110</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

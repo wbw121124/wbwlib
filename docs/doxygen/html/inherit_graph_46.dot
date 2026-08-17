@@ -1,0 +1,8 @@
+digraph "类继承关系图"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="wbwlib::graph::LinkCutTree\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwbwlib_1_1graph_1_1_link_cut_tree.html",tooltip="动态树 LCT：支持 link/cut/makeroot/findroot、路径和查询、路径加、单点赋权。"];
+}

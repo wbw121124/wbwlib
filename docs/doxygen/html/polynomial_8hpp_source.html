@@ -1,0 +1,292 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/math/polynomial.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_3daf11f4f079b8f8f9a94cd388c9bdee.html">math</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">polynomial.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="polynomial_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_MATH_POLYNOMIAL_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_MATH_POLYNOMIAL_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fourier_8hpp.html">wbwlib/math/fourier.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span>math {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math.html#acba21834175ea3d16b66d688e4c43cd7">   38</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classwbwlib_1_1math_1_1modint.html">poly_mod</a> = <a class="code" href="classwbwlib_1_1math_1_1modint.html">modint&lt;998244353&gt;</a>;       </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math.html#a11fbf635b85846f1bba1d9b97d61feab">   39</a></span>&#160;constexpr <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="namespacewbwlib_1_1math.html#a11fbf635b85846f1bba1d9b97d61feab">kPolyMod</a> = 998244353;       </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1poly.html">   41</a></span>&#160;<span class="keyword">namespace </span>poly {</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">   42</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classwbwlib_1_1math_1_1modint.html">M</a> = <a class="code" href="namespacewbwlib_1_1math.html#acba21834175ea3d16b66d688e4c43cd7">poly_mod</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1poly.html#a38c227132b2f6933fe793c3ec70bf610">   50</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;M&gt; <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a38c227132b2f6933fe793c3ec70bf610">trim</a>(std::vector&lt;M&gt; a, <span class="keywordtype">int</span> lim) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  a.resize((std::min)((<span class="keywordtype">int</span>)a.size(), lim));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1poly.html#a100113995301d580c69ee81667155018">   62</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;M&gt; <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a100113995301d580c69ee81667155018">mul</a>(std::vector&lt;M&gt; a, std::vector&lt;M&gt; b, <span class="keywordtype">int</span> lim) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  std::vector&lt;M&gt; c = <a class="code" href="namespacewbwlib_1_1math.html#a74ef93a0142291ad1d6eb275055ec2a7">convolution_ntt</a>(a, b);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)c.size() &gt; lim) c.resize(lim);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">return</span> c;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1poly.html#ae1d591bbae8504ccf778df6efd5e70b1">   75</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;M&gt; <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae1d591bbae8504ccf778df6efd5e70b1">inverses</a>(<span class="keywordtype">int</span> n) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  std::vector&lt;M&gt; iv(n + 1);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">if</span> (n &gt;= 1) iv[1] = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(1);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 2; i &lt;= n; ++i)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    iv[i] = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(-(<a class="code" href="namespacewbwlib_1_1math.html#a11fbf635b85846f1bba1d9b97d61feab">kPolyMod</a> / i)) * iv[<a class="code" href="namespacewbwlib_1_1math.html#a11fbf635b85846f1bba1d9b97d61feab">kPolyMod</a> % i];</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">return</span> iv;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1poly.html#a4d80f7f954eaf44382e50900ff551796">   88</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;M&gt; <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a4d80f7f954eaf44382e50900ff551796">deriv</a>(<span class="keyword">const</span> std::vector&lt;M&gt;&amp; f) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordflow">if</span> (f.size() &lt;= 1) <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  std::vector&lt;M&gt; r(f.size() - 1);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1; i &lt; f.size(); ++i) r[i - 1] = f[i] * <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>((<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>)i);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordflow">return</span> r;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1poly.html#af29751a18f2a744f6dea37e4aec0fa58">  100</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;M&gt; <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#af29751a18f2a744f6dea37e4aec0fa58">integ</a>(<span class="keyword">const</span> std::vector&lt;M&gt;&amp; f) {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">auto</span> iv = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae1d591bbae8504ccf778df6efd5e70b1">inverses</a>((<span class="keywordtype">int</span>)f.size());</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  std::vector&lt;M&gt; r(f.size() + 1);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1; i &lt;= f.size(); ++i) r[i] = f[i - 1] * iv[i];</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordflow">return</span> r;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1poly.html#a7276474ffeb7c5606806bb3ed5dc7704">  115</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;M&gt; <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a7276474ffeb7c5606806bb3ed5dc7704">invf</a>(<span class="keyword">const</span> std::vector&lt;M&gt;&amp; f, <span class="keywordtype">int</span> need) {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <a class="code" href="base_8hpp.html#a06d1d05da6faf7bea328563c9bada928">WBWLIB_ASSERT</a>(!f.empty() &amp;&amp; f[0] != <a class="code" href="classwbwlib_1_1math_1_1modint.html">M</a>(0));</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  std::vector&lt;M&gt; g(1, <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(1) / f[0]);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">int</span> m = 1;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">while</span> (m &lt; need) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    m &lt;&lt;= 1;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    std::vector&lt;M&gt; fm = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a38c227132b2f6933fe793c3ec70bf610">trim</a>(f, m);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    std::vector&lt;M&gt; fg = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a100113995301d580c69ee81667155018">mul</a>(fm, g, m);        <span class="comment">// f*g mod x^m</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; v : fg) v = -v;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    fg[0] += <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(2);                            <span class="comment">// 2 - f*g</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    g = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a100113995301d580c69ee81667155018">mul</a>(g, fg, m);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    g.resize(m);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  g.resize(need);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordflow">return</span> g;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1poly.html#a98813872db0b96a11c91ebd8bfb02bb8">  140</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;M&gt; <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a98813872db0b96a11c91ebd8bfb02bb8">lnf</a>(<span class="keyword">const</span> std::vector&lt;M&gt;&amp; f, <span class="keywordtype">int</span> need) {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <a class="code" href="base_8hpp.html#a06d1d05da6faf7bea328563c9bada928">WBWLIB_ASSERT</a>(!f.empty() &amp;&amp; f[0] == <a class="code" href="classwbwlib_1_1math_1_1modint.html">M</a>(1));</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  std::vector&lt;M&gt; res(need, <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(0));</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  std::vector&lt;M&gt; df = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a4d80f7f954eaf44382e50900ff551796">deriv</a>(f);               <span class="comment">// f&#39;</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordflow">if</span> (df.empty()) <span class="keywordflow">return</span> res;                 <span class="comment">// f 为常数 → ln f = 0</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  std::vector&lt;M&gt; fi = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a7276474ffeb7c5606806bb3ed5dc7704">invf</a>(f, need);          <span class="comment">// 1/f</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  std::vector&lt;M&gt; t = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a100113995301d580c69ee81667155018">mul</a>(df, fi, need - 1);   <span class="comment">// f&#39;/f，长度 need-1</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keyword">auto</span> iv = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae1d591bbae8504ccf778df6efd5e70b1">inverses</a>(need);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; need; ++i) res[i] = t[i - 1] * iv[i];   <span class="comment">// 积分</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1poly.html#a6c4f78bb7888ae16f4b919edebcb0a63">  160</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;M&gt; <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a6c4f78bb7888ae16f4b919edebcb0a63">expf</a>(<span class="keyword">const</span> std::vector&lt;M&gt;&amp; f, <span class="keywordtype">int</span> need) {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <a class="code" href="base_8hpp.html#a06d1d05da6faf7bea328563c9bada928">WBWLIB_ASSERT</a>(!f.empty() &amp;&amp; f[0] == <a class="code" href="classwbwlib_1_1math_1_1modint.html">M</a>(0));</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  std::vector&lt;M&gt; g(1, <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(1));</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordtype">int</span> m = 1;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keywordflow">while</span> (m &lt; need) {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    m &lt;&lt;= 1;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    std::vector&lt;M&gt; lg = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a98813872db0b96a11c91ebd8bfb02bb8">lnf</a>(g, m);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; v : lg) v = -v;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    lg[0] += <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(1);                            <span class="comment">// 1 - ln(g)</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    std::vector&lt;M&gt; fm = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a38c227132b2f6933fe793c3ec70bf610">trim</a>(f, m);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m; ++i)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      lg[i] += (i &lt; (<span class="keywordtype">int</span>)fm.size() ? fm[i] : <a class="code" href="classwbwlib_1_1math_1_1modint.html">M</a>(0));   <span class="comment">// 1 - ln(g) + f</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    g = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a100113995301d580c69ee81667155018">mul</a>(g, lg, m);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    g.resize(m);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  g.resize(need);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keywordflow">return</span> g;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1poly.html#afa1de88d37b9c6a62b6f503b518842c8">  187</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;M&gt; <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#afa1de88d37b9c6a62b6f503b518842c8">sqrtf</a>(<span class="keyword">const</span> std::vector&lt;M&gt;&amp; f, <span class="keywordtype">int</span> need) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <a class="code" href="base_8hpp.html#a06d1d05da6faf7bea328563c9bada928">WBWLIB_ASSERT</a>(!f.empty() &amp;&amp; f[0] == <a class="code" href="classwbwlib_1_1math_1_1modint.html">M</a>(1));</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classwbwlib_1_1math_1_1modint.html">M</a> inv2 = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(2).<a class="code" href="classwbwlib_1_1math_1_1modint.html#aa1bf5bd0d4cedcadc1df4d4c8d2914a6">inv</a>();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  std::vector&lt;M&gt; g(1, <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(1));</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordtype">int</span> m = 1;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="keywordflow">while</span> (m &lt; need) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    m &lt;&lt;= 1;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    std::vector&lt;M&gt; gi = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a7276474ffeb7c5606806bb3ed5dc7704">invf</a>(g, m);           <span class="comment">// 1/g</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    std::vector&lt;M&gt; fm = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a38c227132b2f6933fe793c3ec70bf610">trim</a>(f, m);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    std::vector&lt;M&gt; t = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a100113995301d580c69ee81667155018">mul</a>(fm, gi, m);        <span class="comment">// f/g</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m; ++i) {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      <a class="code" href="classwbwlib_1_1math_1_1modint.html">M</a> gv = (i &lt; (int)g.size()) ? g[i] : <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(0);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      t[i] = (t[i] + gv) * inv2;              <span class="comment">// (f/g + g)/2</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    g.swap(t);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    g.resize(m);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  g.resize(need);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keywordflow">return</span> g;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1poly.html#a0dcc9cd037ab178647b5982ae94f6f2a">  217</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;M&gt; <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a0dcc9cd037ab178647b5982ae94f6f2a">powf</a>(std::vector&lt;M&gt; f, <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> k, <span class="keywordtype">int</span> need) {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <a class="code" href="base_8hpp.html#a06d1d05da6faf7bea328563c9bada928">WBWLIB_ASSERT</a>(!f.empty() &amp;&amp; f[0] == <a class="code" href="classwbwlib_1_1math_1_1modint.html">M</a>(1));</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  std::vector&lt;M&gt; l = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a98813872db0b96a11c91ebd8bfb02bb8">lnf</a>(f, need);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <a class="code" href="classwbwlib_1_1math_1_1modint.html">M</a> coeff(k % <a class="code" href="namespacewbwlib_1_1math.html#a11fbf635b85846f1bba1d9b97d61feab">kPolyMod</a>);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; v : l) v *= coeff;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a6c4f78bb7888ae16f4b919edebcb0a63">expf</a>(l, need);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;}</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1math_1_1poly.html#aceddae0950bdd0a6695fc4a0ef7188df">  234</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#aceddae0950bdd0a6695fc4a0ef7188df">divmod</a>(<span class="keyword">const</span> std::vector&lt;M&gt;&amp; f, <span class="keyword">const</span> std::vector&lt;M&gt;&amp; g,</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                   std::vector&lt;M&gt;&amp; q, std::vector&lt;M&gt;&amp; r) {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordtype">int</span> n = (int)f.size(), m = (int)g.size();</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="keywordflow">if</span> (n &lt; m) { q.clear(); r = f; <span class="keywordflow">return</span>; }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  std::vector&lt;M&gt; rf(f.rbegin(), f.rend());    <span class="comment">// 系数反转</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  std::vector&lt;M&gt; rgv(g.rbegin(), g.rend());</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keywordtype">int</span> need = n - m + 1;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  std::vector&lt;M&gt; ig = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a7276474ffeb7c5606806bb3ed5dc7704">invf</a>(<a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a38c227132b2f6933fe793c3ec70bf610">trim</a>(rgv, need), need);   <span class="comment">// 1/reverse(g)</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  std::vector&lt;M&gt; qrev = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a100113995301d580c69ee81667155018">mul</a>(rf, ig, need);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  q.assign(qrev.rbegin(), qrev.rend());       <span class="comment">// 反转为 q</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  std::vector&lt;M&gt; qg = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#a100113995301d580c69ee81667155018">mul</a>(q, g, n);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="keywordtype">int</span> rlen = (std::max)(m - 1, 0);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  r.assign(rlen, <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(0));</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; rlen; ++i) {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <a class="code" href="classwbwlib_1_1math_1_1modint.html">M</a> a = (i &lt; n) ? f[i] : <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(0);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <a class="code" href="classwbwlib_1_1math_1_1modint.html">M</a> b = (i &lt; (int)qg.size()) ? qg[i] : <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(0);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    r[i] = a - b;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;} <span class="comment">// namespace poly</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;} <span class="comment">// namespace math</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_MATH_POLYNOMIAL_HPP</span></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="abase_8hpp_html_a06d1d05da6faf7bea328563c9bada928"><div class="ttname"><a href="base_8hpp.html#a06d1d05da6faf7bea328563c9bada928">WBWLIB_ASSERT</a></div><div class="ttdeci">#define WBWLIB_ASSERT(cond)</div><div class="ttdef"><b>Definition:</b> base.hpp:91</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1modint_html"><div class="ttname"><a href="classwbwlib_1_1math_1_1modint.html">wbwlib::math::modint</a></div><div class="ttdoc">固定模数的模整数类：所有运算自动取模，支持与原生整数混合运算。</div><div class="ttdef"><b>Definition:</b> modular.hpp:41</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1modint_html_aa1bf5bd0d4cedcadc1df4d4c8d2914a6"><div class="ttname"><a href="classwbwlib_1_1math_1_1modint.html#aa1bf5bd0d4cedcadc1df4d4c8d2914a6">wbwlib::math::modint::inv</a></div><div class="ttdeci">modint inv() const</div><div class="ttdoc">求逆元（扩展欧几里得；要求 ，与 mod 是否质数无关）。</div><div class="ttdef"><b>Definition:</b> modular.hpp:200</div></div>
+<div class="ttc" id="afourier_8hpp_html"><div class="ttname"><a href="fourier_8hpp.html">fourier.hpp</a></div><div class="ttdoc">卷积加速：复数 FFT 与数论变换 NTT。</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1poly_html_a0dcc9cd037ab178647b5982ae94f6f2a"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1poly.html#a0dcc9cd037ab178647b5982ae94f6f2a">wbwlib::math::poly::powf</a></div><div class="ttdeci">std::vector&lt; M &gt; powf(std::vector&lt; M &gt; f, i64 k, int need)</div><div class="ttdoc">形式幂级数幂： ，计算 。</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:217</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1poly_html_a100113995301d580c69ee81667155018"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1poly.html#a100113995301d580c69ee81667155018">wbwlib::math::poly::mul</a></div><div class="ttdeci">std::vector&lt; M &gt; mul(std::vector&lt; M &gt; a, std::vector&lt; M &gt; b, int lim)</div><div class="ttdoc">完整卷积后取前 lim 项： 。</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:62</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1poly_html_a38c227132b2f6933fe793c3ec70bf610"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1poly.html#a38c227132b2f6933fe793c3ec70bf610">wbwlib::math::poly::trim</a></div><div class="ttdeci">std::vector&lt; M &gt; trim(std::vector&lt; M &gt; a, int lim)</div><div class="ttdoc">截断多项式到前 lim 项。</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:50</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1poly_html_a4d80f7f954eaf44382e50900ff551796"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1poly.html#a4d80f7f954eaf44382e50900ff551796">wbwlib::math::poly::deriv</a></div><div class="ttdeci">std::vector&lt; M &gt; deriv(const std::vector&lt; M &gt; &amp;f)</div><div class="ttdoc">多项式求导： 。</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:88</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1poly_html_a6c4f78bb7888ae16f4b919edebcb0a63"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1poly.html#a6c4f78bb7888ae16f4b919edebcb0a63">wbwlib::math::poly::expf</a></div><div class="ttdeci">std::vector&lt; M &gt; expf(const std::vector&lt; M &gt; &amp;f, int need)</div><div class="ttdoc">形式幂级数指数：计算 。</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:160</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1poly_html_a7276474ffeb7c5606806bb3ed5dc7704"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1poly.html#a7276474ffeb7c5606806bb3ed5dc7704">wbwlib::math::poly::invf</a></div><div class="ttdeci">std::vector&lt; M &gt; invf(const std::vector&lt; M &gt; &amp;f, int need)</div><div class="ttdoc">形式幂级数乘法逆：计算 。</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:115</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1poly_html_a98813872db0b96a11c91ebd8bfb02bb8"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1poly.html#a98813872db0b96a11c91ebd8bfb02bb8">wbwlib::math::poly::lnf</a></div><div class="ttdeci">std::vector&lt; M &gt; lnf(const std::vector&lt; M &gt; &amp;f, int need)</div><div class="ttdoc">形式幂级数对数： ，计算 。</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:140</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1poly_html_aceddae0950bdd0a6695fc4a0ef7188df"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1poly.html#aceddae0950bdd0a6695fc4a0ef7188df">wbwlib::math::poly::divmod</a></div><div class="ttdeci">void divmod(const std::vector&lt; M &gt; &amp;f, const std::vector&lt; M &gt; &amp;g, std::vector&lt; M &gt; &amp;q, std::vector&lt; M &gt; &amp;r)</div><div class="ttdoc">多项式带余除法： ，其中 。</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:234</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1poly_html_ae1d591bbae8504ccf778df6efd5e70b1"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1poly.html#ae1d591bbae8504ccf778df6efd5e70b1">wbwlib::math::poly::inverses</a></div><div class="ttdeci">std::vector&lt; M &gt; inverses(int n)</div><div class="ttdoc">0..n 的模逆表（线性递推）。</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:75</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1poly_html_ae4a100da6c5ade020129268cefb3fb3b"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">wbwlib::math::poly::M</a></div><div class="ttdeci">poly_mod M</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:42</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1poly_html_af29751a18f2a744f6dea37e4aec0fa58"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1poly.html#af29751a18f2a744f6dea37e4aec0fa58">wbwlib::math::poly::integ</a></div><div class="ttdeci">std::vector&lt; M &gt; integ(const std::vector&lt; M &gt; &amp;f)</div><div class="ttdoc">多项式积分： （常数项补 0）。</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:100</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1poly_html_afa1de88d37b9c6a62b6f503b518842c8"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1poly.html#afa1de88d37b9c6a62b6f503b518842c8">wbwlib::math::poly::sqrtf</a></div><div class="ttdeci">std::vector&lt; M &gt; sqrtf(const std::vector&lt; M &gt; &amp;f, int need)</div><div class="ttdoc">形式幂级数平方根：计算 。</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:187</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_html_a11fbf635b85846f1bba1d9b97d61feab"><div class="ttname"><a href="namespacewbwlib_1_1math.html#a11fbf635b85846f1bba1d9b97d61feab">wbwlib::math::kPolyMod</a></div><div class="ttdeci">constexpr i64 kPolyMod</div><div class="ttdoc">默认多项式环模数</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:39</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_html_a74ef93a0142291ad1d6eb275055ec2a7"><div class="ttname"><a href="namespacewbwlib_1_1math.html#a74ef93a0142291ad1d6eb275055ec2a7">wbwlib::math::convolution_ntt</a></div><div class="ttdeci">std::vector&lt; M &gt; convolution_ntt(std::vector&lt; M &gt; a, std::vector&lt; M &gt; b)</div><div class="ttdoc">模数卷积（NTT）： 。</div><div class="ttdef"><b>Definition:</b> fourier.hpp:157</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_html_acba21834175ea3d16b66d688e4c43cd7"><div class="ttname"><a href="namespacewbwlib_1_1math.html#acba21834175ea3d16b66d688e4c43cd7">wbwlib::math::poly_mod</a></div><div class="ttdeci">modint&lt; 998244353 &gt; poly_mod</div><div class="ttdoc">默认多项式环元素</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:38</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+<div class="ttc" id="anamespacewbwlib_html_a86ab7e3b77fa0c682d473301d8c617c6"><div class="ttname"><a href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">wbwlib::i64</a></div><div class="ttdeci">std::int64_t i64</div><div class="ttdoc">64 位有符号整数</div><div class="ttdef"><b>Definition:</b> base.hpp:98</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

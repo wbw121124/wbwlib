@@ -1,0 +1,13 @@
+<map id="wbwlib/datastruct/monotonic.hpp" name="wbwlib/datastruct/monotonic.hpp">
+<area shape="rect" id="node1" title="单调栈、单调队列（滑动窗口最值）、最近小/大元素。" alt="" coords="63,5,276,33"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,81,62,109"/>
+<area shape="rect" id="node3" title=" " alt="" coords="86,81,163,109"/>
+<area shape="rect" id="node4" title=" " alt="" coords="188,81,245,109"/>
+<area shape="rect" id="node5" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="269,81,417,109"/>
+<area shape="rect" id="node6" title=" " alt="" coords="90,157,150,185"/>
+<area shape="rect" id="node7" title=" " alt="" coords="175,157,239,185"/>
+<area shape="rect" id="node8" title=" " alt="" coords="263,157,327,185"/>
+<area shape="rect" id="node9" title=" " alt="" coords="352,157,430,185"/>
+<area shape="rect" id="node10" title=" " alt="" coords="454,157,536,185"/>
+<area shape="rect" id="node11" title=" " alt="" coords="561,157,613,185"/>
+</map>

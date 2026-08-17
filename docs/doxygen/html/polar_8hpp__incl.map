@@ -1,0 +1,14 @@
+<map id="wbwlib/geo/polar.hpp" name="wbwlib/geo/polar.hpp">
+<area shape="rect" id="node1" title="极角相关工具：按极角排序、角度转弧度、坐标→极角。" alt="" coords="80,5,223,33"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,81,63,109"/>
+<area shape="rect" id="node3" title=" " alt="" coords="90,157,165,185"/>
+<area shape="rect" id="node4" title=" " alt="" coords="201,157,259,185"/>
+<area shape="rect" id="node5" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="290,157,437,185"/>
+<area shape="rect" id="node12" href="$point_8hpp.html" title="计算几何基础：二维点/向量，整数坐标（默认 i64）+ double 变体。" alt="" coords="189,81,332,109"/>
+<area shape="rect" id="node6" title=" " alt="" coords="111,233,171,261"/>
+<area shape="rect" id="node7" title=" " alt="" coords="195,233,260,261"/>
+<area shape="rect" id="node8" title=" " alt="" coords="283,233,348,261"/>
+<area shape="rect" id="node9" title=" " alt="" coords="372,233,451,261"/>
+<area shape="rect" id="node10" title=" " alt="" coords="474,233,557,261"/>
+<area shape="rect" id="node11" title=" " alt="" coords="581,233,634,261"/>
+</map>

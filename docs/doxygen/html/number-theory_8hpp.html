@@ -1,0 +1,241 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/math/number-theory.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_3daf11f4f079b8f8f9a94cd388c9bdee.html">math</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">number-theory.hpp 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>数论基础：快速幂、快速乘、gcd/lcm、扩展欧几里得、逆元、CRT/EXCRT、欧拉定理、整除分块。  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="base_8hpp_source.html">wbwlib/core/base.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+number-theory.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="number-theory_8hpp__incl.png" border="0" usemap="#awbwlib_2math_2number-theory_8hpp" alt=""/></div>
+<map name="awbwlib_2math_2number-theory_8hpp" id="awbwlib_2math_2number-theory_8hpp">
+<area shape="rect" title="数论基础：快速幂、快速乘、gcd/lcm、扩展欧几里得、逆元、CRT/EXCRT、欧拉定理、整除分块。" alt="" coords="28,5,169,49"/>
+<area shape="rect" title=" " alt="" coords="5,173,58,201"/>
+<area shape="rect" title=" " alt="" coords="70,97,127,125"/>
+<area shape="rect" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="151,97,299,125"/>
+<area shape="rect" title=" " alt="" coords="81,173,142,201"/>
+<area shape="rect" title=" " alt="" coords="166,173,230,201"/>
+<area shape="rect" title=" " alt="" coords="254,173,318,201"/>
+<area shape="rect" title=" " alt="" coords="343,173,421,201"/>
+<area shape="rect" title=" " alt="" coords="445,173,527,201"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="number-theory_8hpp__dep__incl.png" border="0" usemap="#awbwlib_2math_2number-theory_8hppdep" alt=""/></div>
+<map name="awbwlib_2math_2number-theory_8hppdep" id="awbwlib_2math_2number-theory_8hppdep">
+<area shape="rect" title="数论基础：快速幂、快速乘、gcd/lcm、扩展欧几里得、逆元、CRT/EXCRT、欧拉定理、整除分块。" alt="" coords="352,5,493,49"/>
+<area shape="rect" href="bsgs_8hpp.html" title="大步小步法 Baby&#45;Step&#45;Giant&#45;Step：解离散对数 a^x ≡ b (mod p)。" alt="" coords="5,265,157,293"/>
+<area shape="rect" href="math_8hpp.html" title="math 模块聚合头：一次引入本模块全部头文件。" alt="" coords="434,341,587,369"/>
+<area shape="rect" href="fraction_8hpp.html" title="精确有理数（分数）类：自动约分，支持全部算术/比较/输出。" alt="" coords="231,265,398,293"/>
+<area shape="rect" href="modular_8hpp.html" title="模意义整数类 modint（固定模版）与动态模版。" alt="" coords="447,97,616,125"/>
+<area shape="rect" href="primes_8hpp.html" title="质数工具：线性筛（素数/欧拉函数/莫比乌斯函数）、Miller&#45;Rabin 素性测试、 Pollard&#45;Rho 质因数分解。" alt="" coords="873,97,1036,125"/>
+<area shape="rect" href="primitive-root_8hpp.html" title="原根求解：求模 p 意义下的最小原根（常用 NTT 前置，p 为质数）。" alt="" coords="999,173,1147,217"/>
+<area shape="rect" href="wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="445,417,576,445"/>
+<area shape="rect" href="combinatorics_8hpp.html" title="组合计数工具：阶乘/逆元预计算、组合数、排列数、Lucas、卡特兰、 两型斯特林数、错排数。" alt="" coords="430,181,634,209"/>
+<area shape="rect" href="fourier_8hpp.html" title="卷积加速：复数 FFT 与数论变换 NTT。" alt="" coords="657,181,817,209"/>
+<area shape="rect" href="fwt_8hpp.html" title="快速沃尔什变换 FWT：集合幂级数的 OR / AND / XOR 卷积。" alt="" coords="784,265,925,293"/>
+<area shape="rect" href="polynomial_8hpp.html" title="多项式运算（形式幂级数，截断到指定长度）。" alt="" coords="574,265,759,293"/>
+</map>
+</div>
+</div>
+<p><a href="number-theory_8hpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1math_1_1_excrt_result.html">wbwlib::math::ExcrtResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">扩展中国剩余定理（EXCRT）的求解结果。  <a href="structwbwlib_1_1math_1_1_excrt_result.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1math_1_1_int_block.html">wbwlib::math::IntBlock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">整除分块：按 \(\lfloor n / i \rfloor\) 取值相同分块，用于 \(\sum_{i=1}^{n} f(\lfloor n/i \rfloor)\) 类求和。  <a href="structwbwlib_1_1math_1_1_int_block.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacewbwlib"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib.html">wbwlib</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacewbwlib_1_1math"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html">wbwlib::math</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a98a7e4305bd60b9f791338c1d362839d"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a98a7e4305bd60b9f791338c1d362839d"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a98a7e4305bd60b9f791338c1d362839d">wbwlib::math::qpow</a> (T a, i64 p, T mod)</td></tr>
+<tr class="memdesc:a98a7e4305bd60b9f791338c1d362839d"><td class="mdescLeft">&#160;</td><td class="mdescRight">快速幂：计算 \(a^p \bmod mod\)，p 可为任意非负整数。  <a href="namespacewbwlib_1_1math.html#a98a7e4305bd60b9f791338c1d362839d">更多...</a><br /></td></tr>
+<tr class="separator:a98a7e4305bd60b9f791338c1d362839d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a485768859468bde0dc8d9c8f6342e1a2"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a485768859468bde0dc8d9c8f6342e1a2"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a485768859468bde0dc8d9c8f6342e1a2">wbwlib::math::qpow_plain</a> (T a, i64 p)</td></tr>
+<tr class="memdesc:a485768859468bde0dc8d9c8f6342e1a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">无取模的快速幂：直接计算 \(a^p\)（用于不进位的浮点/或溢出可接受的加速场景）。  <a href="namespacewbwlib_1_1math.html#a485768859468bde0dc8d9c8f6342e1a2">更多...</a><br /></td></tr>
+<tr class="separator:a485768859468bde0dc8d9c8f6342e1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8630eefb667f064818be11f8a5b15611"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a8630eefb667f064818be11f8a5b15611"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a8630eefb667f064818be11f8a5b15611">wbwlib::math::mul_mod</a> (T a, T b, T mod)</td></tr>
+<tr class="memdesc:a8630eefb667f064818be11f8a5b15611"><td class="mdescLeft">&#160;</td><td class="mdescRight">快速乘：精确计算 \(a \cdot b \bmod mod\)，适用于 mod 超过 1e18、i64 乘法溢出的场景。  <a href="namespacewbwlib_1_1math.html#a8630eefb667f064818be11f8a5b15611">更多...</a><br /></td></tr>
+<tr class="separator:a8630eefb667f064818be11f8a5b15611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad63e5d15b740179eb999725b580fa22a"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ad63e5d15b740179eb999725b580fa22a"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#ad63e5d15b740179eb999725b580fa22a">wbwlib::math::gcd</a> (T a, T b)</td></tr>
+<tr class="memdesc:ad63e5d15b740179eb999725b580fa22a"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大公约数（结果非负）。  <a href="namespacewbwlib_1_1math.html#ad63e5d15b740179eb999725b580fa22a">更多...</a><br /></td></tr>
+<tr class="separator:ad63e5d15b740179eb999725b580fa22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c4fc393a17d41a9667d66119bc61f34"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a3c4fc393a17d41a9667d66119bc61f34"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a3c4fc393a17d41a9667d66119bc61f34">wbwlib::math::lcm</a> (T a, T b)</td></tr>
+<tr class="memdesc:a3c4fc393a17d41a9667d66119bc61f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小公倍数： \(\operatorname{lcm}(a, b) = \frac{a \cdot b}{\gcd(a, b)}\)。  <a href="namespacewbwlib_1_1math.html#a3c4fc393a17d41a9667d66119bc61f34">更多...</a><br /></td></tr>
+<tr class="separator:a3c4fc393a17d41a9667d66119bc61f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aaf6c4425d159eed5d042d870390856"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a7aaf6c4425d159eed5d042d870390856"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a7aaf6c4425d159eed5d042d870390856">wbwlib::math::ext_gcd</a> (T a, T b, T &amp;x, T &amp;y)</td></tr>
+<tr class="memdesc:a7aaf6c4425d159eed5d042d870390856"><td class="mdescLeft">&#160;</td><td class="mdescRight">扩展欧几里得：求 \(ax + by = \gcd(a, b)\) 的一组整数解 \((x, y)\)。  <a href="namespacewbwlib_1_1math.html#a7aaf6c4425d159eed5d042d870390856">更多...</a><br /></td></tr>
+<tr class="separator:a7aaf6c4425d159eed5d042d870390856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a681bee043826fa9dd557d87f8c4f40be"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a681bee043826fa9dd557d87f8c4f40be"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a681bee043826fa9dd557d87f8c4f40be">wbwlib::math::inv</a> (T a, T mod)</td></tr>
+<tr class="memdesc:a681bee043826fa9dd557d87f8c4f40be"><td class="mdescLeft">&#160;</td><td class="mdescRight">a 在模 mod 意义下的乘法逆元（仅要求 \(\gcd(a, mod) = 1\)，不要求 mod 为质数）。  <a href="namespacewbwlib_1_1math.html#a681bee043826fa9dd557d87f8c4f40be">更多...</a><br /></td></tr>
+<tr class="separator:a681bee043826fa9dd557d87f8c4f40be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0233c5b1e0a574e180f024ce44eba57"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aa0233c5b1e0a574e180f024ce44eba57"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#aa0233c5b1e0a574e180f024ce44eba57">wbwlib::math::mod_inv_prime</a> (T a, T mod)</td></tr>
+<tr class="memdesc:aa0233c5b1e0a574e180f024ce44eba57"><td class="mdescLeft">&#160;</td><td class="mdescRight">费马小定理求逆元（仅当 mod 为质数时成立）。  <a href="namespacewbwlib_1_1math.html#aa0233c5b1e0a574e180f024ce44eba57">更多...</a><br /></td></tr>
+<tr class="separator:aa0233c5b1e0a574e180f024ce44eba57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f38a54f9fa76a10dd536c949413d0d"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aa4f38a54f9fa76a10dd536c949413d0d"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#aa4f38a54f9fa76a10dd536c949413d0d">wbwlib::math::crt</a> (const std::vector&lt; T &gt; &amp;a, const std::vector&lt; T &gt; &amp;m, T M)</td></tr>
+<tr class="memdesc:aa4f38a54f9fa76a10dd536c949413d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">中国剩余定理（CRT）：解同余方程组 \(x \equiv a_i \pmod{m_i}\)（ \(m_i\) 两两互质）。  <a href="namespacewbwlib_1_1math.html#aa4f38a54f9fa76a10dd536c949413d0d">更多...</a><br /></td></tr>
+<tr class="separator:aa4f38a54f9fa76a10dd536c949413d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a260265713cb827022d0a36b300902161"><td class="memItemLeft" align="right" valign="top">i64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a260265713cb827022d0a36b300902161">wbwlib::math::inv_inline</a> (i64 a, i64 mod)</td></tr>
+<tr class="memdesc:a260265713cb827022d0a36b300902161"><td class="mdescLeft">&#160;</td><td class="mdescRight">供 excrt 使用的 i64 逆元（调用处保证互质，逆元必存在）。  <a href="namespacewbwlib_1_1math.html#a260265713cb827022d0a36b300902161">更多...</a><br /></td></tr>
+<tr class="separator:a260265713cb827022d0a36b300902161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbab613ec3bc93768c15cfb2cf385eb2"><td class="memItemLeft" align="right" valign="top">ExcrtResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#acbab613ec3bc93768c15cfb2cf385eb2">wbwlib::math::excrt</a> (const std::vector&lt; i64 &gt; &amp;a, const std::vector&lt; i64 &gt; &amp;m)</td></tr>
+<tr class="memdesc:acbab613ec3bc93768c15cfb2cf385eb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">扩展中国剩余定理（EXCRT）：解同余方程组 \(x \equiv a_i \pmod{m_i}\)， \(m_i\) 不必两两互质。  <a href="namespacewbwlib_1_1math.html#acbab613ec3bc93768c15cfb2cf385eb2">更多...</a><br /></td></tr>
+<tr class="separator:acbab613ec3bc93768c15cfb2cf385eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2afbd6b7fc008f1b75877df25029691"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ae2afbd6b7fc008f1b75877df25029691"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#ae2afbd6b7fc008f1b75877df25029691">wbwlib::math::phi</a> (T n)</td></tr>
+<tr class="memdesc:ae2afbd6b7fc008f1b75877df25029691"><td class="mdescLeft">&#160;</td><td class="mdescRight">欧拉函数：1..n 中与 n 互质的个数， \(\varphi(n) = n \prod_{p \mid n} (1 - \frac{1}{p})\)。  <a href="namespacewbwlib_1_1math.html#ae2afbd6b7fc008f1b75877df25029691">更多...</a><br /></td></tr>
+<tr class="separator:ae2afbd6b7fc008f1b75877df25029691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb77072a2edab1bdbcdc10a5ade0f6f6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; IntBlock &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#afb77072a2edab1bdbcdc10a5ade0f6f6">wbwlib::math::floor_blocks</a> (i64 n)</td></tr>
+<tr class="memdesc:afb77072a2edab1bdbcdc10a5ade0f6f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">求所有 \(\lfloor n/i \rfloor\) 取值相同的块 \([l, r]\)。  <a href="namespacewbwlib_1_1math.html#afb77072a2edab1bdbcdc10a5ade0f6f6">更多...</a><br /></td></tr>
+<tr class="separator:afb77072a2edab1bdbcdc10a5ade0f6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66018940a67345819158d8ccf981aa1f"><td class="memItemLeft" align="right" valign="top">i64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a66018940a67345819158d8ccf981aa1f">wbwlib::math::sum_floor</a> (i64 n)</td></tr>
+<tr class="memdesc:a66018940a67345819158d8ccf981aa1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算 \(\sum_{i=1}^{n} \lfloor n / i \rfloor\) 的经典整除分块公式，复杂度 \(O(\sqrt n)\)。  <a href="namespacewbwlib_1_1math.html#a66018940a67345819158d8ccf981aa1f">更多...</a><br /></td></tr>
+<tr class="separator:a66018940a67345819158d8ccf981aa1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>数论基础：快速幂、快速乘、gcd/lcm、扩展欧几里得、逆元、CRT/EXCRT、欧拉定理、整除分块。 </p>
+<dl class="section user"><dt>依赖</dt><dd><a class="el" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。">wbwlib/core/base.hpp</a></dd></dl>
+<p>函数均模板化，建议使用 i64（必要时借助 WBWLIB_HAS_INT128 的 wbwlib::i128 防溢出）。 </p>
+</div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

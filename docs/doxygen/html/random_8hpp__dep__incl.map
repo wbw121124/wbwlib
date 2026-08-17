@@ -1,0 +1,6 @@
+<map id="wbwlib/core/random.hpp" name="wbwlib/core/random.hpp">
+<area shape="rect" id="node1" title="随机工具：splitmix64、mt19937_64 封装、随机排列。" alt="" coords="5,5,168,33"/>
+<area shape="rect" id="node2" href="$core_8hpp.html" title="core 模块聚合头：一次引入本模块全部头文件。" alt="" coords="14,157,159,185"/>
+<area shape="rect" id="node4" href="$hash_8hpp.html" title="抗哈希冲突的哈希器（用于 std::unordered_map / unordered_set）。" alt="" coords="69,81,216,109"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="21,233,152,261"/>
+</map>

@@ -1,0 +1,196 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/dp/digit-dp.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_1d28127a4ea1892663a1bc4cd708e7e0.html">dp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">digit-dp.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="digit-dp_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_DP_DIGIT_DP_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_DP_DIGIT_DP_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>dp {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1dp.html#af48c9ff6930c656eb5b7765124773f73">   34</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="namespacewbwlib_1_1dp.html#af48c9ff6930c656eb5b7765124773f73">sum_of_digits_leq</a>(<span class="keyword">const</span> std::string&amp; N) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">int</span> n = (int)N.size();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  std::vector&lt;std::vector&lt;i64&gt;&gt; memo(n + 1, std::vector&lt;i64&gt;(9 * n + 1, -1));</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  std::function&lt;<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">bool</span>)&gt; dfs =</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      [&amp;](<span class="keywordtype">int</span> pos, <span class="keywordtype">int</span> sum, <span class="keywordtype">bool</span> tight) -&gt; <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (pos == n) <span class="keywordflow">return</span> sum;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span> (!tight &amp;&amp; memo[pos][sum] &gt;= 0) <span class="keywordflow">return</span> memo[pos][sum];</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> res = 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> up = tight ? N[pos] - <span class="charliteral">&#39;0&#39;</span> : 9;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> d = 0; d &lt;= up; ++d)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      res += dfs(pos + 1, sum + d, tight &amp;&amp; d == up);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (!tight) memo[pos][sum] = res;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  };</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">return</span> dfs(0, 0, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1dp.html#a4d1a088e28bf0e66859d0d99ce28685a">   57</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="namespacewbwlib_1_1dp.html#a4d1a088e28bf0e66859d0d99ce28685a">count_mod_leq</a>(<span class="keyword">const</span> std::string&amp; N, <span class="keywordtype">int</span> <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">int</span> n = (int)N.size();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  std::vector&lt;std::vector&lt;i64&gt;&gt; memo(n + 1, std::vector&lt;i64&gt;(<a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>, -1));</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  std::function&lt;<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">bool</span>)&gt; dfs =</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      [&amp;](<span class="keywordtype">int</span> pos, <span class="keywordtype">int</span> rem, <span class="keywordtype">bool</span> tight) -&gt; <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (pos == n) <span class="keywordflow">return</span> rem == 0 ? 1 : 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span> (!tight &amp;&amp; memo[pos][rem] &gt;= 0) <span class="keywordflow">return</span> memo[pos][rem];</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> res = 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> up = tight ? N[pos] - <span class="charliteral">&#39;0&#39;</span> : 9;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> d = 0; d &lt;= up; ++d)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      res += dfs(pos + 1, (rem + d) % <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>, tight &amp;&amp; d == up);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (!tight) memo[pos][rem] = res;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  };</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">return</span> dfs(0, 0, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1dp.html#a2faf13efa26e2cc6e61645cbecbb5d39">   79</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="namespacewbwlib_1_1dp.html#a2faf13efa26e2cc6e61645cbecbb5d39">count_no_62_leq</a>(<span class="keyword">const</span> std::string&amp; N) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">int</span> n = (int)N.size();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  std::vector&lt;std::vector&lt;i64&gt;&gt; memo(n + 1, std::vector&lt;i64&gt;(11, -1));</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="comment">// memo[pos][prev]：prev=10 表示没有前一位</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  std::function&lt;<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">bool</span>)&gt; dfs =</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      [&amp;](<span class="keywordtype">int</span> pos, <span class="keywordtype">int</span> prev, <span class="keywordtype">bool</span> tight) -&gt; <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (pos == n) <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span> (!tight &amp;&amp; memo[pos][prev] &gt;= 0) <span class="keywordflow">return</span> memo[pos][prev];</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> res = 0;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">int</span> up = tight ? N[pos] - <span class="charliteral">&#39;0&#39;</span> : 9;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> d = 0; d &lt;= up; ++d) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <span class="keywordflow">if</span> (prev == 6 &amp;&amp; d == 2) <span class="keywordflow">continue</span>;   <span class="comment">// 禁止 62</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      res += dfs(pos + 1, d, tight &amp;&amp; d == up);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> (!tight) memo[pos][prev] = res;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  };</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">return</span> dfs(0, 10, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;} <span class="comment">// namespace dp</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_DP_DIGIT_DP_HPP</span></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1dp_html_a2faf13efa26e2cc6e61645cbecbb5d39"><div class="ttname"><a href="namespacewbwlib_1_1dp.html#a2faf13efa26e2cc6e61645cbecbb5d39">wbwlib::dp::count_no_62_leq</a></div><div class="ttdeci">i64 count_no_62_leq(const std::string &amp;N)</div><div class="ttdoc">统计 [0, N] 中十进制表示不含连续两位 &quot;62&quot; 的数的个数。</div><div class="ttdef"><b>Definition:</b> digit-dp.hpp:79</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1dp_html_a4d1a088e28bf0e66859d0d99ce28685a"><div class="ttname"><a href="namespacewbwlib_1_1dp.html#a4d1a088e28bf0e66859d0d99ce28685a">wbwlib::dp::count_mod_leq</a></div><div class="ttdeci">i64 count_mod_leq(const std::string &amp;N, int M)</div><div class="ttdoc">统计 [0, N] 中数位总和能被 M 整除的数的个数。</div><div class="ttdef"><b>Definition:</b> digit-dp.hpp:57</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1dp_html_af48c9ff6930c656eb5b7765124773f73"><div class="ttname"><a href="namespacewbwlib_1_1dp.html#af48c9ff6930c656eb5b7765124773f73">wbwlib::dp::sum_of_digits_leq</a></div><div class="ttdeci">i64 sum_of_digits_leq(const std::string &amp;N)</div><div class="ttdoc">统计  所有数 x 的十进制数位之和的总和。</div><div class="ttdef"><b>Definition:</b> digit-dp.hpp:34</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1poly_html_ae4a100da6c5ade020129268cefb3fb3b"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">wbwlib::math::poly::M</a></div><div class="ttdeci">poly_mod M</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:42</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+<div class="ttc" id="anamespacewbwlib_html_a86ab7e3b77fa0c682d473301d8c617c6"><div class="ttname"><a href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">wbwlib::i64</a></div><div class="ttdeci">std::int64_t i64</div><div class="ttdoc">64 位有符号整数</div><div class="ttdef"><b>Definition:</b> base.hpp:98</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

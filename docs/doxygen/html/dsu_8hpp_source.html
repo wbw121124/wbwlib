@@ -1,0 +1,334 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/datastruct/dsu.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_8d69220e0774a19b26f749e5403d9fea.html">datastruct</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">dsu.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="dsu_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_DS_DSU_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_DS_DSU_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span>ds {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// ================= 标准并查集 =================</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_d_s_u.html">   40</a></span>&#160;<span class="comment"></span><span class="keyword">class </span><a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html">DSU</a> {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_d_s_u.html#a12ad12605e5fd1ef37350227226730a5">   42</a></span>&#160;  std::vector&lt;int&gt; <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a12ad12605e5fd1ef37350227226730a5">fa_</a>, <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a6927821406ed21b61e14f25c7fa2ca02">rk_</a>;   </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_d_s_u.html#a0541bcbb0e2577b965583e269053d857">   48</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a0541bcbb0e2577b965583e269053d857">DSU</a>(<span class="keywordtype">int</span> n) { <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a9c64b859e12f3d6a0e9c11d0781fab7d">init</a>(n); }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_d_s_u.html#a9c64b859e12f3d6a0e9c11d0781fab7d">   54</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a9c64b859e12f3d6a0e9c11d0781fab7d">init</a>(<span class="keywordtype">int</span> n) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a12ad12605e5fd1ef37350227226730a5">fa_</a>.resize(n + 1);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a6927821406ed21b61e14f25c7fa2ca02">rk_</a>.assign(n + 1, 1);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= n; ++i) <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a12ad12605e5fd1ef37350227226730a5">fa_</a>[i] = i;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_d_s_u.html#a30f616ce84bde548715a6de5a1f7f2ca">   65</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a30f616ce84bde548715a6de5a1f7f2ca">find</a>(<span class="keywordtype">int</span> x) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a12ad12605e5fd1ef37350227226730a5">fa_</a>[x] != x) x = <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a12ad12605e5fd1ef37350227226730a5">fa_</a>[x] = <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a12ad12605e5fd1ef37350227226730a5">fa_</a>[<a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a12ad12605e5fd1ef37350227226730a5">fa_</a>[x]];   <span class="comment">// 路径压缩</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_d_s_u.html#af3516af82f065f63f9f5777a18099ed3">   76</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#af3516af82f065f63f9f5777a18099ed3">unite</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    a = <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a30f616ce84bde548715a6de5a1f7f2ca">find</a>(a); b = <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a30f616ce84bde548715a6de5a1f7f2ca">find</a>(b);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span> (a == b) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a6927821406ed21b61e14f25c7fa2ca02">rk_</a>[a] &lt; <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a6927821406ed21b61e14f25c7fa2ca02">rk_</a>[b]) std::swap(a, b);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a12ad12605e5fd1ef37350227226730a5">fa_</a>[b] = a;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a6927821406ed21b61e14f25c7fa2ca02">rk_</a>[a] == <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a6927821406ed21b61e14f25c7fa2ca02">rk_</a>[b]) ++<a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a6927821406ed21b61e14f25c7fa2ca02">rk_</a>[a];</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_d_s_u.html#a9bc9378bbd6c278b07badc398e7d1809">   91</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a9bc9378bbd6c278b07badc398e7d1809">same</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) { <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a30f616ce84bde548715a6de5a1f7f2ca">find</a>(a) == <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a30f616ce84bde548715a6de5a1f7f2ca">find</a>(b); }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_d_s_u.html#abf4b456c532698ef465999c26bc4c9d4">   98</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#abf4b456c532698ef465999c26bc4c9d4">rank_of</a>(<span class="keywordtype">int</span> x)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a6927821406ed21b61e14f25c7fa2ca02">rk_</a>[x]; }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html">  104</a></span>&#160;<span class="keyword">class </span><a class="code" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html">DSUWave</a> : <span class="keyword">public</span> <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html">DSU</a> {</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#adc4a1bfa28cb173b0f3b9ac6b47693a0">  105</a></span>&#160;  std::vector&lt;int&gt; <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#adc4a1bfa28cb173b0f3b9ac6b47693a0">sz_</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#abde0045b39d15e37e5201ed888dffc7e">  112</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#abde0045b39d15e37e5201ed888dffc7e">DSUWave</a>(<span class="keywordtype">int</span> n) : <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html">DSU</a>(n) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#adc4a1bfa28cb173b0f3b9ac6b47693a0">sz_</a>.assign(n + 1, 1);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#a54c83b302fada863a47019cb6cf26359">  121</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#a54c83b302fada863a47019cb6cf26359">find</a>(<span class="keywordtype">int</span> x) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a12ad12605e5fd1ef37350227226730a5">fa_</a>[x] != x) x = <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a12ad12605e5fd1ef37350227226730a5">fa_</a>[x] = <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a12ad12605e5fd1ef37350227226730a5">fa_</a>[<a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a12ad12605e5fd1ef37350227226730a5">fa_</a>[x]];</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#a56c0c0f3af1d0f06f0617fbd60f5cefe">  132</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#a56c0c0f3af1d0f06f0617fbd60f5cefe">unite</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    a = <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#a54c83b302fada863a47019cb6cf26359">find</a>(a); b = <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#a54c83b302fada863a47019cb6cf26359">find</a>(b);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">if</span> (a == b) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a6927821406ed21b61e14f25c7fa2ca02">rk_</a>[a] &lt; <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a6927821406ed21b61e14f25c7fa2ca02">rk_</a>[b]) std::swap(a, b);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a12ad12605e5fd1ef37350227226730a5">fa_</a>[b] = a;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#adc4a1bfa28cb173b0f3b9ac6b47693a0">sz_</a>[a] += <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#adc4a1bfa28cb173b0f3b9ac6b47693a0">sz_</a>[b];</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a6927821406ed21b61e14f25c7fa2ca02">rk_</a>[a] == <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a6927821406ed21b61e14f25c7fa2ca02">rk_</a>[b]) ++<a class="code" href="classwbwlib_1_1ds_1_1_d_s_u.html#a6927821406ed21b61e14f25c7fa2ca02">rk_</a>[a];</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#a1e08260b051856e77eee5c24ffb02a35">  143</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#a1e08260b051856e77eee5c24ffb02a35">size_of</a>(<span class="keywordtype">int</span> x) { <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#adc4a1bfa28cb173b0f3b9ac6b47693a0">sz_</a>[<a class="code" href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#a54c83b302fada863a47019cb6cf26359">find</a>(x)]; }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;};</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">// ================= 带权并查集 =================</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html">  153</a></span>&#160;<span class="comment"></span><span class="keyword">class </span><a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html">WeightedDSU</a> {</div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a38e3cce68ffc3d703e7a88159eab20b5">  154</a></span>&#160;  std::vector&lt;int&gt; <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a38e3cce68ffc3d703e7a88159eab20b5">fa_</a>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a642238e2a06086ffeca53fab4691481a">  155</a></span>&#160;  std::vector&lt;i64&gt; <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a642238e2a06086ffeca53fab4691481a">wt_</a>;    </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a9628713f36aeebd4b9fb96ea7fcb69f2">  156</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a9628713f36aeebd4b9fb96ea7fcb69f2">mod_mode_</a>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a3e120a90c1f1d5c20de787d81c4ec801">  157</a></span>&#160;  <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a3e120a90c1f1d5c20de787d81c4ec801">mod_</a>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a33a8d95b6ef5452868fdc54914ab6b1f">  166</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a33a8d95b6ef5452868fdc54914ab6b1f">WeightedDSU</a>(<span class="keywordtype">int</span> n, <span class="keywordtype">bool</span> mod = <span class="keyword">false</span>, <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> modulus = 0)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      : <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a9628713f36aeebd4b9fb96ea7fcb69f2">mod_mode_</a>(mod), <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a3e120a90c1f1d5c20de787d81c4ec801">mod_</a>(modulus) {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a38e3cce68ffc3d703e7a88159eab20b5">fa_</a>.resize(n + 1);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a642238e2a06086ffeca53fab4691481a">wt_</a>.assign(n + 1, 0);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= n; ++i) <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a38e3cce68ffc3d703e7a88159eab20b5">fa_</a>[i] = i;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#acbd9096dbefdefde23bffb8edffccd8a">  178</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#acbd9096dbefdefde23bffb8edffccd8a">find</a>(<span class="keywordtype">int</span> x) {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a38e3cce68ffc3d703e7a88159eab20b5">fa_</a>[x] == x) <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">int</span> r = <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#acbd9096dbefdefde23bffb8edffccd8a">find</a>(<a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a38e3cce68ffc3d703e7a88159eab20b5">fa_</a>[x]);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a642238e2a06086ffeca53fab4691481a">wt_</a>[x] += <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a642238e2a06086ffeca53fab4691481a">wt_</a>[<a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a38e3cce68ffc3d703e7a88159eab20b5">fa_</a>[x]];          <span class="comment">// 路径压缩累加权值</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a38e3cce68ffc3d703e7a88159eab20b5">fa_</a>[x] = r;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">return</span> r;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a902de5a1b20e59f744a2c03bf2ba6726">  191</a></span>&#160;  <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a902de5a1b20e59f744a2c03bf2ba6726">to_root</a>(<span class="keywordtype">int</span> x) { <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#acbd9096dbefdefde23bffb8edffccd8a">find</a>(x); <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a642238e2a06086ffeca53fab4691481a">wt_</a>[x]; }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#ae05ef1a24096fb2cf3279432bded096b">  202</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#ae05ef1a24096fb2cf3279432bded096b">unite</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b, <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#adb6904113203a41bed925414260aba3e">diff</a>) {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">int</span> ra = <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#acbd9096dbefdefde23bffb8edffccd8a">find</a>(a), rb = <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#acbd9096dbefdefde23bffb8edffccd8a">find</a>(b);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">if</span> (ra == rb) {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> cur = <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a902de5a1b20e59f744a2c03bf2ba6726">to_root</a>(b) - <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a902de5a1b20e59f744a2c03bf2ba6726">to_root</a>(a);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a9628713f36aeebd4b9fb96ea7fcb69f2">mod_mode_</a>) cur = <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#af8f8652d2714c0deaf401a9347139135">norm</a>(cur);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      <span class="keywordflow">return</span> cur == (<a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a9628713f36aeebd4b9fb96ea7fcb69f2">mod_mode_</a> ? <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#af8f8652d2714c0deaf401a9347139135">norm</a>(<a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#adb6904113203a41bed925414260aba3e">diff</a>) : <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#adb6904113203a41bed925414260aba3e">diff</a>);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="comment">// diff = value(b) - value(a) = (wt_b + value(rb)) - (wt_a + value(ra))</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="comment">// 令 value(ra) = value(rb) + (wt_b + value(rb)... ) 化解：</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> t = <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a902de5a1b20e59f744a2c03bf2ba6726">to_root</a>(b) - <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a902de5a1b20e59f744a2c03bf2ba6726">to_root</a>(a) - <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#adb6904113203a41bed925414260aba3e">diff</a>;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a9628713f36aeebd4b9fb96ea7fcb69f2">mod_mode_</a>) t = <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#af8f8652d2714c0deaf401a9347139135">norm</a>(t);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a38e3cce68ffc3d703e7a88159eab20b5">fa_</a>[ra] = rb;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a642238e2a06086ffeca53fab4691481a">wt_</a>[ra] = t;                    <span class="comment">// value(ra) = value(rb) + t</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a700ca4e04920f5a67e1b4b50216c7cfc">  224</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a700ca4e04920f5a67e1b4b50216c7cfc">same</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) { <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#acbd9096dbefdefde23bffb8edffccd8a">find</a>(a) == <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#acbd9096dbefdefde23bffb8edffccd8a">find</a>(b); }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#adb6904113203a41bed925414260aba3e">  232</a></span>&#160;  <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#adb6904113203a41bed925414260aba3e">diff</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) {          <span class="comment">// value(b) - value(a)</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#acbd9096dbefdefde23bffb8edffccd8a">find</a>(a); <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#acbd9096dbefdefde23bffb8edffccd8a">find</a>(b);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> d = <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a902de5a1b20e59f744a2c03bf2ba6726">to_root</a>(b) - <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a902de5a1b20e59f744a2c03bf2ba6726">to_root</a>(a);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a9628713f36aeebd4b9fb96ea7fcb69f2">mod_mode_</a> ? <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#af8f8652d2714c0deaf401a9347139135">norm</a>(d) : d;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00240"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#af8f8652d2714c0deaf401a9347139135">  240</a></span>&#160;  <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#af8f8652d2714c0deaf401a9347139135">norm</a>(<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> x)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    x %= <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a3e120a90c1f1d5c20de787d81c4ec801">mod_</a>;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">return</span> x &lt; 0 ? x + <a class="code" href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a3e120a90c1f1d5c20de787d81c4ec801">mod_</a> : x;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;};</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="comment">// ================= 可撤销并查集 =================</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html">  252</a></span>&#160;<span class="comment"></span><span class="keyword">class </span><a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html">RollbackDSU</a> {</div>
+<div class="line"><a name="l00253"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a84c6ef7bec90da23d3cf91ccf5c03d02">  253</a></span>&#160;  std::vector&lt;int&gt; <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a84c6ef7bec90da23d3cf91ccf5c03d02">fa_</a>, <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a75467218bf9b2bb61b2e440e00d9667e">sz_</a>;</div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="structwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op.html#a494d36e1e04b7221b34e435997b5dcaf">  254</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op.html">Op</a> { <span class="keywordtype">int</span> <a class="code" href="structwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op.html#af68eee8ed065163b482a9f265198bbd2">u</a>, <a class="code" href="structwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op.html#a3bbb297a8ec44d5493700478d212d69e">v</a>, <a class="code" href="structwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op.html#a494d36e1e04b7221b34e435997b5dcaf">szu</a>; };     <span class="comment">// 合并前记录</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#ab8be3924aa69400e1e3e3f3c8d9555b4">  255</a></span>&#160;  std::vector&lt;Op&gt; <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#ab8be3924aa69400e1e3e3f3c8d9555b4">hist_</a>;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a837f782e0bbb500480fcabb740040497">  258</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a837f782e0bbb500480fcabb740040497">find</a>(<span class="keywordtype">int</span> x)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a84c6ef7bec90da23d3cf91ccf5c03d02">fa_</a>[x] != x) x = <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a84c6ef7bec90da23d3cf91ccf5c03d02">fa_</a>[x];</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a6bcc51de8d2dee21a97a0cad2ef18a29">  268</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a6bcc51de8d2dee21a97a0cad2ef18a29">RollbackDSU</a>(<span class="keywordtype">int</span> n) : <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a84c6ef7bec90da23d3cf91ccf5c03d02">fa_</a>(n + 1), <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a75467218bf9b2bb61b2e440e00d9667e">sz_</a>(n + 1, 1) {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= n; ++i) <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a84c6ef7bec90da23d3cf91ccf5c03d02">fa_</a>[i] = i;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#acc0c07bcdb3bd20c7552a3017566ef11">  278</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#acc0c07bcdb3bd20c7552a3017566ef11">unite</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) {        <span class="comment">// 按大小合并（不做路径压缩）</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">int</span> ra = <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a837f782e0bbb500480fcabb740040497">find</a>(a), rb = <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a837f782e0bbb500480fcabb740040497">find</a>(b);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">if</span> (ra == rb) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a75467218bf9b2bb61b2e440e00d9667e">sz_</a>[ra] &lt; <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a75467218bf9b2bb61b2e440e00d9667e">sz_</a>[rb]) std::swap(ra, rb);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#ab8be3924aa69400e1e3e3f3c8d9555b4">hist_</a>.push_back({rb, ra, <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a75467218bf9b2bb61b2e440e00d9667e">sz_</a>[ra]});</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a84c6ef7bec90da23d3cf91ccf5c03d02">fa_</a>[rb] = ra;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a75467218bf9b2bb61b2e440e00d9667e">sz_</a>[ra] += <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a75467218bf9b2bb61b2e440e00d9667e">sz_</a>[rb];</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#ab1966e3709322f01c8b86e7ee5bc706b">  294</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#ab1966e3709322f01c8b86e7ee5bc706b">same</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a837f782e0bbb500480fcabb740040497">find</a>(a) == <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a837f782e0bbb500480fcabb740040497">find</a>(b); }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a33223a1cb6a17eff1d561ed02bb5500b">  299</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a33223a1cb6a17eff1d561ed02bb5500b">rollback</a>() {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <a class="code" href="base_8hpp.html#a06d1d05da6faf7bea328563c9bada928">WBWLIB_ASSERT</a>(!<a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#ab8be3924aa69400e1e3e3f3c8d9555b4">hist_</a>.empty());</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <a class="code" href="structwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op.html">Op</a> o = <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#ab8be3924aa69400e1e3e3f3c8d9555b4">hist_</a>.back(); <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#ab8be3924aa69400e1e3e3f3c8d9555b4">hist_</a>.pop_back();</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a84c6ef7bec90da23d3cf91ccf5c03d02">fa_</a>[o.<a class="code" href="structwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op.html#af68eee8ed065163b482a9f265198bbd2">u</a>] = o.<a class="code" href="structwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op.html#af68eee8ed065163b482a9f265198bbd2">u</a>;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a75467218bf9b2bb61b2e440e00d9667e">sz_</a>[o.<a class="code" href="structwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op.html#a3bbb297a8ec44d5493700478d212d69e">v</a>] = o.<a class="code" href="structwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op.html#a494d36e1e04b7221b34e435997b5dcaf">szu</a>;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#aacccd964b3e5445e9965e29665b6b39e">  307</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#aacccd964b3e5445e9965e29665b6b39e">snapshot</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)<a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#ab8be3924aa69400e1e3e3f3c8d9555b4">hist_</a>.size(); }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
+<div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a3c15e2ba67ba34e798341472c1190e04">  313</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a3c15e2ba67ba34e798341472c1190e04">rollback_to</a>(<span class="keywordtype">int</span> snap) {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">while</span> ((<span class="keywordtype">int</span>)<a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#ab8be3924aa69400e1e3e3f3c8d9555b4">hist_</a>.size() &gt; snap) <a class="code" href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a33223a1cb6a17eff1d561ed02bb5500b">rollback</a>();</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;};</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;} <span class="comment">// namespace ds</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_DS_DSU_HPP</span></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="abase_8hpp_html_a06d1d05da6faf7bea328563c9bada928"><div class="ttname"><a href="base_8hpp.html#a06d1d05da6faf7bea328563c9bada928">WBWLIB_ASSERT</a></div><div class="ttdeci">#define WBWLIB_ASSERT(cond)</div><div class="ttdef"><b>Definition:</b> base.hpp:91</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_d_s_u_html"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_d_s_u.html">wbwlib::ds::DSU</a></div><div class="ttdoc">标准并查集：路径压缩 + 按秩合并。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:40</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_d_s_u_html_a0541bcbb0e2577b965583e269053d857"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_d_s_u.html#a0541bcbb0e2577b965583e269053d857">wbwlib::ds::DSU::DSU</a></div><div class="ttdeci">DSU(int n)</div><div class="ttdoc">构造 n 个元素的并查集（每个元素自成一集合）。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:48</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_d_s_u_html_a12ad12605e5fd1ef37350227226730a5"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_d_s_u.html#a12ad12605e5fd1ef37350227226730a5">wbwlib::ds::DSU::fa_</a></div><div class="ttdeci">std::vector&lt; int &gt; fa_</div><div class="ttdef"><b>Definition:</b> dsu.hpp:42</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_d_s_u_html_a30f616ce84bde548715a6de5a1f7f2ca"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_d_s_u.html#a30f616ce84bde548715a6de5a1f7f2ca">wbwlib::ds::DSU::find</a></div><div class="ttdeci">int find(int x)</div><div class="ttdoc">查询 x 所在集合的代表元（路径压缩）。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:65</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_d_s_u_html_a6927821406ed21b61e14f25c7fa2ca02"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_d_s_u.html#a6927821406ed21b61e14f25c7fa2ca02">wbwlib::ds::DSU::rk_</a></div><div class="ttdeci">std::vector&lt; int &gt; rk_</div><div class="ttdoc">父节点与秩</div><div class="ttdef"><b>Definition:</b> dsu.hpp:42</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_d_s_u_html_a9bc9378bbd6c278b07badc398e7d1809"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_d_s_u.html#a9bc9378bbd6c278b07badc398e7d1809">wbwlib::ds::DSU::same</a></div><div class="ttdeci">bool same(int a, int b)</div><div class="ttdoc">判断 a、b 是否在同一集合。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:91</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_d_s_u_html_a9c64b859e12f3d6a0e9c11d0781fab7d"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_d_s_u.html#a9c64b859e12f3d6a0e9c11d0781fab7d">wbwlib::ds::DSU::init</a></div><div class="ttdeci">void init(int n)</div><div class="ttdoc">重置为 n 个元素的并查集。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:54</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_d_s_u_html_abf4b456c532698ef465999c26bc4c9d4"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_d_s_u.html#abf4b456c532698ef465999c26bc4c9d4">wbwlib::ds::DSU::rank_of</a></div><div class="ttdeci">int rank_of(int x) const</div><div class="ttdoc">查询 x 的秩（树的近似高度，非集合大小）。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:98</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_d_s_u_html_af3516af82f065f63f9f5777a18099ed3"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_d_s_u.html#af3516af82f065f63f9f5777a18099ed3">wbwlib::ds::DSU::unite</a></div><div class="ttdeci">bool unite(int a, int b)</div><div class="ttdoc">合并 a、b 所在集合（按秩合并）。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:76</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_d_s_u_wave_html"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_d_s_u_wave.html">wbwlib::ds::DSUWave</a></div><div class="ttdoc">维护连通块大小的并查集（路径压缩 + 按秩合并）。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:104</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_d_s_u_wave_html_a1e08260b051856e77eee5c24ffb02a35"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#a1e08260b051856e77eee5c24ffb02a35">wbwlib::ds::DSUWave::size_of</a></div><div class="ttdeci">int size_of(int x)</div><div class="ttdoc">返回 x 所在连通块的大小</div><div class="ttdef"><b>Definition:</b> dsu.hpp:143</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_d_s_u_wave_html_a54c83b302fada863a47019cb6cf26359"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#a54c83b302fada863a47019cb6cf26359">wbwlib::ds::DSUWave::find</a></div><div class="ttdeci">int find(int x)</div><div class="ttdoc">查询 x 所在集合的代表元（路径压缩）。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:121</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_d_s_u_wave_html_a56c0c0f3af1d0f06f0617fbd60f5cefe"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#a56c0c0f3af1d0f06f0617fbd60f5cefe">wbwlib::ds::DSUWave::unite</a></div><div class="ttdeci">bool unite(int a, int b)</div><div class="ttdoc">合并 a、b 所在集合，并同步维护集合大小。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:132</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_d_s_u_wave_html_abde0045b39d15e37e5201ed888dffc7e"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#abde0045b39d15e37e5201ed888dffc7e">wbwlib::ds::DSUWave::DSUWave</a></div><div class="ttdeci">DSUWave(int n)</div><div class="ttdoc">构造 n 个元素的并查集。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:112</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_d_s_u_wave_html_adc4a1bfa28cb173b0f3b9ac6b47693a0"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_d_s_u_wave.html#adc4a1bfa28cb173b0f3b9ac6b47693a0">wbwlib::ds::DSUWave::sz_</a></div><div class="ttdeci">std::vector&lt; int &gt; sz_</div><div class="ttdef"><b>Definition:</b> dsu.hpp:105</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_rollback_d_s_u_html"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html">wbwlib::ds::RollbackDSU</a></div><div class="ttdoc">可撤销并查集：按大小合并（不做路径压缩），支持栈式回滚。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:252</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_rollback_d_s_u_html_a33223a1cb6a17eff1d561ed02bb5500b"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a33223a1cb6a17eff1d561ed02bb5500b">wbwlib::ds::RollbackDSU::rollback</a></div><div class="ttdeci">void rollback()</div><div class="ttdoc">回滚最近的一次 unite 操作。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:299</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_rollback_d_s_u_html_a3c15e2ba67ba34e798341472c1190e04"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a3c15e2ba67ba34e798341472c1190e04">wbwlib::ds::RollbackDSU::rollback_to</a></div><div class="ttdeci">void rollback_to(int snap)</div><div class="ttdoc">回滚到快照 snap（撤销自 snap 之后的所有 unite）。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:313</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_rollback_d_s_u_html_a6bcc51de8d2dee21a97a0cad2ef18a29"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a6bcc51de8d2dee21a97a0cad2ef18a29">wbwlib::ds::RollbackDSU::RollbackDSU</a></div><div class="ttdeci">RollbackDSU(int n)</div><div class="ttdoc">构造 n 个元素的并查集。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:268</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_rollback_d_s_u_html_a75467218bf9b2bb61b2e440e00d9667e"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a75467218bf9b2bb61b2e440e00d9667e">wbwlib::ds::RollbackDSU::sz_</a></div><div class="ttdeci">std::vector&lt; int &gt; sz_</div><div class="ttdef"><b>Definition:</b> dsu.hpp:253</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_rollback_d_s_u_html_a837f782e0bbb500480fcabb740040497"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a837f782e0bbb500480fcabb740040497">wbwlib::ds::RollbackDSU::find</a></div><div class="ttdeci">int find(int x) const</div><div class="ttdoc">查询 x 所在集合的代表元（不路径压缩）</div><div class="ttdef"><b>Definition:</b> dsu.hpp:258</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_rollback_d_s_u_html_a84c6ef7bec90da23d3cf91ccf5c03d02"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#a84c6ef7bec90da23d3cf91ccf5c03d02">wbwlib::ds::RollbackDSU::fa_</a></div><div class="ttdeci">std::vector&lt; int &gt; fa_</div><div class="ttdef"><b>Definition:</b> dsu.hpp:253</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_rollback_d_s_u_html_aacccd964b3e5445e9965e29665b6b39e"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#aacccd964b3e5445e9965e29665b6b39e">wbwlib::ds::RollbackDSU::snapshot</a></div><div class="ttdeci">int snapshot() const</div><div class="ttdoc">返回当前操作历史大小，可作为回滚快照</div><div class="ttdef"><b>Definition:</b> dsu.hpp:307</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_rollback_d_s_u_html_ab1966e3709322f01c8b86e7ee5bc706b"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#ab1966e3709322f01c8b86e7ee5bc706b">wbwlib::ds::RollbackDSU::same</a></div><div class="ttdeci">bool same(int a, int b) const</div><div class="ttdoc">判断 a、b 是否在同一集合。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:294</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_rollback_d_s_u_html_ab8be3924aa69400e1e3e3f3c8d9555b4"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#ab8be3924aa69400e1e3e3f3c8d9555b4">wbwlib::ds::RollbackDSU::hist_</a></div><div class="ttdeci">std::vector&lt; Op &gt; hist_</div><div class="ttdef"><b>Definition:</b> dsu.hpp:255</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_rollback_d_s_u_html_acc0c07bcdb3bd20c7552a3017566ef11"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_rollback_d_s_u.html#acc0c07bcdb3bd20c7552a3017566ef11">wbwlib::ds::RollbackDSU::unite</a></div><div class="ttdeci">bool unite(int a, int b)</div><div class="ttdoc">合并 a、b 所在集合（按大小合并，记录回滚信息）。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:278</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_weighted_d_s_u_html"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html">wbwlib::ds::WeightedDSU</a></div><div class="ttdoc">带权并查集：维护每个元素到根的权值差。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:153</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_weighted_d_s_u_html_a33a8d95b6ef5452868fdc54914ab6b1f"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a33a8d95b6ef5452868fdc54914ab6b1f">wbwlib::ds::WeightedDSU::WeightedDSU</a></div><div class="ttdeci">WeightedDSU(int n, bool mod=false, i64 modulus=0)</div><div class="ttdoc">构造 n 个元素的带权并查集。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:166</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_weighted_d_s_u_html_a38e3cce68ffc3d703e7a88159eab20b5"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a38e3cce68ffc3d703e7a88159eab20b5">wbwlib::ds::WeightedDSU::fa_</a></div><div class="ttdeci">std::vector&lt; int &gt; fa_</div><div class="ttdef"><b>Definition:</b> dsu.hpp:154</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_weighted_d_s_u_html_a3e120a90c1f1d5c20de787d81c4ec801"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a3e120a90c1f1d5c20de787d81c4ec801">wbwlib::ds::WeightedDSU::mod_</a></div><div class="ttdeci">i64 mod_</div><div class="ttdef"><b>Definition:</b> dsu.hpp:157</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_weighted_d_s_u_html_a642238e2a06086ffeca53fab4691481a"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a642238e2a06086ffeca53fab4691481a">wbwlib::ds::WeightedDSU::wt_</a></div><div class="ttdeci">std::vector&lt; i64 &gt; wt_</div><div class="ttdoc">wt_[x] = value(x) - value(fa_[x])</div><div class="ttdef"><b>Definition:</b> dsu.hpp:155</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_weighted_d_s_u_html_a700ca4e04920f5a67e1b4b50216c7cfc"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a700ca4e04920f5a67e1b4b50216c7cfc">wbwlib::ds::WeightedDSU::same</a></div><div class="ttdeci">bool same(int a, int b)</div><div class="ttdoc">判断 a、b 是否在同一集合。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:224</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_weighted_d_s_u_html_a902de5a1b20e59f744a2c03bf2ba6726"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a902de5a1b20e59f744a2c03bf2ba6726">wbwlib::ds::WeightedDSU::to_root</a></div><div class="ttdeci">i64 to_root(int x)</div><div class="ttdoc">返回 value(x)（以根为基准的相对值）。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:191</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_weighted_d_s_u_html_a9628713f36aeebd4b9fb96ea7fcb69f2"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#a9628713f36aeebd4b9fb96ea7fcb69f2">wbwlib::ds::WeightedDSU::mod_mode_</a></div><div class="ttdeci">bool mod_mode_</div><div class="ttdef"><b>Definition:</b> dsu.hpp:156</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_weighted_d_s_u_html_acbd9096dbefdefde23bffb8edffccd8a"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#acbd9096dbefdefde23bffb8edffccd8a">wbwlib::ds::WeightedDSU::find</a></div><div class="ttdeci">int find(int x)</div><div class="ttdoc">查询 x 所在集合的代表元（路径压缩时累加权值差）。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:178</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_weighted_d_s_u_html_adb6904113203a41bed925414260aba3e"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#adb6904113203a41bed925414260aba3e">wbwlib::ds::WeightedDSU::diff</a></div><div class="ttdeci">i64 diff(int a, int b)</div><div class="ttdoc">查询权值差 （a、b 须同集合）。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:232</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_weighted_d_s_u_html_ae05ef1a24096fb2cf3279432bded096b"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#ae05ef1a24096fb2cf3279432bded096b">wbwlib::ds::WeightedDSU::unite</a></div><div class="ttdeci">bool unite(int a, int b, i64 diff)</div><div class="ttdoc">合并：建立  的关系。</div><div class="ttdef"><b>Definition:</b> dsu.hpp:202</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_weighted_d_s_u_html_af8f8652d2714c0deaf401a9347139135"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_weighted_d_s_u.html#af8f8652d2714c0deaf401a9347139135">wbwlib::ds::WeightedDSU::norm</a></div><div class="ttdeci">i64 norm(i64 x) const</div><div class="ttdoc">模意义下归约到 [0, mod)</div><div class="ttdef"><b>Definition:</b> dsu.hpp:240</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+<div class="ttc" id="anamespacewbwlib_html_a86ab7e3b77fa0c682d473301d8c617c6"><div class="ttname"><a href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">wbwlib::i64</a></div><div class="ttdeci">std::int64_t i64</div><div class="ttdoc">64 位有符号整数</div><div class="ttdef"><b>Definition:</b> base.hpp:98</div></div>
+<div class="ttc" id="astructwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op_html"><div class="ttname"><a href="structwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op.html">wbwlib::ds::RollbackDSU::Op</a></div><div class="ttdef"><b>Definition:</b> dsu.hpp:254</div></div>
+<div class="ttc" id="astructwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op_html_a3bbb297a8ec44d5493700478d212d69e"><div class="ttname"><a href="structwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op.html#a3bbb297a8ec44d5493700478d212d69e">wbwlib::ds::RollbackDSU::Op::v</a></div><div class="ttdeci">int v</div><div class="ttdef"><b>Definition:</b> dsu.hpp:254</div></div>
+<div class="ttc" id="astructwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op_html_a494d36e1e04b7221b34e435997b5dcaf"><div class="ttname"><a href="structwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op.html#a494d36e1e04b7221b34e435997b5dcaf">wbwlib::ds::RollbackDSU::Op::szu</a></div><div class="ttdeci">int szu</div><div class="ttdef"><b>Definition:</b> dsu.hpp:254</div></div>
+<div class="ttc" id="astructwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op_html_af68eee8ed065163b482a9f265198bbd2"><div class="ttname"><a href="structwbwlib_1_1ds_1_1_rollback_d_s_u_1_1_op.html#af68eee8ed065163b482a9f265198bbd2">wbwlib::ds::RollbackDSU::Op::u</a></div><div class="ttdeci">int u</div><div class="ttdef"><b>Definition:</b> dsu.hpp:254</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

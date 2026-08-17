@@ -1,0 +1,213 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/graph/adjacency.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_eb5e8cb22b4df04bf6d97bd1e7f427e8.html">graph</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">adjacency.hpp 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>图表示约定：1 基邻接表 + 常用辅助。  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &quot;<a class="el" href="base_8hpp_source.html">wbwlib/core/base.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+adjacency.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="adjacency_8hpp__incl.png" border="0" usemap="#awbwlib_2graph_2adjacency_8hpp" alt=""/></div>
+<map name="awbwlib_2graph_2adjacency_8hpp" id="awbwlib_2graph_2adjacency_8hpp">
+<area shape="rect" title="图表示约定：1 基邻接表 + 常用辅助。" alt="" coords="71,5,256,33"/>
+<area shape="rect" title=" " alt="" coords="5,81,63,109"/>
+<area shape="rect" title=" " alt="" coords="89,157,142,185"/>
+<area shape="rect" title=" " alt="" coords="139,81,188,109"/>
+<area shape="rect" title=" " alt="" coords="212,81,286,109"/>
+<area shape="rect" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="310,81,457,109"/>
+<area shape="rect" title=" " alt="" coords="179,157,239,185"/>
+<area shape="rect" title=" " alt="" coords="263,157,328,185"/>
+<area shape="rect" title=" " alt="" coords="351,157,416,185"/>
+<area shape="rect" title=" " alt="" coords="440,157,519,185"/>
+<area shape="rect" title=" " alt="" coords="542,157,625,185"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="adjacency_8hpp__dep__incl.png" border="0" usemap="#awbwlib_2graph_2adjacency_8hppdep" alt=""/></div>
+<map name="awbwlib_2graph_2adjacency_8hppdep" id="awbwlib_2graph_2adjacency_8hppdep">
+<area shape="rect" title="图表示约定：1 基邻接表 + 常用辅助。" alt="" coords="535,5,720,33"/>
+<area shape="rect" href="bipartite_8hpp.html" title="二分图判定（黑白染色）+ 最大匹配（匈牙利）+ 最小点覆盖/最大独立集。" alt="" coords="5,181,178,209"/>
+<area shape="rect" href="graph_8hpp.html" title="graph 模块聚合头：一次引入本模块全部头文件。" alt="" coords="518,265,676,293"/>
+<area shape="rect" href="euler-path_8hpp.html" title="欧拉路径 / 欧拉回路（Hierholzer，有向/无向）。" alt="" coords="259,173,388,217"/>
+<area shape="rect" href="hld_8hpp.html" title="树链剖分（HLD）：剖分 + 路径/子树区间映射，供线段树等配合。" alt="" coords="304,89,447,117"/>
+<area shape="rect" href="lca_8hpp.html" title="LCA：倍增法（O(n log n) 预处理，O(log n) 查询）+ 树深/距离/第 k 祖先。" alt="" coords="472,89,615,117"/>
+<area shape="rect" href="mst_8hpp.html" title="最小生成树：Kruskal（并查集）+ Prim（堆）。" alt="" coords="639,89,787,117"/>
+<area shape="rect" href="shortest-path_8hpp.html" title="最短路：Dijkstra（堆）/ SPFA（判负环）/ Floyd / 0&#45;1 BFS / 拓扑序 DAG。" alt="" coords="811,81,959,125"/>
+<area shape="rect" href="tarjan_8hpp.html" title="强连通分量 / 割点 / 桥（Tarjan）。" alt="" coords="790,181,948,209"/>
+<area shape="rect" href="topo_8hpp.html" title="拓扑排序（Kahn，返回字典序可选）+ 判环 + 关键路径。" alt="" coords="972,181,1123,209"/>
+<area shape="rect" href="tree-dp_8hpp.html" title="树上 DP 套路：直径、中心、换根 DP 模板。" alt="" coords="1084,89,1251,117"/>
+<area shape="rect" href="wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="532,341,662,369"/>
+<area shape="rect" href="virtual-tree_8hpp.html" title="虚树：保留关键点及其两两 LCA，压缩成 O(k) 规模的树。" alt="" coords="529,173,665,217"/>
+</map>
+</div>
+</div>
+<p><a href="adjacency_8hpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1graph_1_1_w_adj.html">wbwlib::graph::WAdj&lt; W &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">带权邻接表（1 基）：g[u] 为 (邻点 v, 边权 w) 列表。  <a href="structwbwlib_1_1graph_1_1_w_adj.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacewbwlib"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib.html">wbwlib</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacewbwlib_1_1graph"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1graph.html">wbwlib::graph</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ae493c082be88e701442a1a1630178911"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">wbwlib::graph::Adj</a> = std::vector&lt; std::vector&lt; int &gt; &gt;</td></tr>
+<tr class="memdesc:ae493c082be88e701442a1a1630178911"><td class="mdescLeft">&#160;</td><td class="mdescRight">无权邻接表（1 基）  <a href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">更多...</a><br /></td></tr>
+<tr class="separator:ae493c082be88e701442a1a1630178911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ae3379ccf7607620438166f9f24c9d96c"><td class="memItemLeft" align="right" valign="top">Adj&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1graph.html#ae3379ccf7607620438166f9f24c9d96c">wbwlib::graph::make_graph</a> (int n, const std::vector&lt; std::pair&lt; int, int &gt;&gt; &amp;edges, bool bidir=true)</td></tr>
+<tr class="memdesc:ae3379ccf7607620438166f9f24c9d96c"><td class="mdescLeft">&#160;</td><td class="mdescRight">由边列表建无权图。  <a href="namespacewbwlib_1_1graph.html#ae3379ccf7607620438166f9f24c9d96c">更多...</a><br /></td></tr>
+<tr class="separator:ae3379ccf7607620438166f9f24c9d96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a360ec9219b8e3be970b1bd942ff7fc37"><td class="memTemplParams" colspan="2">template&lt;class W &gt; </td></tr>
+<tr class="memitem:a360ec9219b8e3be970b1bd942ff7fc37"><td class="memTemplItemLeft" align="right" valign="top">WAdj&lt; W &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1graph.html#a360ec9219b8e3be970b1bd942ff7fc37">wbwlib::graph::make_graph</a> (int n, const std::vector&lt; std::tuple&lt; int, int, W &gt;&gt; &amp;edges, bool bidir=true)</td></tr>
+<tr class="memdesc:a360ec9219b8e3be970b1bd942ff7fc37"><td class="mdescLeft">&#160;</td><td class="mdescRight">由边列表建带权图。  <a href="namespacewbwlib_1_1graph.html#a360ec9219b8e3be970b1bd942ff7fc37">更多...</a><br /></td></tr>
+<tr class="separator:a360ec9219b8e3be970b1bd942ff7fc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3db1e59f2f9baa9cd6206fe12afca9a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1graph.html#a3db1e59f2f9baa9cd6206fe12afca9a8">wbwlib::graph::add_edge</a> (Adj &amp;a, int u, int v, bool bidir=true)</td></tr>
+<tr class="memdesc:a3db1e59f2f9baa9cd6206fe12afca9a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">向无权图加一条边（不检查重边）。  <a href="namespacewbwlib_1_1graph.html#a3db1e59f2f9baa9cd6206fe12afca9a8">更多...</a><br /></td></tr>
+<tr class="separator:a3db1e59f2f9baa9cd6206fe12afca9a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>图表示约定：1 基邻接表 + 常用辅助。 </p>
+<dl class="section user"><dt>依赖</dt><dd><a class="el" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。">wbwlib/core/base.hpp</a></dd></dl>
+<p>约定：</p><ul>
+<li>所有图算法使用 1..n 的点编号。</li>
+<li>无权图：Adj = vector&lt;vector&lt;int&gt;&gt;（大小为 n+1）。</li>
+<li>带权图：WAdj&lt;W&gt; 结构体（成员 g[n+1]，pair(v,w)）。</li>
+<li>树：同上，通常建双向边。 </li>
+</ul>
+</div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

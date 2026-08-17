@@ -1,0 +1,167 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/datastruct/sparse-table.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_8d69220e0774a19b26f749e5403d9fea.html">datastruct</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">sparse-table.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="sparse-table_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_DS_SPARSE_TABLE_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_DS_SPARSE_TABLE_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>ds {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T, <span class="keyword">class</span> Op&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_sparse_table.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="classwbwlib_1_1ds_1_1_sparse_table.html">SparseTable</a> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_sparse_table.html#a5401f21e6c93ca85eaf070d23c6b1db7">   40</a></span>&#160;  std::vector&lt;std::vector&lt;T&gt;&gt; <a class="code" href="classwbwlib_1_1ds_1_1_sparse_table.html#a5401f21e6c93ca85eaf070d23c6b1db7">f_</a>;  </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_sparse_table.html#a109e3626cf42f5ed159a30e569297895">   41</a></span>&#160;  Op <a class="code" href="classwbwlib_1_1ds_1_1_sparse_table.html#a109e3626cf42f5ed159a30e569297895">op_</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_sparse_table.html#a1aa736c5d98c3bec776394bac87eb65a">   47</a></span>&#160;  <a class="code" href="classwbwlib_1_1ds_1_1_sparse_table.html#a1aa736c5d98c3bec776394bac87eb65a">SparseTable</a>() {}</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_sparse_table.html#adf799d0f04d5fa85893999eef4ade370">   53</a></span>&#160;  <a class="code" href="classwbwlib_1_1ds_1_1_sparse_table.html#adf799d0f04d5fa85893999eef4ade370">SparseTable</a>(<span class="keyword">const</span> std::vector&lt;T&gt;&amp; a, Op op = Op()) : <a class="code" href="classwbwlib_1_1ds_1_1_sparse_table.html#a109e3626cf42f5ed159a30e569297895">op_</a>(op) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">int</span> n = (int)a.size() - 1;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> k = 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">while</span> ((1 &lt;&lt; k) &lt;= n) ++k;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_sparse_table.html#a5401f21e6c93ca85eaf070d23c6b1db7">f_</a>.assign(k, std::vector&lt;T&gt;(n + 1));</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= n; ++i) <a class="code" href="classwbwlib_1_1ds_1_1_sparse_table.html#a5401f21e6c93ca85eaf070d23c6b1db7">f_</a>[0][i] = a[i];</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 1; j &lt; k; ++j)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i + (1 &lt;&lt; j) - 1 &lt;= n; ++i)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="classwbwlib_1_1ds_1_1_sparse_table.html#a5401f21e6c93ca85eaf070d23c6b1db7">f_</a>[j][i] = <a class="code" href="classwbwlib_1_1ds_1_1_sparse_table.html#a109e3626cf42f5ed159a30e569297895">op_</a>(<a class="code" href="classwbwlib_1_1ds_1_1_sparse_table.html#a5401f21e6c93ca85eaf070d23c6b1db7">f_</a>[j - 1][i], <a class="code" href="classwbwlib_1_1ds_1_1_sparse_table.html#a5401f21e6c93ca85eaf070d23c6b1db7">f_</a>[j - 1][i + (1 &lt;&lt; (j - 1))]);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_sparse_table.html#a6b0a593b0ecb3af4feceb2f636b98057">   70</a></span>&#160;  T <a class="code" href="classwbwlib_1_1ds_1_1_sparse_table.html#a6b0a593b0ecb3af4feceb2f636b98057">query</a>(<span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">int</span> len = r - l + 1;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">int</span> j = 0;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">while</span> ((1 &lt;&lt; (j + 1)) &lt;= len) ++j;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_sparse_table.html#a109e3626cf42f5ed159a30e569297895">op_</a>(<a class="code" href="classwbwlib_1_1ds_1_1_sparse_table.html#a5401f21e6c93ca85eaf070d23c6b1db7">f_</a>[j][l], <a class="code" href="classwbwlib_1_1ds_1_1_sparse_table.html#a5401f21e6c93ca85eaf070d23c6b1db7">f_</a>[j][r - (1 &lt;&lt; j) + 1]);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;} <span class="comment">// namespace ds</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_DS_SPARSE_TABLE_HPP</span></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_sparse_table_html"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_sparse_table.html">wbwlib::ds::SparseTable</a></div><div class="ttdoc">Sparse Table（ST 表）：静态区间幂等查询（min/max/gcd/…），查询 O(1)。</div><div class="ttdef"><b>Definition:</b> sparse-table.hpp:39</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_sparse_table_html_a109e3626cf42f5ed159a30e569297895"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_sparse_table.html#a109e3626cf42f5ed159a30e569297895">wbwlib::ds::SparseTable::op_</a></div><div class="ttdeci">Op op_</div><div class="ttdef"><b>Definition:</b> sparse-table.hpp:41</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_sparse_table_html_a1aa736c5d98c3bec776394bac87eb65a"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_sparse_table.html#a1aa736c5d98c3bec776394bac87eb65a">wbwlib::ds::SparseTable::SparseTable</a></div><div class="ttdeci">SparseTable()</div><div class="ttdoc">默认构造空表，需用带参构造。</div><div class="ttdef"><b>Definition:</b> sparse-table.hpp:47</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_sparse_table_html_a5401f21e6c93ca85eaf070d23c6b1db7"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_sparse_table.html#a5401f21e6c93ca85eaf070d23c6b1db7">wbwlib::ds::SparseTable::f_</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; T &gt; &gt; f_</div><div class="ttdoc">f_[k][i] = 区间 [i, i+2^k-1]</div><div class="ttdef"><b>Definition:</b> sparse-table.hpp:40</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_sparse_table_html_a6b0a593b0ecb3af4feceb2f636b98057"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_sparse_table.html#a6b0a593b0ecb3af4feceb2f636b98057">wbwlib::ds::SparseTable::query</a></div><div class="ttdeci">T query(int l, int r) const</div><div class="ttdoc">查询区间 [l, r] 的 op 聚合值（O(1)）。</div><div class="ttdef"><b>Definition:</b> sparse-table.hpp:70</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_sparse_table_html_adf799d0f04d5fa85893999eef4ade370"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_sparse_table.html#adf799d0f04d5fa85893999eef4ade370">wbwlib::ds::SparseTable::SparseTable</a></div><div class="ttdeci">SparseTable(const std::vector&lt; T &gt; &amp;a, Op op=Op())</div><div class="ttdoc">由 1 基数组 a 构造</div><div class="ttdef"><b>Definition:</b> sparse-table.hpp:53</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

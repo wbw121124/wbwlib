@@ -1,0 +1,5 @@
+<map id="wbwlib/misc/big&#45;int.hpp" name="wbwlib/misc/big&#45;int.hpp">
+<area shape="rect" id="node1" title="高精度整数：十进制 1e9 基（符号 + 幅值）。" alt="" coords="5,5,163,33"/>
+<area shape="rect" id="node2" href="$misc_8hpp.html" title="misc 模块聚合头：一次引入本模块全部头文件。" alt="" coords="9,81,159,109"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="19,157,149,185"/>
+</map>

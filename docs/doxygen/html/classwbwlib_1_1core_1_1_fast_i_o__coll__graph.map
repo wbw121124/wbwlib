@@ -1,0 +1,3 @@
+<map id="wbwlib::core::FastIO" name="wbwlib::core::FastIO">
+<area shape="rect" id="node1" title="快速输入输出类：带缓冲的 stdin/stdout（或文件）读写，支持整数、字符串与 char。" alt="" coords="5,5,148,519"/>
+</map>

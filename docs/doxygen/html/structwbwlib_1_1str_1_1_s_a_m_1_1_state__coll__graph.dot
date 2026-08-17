@@ -1,0 +1,7 @@
+digraph "wbwlib::str::SAM&lt; Char, ALPHA, CharMap &gt;::State"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::str::SAM\< Char,\l ALPHA, CharMap \>::State\n|+ len\l+ link\l+ nxt\l+ cnt\l+ cnt2\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="SAM 状态（等价类），len 为状态内最长串长度，link 为后缀链接。"];
+}

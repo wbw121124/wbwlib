@@ -1,0 +1,11 @@
+digraph "wbwlib/math/linalg.hpp"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="wbwlib/math/linalg.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="线性代数：高斯消元（复杂类型通用，支持浮点/模）、异或线性基。"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="wbwlib/math/math.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$math_8hpp.html",tooltip="math 模块聚合头：一次引入本模块全部头文件。"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="wbwlib/wbwlib.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$wbwlib_8hpp.html",tooltip="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。"];
+}

@@ -1,0 +1,3 @@
+<map id="wbwlib::graph::Dinic&lt; F &gt;" name="wbwlib::graph::Dinic&lt; F &gt;">
+<area shape="rect" id="node1" title="最大流：Dinic 算法（BFS 分层 + DFS 多路增广 + 当前弧优化）。" alt="" coords="5,5,177,247"/>
+</map>

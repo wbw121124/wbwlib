@@ -1,0 +1,14 @@
+<map id="wbwlib/graph/min&#45;cost&#45;flow.hpp" name="wbwlib/graph/min&#45;cost&#45;flow.hpp">
+<area shape="rect" id="node1" title="最小费用最大流：SPFA 增广（允许负费用边，判负环场景另处理）。" alt="" coords="118,5,270,49"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,97,63,125"/>
+<area shape="rect" id="node3" title=" " alt="" coords="87,97,144,125"/>
+<area shape="rect" id="node4" title=" " alt="" coords="168,97,220,125"/>
+<area shape="rect" id="node5" title=" " alt="" coords="245,97,319,125"/>
+<area shape="rect" id="node6" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="343,97,490,125"/>
+<area shape="rect" id="node7" title=" " alt="" coords="164,173,224,201"/>
+<area shape="rect" id="node8" title=" " alt="" coords="249,173,313,201"/>
+<area shape="rect" id="node9" title=" " alt="" coords="337,173,401,201"/>
+<area shape="rect" id="node10" title=" " alt="" coords="426,173,504,201"/>
+<area shape="rect" id="node11" title=" " alt="" coords="528,173,610,201"/>
+<area shape="rect" id="node12" title=" " alt="" coords="635,173,687,201"/>
+</map>

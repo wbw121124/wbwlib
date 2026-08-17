@@ -1,0 +1,801 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::math::Mat&lt; T &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1math.html">math</a></li><li class="navelem"><a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classwbwlib_1_1math_1_1_mat-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::math::Mat&lt; T &gt; 模板类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>稠密矩阵类：加/减/乘、快速幂、转置、单位阵与向量乘法。  
+ <a href="classwbwlib_1_1math_1_1_mat.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="matrix_8hpp_source.html">matrix.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::math::Mat&lt; T &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwbwlib_1_1math_1_1_mat__coll__graph.png" border="0" usemap="#awbwlib_1_1math_1_1_mat_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1math_1_1_mat_3_01_t_01_4_coll__map" id="awbwlib_1_1math_1_1_mat_3_01_t_01_4_coll__map">
+<area shape="rect" title="稠密矩阵类：加/减/乘、快速幂、转置、单位阵与向量乘法。" alt="" coords="5,5,165,327"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a64ea5382499149ef7a3ad60e13ce68fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#a64ea5382499149ef7a3ad60e13ce68fe">Mat</a> ()</td></tr>
+<tr class="memdesc:a64ea5382499149ef7a3ad60e13ce68fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造：0×0 空矩阵。  <a href="classwbwlib_1_1math_1_1_mat.html#a64ea5382499149ef7a3ad60e13ce68fe">更多...</a><br /></td></tr>
+<tr class="separator:a64ea5382499149ef7a3ad60e13ce68fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab86db2717fd8be4961af9bccf2f3f588"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#ab86db2717fd8be4961af9bccf2f3f588">Mat</a> (int r, int c, const T &amp;init=T())</td></tr>
+<tr class="memdesc:ab86db2717fd8be4961af9bccf2f3f588"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造 r 行 c 列矩阵，元素初始化为 init。  <a href="classwbwlib_1_1math_1_1_mat.html#ab86db2717fd8be4961af9bccf2f3f588">更多...</a><br /></td></tr>
+<tr class="separator:ab86db2717fd8be4961af9bccf2f3f588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f1d6711c1bdd3d75f24a04784fa220"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#a63f1d6711c1bdd3d75f24a04784fa220">rows</a> () const</td></tr>
+<tr class="memdesc:a63f1d6711c1bdd3d75f24a04784fa220"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回行数  <a href="classwbwlib_1_1math_1_1_mat.html#a63f1d6711c1bdd3d75f24a04784fa220">更多...</a><br /></td></tr>
+<tr class="separator:a63f1d6711c1bdd3d75f24a04784fa220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa04447c63f07b318f22db0aef17dc2b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#aa04447c63f07b318f22db0aef17dc2b9">cols</a> () const</td></tr>
+<tr class="memdesc:aa04447c63f07b318f22db0aef17dc2b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回列数  <a href="classwbwlib_1_1math_1_1_mat.html#aa04447c63f07b318f22db0aef17dc2b9">更多...</a><br /></td></tr>
+<tr class="separator:aa04447c63f07b318f22db0aef17dc2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf4f8fe4b26ecab235324e4e6bfe0ec8"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#acf4f8fe4b26ecab235324e4e6bfe0ec8">operator()</a> (int i, int j)</td></tr>
+<tr class="memdesc:acf4f8fe4b26ecab235324e4e6bfe0ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">可写访问元素 (i, j)（行主序）。  <a href="classwbwlib_1_1math_1_1_mat.html#acf4f8fe4b26ecab235324e4e6bfe0ec8">更多...</a><br /></td></tr>
+<tr class="separator:acf4f8fe4b26ecab235324e4e6bfe0ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62ffe1812871af06579f533246034f2d"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#a62ffe1812871af06579f533246034f2d">operator()</a> (int i, int j) const</td></tr>
+<tr class="memdesc:a62ffe1812871af06579f533246034f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">只读访问元素 (i, j)。  <a href="classwbwlib_1_1math_1_1_mat.html#a62ffe1812871af06579f533246034f2d">更多...</a><br /></td></tr>
+<tr class="separator:a62ffe1812871af06579f533246034f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7273116d22d4beb15cb7cfb935a2441"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#ad7273116d22d4beb15cb7cfb935a2441">transpose_inplace</a> ()</td></tr>
+<tr class="memdesc:ad7273116d22d4beb15cb7cfb935a2441"><td class="mdescLeft">&#160;</td><td class="mdescRight">原地转置： \(A \gets A^T\)。  <a href="classwbwlib_1_1math_1_1_mat.html#ad7273116d22d4beb15cb7cfb935a2441">更多...</a><br /></td></tr>
+<tr class="separator:ad7273116d22d4beb15cb7cfb935a2441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbfa7546e7ceb77ac92b75ae75b4724f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#afbfa7546e7ceb77ac92b75ae75b4724f">transposed</a> () const</td></tr>
+<tr class="memdesc:afbfa7546e7ceb77ac92b75ae75b4724f"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回转置矩阵（不修改自身）。  <a href="classwbwlib_1_1math_1_1_mat.html#afbfa7546e7ceb77ac92b75ae75b4724f">更多...</a><br /></td></tr>
+<tr class="separator:afbfa7546e7ceb77ac92b75ae75b4724f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07be6b47c877f4347151a7bd718fc325"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#a07be6b47c877f4347151a7bd718fc325">operator+</a> (const <a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a> &amp;o) const</td></tr>
+<tr class="memdesc:a07be6b47c877f4347151a7bd718fc325"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩阵加法（要求同尺寸）。  <a href="classwbwlib_1_1math_1_1_mat.html#a07be6b47c877f4347151a7bd718fc325">更多...</a><br /></td></tr>
+<tr class="separator:a07be6b47c877f4347151a7bd718fc325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff8183137c4ac405944db2a9806194f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#aff8183137c4ac405944db2a9806194f8">operator-</a> (const <a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a> &amp;o) const</td></tr>
+<tr class="memdesc:aff8183137c4ac405944db2a9806194f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩阵减法（要求同尺寸）。  <a href="classwbwlib_1_1math_1_1_mat.html#aff8183137c4ac405944db2a9806194f8">更多...</a><br /></td></tr>
+<tr class="separator:aff8183137c4ac405944db2a9806194f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bf7014790f923efa016cb55c3f93507"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#a8bf7014790f923efa016cb55c3f93507">operator*</a> (const <a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a> &amp;o) const</td></tr>
+<tr class="memdesc:a8bf7014790f923efa016cb55c3f93507"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩阵乘法（要求 A 的列数等于 B 的行数）。  <a href="classwbwlib_1_1math_1_1_mat.html#a8bf7014790f923efa016cb55c3f93507">更多...</a><br /></td></tr>
+<tr class="separator:a8bf7014790f923efa016cb55c3f93507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b16ab3eeafe49ebc27f0ac5fd9c5834"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#a2b16ab3eeafe49ebc27f0ac5fd9c5834">pow</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> k) const</td></tr>
+<tr class="memdesc:a2b16ab3eeafe49ebc27f0ac5fd9c5834"><td class="mdescLeft">&#160;</td><td class="mdescRight">方阵快速幂： \(A^k\)（倍增法， \(O(\log k)\) 次矩阵乘）。  <a href="classwbwlib_1_1math_1_1_mat.html#a2b16ab3eeafe49ebc27f0ac5fd9c5834">更多...</a><br /></td></tr>
+<tr class="separator:a2b16ab3eeafe49ebc27f0ac5fd9c5834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c451489bce5740e53c1fe82dd46e6c1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#a6c451489bce5740e53c1fe82dd46e6c1">operator*</a> (const std::vector&lt; T &gt; &amp;v) const</td></tr>
+<tr class="memdesc:a6c451489bce5740e53c1fe82dd46e6c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩阵乘列向量： \(r_i = \sum_k A_{ik} v_k\)。  <a href="classwbwlib_1_1math_1_1_mat.html#a6c451489bce5740e53c1fe82dd46e6c1">更多...</a><br /></td></tr>
+<tr class="separator:a6c451489bce5740e53c1fe82dd46e6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ab8bb155f99799a6ad484ba13ae18c41b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#ab8bb155f99799a6ad484ba13ae18c41b">identity</a> (int n)</td></tr>
+<tr class="memdesc:ab8bb155f99799a6ad484ba13ae18c41b"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造 n 阶单位矩阵（要求方阵）。  <a href="classwbwlib_1_1math_1_1_mat.html#ab8bb155f99799a6ad484ba13ae18c41b">更多...</a><br /></td></tr>
+<tr class="separator:ab8bb155f99799a6ad484ba13ae18c41b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a036f21e35fcfe651c42992badb1c0374"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#a036f21e35fcfe651c42992badb1c0374">r_</a></td></tr>
+<tr class="separator:a036f21e35fcfe651c42992badb1c0374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aed3236bf32cea91db7dfb6336c4774"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#a6aed3236bf32cea91db7dfb6336c4774">c_</a></td></tr>
+<tr class="separator:a6aed3236bf32cea91db7dfb6336c4774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29b09aa1f7810d2214d9de95b670b9bd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html#a29b09aa1f7810d2214d9de95b670b9bd">a_</a></td></tr>
+<tr class="separator:a29b09aa1f7810d2214d9de95b670b9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><h3>template&lt;class T&gt;<br />
+class wbwlib::math::Mat&lt; T &gt;</h3>
+
+<p>稠密矩阵类：加/减/乘、快速幂、转置、单位阵与向量乘法。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>元素类型（需支持 +, -, * 与 T() 零元构造，如 modint） </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a64ea5382499149ef7a3ad60e13ce68fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64ea5382499149ef7a3ad60e13ce68fe">&#9670;&nbsp;</a></span>Mat() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::<a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认构造：0×0 空矩阵。 </p>
+
+</div>
+</div>
+<a id="ab86db2717fd8be4961af9bccf2f3f588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab86db2717fd8be4961af9bccf2f3f588">&#9670;&nbsp;</a></span>Mat() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::<a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>init</em> = <code>T()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造 r 行 c 列矩阵，元素初始化为 init。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>行数 </td></tr>
+    <tr><td class="paramname">c</td><td>列数 </td></tr>
+    <tr><td class="paramname">init</td><td>初始元素值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aa04447c63f07b318f22db0aef17dc2b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa04447c63f07b318f22db0aef17dc2b9">&#9670;&nbsp;</a></span>cols()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::cols </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回列数 </p>
+
+</div>
+</div>
+<a id="ab8bb155f99799a6ad484ba13ae18c41b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8bb155f99799a6ad484ba13ae18c41b">&#9670;&nbsp;</a></span>identity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a> <a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::identity </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造 n 阶单位矩阵（要求方阵）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>阶数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>单位阵 \(I_n\)（对角元为 T(1)） </dd></dl>
+
+</div>
+</div>
+<a id="acf4f8fe4b26ecab235324e4e6bfe0ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf4f8fe4b26ecab235324e4e6bfe0ec8">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T&amp; <a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>可写访问元素 (i, j)（行主序）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>行下标 </td></tr>
+    <tr><td class="paramname">j</td><td>列下标 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>元素引用 </dd></dl>
+
+</div>
+</div>
+<a id="a62ffe1812871af06579f533246034f2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62ffe1812871af06579f533246034f2d">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T&amp; <a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>只读访问元素 (i, j)。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>行下标 </td></tr>
+    <tr><td class="paramname">j</td><td>列下标 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>元素常量引用 </dd></dl>
+
+</div>
+</div>
+<a id="a8bf7014790f923efa016cb55c3f93507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bf7014790f923efa016cb55c3f93507">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a> <a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>矩阵乘法（要求 A 的列数等于 B 的行数）。 </p>
+<p>公式： \((AB)_{ij} = \sum_{k} A_{ik} B_{kj}\)，复杂度 \(O(r \cdot c_2 \cdot k)\)，含稀疏跳过。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>乘数矩阵 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(A \cdot B\) </dd></dl>
+
+</div>
+</div>
+<a id="a6c451489bce5740e53c1fe82dd46e6c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c451489bce5740e53c1fe82dd46e6c1">&#9670;&nbsp;</a></span>operator*() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;T&gt; <a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>矩阵乘列向量： \(r_i = \sum_k A_{ik} v_k\)。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>列向量（长度须等于列数） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>长度等于行数的结果向量 </dd></dl>
+
+</div>
+</div>
+<a id="a07be6b47c877f4347151a7bd718fc325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07be6b47c877f4347151a7bd718fc325">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a> <a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>矩阵加法（要求同尺寸）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>加数矩阵 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(A + B\) </dd></dl>
+
+</div>
+</div>
+<a id="aff8183137c4ac405944db2a9806194f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff8183137c4ac405944db2a9806194f8">&#9670;&nbsp;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a> <a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>矩阵减法（要求同尺寸）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>减数矩阵 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(A - B\) </dd></dl>
+
+</div>
+</div>
+<a id="a2b16ab3eeafe49ebc27f0ac5fd9c5834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b16ab3eeafe49ebc27f0ac5fd9c5834">&#9670;&nbsp;</a></span>pow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a> <a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::pow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>方阵快速幂： \(A^k\)（倍增法， \(O(\log k)\) 次矩阵乘）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>指数（k &lt; 0 视为 0，返回单位阵） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(A^k\)（k=0 时返回单位阵） </dd></dl>
+
+</div>
+</div>
+<a id="a63f1d6711c1bdd3d75f24a04784fa220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63f1d6711c1bdd3d75f24a04784fa220">&#9670;&nbsp;</a></span>rows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::rows </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回行数 </p>
+
+</div>
+</div>
+<a id="ad7273116d22d4beb15cb7cfb935a2441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7273116d22d4beb15cb7cfb935a2441">&#9670;&nbsp;</a></span>transpose_inplace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::transpose_inplace </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>原地转置： \(A \gets A^T\)。 </p>
+
+</div>
+</div>
+<a id="afbfa7546e7ceb77ac92b75ae75b4724f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbfa7546e7ceb77ac92b75ae75b4724f">&#9670;&nbsp;</a></span>transposed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a> <a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::transposed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回转置矩阵（不修改自身）。 </p>
+<dl class="section return"><dt>返回</dt><dd>\(A^T\) </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a29b09aa1f7810d2214d9de95b670b9bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29b09aa1f7810d2214d9de95b670b9bd">&#9670;&nbsp;</a></span>a_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;T&gt; <a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::a_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6aed3236bf32cea91db7dfb6336c4774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aed3236bf32cea91db7dfb6336c4774">&#9670;&nbsp;</a></span>c_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::c_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a036f21e35fcfe651c42992badb1c0374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a036f21e35fcfe651c42992badb1c0374">&#9670;&nbsp;</a></span>r_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1math_1_1_mat.html">wbwlib::math::Mat</a>&lt; T &gt;::r_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>wbwlib/math/<a class="el" href="matrix_8hpp_source.html">matrix.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -5,10 +5,12 @@
  * @file primitive-root.hpp
  * @brief 原根求解：求模 p 意义下的最小原根（常用 NTT 前置，p 为质数）。
  *
- * 依赖：wbwlib/core/base.hpp, wbwlib/math/number-theory.hpp, wbwlib/math/primes.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp, wbwlib/math/number-theory.hpp, wbwlib/math/primes.hpp
  *
  * 原理：g 是模 p 的原根 ⇔ ord(g) = p-1 ⇔ 对所有 p-1 的质因子 q，g^((p-1)/q) != 1。
- * 复杂度：O(sqrt(p) · ω(p) · log p)，实际枚举 g 很小。
+ * @par 复杂度
+ * O(sqrt(p) · ω(p) · log p)，实际枚举 g 很小。
  */
 
 #include "wbwlib/core/base.hpp"
@@ -18,7 +20,13 @@
 namespace wbwlib {
 namespace math {
 
-/// 求模 p（质数）的最小原根；p <= 2 时不存在，返回 -1
+/**
+ * @brief 求模 p（质数）的最小原根；p <= 2 时不存在，返回 -1。
+ *
+ * 判定条件：对所有 p-1 的质因子 q，满足 \f$g^{(p-1)/q} \not\equiv 1 \pmod p\f$。
+ * @param p 质数模数
+ * @return 最小原根（2 <= g < p）；p < 3 时返回 -1
+ */
 inline i64 primitive_root(i64 p) {
   if (p < 3) return -1;
   std::vector<u64> fs64 = factorize(p - 1);
@@ -34,7 +42,11 @@ inline i64 primitive_root(i64 p) {
   return -1;
 }
 
-/// 模 p（质数）的原根个数 = phi(p-1)（用于理解，不验证）
+/**
+ * @brief 模 p（质数）的原根个数：\f$\varphi(p-1)\f$（用于理解，不验证）。
+ * @param p 质数模数
+ * @return \f$\varphi(p-1)\f$
+ */
 inline i64 count_primitive_roots(i64 p) { return phi(p - 1); }
 
 } // namespace math

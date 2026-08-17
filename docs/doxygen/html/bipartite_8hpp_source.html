@@ -1,0 +1,190 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/graph/bipartite.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_eb5e8cb22b4df04bf6d97bd1e7f427e8.html">graph</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">bipartite.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="bipartite_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_GRAPH_BIPARTITE_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_GRAPH_BIPARTITE_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;queue&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="adjacency_8hpp.html">wbwlib/graph/adjacency.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>graph {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1graph.html#a45c3747cd29b558f1595b00bd810802d">   34</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespacewbwlib_1_1graph.html#a45c3747cd29b558f1595b00bd810802d">is_bipartite</a>(<span class="keyword">const</span> <a class="code" href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">Adj</a>&amp; g, std::vector&lt;int&gt;&amp; color) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">int</span> n = (int)g.size() - 1;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  color.assign(n + 1, 0);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  std::queue&lt;int&gt; q;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> s = 1; s &lt;= n; ++s)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (color[s] == 0) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      color[s] = 1;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      q.push(s);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keywordflow">while</span> (!q.empty()) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">int</span> u = q.front();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        q.pop();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v : g[u]) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;          <span class="keywordflow">if</span> (color[v] == 0) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            color[v] = 3 - color[u];</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            q.push(v);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;          } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (color[v] == color[u]) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;          }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1graph.html#ae013271ef284a3652ce7b52035b30a2d">   66</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespacewbwlib_1_1graph.html#ae013271ef284a3652ce7b52035b30a2d">max_matching</a>(<span class="keywordtype">int</span> nL, <span class="keywordtype">int</span> nR, <span class="keyword">const</span> <a class="code" href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">Adj</a>&amp; adjL,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        std::vector&lt;int&gt;* matchR = <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  std::vector&lt;int&gt; mL(nL + 1, 0), mR(nR + 1, 0);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">int</span> ans = 0;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  std::vector&lt;char&gt; vis;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  std::function&lt;bool(<span class="keywordtype">int</span>)&gt; aug = [&amp;](<span class="keywordtype">int</span> u) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v : adjL[u]) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">if</span> (vis[v]) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      vis[v] = 1;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">if</span> (mR[v] == 0 || aug(mR[v])) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        mR[v] = u;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        mL[u] = v;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  };</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> u = 1; u &lt;= nL; ++u) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    vis.assign(nR + 1, 0);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (aug(u)) ++ans;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordflow">if</span> (matchR) *matchR = mR;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;} <span class="comment">// namespace graph</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_GRAPH_BIPARTITE_HPP</span></div>
+<div class="ttc" id="aadjacency_8hpp_html"><div class="ttname"><a href="adjacency_8hpp.html">adjacency.hpp</a></div><div class="ttdoc">图表示约定：1 基邻接表 + 常用辅助。</div></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1graph_html_a45c3747cd29b558f1595b00bd810802d"><div class="ttname"><a href="namespacewbwlib_1_1graph.html#a45c3747cd29b558f1595b00bd810802d">wbwlib::graph::is_bipartite</a></div><div class="ttdeci">bool is_bipartite(const Adj &amp;g, std::vector&lt; int &gt; &amp;color)</div><div class="ttdoc">二分图判定：BFS 黑白染色，同色邻边即非二分图。</div><div class="ttdef"><b>Definition:</b> bipartite.hpp:34</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1graph_html_ae013271ef284a3652ce7b52035b30a2d"><div class="ttname"><a href="namespacewbwlib_1_1graph.html#ae013271ef284a3652ce7b52035b30a2d">wbwlib::graph::max_matching</a></div><div class="ttdeci">int max_matching(int nL, int nR, const Adj &amp;adjL, std::vector&lt; int &gt; *matchR=nullptr)</div><div class="ttdoc">匈牙利算法求二分图最大匹配。</div><div class="ttdef"><b>Definition:</b> bipartite.hpp:66</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1graph_html_ae493c082be88e701442a1a1630178911"><div class="ttname"><a href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">wbwlib::graph::Adj</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; int &gt; &gt; Adj</div><div class="ttdoc">无权邻接表（1 基）</div><div class="ttdef"><b>Definition:</b> adjacency.hpp:28</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

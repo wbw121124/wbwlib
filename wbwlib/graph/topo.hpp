@@ -5,9 +5,11 @@
  * @file topo.hpp
  * @brief 拓扑排序（Kahn，返回字典序可选）+ 判环 + 关键路径。
  *
- * 依赖：wbwlib/core/base.hpp、wbwlib/graph/adjacency.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp、wbwlib/graph/adjacency.hpp
  *
- * 复杂度：O(V+E)。
+ * @par 复杂度
+ * O(V+E)。
  */
 
 #include <vector>
@@ -19,7 +21,12 @@
 namespace wbwlib {
 namespace graph {
 
-/// Kahn 拓扑排序；order 填入拓扑序列；返回是否存在拓扑序（无环）
+/**
+ * @brief Kahn 拓扑排序：反复取出入度为 0 的点。
+ * @param g 无权邻接表（1 基）
+ * @param order 输出参数，接收拓扑序列
+ * @return 存在拓扑序（无环）返回 true，否则 false
+ */
 inline bool topo_sort(const Adj& g, std::vector<int>& order) {
   int n = (int)g.size() - 1;
   std::vector<int> indeg(n + 1, 0);
@@ -39,7 +46,12 @@ inline bool topo_sort(const Adj& g, std::vector<int>& order) {
   return (int)order.size() == n;
 }
 
-/// 拓扑排序（小根堆 → 字典序最小）
+/**
+ * @brief 拓扑排序（小根堆实现 → 字典序最小）。
+ * @param g 无权邻接表（1 基）
+ * @param order 输出参数，接收字典序最小的拓扑序列
+ * @return 存在拓扑序（无环）返回 true，否则 false
+ */
 inline bool topo_sort_lex_min(const Adj& g, std::vector<int>& order) {
   int n = (int)g.size() - 1;
   std::vector<int> indeg(n + 1, 0);

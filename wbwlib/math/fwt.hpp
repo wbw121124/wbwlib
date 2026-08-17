@@ -5,14 +5,18 @@
  * @file fwt.hpp
  * @brief 快速沃尔什变换 FWT：集合幂级数的 OR / AND / XOR 卷积。
  *
- * 依赖：wbwlib/core/base.hpp, wbwlib/math/modular.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp, wbwlib/math/modular.hpp
  *
- * 复杂度：每维 O(n log n)。
+ * @par 复杂度
+ * 每维 O(n log n)。
  *
- * 用法：
+ * @par 示例
+ * @code{.cpp}
  *   using M = wbwlib::math::modint<998244353>;
  *   std::vector<M> a(n), b(n);
  *   std::vector<M> c = wbwlib::math::convolution_xor(a, b);  // 或 _or/_and
+ * @endcode
  *
  * 原理：在变换域做点乘再逆变换。
  */
@@ -26,7 +30,7 @@ namespace math {
 
 namespace details {
 
-/// 正变换参数 inPlace 恒为正向等价式展开
+/// FWT 核心蝶形：kind 0/1/2 对应 OR/AND/XOR，inverse 为真时做逆变换（XOR 逆变换需除以 2）
 template<class M, bool inverse>
 inline void fwt_core(std::vector<M>& a, int kind) {
   int n = (int)a.size();
@@ -50,14 +54,55 @@ inline void fwt_core(std::vector<M>& a, int kind) {
 
 } // namespace details
 
+/**
+ * @brief OR 卷积正变换（原地；长度需为 2 的幂）。
+ * @tparam M 模整数类
+ * @param a 待变换序列
+ */
 template<class M> void fwt_or(std::vector<M>& a)   { details::fwt_core<M, false>(a, 0); }
+
+/**
+ * @brief OR 卷积逆变换（原地；长度需为 2 的幂）。
+ * @tparam M 模整数类
+ * @param a 待逆变换序列
+ */
 template<class M> void ifwt_or(std::vector<M>& a)  { details::fwt_core<M, true>(a, 0); }
+
+/**
+ * @brief AND 卷积正变换（原地；长度需为 2 的幂）。
+ * @tparam M 模整数类
+ * @param a 待变换序列
+ */
 template<class M> void fwt_and(std::vector<M>& a)  { details::fwt_core<M, false>(a, 1); }
+
+/**
+ * @brief AND 卷积逆变换（原地；长度需为 2 的幂）。
+ * @tparam M 模整数类
+ * @param a 待逆变换序列
+ */
 template<class M> void ifwt_and(std::vector<M>& a) { details::fwt_core<M, true>(a, 1); }
+
+/**
+ * @brief XOR 卷积正变换（原地；长度需为 2 的幂）。
+ * @tparam M 模整数类
+ * @param a 待变换序列
+ */
 template<class M> void fwt_xor(std::vector<M>& a)  { details::fwt_core<M, false>(a, 2); }
+
+/**
+ * @brief XOR 卷积逆变换（原地；长度需为 2 的幂）。
+ * @tparam M 模整数类
+ * @param a 待逆变换序列
+ */
 template<class M> void ifwt_xor(std::vector<M>& a) { details::fwt_core<M, true>(a, 2); }
 
-/// 三个卷积封装：返回 a,b 的 (OR/AND/XOR) 卷积
+/**
+ * @brief OR 卷积：\f$c_k = \sum_{i | j = k} a_i b_j\f$。
+ * @tparam M 模整数类
+ * @param a 序列 1
+ * @param b 序列 2
+ * @return 卷积结果（长度向上取整到 2 的幂）
+ */
 template<class M>
 std::vector<M> convolution_or(std::vector<M> a, std::vector<M> b) {
   int n = 1; while (n < (int)std::max(a.size(), b.size())) n <<= 1;
@@ -68,6 +113,13 @@ std::vector<M> convolution_or(std::vector<M> a, std::vector<M> b) {
   return a;
 }
 
+/**
+ * @brief AND 卷积：\f$c_k = \sum_{i \& j = k} a_i b_j\f$。
+ * @tparam M 模整数类
+ * @param a 序列 1
+ * @param b 序列 2
+ * @return 卷积结果（长度向上取整到 2 的幂）
+ */
 template<class M>
 std::vector<M> convolution_and(std::vector<M> a, std::vector<M> b) {
   int n = 1; while (n < (int)std::max(a.size(), b.size())) n <<= 1;
@@ -78,6 +130,13 @@ std::vector<M> convolution_and(std::vector<M> a, std::vector<M> b) {
   return a;
 }
 
+/**
+ * @brief XOR 卷积：\f$c_k = \sum_{i \oplus j = k} a_i b_j\f$。
+ * @tparam M 模整数类
+ * @param a 序列 1
+ * @param b 序列 2
+ * @return 卷积结果（长度向上取整到 2 的幂）
+ */
 template<class M>
 std::vector<M> convolution_xor(std::vector<M> a, std::vector<M> b) {
   int n = 1; while (n < (int)std::max(a.size(), b.size())) n <<= 1;

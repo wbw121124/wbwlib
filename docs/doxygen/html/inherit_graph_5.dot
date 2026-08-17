@@ -1,0 +1,8 @@
+digraph "类继承关系图"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="wbwlib::dp::LineContainer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwbwlib_1_1dp_1_1_line_container.html",tooltip="动态 CHT：内部按上凸壳维护「最大」，提供 max/min 两套接口（KACTL 风格）。"];
+}

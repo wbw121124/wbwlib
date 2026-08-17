@@ -5,7 +5,8 @@
  * @file shortest-path.hpp
  * @brief 最短路：Dijkstra（堆）/ SPFA（判负环）/ Floyd / 0-1 BFS / 拓扑序 DAG。
  *
- * 依赖：wbwlib/core/base.hpp、wbwlib/graph/adjacency.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp、wbwlib/graph/adjacency.hpp
  *
  * 复杂度：
  *   dijkstra     O((V+E) log V)，要求边权非负。
@@ -26,9 +27,17 @@
 namespace wbwlib {
 namespace graph {
 
+/// 表示无穷大（不可达 / 初始距离）
 constexpr i64 INF_LL = (i64)4e18;
 
-/// 单源最短路（非负权），返回 dist[1..n]，不可达为 INF_LL
+/**
+ * @brief Dijkstra 单源最短路（要求边权非负）：每次取堆顶未确定点做松弛。
+ * @tparam W 边权类型
+ * @param n 点数（1 基）
+ * @param s 源点
+ * @param g 带权邻接表
+ * @return dist[1..n]，不可达为 INF_LL
+ */
 template<class W>
 std::vector<i64> dijkstra(int n, int s, const WAdj<W>& g) {
   std::vector<i64> dist(n + 1, INF_LL);
@@ -52,7 +61,15 @@ std::vector<i64> dijkstra(int n, int s, const WAdj<W>& g) {
   return dist;
 }
 
-/// SPFA：返回 false 表示存在负环；dist 为答案（负环检测到即返回）
+/**
+ * @brief SPFA 单源最短路（可判负环）：入队次数 ≥ n 即判定存在负环。
+ * @tparam W 边权类型
+ * @param n 点数（1 基）
+ * @param s 源点
+ * @param g 带权邻接表
+ * @param dist 输出参数，接收 dist[1..n]（检测到负环时部分结果可能无效）
+ * @return 无负环返回 true；存在负环返回 false
+ */
 template<class W>
 bool spfa(int n, int s, const WAdj<W>& g, std::vector<i64>& dist) {
   dist.assign(n + 1, INF_LL);
@@ -81,7 +98,10 @@ bool spfa(int n, int s, const WAdj<W>& g, std::vector<i64>& dist) {
   return true;
 }
 
-/// Floyd：d 为 n×n 邻接矩阵（i==j 置 0，无边 INF_LL），就地求最短路
+/**
+ * @brief Floyd 任意两点最短路：递推 \f$d[i][j] = \min(d[i][j],\; d[i][k]+d[k][j])\f$。
+ * @param d n×n 邻接矩阵（下标 1 基；i==j 置 0，无边置 INF_LL），结果就地写入
+ */
 inline void floyd(std::vector<std::vector<i64>>& d) {
   int n = (int)d.size() - 1;
   for (int k = 1; k <= n; ++k)
@@ -93,7 +113,14 @@ inline void floyd(std::vector<std::vector<i64>>& d) {
     }
 }
 
-/// 0-1 BFS：边权 0/1
+/**
+ * @brief 0-1 BFS：边权仅 0/1 时按权值插入队首/队尾求单源最短路。
+ * @tparam W 边权类型（须为 0 或 1）
+ * @param n 点数（1 基）
+ * @param s 源点
+ * @param g 带权邻接表
+ * @return dist[1..n]，不可达为 INF_LL
+ */
 template<class W>
 std::vector<i64> bfs01(int n, int s, const WAdj<W>& g) {
   std::deque<int> dq;
@@ -115,7 +142,14 @@ std::vector<i64> bfs01(int n, int s, const WAdj<W>& g) {
   return dist;
 }
 
-/// DAG 最短路：先拓扑排序，再按拓扑序松弛；order 将填入拓扑序
+/**
+ * @brief DAG 最短路：先 Kahn 拓扑排序，再按拓扑序从点 1 出发做松弛 DP（不支持负环语义，DAG 无环）。
+ * @tparam W 边权类型
+ * @param n 点数（1 基）
+ * @param g 带权邻接表
+ * @param order 输出参数，接收拓扑序
+ * @return dist[1..n]（从点 1 出发，不可达为 INF_LL）
+ */
 template<class W>
 std::vector<i64> dag_shortest(int n, const WAdj<W>& g,
                               std::vector<int>& order) {

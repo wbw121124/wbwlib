@@ -1,0 +1,16 @@
+<map id="wbwlib/math/fourier.hpp" name="wbwlib/math/fourier.hpp">
+<area shape="rect" id="node1" title="卷积加速：复数 FFT 与数论变换 NTT。" alt="" coords="114,5,274,33"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,81,63,109"/>
+<area shape="rect" id="node3" title=" " alt="" coords="87,81,157,109"/>
+<area shape="rect" id="node4" title=" " alt="" coords="181,249,239,277"/>
+<area shape="rect" id="node5" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="342,249,489,277"/>
+<area shape="rect" id="node12" href="$modular_8hpp.html" title="模意义整数类 modint（固定模版）与动态模版。" alt="" coords="279,81,448,109"/>
+<area shape="rect" id="node6" title=" " alt="" coords="681,325,742,353"/>
+<area shape="rect" id="node7" title=" " alt="" coords="295,325,360,353"/>
+<area shape="rect" id="node8" title=" " alt="" coords="383,325,448,353"/>
+<area shape="rect" id="node9" title=" " alt="" coords="472,325,551,353"/>
+<area shape="rect" id="node10" title=" " alt="" coords="574,325,657,353"/>
+<area shape="rect" id="node11" title=" " alt="" coords="219,325,271,353"/>
+<area shape="rect" id="node13" title=" " alt="" coords="448,165,519,193"/>
+<area shape="rect" id="node14" href="$number-theory_8hpp.html" title="数论基础：快速幂、快速乘、gcd/lcm、扩展欧几里得、逆元、CRT/EXCRT、欧拉定理、整除分块。" alt="" coords="231,157,373,201"/>
+</map>

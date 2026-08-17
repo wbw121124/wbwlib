@@ -1,0 +1,12 @@
+<map id="wbwlib/string/rolling&#45;hash.hpp" name="wbwlib/string/rolling&#45;hash.hpp">
+<area shape="rect" id="node1" title="字符串双哈希（模板化双模数），取模 + 自然溢出可选。" alt="" coords="62,5,197,49"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,97,59,125"/>
+<area shape="rect" id="node3" title=" " alt="" coords="70,173,122,201"/>
+<area shape="rect" id="node4" title=" " alt="" coords="134,97,191,125"/>
+<area shape="rect" id="node5" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="216,97,363,125"/>
+<area shape="rect" id="node6" title=" " alt="" coords="146,173,206,201"/>
+<area shape="rect" id="node7" title=" " alt="" coords="231,173,295,201"/>
+<area shape="rect" id="node8" title=" " alt="" coords="319,173,383,201"/>
+<area shape="rect" id="node9" title=" " alt="" coords="408,173,486,201"/>
+<area shape="rect" id="node10" title=" " alt="" coords="510,173,592,201"/>
+</map>

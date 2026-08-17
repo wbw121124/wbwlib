@@ -1,0 +1,573 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::math::XorBasis类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1math.html">math</a></li><li class="navelem"><a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html">XorBasis</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classwbwlib_1_1math_1_1_xor_basis-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::math::XorBasis类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>64 位异或线性基。  
+ <a href="classwbwlib_1_1math_1_1_xor_basis.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="linalg_8hpp_source.html">linalg.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::math::XorBasis 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwbwlib_1_1math_1_1_xor_basis__coll__graph.png" border="0" usemap="#awbwlib_1_1math_1_1_xor_basis_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1math_1_1_xor_basis_coll__map" id="awbwlib_1_1math_1_1_xor_basis_coll__map">
+<area shape="rect" title="64 位异或线性基。" alt="" coords="5,5,165,263"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4e35e6274d87dcc9e12d423defaa360f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#a4e35e6274d87dcc9e12d423defaa360f">XorBasis</a> ()</td></tr>
+<tr class="memdesc:a4e35e6274d87dcc9e12d423defaa360f"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造空线性基。  <a href="classwbwlib_1_1math_1_1_xor_basis.html#a4e35e6274d87dcc9e12d423defaa360f">更多...</a><br /></td></tr>
+<tr class="separator:a4e35e6274d87dcc9e12d423defaa360f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a48f7869818591b0cfb009a83c469db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#a4a48f7869818591b0cfb009a83c469db">reset</a> ()</td></tr>
+<tr class="memdesc:a4a48f7869818591b0cfb009a83c469db"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空线性基（并作废 kth 构建结果）。  <a href="classwbwlib_1_1math_1_1_xor_basis.html#a4a48f7869818591b0cfb009a83c469db">更多...</a><br /></td></tr>
+<tr class="separator:a4a48f7869818591b0cfb009a83c469db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4767302d841393e6da8d4956aba88555"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#a4767302d841393e6da8d4956aba88555">insert</a> (<a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> x)</td></tr>
+<tr class="memdesc:a4767302d841393e6da8d4956aba88555"><td class="mdescLeft">&#160;</td><td class="mdescRight">向线性基插入 x。  <a href="classwbwlib_1_1math_1_1_xor_basis.html#a4767302d841393e6da8d4956aba88555">更多...</a><br /></td></tr>
+<tr class="separator:a4767302d841393e6da8d4956aba88555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55af2a1c299dfedc517d9940f5df9864"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#a55af2a1c299dfedc517d9940f5df9864">max_xor</a> (<a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> base=0) const</td></tr>
+<tr class="memdesc:a55af2a1c299dfedc517d9940f5df9864"><td class="mdescLeft">&#160;</td><td class="mdescRight">求 \(\max_{x \in span} (x \oplus base)\)。  <a href="classwbwlib_1_1math_1_1_xor_basis.html#a55af2a1c299dfedc517d9940f5df9864">更多...</a><br /></td></tr>
+<tr class="separator:a55af2a1c299dfedc517d9940f5df9864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af66bc8ab8dcadf83293c8eb310830406"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#af66bc8ab8dcadf83293c8eb310830406">min_xor</a> (<a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> base=0) const</td></tr>
+<tr class="memdesc:af66bc8ab8dcadf83293c8eb310830406"><td class="mdescLeft">&#160;</td><td class="mdescRight">求 \(\min_{x \in span} (x \oplus base)\)。  <a href="classwbwlib_1_1math_1_1_xor_basis.html#af66bc8ab8dcadf83293c8eb310830406">更多...</a><br /></td></tr>
+<tr class="separator:af66bc8ab8dcadf83293c8eb310830406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1303dde4118f95f13306d5197bc5b1a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#a1303dde4118f95f13306d5197bc5b1a1">has</a> (<a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> x) const</td></tr>
+<tr class="memdesc:a1303dde4118f95f13306d5197bc5b1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断 x 是否可被线性基表示。  <a href="classwbwlib_1_1math_1_1_xor_basis.html#a1303dde4118f95f13306d5197bc5b1a1">更多...</a><br /></td></tr>
+<tr class="separator:a1303dde4118f95f13306d5197bc5b1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d8cf76b242e9861ca80582c3f3ed966"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#a1d8cf76b242e9861ca80582c3f3ed966">rank</a> () const</td></tr>
+<tr class="memdesc:a1d8cf76b242e9861ca80582c3f3ed966"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回线性基的秩（主元个数），线性基张成的可表示数共有 \(2^r\) 种（含 0）  <a href="classwbwlib_1_1math_1_1_xor_basis.html#a1d8cf76b242e9861ca80582c3f3ed966">更多...</a><br /></td></tr>
+<tr class="separator:a1d8cf76b242e9861ca80582c3f3ed966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3308549234ab6e372ab66967aee47a50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#a3308549234ab6e372ab66967aee47a50">build_kth</a> ()</td></tr>
+<tr class="memdesc:a3308549234ab6e372ab66967aee47a50"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建第 k 小查询所需的化简基（需在 kth_min 前调用一次）。  <a href="classwbwlib_1_1math_1_1_xor_basis.html#a3308549234ab6e372ab66967aee47a50">更多...</a><br /></td></tr>
+<tr class="separator:a3308549234ab6e372ab66967aee47a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae509e5555e899bc3b34ed03c6044c9c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#ae509e5555e899bc3b34ed03c6044c9c7">kth_min</a> (<a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> k) const</td></tr>
+<tr class="memdesc:ae509e5555e899bc3b34ed03c6044c9c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">第 k 小（1 基，0 计入第 1 小）的可表示数。  <a href="classwbwlib_1_1math_1_1_xor_basis.html#ae509e5555e899bc3b34ed03c6044c9c7">更多...</a><br /></td></tr>
+<tr class="separator:ae509e5555e899bc3b34ed03c6044c9c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a5e94633fec5f4aa445c3c0ba3226558d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">p_</a> [<a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#a91c2d4d1f1012e17da846b65fa09ccb1">B</a>]</td></tr>
+<tr class="memdesc:a5e94633fec5f4aa445c3c0ba3226558d"><td class="mdescLeft">&#160;</td><td class="mdescRight">主元数组  <a href="classwbwlib_1_1math_1_1_xor_basis.html#a5e94633fec5f4aa445c3c0ba3226558d">更多...</a><br /></td></tr>
+<tr class="separator:a5e94633fec5f4aa445c3c0ba3226558d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1ada9dffead6d604c51d4b756086b81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#ac1ada9dffead6d604c51d4b756086b81">ok_kth_</a></td></tr>
+<tr class="separator:ac1ada9dffead6d604c51d4b756086b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa383d016ab837160e4b53b14e6d55a4c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#aa383d016ab837160e4b53b14e6d55a4c">kth_</a></td></tr>
+<tr class="memdesc:aa383d016ab837160e4b53b14e6d55a4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于第 k 小查询的化简基  <a href="classwbwlib_1_1math_1_1_xor_basis.html#aa383d016ab837160e4b53b14e6d55a4c">更多...</a><br /></td></tr>
+<tr class="separator:aa383d016ab837160e4b53b14e6d55a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a91c2d4d1f1012e17da846b65fa09ccb1"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#a91c2d4d1f1012e17da846b65fa09ccb1">B</a> = 63</td></tr>
+<tr class="separator:a91c2d4d1f1012e17da846b65fa09ccb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>64 位异或线性基。 </p>
+<ul>
+<li>insert(x)：插入成功返回 true（增加秩）；</li>
+<li><a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#a55af2a1c299dfedc517d9940f5df9864" title="求 。">max_xor()</a>：与已有元素异或得到的最大值；可传入初值 base；</li>
+<li>min_xor(base)：最小值（异或 base）也支持；</li>
+<li>has(x)：x 是否可被表示；</li>
+<li>kth_min(k)：第 k 小（1 基）的可表示数，需先 <a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#a3308549234ab6e372ab66967aee47a50" title="构建第 k 小查询所需的化简基（需在 kth_min 前调用一次）。">build_kth()</a>。 </li>
+</ul>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a4e35e6274d87dcc9e12d423defaa360f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e35e6274d87dcc9e12d423defaa360f">&#9670;&nbsp;</a></span>XorBasis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wbwlib::math::XorBasis::XorBasis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造空线性基。 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a3308549234ab6e372ab66967aee47a50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3308549234ab6e372ab66967aee47a50">&#9670;&nbsp;</a></span>build_kth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::math::XorBasis::build_kth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构建第 k 小查询所需的化简基（需在 kth_min 前调用一次）。 </p>
+
+</div>
+</div>
+<a id="a1303dde4118f95f13306d5197bc5b1a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1303dde4118f95f13306d5197bc5b1a1">&#9670;&nbsp;</a></span>has()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wbwlib::math::XorBasis::has </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断 x 是否可被线性基表示。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>待查询的数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>可表示返回 true </dd></dl>
+
+</div>
+</div>
+<a id="a4767302d841393e6da8d4956aba88555"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4767302d841393e6da8d4956aba88555">&#9670;&nbsp;</a></span>insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wbwlib::math::XorBasis::insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向线性基插入 x。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>待插入的数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>插入成功（秩增加）返回 true；x 可被已有基表示则返回 false </dd></dl>
+
+</div>
+</div>
+<a id="ae509e5555e899bc3b34ed03c6044c9c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae509e5555e899bc3b34ed03c6044c9c7">&#9670;&nbsp;</a></span>kth_min()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> wbwlib::math::XorBasis::kth_min </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>第 k 小（1 基，0 计入第 1 小）的可表示数。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>排名（从 1 开始） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>第 k 小的可表示数；需先调用 build_kth </dd></dl>
+
+</div>
+</div>
+<a id="a55af2a1c299dfedc517d9940f5df9864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55af2a1c299dfedc517d9940f5df9864">&#9670;&nbsp;</a></span>max_xor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> wbwlib::math::XorBasis::max_xor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td>
+          <td class="paramname"><em>base</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>求 \(\max_{x \in span} (x \oplus base)\)。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">base</td><td>初值（默认 0） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>线性基中元素异或 base 能得到的最大值 </dd></dl>
+
+</div>
+</div>
+<a id="af66bc8ab8dcadf83293c8eb310830406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af66bc8ab8dcadf83293c8eb310830406">&#9670;&nbsp;</a></span>min_xor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> wbwlib::math::XorBasis::min_xor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td>
+          <td class="paramname"><em>base</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>求 \(\min_{x \in span} (x \oplus base)\)。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">base</td><td>初值（默认 0） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>线性基中元素异或 base 能得到的最小值（若最小为 base 本身则返回 0） </dd></dl>
+
+</div>
+</div>
+<a id="a1d8cf76b242e9861ca80582c3f3ed966"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d8cf76b242e9861ca80582c3f3ed966">&#9670;&nbsp;</a></span>rank()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wbwlib::math::XorBasis::rank </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回线性基的秩（主元个数），线性基张成的可表示数共有 \(2^r\) 种（含 0） </p>
+
+</div>
+</div>
+<a id="a4a48f7869818591b0cfb009a83c469db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a48f7869818591b0cfb009a83c469db">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::math::XorBasis::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>清空线性基（并作废 kth 构建结果）。 </p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a91c2d4d1f1012e17da846b65fa09ccb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91c2d4d1f1012e17da846b65fa09ccb1">&#9670;&nbsp;</a></span>B</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int wbwlib::math::XorBasis::B = 63</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa383d016ab837160e4b53b14e6d55a4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa383d016ab837160e4b53b14e6d55a4c">&#9670;&nbsp;</a></span>kth_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&gt; wbwlib::math::XorBasis::kth_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>用于第 k 小查询的化简基 </p>
+
+</div>
+</div>
+<a id="ac1ada9dffead6d604c51d4b756086b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1ada9dffead6d604c51d4b756086b81">&#9670;&nbsp;</a></span>ok_kth_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wbwlib::math::XorBasis::ok_kth_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e94633fec5f4aa445c3c0ba3226558d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e94633fec5f4aa445c3c0ba3226558d">&#9670;&nbsp;</a></span>p_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> wbwlib::math::XorBasis::p_[<a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html#a91c2d4d1f1012e17da846b65fa09ccb1">B</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>主元数组 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>wbwlib/math/<a class="el" href="linalg_8hpp_source.html">linalg.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

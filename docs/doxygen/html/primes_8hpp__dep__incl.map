@@ -1,0 +1,6 @@
+<map id="wbwlib/math/primes.hpp" name="wbwlib/math/primes.hpp">
+<area shape="rect" id="node1" title="质数工具：线性筛（素数/欧拉函数/莫比乌斯函数）、Miller&#45;Rabin 素性测试、 Pollard&#45;Rho 质因数分解。" alt="" coords="5,5,168,33"/>
+<area shape="rect" id="node2" href="$math_8hpp.html" title="math 模块聚合头：一次引入本模块全部头文件。" alt="" coords="10,173,163,201"/>
+<area shape="rect" id="node4" href="$primitive-root_8hpp.html" title="原根求解：求模 p 意义下的最小原根（常用 NTT 前置，p 为质数）。" alt="" coords="69,81,216,125"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="21,249,152,277"/>
+</map>

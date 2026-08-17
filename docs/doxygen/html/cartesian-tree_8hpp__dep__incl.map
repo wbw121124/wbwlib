@@ -1,0 +1,5 @@
+<map id="wbwlib/datastruct/cartesian&#45;tree.hpp" name="wbwlib/datastruct/cartesian&#45;tree.hpp">
+<area shape="rect" id="node1" title="笛卡尔树：中序遍历为原序列、满足堆性质的二叉树。" alt="" coords="20,5,201,49"/>
+<area shape="rect" id="node2" href="$datastruct_8hpp.html" title="datastruct 模块聚合头：一次引入本模块全部头文件。" alt="" coords="5,97,216,125"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="45,173,176,201"/>
+</map>

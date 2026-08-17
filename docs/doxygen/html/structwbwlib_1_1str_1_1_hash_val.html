@@ -1,0 +1,260 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::str::HashVal结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1str.html">str</a></li><li class="navelem"><a class="el" href="structwbwlib_1_1str_1_1_hash_val.html">HashVal</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structwbwlib_1_1str_1_1_hash_val-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::str::HashVal结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>双哈希值：两条路哈希以相等比较（a 路 mod MOD1，b 路 mod MOD2）。  
+ <a href="structwbwlib_1_1str_1_1_hash_val.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="rolling-hash_8hpp_source.html">rolling-hash.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::str::HashVal 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="structwbwlib_1_1str_1_1_hash_val__coll__graph.png" border="0" usemap="#awbwlib_1_1str_1_1_hash_val_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1str_1_1_hash_val_coll__map" id="awbwlib_1_1str_1_1_hash_val_coll__map">
+<area shape="rect" title="双哈希值：两条路哈希以相等比较（a 路 mod MOD1，b 路 mod MOD2）。" alt="" coords="5,5,147,119"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4c0664ecaed59ea673a88f3dd8a916ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1str_1_1_hash_val.html#a4c0664ecaed59ea673a88f3dd8a916ad">operator==</a> (const <a class="el" href="structwbwlib_1_1str_1_1_hash_val.html">HashVal</a> &amp;o) const</td></tr>
+<tr class="memdesc:a4c0664ecaed59ea673a88f3dd8a916ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断两个哈希值是否相等。  <a href="structwbwlib_1_1str_1_1_hash_val.html#a4c0664ecaed59ea673a88f3dd8a916ad">更多...</a><br /></td></tr>
+<tr class="separator:a4c0664ecaed59ea673a88f3dd8a916ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7819d6f2d69689b2ab3bf1907afde37f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1str_1_1_hash_val.html#a7819d6f2d69689b2ab3bf1907afde37f">operator!=</a> (const <a class="el" href="structwbwlib_1_1str_1_1_hash_val.html">HashVal</a> &amp;o) const</td></tr>
+<tr class="memdesc:a7819d6f2d69689b2ab3bf1907afde37f"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断两个哈希值是否不等。  <a href="structwbwlib_1_1str_1_1_hash_val.html#a7819d6f2d69689b2ab3bf1907afde37f">更多...</a><br /></td></tr>
+<tr class="separator:a7819d6f2d69689b2ab3bf1907afde37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:abe710a8b99d5417aabe81b4b2f40b0f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1str_1_1_hash_val.html#abe710a8b99d5417aabe81b4b2f40b0f4">a</a></td></tr>
+<tr class="separator:abe710a8b99d5417aabe81b4b2f40b0f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a425503aa47f3253c74c1aaf8c8543d7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1str_1_1_hash_val.html#a425503aa47f3253c74c1aaf8c8543d7f">b</a></td></tr>
+<tr class="memdesc:a425503aa47f3253c74c1aaf8c8543d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">两条路哈希值  <a href="structwbwlib_1_1str_1_1_hash_val.html#a425503aa47f3253c74c1aaf8c8543d7f">更多...</a><br /></td></tr>
+<tr class="separator:a425503aa47f3253c74c1aaf8c8543d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>双哈希值：两条路哈希以相等比较（a 路 mod MOD1，b 路 mod MOD2）。 </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a7819d6f2d69689b2ab3bf1907afde37f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7819d6f2d69689b2ab3bf1907afde37f">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wbwlib::str::HashVal::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structwbwlib_1_1str_1_1_hash_val.html">HashVal</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断两个哈希值是否不等。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>另一个哈希值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>a 或 b 任一路不等返回 true </dd></dl>
+
+</div>
+</div>
+<a id="a4c0664ecaed59ea673a88f3dd8a916ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c0664ecaed59ea673a88f3dd8a916ad">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wbwlib::str::HashVal::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structwbwlib_1_1str_1_1_hash_val.html">HashVal</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断两个哈希值是否相等。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>另一个哈希值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>a 与 b 均相等返回 true </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="abe710a8b99d5417aabe81b4b2f40b0f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe710a8b99d5417aabe81b4b2f40b0f4">&#9670;&nbsp;</a></span>a</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> wbwlib::str::HashVal::a</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a425503aa47f3253c74c1aaf8c8543d7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a425503aa47f3253c74c1aaf8c8543d7f">&#9670;&nbsp;</a></span>b</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> wbwlib::str::HashVal::b</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>两条路哈希值 </p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>wbwlib/string/<a class="el" href="rolling-hash_8hpp_source.html">rolling-hash.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

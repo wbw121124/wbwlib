@@ -1,0 +1,5 @@
+<map id="wbwlib/graph/bipartite.hpp" name="wbwlib/graph/bipartite.hpp">
+<area shape="rect" id="node1" title="二分图判定（黑白染色）+ 最大匹配（匈牙利）+ 最小点覆盖/最大独立集。" alt="" coords="5,5,178,33"/>
+<area shape="rect" id="node2" href="$graph_8hpp.html" title="graph 模块聚合头：一次引入本模块全部头文件。" alt="" coords="12,81,171,109"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="26,157,157,185"/>
+</map>

@@ -1,0 +1,7 @@
+digraph "wbwlib::dp::LineContainer"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::dp::LineContainer\n|- st_\l- INF\l|+ clear()\l+ add_line()\l+ query()\l+ add_min_mode()\l+ query_min_mode()\l- isect()\l- div_f()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="动态 CHT：内部按上凸壳维护「最大」，提供 max/min 两套接口（KACTL 风格）。"];
+}

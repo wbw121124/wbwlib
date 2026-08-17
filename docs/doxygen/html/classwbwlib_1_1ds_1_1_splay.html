@@ -1,0 +1,1030 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::ds::Splay&lt; T &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1ds.html">ds</a></li><li class="navelem"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html">Splay</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classwbwlib_1_1ds_1_1_splay-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::ds::Splay&lt; T &gt; 模板类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>伸展树 Splay（序列模式，文艺平衡树）：按位置维护序列。  
+ <a href="classwbwlib_1_1ds_1_1_splay.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="splay_8hpp_source.html">splay.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::ds::Splay&lt; T &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwbwlib_1_1ds_1_1_splay__coll__graph.png" border="0" usemap="#awbwlib_1_1ds_1_1_splay_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1ds_1_1_splay_3_01_t_01_4_coll__map" id="awbwlib_1_1ds_1_1_splay_3_01_t_01_4_coll__map">
+<area shape="rect" title="伸展树 Splay（序列模式，文艺平衡树）：按位置维护序列。" alt="" coords="5,5,161,423"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1ds_1_1_splay_1_1_interval.html">Interval</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1ds_1_1_splay_1_1_node.html">Node</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a5d4b9796cffe2114248d2aa7aa38df4c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a5d4b9796cffe2114248d2aa7aa38df4c">Splay</a> ()</td></tr>
+<tr class="memdesc:a5d4b9796cffe2114248d2aa7aa38df4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造空序列。  <a href="classwbwlib_1_1ds_1_1_splay.html#a5d4b9796cffe2114248d2aa7aa38df4c">更多...</a><br /></td></tr>
+<tr class="separator:a5d4b9796cffe2114248d2aa7aa38df4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f2bc6dac8ce831360359c278c7cb942"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a8f2bc6dac8ce831360359c278c7cb942">Splay</a> (const std::vector&lt; T &gt; &amp;a)</td></tr>
+<tr class="memdesc:a8f2bc6dac8ce831360359c278c7cb942"><td class="mdescLeft">&#160;</td><td class="mdescRight">由数组 a 构造序列（a 为 0 基）。  <a href="classwbwlib_1_1ds_1_1_splay.html#a8f2bc6dac8ce831360359c278c7cb942">更多...</a><br /></td></tr>
+<tr class="separator:a8f2bc6dac8ce831360359c278c7cb942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c1e46f1cd3f79059ea6b6c6ed879853"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a4c1e46f1cd3f79059ea6b6c6ed879853">build</a> (const std::vector&lt; T &gt; &amp;a)</td></tr>
+<tr class="memdesc:a4c1e46f1cd3f79059ea6b6c6ed879853"><td class="mdescLeft">&#160;</td><td class="mdescRight">用数组 a 重建整个序列（清空原序列）。  <a href="classwbwlib_1_1ds_1_1_splay.html#a4c1e46f1cd3f79059ea6b6c6ed879853">更多...</a><br /></td></tr>
+<tr class="separator:a4c1e46f1cd3f79059ea6b6c6ed879853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a745a32ffe11e18be2558bdd7be1f8d4b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a745a32ffe11e18be2558bdd7be1f8d4b">size</a> () const</td></tr>
+<tr class="memdesc:a745a32ffe11e18be2558bdd7be1f8d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回序列长度  <a href="classwbwlib_1_1ds_1_1_splay.html#a745a32ffe11e18be2558bdd7be1f8d4b">更多...</a><br /></td></tr>
+<tr class="separator:a745a32ffe11e18be2558bdd7be1f8d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73b15dd309a5949a075f948f4b9c9445"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a73b15dd309a5949a075f948f4b9c9445">empty</a> () const</td></tr>
+<tr class="memdesc:a73b15dd309a5949a075f948f4b9c9445"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回是否为空  <a href="classwbwlib_1_1ds_1_1_splay.html#a73b15dd309a5949a075f948f4b9c9445">更多...</a><br /></td></tr>
+<tr class="separator:a73b15dd309a5949a075f948f4b9c9445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e821dcafd5bd6b7e20fd5195c88a32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a01e821dcafd5bd6b7e20fd5195c88a32">insert</a> (int k, const T &amp;v)</td></tr>
+<tr class="memdesc:a01e821dcafd5bd6b7e20fd5195c88a32"><td class="mdescLeft">&#160;</td><td class="mdescRight">在位置 k 前插入 v。  <a href="classwbwlib_1_1ds_1_1_splay.html#a01e821dcafd5bd6b7e20fd5195c88a32">更多...</a><br /></td></tr>
+<tr class="separator:a01e821dcafd5bd6b7e20fd5195c88a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32c62e13f6a9650c11426e191cc0c727"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a32c62e13f6a9650c11426e191cc0c727">push_back</a> (const T &amp;v)</td></tr>
+<tr class="memdesc:a32c62e13f6a9650c11426e191cc0c727"><td class="mdescLeft">&#160;</td><td class="mdescRight">在序列末尾追加 v。  <a href="classwbwlib_1_1ds_1_1_splay.html#a32c62e13f6a9650c11426e191cc0c727">更多...</a><br /></td></tr>
+<tr class="separator:a32c62e13f6a9650c11426e191cc0c727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca7601df777c65c6e61d118f1ad0aae8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#aca7601df777c65c6e61d118f1ad0aae8">erase</a> (int k)</td></tr>
+<tr class="memdesc:aca7601df777c65c6e61d118f1ad0aae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除位置 k 的元素。  <a href="classwbwlib_1_1ds_1_1_splay.html#aca7601df777c65c6e61d118f1ad0aae8">更多...</a><br /></td></tr>
+<tr class="separator:aca7601df777c65c6e61d118f1ad0aae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77798c824b78a44134a3ff0d29b6df6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a77798c824b78a44134a3ff0d29b6df6f">reverse</a> (int l, int r)</td></tr>
+<tr class="memdesc:a77798c824b78a44134a3ff0d29b6df6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">翻转区间 [l, r] 的元素顺序。  <a href="classwbwlib_1_1ds_1_1_splay.html#a77798c824b78a44134a3ff0d29b6df6f">更多...</a><br /></td></tr>
+<tr class="separator:a77798c824b78a44134a3ff0d29b6df6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab464c171b1af1d13a8471f4ba22a6e60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#ab464c171b1af1d13a8471f4ba22a6e60">add</a> (int l, int r, const T &amp;v)</td></tr>
+<tr class="memdesc:ab464c171b1af1d13a8471f4ba22a6e60"><td class="mdescLeft">&#160;</td><td class="mdescRight">区间加： \(a[l..r] += v\)。  <a href="classwbwlib_1_1ds_1_1_splay.html#ab464c171b1af1d13a8471f4ba22a6e60">更多...</a><br /></td></tr>
+<tr class="separator:ab464c171b1af1d13a8471f4ba22a6e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e8a5cf81b2d81fad9c0a92099f4edf"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a01e8a5cf81b2d81fad9c0a92099f4edf">sum</a> (int l, int r)</td></tr>
+<tr class="memdesc:a01e8a5cf81b2d81fad9c0a92099f4edf"><td class="mdescLeft">&#160;</td><td class="mdescRight">区间和： \(\sum_{i=l}^{r} a[i]\)。  <a href="classwbwlib_1_1ds_1_1_splay.html#a01e8a5cf81b2d81fad9c0a92099f4edf">更多...</a><br /></td></tr>
+<tr class="separator:a01e8a5cf81b2d81fad9c0a92099f4edf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad59c6e3cffe2c438fedb5512df00e415"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#ad59c6e3cffe2c438fedb5512df00e415">get</a> (int k)</td></tr>
+<tr class="memdesc:ad59c6e3cffe2c438fedb5512df00e415"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询位置 k 的单点值（会伸展该节点到根）。  <a href="classwbwlib_1_1ds_1_1_splay.html#ad59c6e3cffe2c438fedb5512df00e415">更多...</a><br /></td></tr>
+<tr class="separator:ad59c6e3cffe2c438fedb5512df00e415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88c01c138e929a7a1fa2139b8cc81fb5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a88c01c138e929a7a1fa2139b8cc81fb5">to_vector</a> ()</td></tr>
+<tr class="memdesc:a88c01c138e929a7a1fa2139b8cc81fb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">按顺序输出整个序列。  <a href="classwbwlib_1_1ds_1_1_splay.html#a88c01c138e929a7a1fa2139b8cc81fb5">更多...</a><br /></td></tr>
+<tr class="separator:a88c01c138e929a7a1fa2139b8cc81fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aba0b2d1d99d23071a788c6b7223b83ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#aba0b2d1d99d23071a788c6b7223b83ac">newnode</a> (const T &amp;v)</td></tr>
+<tr class="memdesc:aba0b2d1d99d23071a788c6b7223b83ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">新建节点并返回其下标  <a href="classwbwlib_1_1ds_1_1_splay.html#aba0b2d1d99d23071a788c6b7223b83ac">更多...</a><br /></td></tr>
+<tr class="separator:aba0b2d1d99d23071a788c6b7223b83ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e605852f33702055c9e05e605ea8205"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a3e605852f33702055c9e05e605ea8205">push</a> (int x)</td></tr>
+<tr class="memdesc:a3e605852f33702055c9e05e605ea8205"><td class="mdescLeft">&#160;</td><td class="mdescRight">下传节点 x 的懒标记（翻转 + 加法）  <a href="classwbwlib_1_1ds_1_1_splay.html#a3e605852f33702055c9e05e605ea8205">更多...</a><br /></td></tr>
+<tr class="separator:a3e605852f33702055c9e05e605ea8205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5ab04d39d240d8b1e83a2fe40e64ace"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#aa5ab04d39d240d8b1e83a2fe40e64ace">pull</a> (int x)</td></tr>
+<tr class="memdesc:aa5ab04d39d240d8b1e83a2fe40e64ace"><td class="mdescLeft">&#160;</td><td class="mdescRight">重算 x 的大小与区间和  <a href="classwbwlib_1_1ds_1_1_splay.html#aa5ab04d39d240d8b1e83a2fe40e64ace">更多...</a><br /></td></tr>
+<tr class="separator:aa5ab04d39d240d8b1e83a2fe40e64ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0cc538a3df9a1a129d10e21ffae64ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#aa0cc538a3df9a1a129d10e21ffae64ec">rotate</a> (int x)</td></tr>
+<tr class="memdesc:aa0cc538a3df9a1a129d10e21ffae64ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">以 x 为轴旋转  <a href="classwbwlib_1_1ds_1_1_splay.html#aa0cc538a3df9a1a129d10e21ffae64ec">更多...</a><br /></td></tr>
+<tr class="separator:aa0cc538a3df9a1a129d10e21ffae64ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2fdc9005887c0740140029344244004"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#ac2fdc9005887c0740140029344244004">splay</a> (int x)</td></tr>
+<tr class="memdesc:ac2fdc9005887c0740140029344244004"><td class="mdescLeft">&#160;</td><td class="mdescRight">把节点 x 伸展到根（双旋）  <a href="classwbwlib_1_1ds_1_1_splay.html#ac2fdc9005887c0740140029344244004">更多...</a><br /></td></tr>
+<tr class="separator:ac2fdc9005887c0740140029344244004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a2e79623b31551fed54bc64c16c252d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a0a2e79623b31551fed54bc64c16c252d">kth</a> (int k)</td></tr>
+<tr class="memdesc:a0a2e79623b31551fed54bc64c16c252d"><td class="mdescLeft">&#160;</td><td class="mdescRight">按位置 kth（1 基），返回节点并伸展到根  <a href="classwbwlib_1_1ds_1_1_splay.html#a0a2e79623b31551fed54bc64c16c252d">更多...</a><br /></td></tr>
+<tr class="separator:a0a2e79623b31551fed54bc64c16c252d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9111bb456b73a27ada3a667f4d92bbfd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwbwlib_1_1ds_1_1_splay_1_1_interval.html">Interval</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a9111bb456b73a27ada3a667f4d92bbfd">cut</a> (int l, int r)</td></tr>
+<tr class="memdesc:a9111bb456b73a27ada3a667f4d92bbfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">分离出区间 [l, r] 对应子树  <a href="classwbwlib_1_1ds_1_1_splay.html#a9111bb456b73a27ada3a667f4d92bbfd">更多...</a><br /></td></tr>
+<tr class="separator:a9111bb456b73a27ada3a667f4d92bbfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a278767cd8fd04f5559e1de8980d5cd01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a278767cd8fd04f5559e1de8980d5cd01">restore</a> (const <a class="el" href="structwbwlib_1_1ds_1_1_splay_1_1_interval.html">Interval</a> &amp;iv)</td></tr>
+<tr class="memdesc:a278767cd8fd04f5559e1de8980d5cd01"><td class="mdescLeft">&#160;</td><td class="mdescRight">把区间子树接回原树  <a href="classwbwlib_1_1ds_1_1_splay.html#a278767cd8fd04f5559e1de8980d5cd01">更多...</a><br /></td></tr>
+<tr class="separator:a278767cd8fd04f5559e1de8980d5cd01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a2fc55b4b3011f75823ae44ce8e2a25e5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structwbwlib_1_1ds_1_1_splay_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a2fc55b4b3011f75823ae44ce8e2a25e5">p_</a></td></tr>
+<tr class="separator:a2fc55b4b3011f75823ae44ce8e2a25e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3463b881b5608f04cdfb3e956841611e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a3463b881b5608f04cdfb3e956841611e">root_</a> = 0</td></tr>
+<tr class="separator:a3463b881b5608f04cdfb3e956841611e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><h3>template&lt;class T = i64&gt;<br />
+class wbwlib::ds::Splay&lt; T &gt;</h3>
+
+<p>伸展树 Splay（序列模式，文艺平衡树）：按位置维护序列。 </p>
+<p>支持区间翻转、区间加、区间和、按位置插入/删除；单次操作均摊 O(log n)。 </p><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>元素类型（默认 i64） </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a5d4b9796cffe2114248d2aa7aa38df4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d4b9796cffe2114248d2aa7aa38df4c">&#9670;&nbsp;</a></span>Splay() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::<a class="el" href="classwbwlib_1_1ds_1_1_splay.html">Splay</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认构造空序列。 </p>
+
+</div>
+</div>
+<a id="a8f2bc6dac8ce831360359c278c7cb942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f2bc6dac8ce831360359c278c7cb942">&#9670;&nbsp;</a></span>Splay() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::<a class="el" href="classwbwlib_1_1ds_1_1_splay.html">Splay</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>由数组 a 构造序列（a 为 0 基）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>初始序列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ab464c171b1af1d13a8471f4ba22a6e60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab464c171b1af1d13a8471f4ba22a6e60">&#9670;&nbsp;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::add </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>区间加： \(a[l..r] += v\)。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>区间左端点（1 基闭区间） </td></tr>
+    <tr><td class="paramname">r</td><td>区间右端点（1 基闭区间） </td></tr>
+    <tr><td class="paramname">v</td><td>增加量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4c1e46f1cd3f79059ea6b6c6ed879853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1e46f1cd3f79059ea6b6c6ed879853">&#9670;&nbsp;</a></span>build()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::build </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>用数组 a 重建整个序列（清空原序列）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>新序列（0 基） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9111bb456b73a27ada3a667f4d92bbfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9111bb456b73a27ada3a667f4d92bbfd">&#9670;&nbsp;</a></span>cut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structwbwlib_1_1ds_1_1_splay_1_1_interval.html">Interval</a> <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::cut </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>分离出区间 [l, r] 对应子树 </p>
+
+</div>
+</div>
+<a id="a73b15dd309a5949a075f948f4b9c9445"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73b15dd309a5949a075f948f4b9c9445">&#9670;&nbsp;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回是否为空 </p>
+
+</div>
+</div>
+<a id="aca7601df777c65c6e61d118f1ad0aae8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca7601df777c65c6e61d118f1ad0aae8">&#9670;&nbsp;</a></span>erase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::erase </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>删除位置 k 的元素。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>位置（1 基） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad59c6e3cffe2c438fedb5512df00e415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad59c6e3cffe2c438fedb5512df00e415">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>查询位置 k 的单点值（会伸展该节点到根）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>位置（1 基） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>该位置的值 </dd></dl>
+
+</div>
+</div>
+<a id="a01e821dcafd5bd6b7e20fd5195c88a32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01e821dcafd5bd6b7e20fd5195c88a32">&#9670;&nbsp;</a></span>insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在位置 k 前插入 v。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>插入位置（1 基；k == <a class="el" href="classwbwlib_1_1ds_1_1_splay.html#a745a32ffe11e18be2558bdd7be1f8d4b" title="返回序列长度">size()</a>+1 表示尾部） </td></tr>
+    <tr><td class="paramname">v</td><td>待插入的值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0a2e79623b31551fed54bc64c16c252d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a2e79623b31551fed54bc64c16c252d">&#9670;&nbsp;</a></span>kth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::kth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>按位置 kth（1 基），返回节点并伸展到根 </p>
+
+</div>
+</div>
+<a id="aba0b2d1d99d23071a788c6b7223b83ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba0b2d1d99d23071a788c6b7223b83ac">&#9670;&nbsp;</a></span>newnode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::newnode </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>新建节点并返回其下标 </p>
+
+</div>
+</div>
+<a id="aa5ab04d39d240d8b1e83a2fe40e64ace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5ab04d39d240d8b1e83a2fe40e64ace">&#9670;&nbsp;</a></span>pull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::pull </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重算 x 的大小与区间和 </p>
+
+</div>
+</div>
+<a id="a3e605852f33702055c9e05e605ea8205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e605852f33702055c9e05e605ea8205">&#9670;&nbsp;</a></span>push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::push </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>下传节点 x 的懒标记（翻转 + 加法） </p>
+
+</div>
+</div>
+<a id="a32c62e13f6a9650c11426e191cc0c727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32c62e13f6a9650c11426e191cc0c727">&#9670;&nbsp;</a></span>push_back()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::push_back </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在序列末尾追加 v。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>待追加的值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a278767cd8fd04f5559e1de8980d5cd01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a278767cd8fd04f5559e1de8980d5cd01">&#9670;&nbsp;</a></span>restore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::restore </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structwbwlib_1_1ds_1_1_splay_1_1_interval.html">Interval</a> &amp;&#160;</td>
+          <td class="paramname"><em>iv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>把区间子树接回原树 </p>
+
+</div>
+</div>
+<a id="a77798c824b78a44134a3ff0d29b6df6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77798c824b78a44134a3ff0d29b6df6f">&#9670;&nbsp;</a></span>reverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::reverse </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>翻转区间 [l, r] 的元素顺序。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>区间左端点（1 基闭区间） </td></tr>
+    <tr><td class="paramname">r</td><td>区间右端点（1 基闭区间） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa0cc538a3df9a1a129d10e21ffae64ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0cc538a3df9a1a129d10e21ffae64ec">&#9670;&nbsp;</a></span>rotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::rotate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>以 x 为轴旋转 </p>
+
+</div>
+</div>
+<a id="a745a32ffe11e18be2558bdd7be1f8d4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a745a32ffe11e18be2558bdd7be1f8d4b">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回序列长度 </p>
+
+</div>
+</div>
+<a id="ac2fdc9005887c0740140029344244004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2fdc9005887c0740140029344244004">&#9670;&nbsp;</a></span>splay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::splay </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>把节点 x 伸展到根（双旋） </p>
+
+</div>
+</div>
+<a id="a01e8a5cf81b2d81fad9c0a92099f4edf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01e8a5cf81b2d81fad9c0a92099f4edf">&#9670;&nbsp;</a></span>sum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::sum </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>区间和： \(\sum_{i=l}^{r} a[i]\)。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>区间左端点（1 基闭区间） </td></tr>
+    <tr><td class="paramname">r</td><td>区间右端点（1 基闭区间） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>区间和 </dd></dl>
+
+</div>
+</div>
+<a id="a88c01c138e929a7a1fa2139b8cc81fb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c01c138e929a7a1fa2139b8cc81fb5">&#9670;&nbsp;</a></span>to_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;T&gt; <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::to_vector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>按顺序输出整个序列。 </p>
+<dl class="section return"><dt>返回</dt><dd>当前序列（0 基 vector） </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a2fc55b4b3011f75823ae44ce8e2a25e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fc55b4b3011f75823ae44ce8e2a25e5">&#9670;&nbsp;</a></span>p_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structwbwlib_1_1ds_1_1_splay_1_1_node.html">Node</a>&gt; <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::p_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3463b881b5608f04cdfb3e956841611e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3463b881b5608f04cdfb3e956841611e">&#9670;&nbsp;</a></span>root_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1_splay.html">wbwlib::ds::Splay</a>&lt; T &gt;::root_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>wbwlib/datastruct/<a class="el" href="splay_8hpp_source.html">splay.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

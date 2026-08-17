@@ -1,0 +1,7 @@
+digraph "wbwlib::ds::SqrtDecomp&lt; T &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::ds::SqrtDecomp\< T \>\n|- n_\l- B_\l- a_\l- sum_\l- mx_\l- lazy_\l- bel_\l|+ SqrtDecomp()\l+ add()\l+ sum()\l+ max()\l+ block_size()\l- rebuild()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="序列分块：区间加 + 区间和 + 区间最值，修改/查询 O(sqrt(n))。"];
+}

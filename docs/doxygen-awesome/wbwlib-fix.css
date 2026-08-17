@@ -1,0 +1,51 @@
+/* wbwlib 文档修正：覆盖 doxygen 1.9.1 默认样式过小/不协调之处 */
+#main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--page-background-color, #ffffff);
+}
+div.summary {
+  font-size: 11pt;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+.navpath li.footer,
+div.ingroups,
+.directory .levels {
+  font-size: 10.5pt;
+}
+pre.fragment,
+div.fragment {
+  font-size: 10.5pt;
+}
+div.contents {
+  font-size: 10.5pt;
+}
+div.fragment,
+div.line {
+  font-family: Consolas, "Courier New", monospace;
+}
+div.fragment {
+  line-height: 1.4;
+  border-radius: 4px;
+}
+code,
+pre,
+span.preprocessor,
+span.keyword,
+span.comment {
+  font-family: Consolas, "Courier New", monospace;
+}
+td.memname,
+td.memparamname,
+td.paramname {
+  font-family: Consolas, "Courier New", monospace;
+}
+/* Prism 对 doxygen 未高亮的 fragment 补色 */
+div.fragment .token.comment  { color: #6a9955; }
+div.fragment .token.function { color: #d16969; }
+div.fragment .token.string   { color: #ce9178; }
+div.fragment .token.operator { color: #569cd6; }
+div.fragment .token.keyword  { color: #569cd6; }
+div.fragment .token.number   { color: #b5cea8; }
+div.fragment .token.plain-text { color: inherit; }

@@ -1,0 +1,239 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/dp/cht.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_1d28127a4ea1892663a1bc4cd708e7e0.html">dp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">cht.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cht_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_DP_CHT_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_DP_CHT_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1dp.html">   34</a></span>&#160;<span class="keyword">namespace </span>dp {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html">MonoCHT</a> {</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html#a0ec0676571e2b4556514fefaafa0164d">   43</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html">Line</a> { <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html#afc46e51b47289610886fb4684b60d0e1">m</a>, <a class="code" href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html#a0ec0676571e2b4556514fefaafa0164d">b</a>; };</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">   44</a></span>&#160;  std::vector&lt;Line&gt; <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">hull</a>;   </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a9650e81a76aa43843697a4014c7e569b">   45</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a9650e81a76aa43843697a4014c7e569b">head</a>;                 </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#ac37088f58395f464a75e2604e5f723a6">   48</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#ac37088f58395f464a75e2604e5f723a6">bad</a>(<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html">Line</a>&amp; a, <span class="keyword">const</span> <a class="code" href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html">Line</a>&amp; b, <span class="keyword">const</span> <a class="code" href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html">Line</a>&amp; c) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> (b.<a class="code" href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html#a0ec0676571e2b4556514fefaafa0164d">b</a> - a.<a class="code" href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html#a0ec0676571e2b4556514fefaafa0164d">b</a>) * (b.<a class="code" href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html#afc46e51b47289610886fb4684b60d0e1">m</a> - c.<a class="code" href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html#afc46e51b47289610886fb4684b60d0e1">m</a>) &gt;= (c.<a class="code" href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html#a0ec0676571e2b4556514fefaafa0164d">b</a> - b.<a class="code" href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html#a0ec0676571e2b4556514fefaafa0164d">b</a>) * (a.<a class="code" href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html#afc46e51b47289610886fb4684b60d0e1">m</a> - b.<a class="code" href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html#afc46e51b47289610886fb4684b60d0e1">m</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#adedd4fbcfd0ef97d456da554b746f80c">   56</a></span>&#160;  <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#adedd4fbcfd0ef97d456da554b746f80c">MonoCHT</a>() : <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a9650e81a76aa43843697a4014c7e569b">head</a>(0) {}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a744c0d942afcd947e6228939dbc2c0a8">   61</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a744c0d942afcd947e6228939dbc2c0a8">clear</a>() { <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">hull</a>.clear(); <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a9650e81a76aa43843697a4014c7e569b">head</a> = 0; }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a19b8ac005cf28e9293c061e0ca40625f">   68</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a19b8ac005cf28e9293c061e0ca40625f">add</a>(<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> m, <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> b) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html">Line</a> ln{m, b};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">while</span> ((<span class="keywordtype">int</span>)<a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">hull</a>.size() - <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a9650e81a76aa43843697a4014c7e569b">head</a> &gt;= 2 &amp;&amp;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;           <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#ac37088f58395f464a75e2604e5f723a6">bad</a>(<a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">hull</a>[<a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">hull</a>.size() - 2], <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">hull</a>.back(), ln))</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">hull</a>.pop_back();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">hull</a>.push_back(ln);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a7a813eb30259012f417de2693ba0f92f">   81</a></span>&#160;  <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a7a813eb30259012f417de2693ba0f92f">query</a>(<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> x) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a9650e81a76aa43843697a4014c7e569b">head</a> + 1 &lt; (<span class="keywordtype">int</span>)<a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">hull</a>.size() &amp;&amp;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;           <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">hull</a>[<a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a9650e81a76aa43843697a4014c7e569b">head</a>].m * x + <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">hull</a>[<a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a9650e81a76aa43843697a4014c7e569b">head</a>].b &gt;=</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;               <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">hull</a>[<a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a9650e81a76aa43843697a4014c7e569b">head</a> + 1].m * x + <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">hull</a>[<a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a9650e81a76aa43843697a4014c7e569b">head</a> + 1].b)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      ++<a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a9650e81a76aa43843697a4014c7e569b">head</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">hull</a>[<a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a9650e81a76aa43843697a4014c7e569b">head</a>].m * x + <a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">hull</a>[<a class="code" href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a9650e81a76aa43843697a4014c7e569b">head</a>].b;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_line_container.html">   95</a></span>&#160;<span class="keyword">class </span><a class="code" href="classwbwlib_1_1dp_1_1_line_container.html">LineContainer</a> {</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html">   97</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html">Line</a> {</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#ae2caecb51e2792b0282aa362f0972a0f">   98</a></span>&#160;    <span class="keyword">mutable</span> <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#ae2caecb51e2792b0282aa362f0972a0f">k</a>, <a class="code" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#aa8d4d92409f233ec5e168a5c66e10166">m</a>, <a class="code" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#a3b640b9d1c4062fa312e9860d37e3d1b">p</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#a21401c19866d984e3205777b65fac874">   99</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#a21401c19866d984e3205777b65fac874">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html">Line</a>&amp; o)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#ae2caecb51e2792b0282aa362f0972a0f">k</a> &lt; o.<a class="code" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#ae2caecb51e2792b0282aa362f0972a0f">k</a>; }</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#afb3fc67d93f5d2f9d02e0e90ffe59754">  100</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#afb3fc67d93f5d2f9d02e0e90ffe59754">operator&lt;</a>(<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> x)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#a3b640b9d1c4062fa312e9860d37e3d1b">p</a> &lt; x; }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  };</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_line_container.html#aa68e1bb08e155e67a22cf6b4ccfca6b3">  102</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#aa68e1bb08e155e67a22cf6b4ccfca6b3">It</a> = std::multiset&lt;Line, std::less&lt;&gt;&gt;::iterator;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_line_container.html#a62b92b656decb2d904780c168a669b00">  103</a></span>&#160;  std::multiset&lt;Line, std::less&lt;&gt;&gt; <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a62b92b656decb2d904780c168a669b00">st_</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_line_container.html#ad31c53e26e25ce7546e37b8c2308b44a">  104</a></span>&#160;  <span class="keyword">static</span> constexpr <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#ad31c53e26e25ce7546e37b8c2308b44a">INF</a> = (<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>)4e18;   </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_line_container.html#a97f1ab0d117adfccdaf8892e10e8d36a">  107</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a97f1ab0d117adfccdaf8892e10e8d36a">div_f</a>(<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> a, <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> b) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> a / b - ((a ^ b) &lt; 0 &amp;&amp; a % b);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_line_container.html#a4d8fdaeebeb3201c54d19130232868e7">  111</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a4d8fdaeebeb3201c54d19130232868e7">isect</a>(<a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#aa68e1bb08e155e67a22cf6b4ccfca6b3">It</a> x, <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#aa68e1bb08e155e67a22cf6b4ccfca6b3">It</a> y) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">if</span> (y == <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a62b92b656decb2d904780c168a669b00">st_</a>.end()) { x-&gt;p = <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#ad31c53e26e25ce7546e37b8c2308b44a">INF</a>; <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">if</span> (x-&gt;k == y-&gt;k) x-&gt;p = x-&gt;m &gt; y-&gt;m ? <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#ad31c53e26e25ce7546e37b8c2308b44a">INF</a> : -<a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#ad31c53e26e25ce7546e37b8c2308b44a">INF</a>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">else</span> x-&gt;p = <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a97f1ab0d117adfccdaf8892e10e8d36a">div_f</a>(y-&gt;m - x-&gt;m, x-&gt;k - y-&gt;k);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">return</span> x-&gt;p &gt;= y-&gt;p;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_line_container.html#aa4e84a3ed5c88ce56b0a1003e03f8abc">  122</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#aa4e84a3ed5c88ce56b0a1003e03f8abc">clear</a>() { <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a62b92b656decb2d904780c168a669b00">st_</a>.clear(); }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_line_container.html#a5781b24f5896896440855f8d03df4f44">  129</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a5781b24f5896896440855f8d03df4f44">add_line</a>(<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> k, <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> m) {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">auto</span> z = <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a62b92b656decb2d904780c168a669b00">st_</a>.insert({k, m, 0}), y = z++, x = y;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a4d8fdaeebeb3201c54d19130232868e7">isect</a>(y, z)) z = <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a62b92b656decb2d904780c168a669b00">st_</a>.erase(z);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span> (x != <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a62b92b656decb2d904780c168a669b00">st_</a>.begin() &amp;&amp; <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a4d8fdaeebeb3201c54d19130232868e7">isect</a>(--x, y)) <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a4d8fdaeebeb3201c54d19130232868e7">isect</a>(x, y = <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a62b92b656decb2d904780c168a669b00">st_</a>.erase(y));</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">while</span> ((y = x) != <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a62b92b656decb2d904780c168a669b00">st_</a>.begin() &amp;&amp; (--x)-&gt;p &gt;= y-&gt;p)</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a4d8fdaeebeb3201c54d19130232868e7">isect</a>(x, <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a62b92b656decb2d904780c168a669b00">st_</a>.erase(y));</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_line_container.html#aaecc61877f68e84a1272bf0b55925d73">  142</a></span>&#160;  <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#aaecc61877f68e84a1272bf0b55925d73">query</a>(<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> x) {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="comment">// lower_bound(x)：比较器为 Line::operator&lt;(i64)（按交点 p），</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="comment">// 找到第一个 p &gt;= x 的直线即最优线</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keyword">auto</span> it = <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a62b92b656decb2d904780c168a669b00">st_</a>.lower_bound(x);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">if</span> (it == <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a62b92b656decb2d904780c168a669b00">st_</a>.end()) it = std::prev(it);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">return</span> it-&gt;k * x + it-&gt;m;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_line_container.html#a37efe2b98a2517e231ec27df24791d39">  155</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a37efe2b98a2517e231ec27df24791d39">add_min_mode</a>(<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> k, <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> m) { <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a5781b24f5896896440855f8d03df4f44">add_line</a>(-k, -m); }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="classwbwlib_1_1dp_1_1_line_container.html#a61f2fd89dcb06389d32c89d4da067ba6">  162</a></span>&#160;  <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#a61f2fd89dcb06389d32c89d4da067ba6">query_min_mode</a>(<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> x) { <span class="keywordflow">return</span> -<a class="code" href="classwbwlib_1_1dp_1_1_line_container.html#aaecc61877f68e84a1272bf0b55925d73">query</a>(x); }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;};</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;} <span class="comment">// namespace dp</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_DP_CHT_HPP</span></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_line_container_html"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_line_container.html">wbwlib::dp::LineContainer</a></div><div class="ttdoc">动态 CHT：内部按上凸壳维护「最大」，提供 max/min 两套接口（KACTL 风格）。</div><div class="ttdef"><b>Definition:</b> cht.hpp:95</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_line_container_html_a37efe2b98a2517e231ec27df24791d39"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_line_container.html#a37efe2b98a2517e231ec27df24791d39">wbwlib::dp::LineContainer::add_min_mode</a></div><div class="ttdeci">void add_min_mode(i64 k, i64 m)</div><div class="ttdoc">以最小值模式插入直线 （内部对 k、m 取负后维护）。</div><div class="ttdef"><b>Definition:</b> cht.hpp:155</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_line_container_html_a4d8fdaeebeb3201c54d19130232868e7"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_line_container.html#a4d8fdaeebeb3201c54d19130232868e7">wbwlib::dp::LineContainer::isect</a></div><div class="ttdeci">bool isect(It x, It y)</div><div class="ttdoc">计算直线 x 与 y 的交点阈值；若 x 已无存在意义返回 true</div><div class="ttdef"><b>Definition:</b> cht.hpp:111</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_line_container_html_a5781b24f5896896440855f8d03df4f44"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_line_container.html#a5781b24f5896896440855f8d03df4f44">wbwlib::dp::LineContainer::add_line</a></div><div class="ttdeci">void add_line(i64 k, i64 m)</div><div class="ttdoc">插入直线 （内部按最大值维护）。</div><div class="ttdef"><b>Definition:</b> cht.hpp:129</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_line_container_html_a61f2fd89dcb06389d32c89d4da067ba6"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_line_container.html#a61f2fd89dcb06389d32c89d4da067ba6">wbwlib::dp::LineContainer::query_min_mode</a></div><div class="ttdeci">i64 query_min_mode(i64 x)</div><div class="ttdoc">以最小值模式查询。</div><div class="ttdef"><b>Definition:</b> cht.hpp:162</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_line_container_html_a62b92b656decb2d904780c168a669b00"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_line_container.html#a62b92b656decb2d904780c168a669b00">wbwlib::dp::LineContainer::st_</a></div><div class="ttdeci">std::multiset&lt; Line, std::less&lt;&gt; &gt; st_</div><div class="ttdef"><b>Definition:</b> cht.hpp:103</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_line_container_html_a97f1ab0d117adfccdaf8892e10e8d36a"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_line_container.html#a97f1ab0d117adfccdaf8892e10e8d36a">wbwlib::dp::LineContainer::div_f</a></div><div class="ttdeci">static i64 div_f(i64 a, i64 b)</div><div class="ttdoc">向负无穷取整的除法（计算交点横坐标用）</div><div class="ttdef"><b>Definition:</b> cht.hpp:107</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_line_container_html_aa4e84a3ed5c88ce56b0a1003e03f8abc"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_line_container.html#aa4e84a3ed5c88ce56b0a1003e03f8abc">wbwlib::dp::LineContainer::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">清空所有已插入的直线。</div><div class="ttdef"><b>Definition:</b> cht.hpp:122</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_line_container_html_aa68e1bb08e155e67a22cf6b4ccfca6b3"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_line_container.html#aa68e1bb08e155e67a22cf6b4ccfca6b3">wbwlib::dp::LineContainer::It</a></div><div class="ttdeci">std::multiset&lt; Line, std::less&lt;&gt; &gt;::iterator It</div><div class="ttdef"><b>Definition:</b> cht.hpp:102</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_line_container_html_aaecc61877f68e84a1272bf0b55925d73"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_line_container.html#aaecc61877f68e84a1272bf0b55925d73">wbwlib::dp::LineContainer::query</a></div><div class="ttdeci">i64 query(i64 x)</div><div class="ttdoc">查询所有已插入直线在 x 处的最大值（空容器时行为未定义）。</div><div class="ttdef"><b>Definition:</b> cht.hpp:142</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_line_container_html_ad31c53e26e25ce7546e37b8c2308b44a"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_line_container.html#ad31c53e26e25ce7546e37b8c2308b44a">wbwlib::dp::LineContainer::INF</a></div><div class="ttdeci">static constexpr i64 INF</div><div class="ttdoc">交点阈值上界（视为无穷）</div><div class="ttdef"><b>Definition:</b> cht.hpp:104</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_mono_c_h_t_html"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_mono_c_h_t.html">wbwlib::dp::MonoCHT</a></div><div class="ttdoc">斜率单调递增、查询 x 单调不减的最小值 CHT（双端队列维护）。</div><div class="ttdef"><b>Definition:</b> cht.hpp:41</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_mono_c_h_t_html_a0757349e43e921c634d89bc5bf5204f1"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a0757349e43e921c634d89bc5bf5204f1">wbwlib::dp::MonoCHT::hull</a></div><div class="ttdeci">std::vector&lt; Line &gt; hull</div><div class="ttdoc">下凸壳上保留的直线</div><div class="ttdef"><b>Definition:</b> cht.hpp:44</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_mono_c_h_t_html_a19b8ac005cf28e9293c061e0ca40625f"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a19b8ac005cf28e9293c061e0ca40625f">wbwlib::dp::MonoCHT::add</a></div><div class="ttdeci">void add(i64 m, i64 b)</div><div class="ttdoc">插入直线 。</div><div class="ttdef"><b>Definition:</b> cht.hpp:68</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_mono_c_h_t_html_a744c0d942afcd947e6228939dbc2c0a8"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a744c0d942afcd947e6228939dbc2c0a8">wbwlib::dp::MonoCHT::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">清空所有已插入的直线。</div><div class="ttdef"><b>Definition:</b> cht.hpp:61</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_mono_c_h_t_html_a7a813eb30259012f417de2693ba0f92f"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a7a813eb30259012f417de2693ba0f92f">wbwlib::dp::MonoCHT::query</a></div><div class="ttdeci">i64 query(i64 x)</div><div class="ttdoc">查询所有已插入直线在 x 处的最小值。</div><div class="ttdef"><b>Definition:</b> cht.hpp:81</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_mono_c_h_t_html_a9650e81a76aa43843697a4014c7e569b"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#a9650e81a76aa43843697a4014c7e569b">wbwlib::dp::MonoCHT::head</a></div><div class="ttdeci">int head</div><div class="ttdoc">队首指针（head 之前的直线已过时）</div><div class="ttdef"><b>Definition:</b> cht.hpp:45</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_mono_c_h_t_html_ac37088f58395f464a75e2604e5f723a6"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#ac37088f58395f464a75e2604e5f723a6">wbwlib::dp::MonoCHT::bad</a></div><div class="ttdeci">static bool bad(const Line &amp;a, const Line &amp;b, const Line &amp;c)</div><div class="ttdoc">交点比较：a.m &lt; b.m &lt; c.m，(b.b-a.b)/(a.m-b.m) &gt;= (c.b-b.b)/(b.m-c.m) 时 b 冗余</div><div class="ttdef"><b>Definition:</b> cht.hpp:48</div></div>
+<div class="ttc" id="aclasswbwlib_1_1dp_1_1_mono_c_h_t_html_adedd4fbcfd0ef97d456da554b746f80c"><div class="ttname"><a href="classwbwlib_1_1dp_1_1_mono_c_h_t.html#adedd4fbcfd0ef97d456da554b746f80c">wbwlib::dp::MonoCHT::MonoCHT</a></div><div class="ttdeci">MonoCHT()</div><div class="ttdoc">构造空 CHT。</div><div class="ttdef"><b>Definition:</b> cht.hpp:56</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+<div class="ttc" id="anamespacewbwlib_html_a86ab7e3b77fa0c682d473301d8c617c6"><div class="ttname"><a href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">wbwlib::i64</a></div><div class="ttdeci">std::int64_t i64</div><div class="ttdoc">64 位有符号整数</div><div class="ttdef"><b>Definition:</b> base.hpp:98</div></div>
+<div class="ttc" id="astructwbwlib_1_1dp_1_1_line_container_1_1_line_html"><div class="ttname"><a href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html">wbwlib::dp::LineContainer::Line</a></div><div class="ttdoc">一条直线 y = k*x + m；p 为该直线成为最优的 x 区间下界（交点阈值）</div><div class="ttdef"><b>Definition:</b> cht.hpp:97</div></div>
+<div class="ttc" id="astructwbwlib_1_1dp_1_1_line_container_1_1_line_html_a21401c19866d984e3205777b65fac874"><div class="ttname"><a href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#a21401c19866d984e3205777b65fac874">wbwlib::dp::LineContainer::Line::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Line &amp;o) const</div><div class="ttdef"><b>Definition:</b> cht.hpp:99</div></div>
+<div class="ttc" id="astructwbwlib_1_1dp_1_1_line_container_1_1_line_html_a3b640b9d1c4062fa312e9860d37e3d1b"><div class="ttname"><a href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#a3b640b9d1c4062fa312e9860d37e3d1b">wbwlib::dp::LineContainer::Line::p</a></div><div class="ttdeci">i64 p</div><div class="ttdef"><b>Definition:</b> cht.hpp:98</div></div>
+<div class="ttc" id="astructwbwlib_1_1dp_1_1_line_container_1_1_line_html_aa8d4d92409f233ec5e168a5c66e10166"><div class="ttname"><a href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#aa8d4d92409f233ec5e168a5c66e10166">wbwlib::dp::LineContainer::Line::m</a></div><div class="ttdeci">i64 m</div><div class="ttdef"><b>Definition:</b> cht.hpp:98</div></div>
+<div class="ttc" id="astructwbwlib_1_1dp_1_1_line_container_1_1_line_html_ae2caecb51e2792b0282aa362f0972a0f"><div class="ttname"><a href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#ae2caecb51e2792b0282aa362f0972a0f">wbwlib::dp::LineContainer::Line::k</a></div><div class="ttdeci">i64 k</div><div class="ttdef"><b>Definition:</b> cht.hpp:98</div></div>
+<div class="ttc" id="astructwbwlib_1_1dp_1_1_line_container_1_1_line_html_afb3fc67d93f5d2f9d02e0e90ffe59754"><div class="ttname"><a href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#afb3fc67d93f5d2f9d02e0e90ffe59754">wbwlib::dp::LineContainer::Line::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(i64 x) const</div><div class="ttdef"><b>Definition:</b> cht.hpp:100</div></div>
+<div class="ttc" id="astructwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line_html"><div class="ttname"><a href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html">wbwlib::dp::MonoCHT::Line</a></div><div class="ttdoc">一条直线 y = m*x + b</div><div class="ttdef"><b>Definition:</b> cht.hpp:43</div></div>
+<div class="ttc" id="astructwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line_html_a0ec0676571e2b4556514fefaafa0164d"><div class="ttname"><a href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html#a0ec0676571e2b4556514fefaafa0164d">wbwlib::dp::MonoCHT::Line::b</a></div><div class="ttdeci">i64 b</div><div class="ttdef"><b>Definition:</b> cht.hpp:43</div></div>
+<div class="ttc" id="astructwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line_html_afc46e51b47289610886fb4684b60d0e1"><div class="ttname"><a href="structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html#afc46e51b47289610886fb4684b60d0e1">wbwlib::dp::MonoCHT::Line::m</a></div><div class="ttdeci">i64 m</div><div class="ttdef"><b>Definition:</b> cht.hpp:43</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

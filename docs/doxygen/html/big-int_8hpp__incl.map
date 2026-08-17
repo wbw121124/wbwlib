@@ -1,0 +1,16 @@
+<map id="wbwlib/misc/big&#45;int.hpp" name="wbwlib/misc/big&#45;int.hpp">
+<area shape="rect" id="node1" title="高精度整数：十进制 1e9 基（符号 + 幅值）。" alt="" coords="207,5,364,33"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,81,59,109"/>
+<area shape="rect" id="node3" title=" " alt="" coords="83,81,141,109"/>
+<area shape="rect" id="node4" title=" " alt="" coords="247,157,308,185"/>
+<area shape="rect" id="node5" title=" " alt="" coords="216,81,272,109"/>
+<area shape="rect" id="node6" title=" " alt="" coords="297,81,357,109"/>
+<area shape="rect" id="node7" title=" " alt="" coords="382,81,456,109"/>
+<area shape="rect" id="node8" title=" " alt="" coords="481,81,549,109"/>
+<area shape="rect" id="node9" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="573,81,720,109"/>
+<area shape="rect" id="node10" title=" " alt="" coords="431,157,495,185"/>
+<area shape="rect" id="node11" title=" " alt="" coords="519,157,583,185"/>
+<area shape="rect" id="node12" title=" " alt="" coords="608,157,686,185"/>
+<area shape="rect" id="node13" title=" " alt="" coords="710,157,792,185"/>
+<area shape="rect" id="node14" title=" " alt="" coords="817,157,869,185"/>
+</map>

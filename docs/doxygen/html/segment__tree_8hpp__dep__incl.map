@@ -1,0 +1,5 @@
+<map id="wbwlib/datastruct/segment_tree.hpp" name="wbwlib/datastruct/segment_tree.hpp">
+<area shape="rect" id="node1" title="泛型懒标记线段树（Tval 值类型 / Ttag 标记类型，策略全在模板参数）。" alt="" coords="22,5,199,49"/>
+<area shape="rect" id="node2" href="$datastruct_8hpp.html" title="datastruct 模块聚合头：一次引入本模块全部头文件。" alt="" coords="5,97,216,125"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="45,173,176,201"/>
+</map>

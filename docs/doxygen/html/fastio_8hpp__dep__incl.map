@@ -1,0 +1,5 @@
+<map id="wbwlib/core/fastio.hpp" name="wbwlib/core/fastio.hpp">
+<area shape="rect" id="node1" title="快速输入输出（信息学竞赛必备）。" alt="" coords="5,5,157,33"/>
+<area shape="rect" id="node2" href="$core_8hpp.html" title="core 模块聚合头：一次引入本模块全部头文件。" alt="" coords="9,81,153,109"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="16,157,146,185"/>
+</map>

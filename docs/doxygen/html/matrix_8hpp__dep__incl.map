@@ -1,0 +1,5 @@
+<map id="wbwlib/math/matrix.hpp" name="wbwlib/math/matrix.hpp">
+<area shape="rect" id="node1" title="矩阵类：加/乘、快速幂、转置、单位阵、向量乘法。" alt="" coords="5,5,165,33"/>
+<area shape="rect" id="node2" href="$math_8hpp.html" title="math 模块聚合头：一次引入本模块全部头文件。" alt="" coords="9,81,161,109"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="20,157,150,185"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="wbwlib/datastruct/li&#45;chao&#45;tree.hpp" name="wbwlib/datastruct/li&#45;chao&#45;tree.hpp">
+<area shape="rect" id="node1" title="李超线段树：维护直线族 y = k*x + b 的最值查询。" alt="" coords="76,5,209,49"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,97,80,125"/>
+<area shape="rect" id="node3" title=" " alt="" coords="104,97,181,125"/>
+<area shape="rect" id="node4" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="205,97,352,125"/>
+<area shape="rect" id="node5" title=" " alt="" coords="26,173,86,201"/>
+<area shape="rect" id="node6" title=" " alt="" coords="110,173,175,201"/>
+<area shape="rect" id="node7" title=" " alt="" coords="198,173,263,201"/>
+<area shape="rect" id="node8" title=" " alt="" coords="287,173,366,201"/>
+<area shape="rect" id="node9" title=" " alt="" coords="389,173,472,201"/>
+<area shape="rect" id="node10" title=" " alt="" coords="496,173,549,201"/>
+</map>

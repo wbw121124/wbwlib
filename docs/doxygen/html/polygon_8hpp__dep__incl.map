@@ -1,0 +1,5 @@
+<map id="wbwlib/geo/polygon.hpp" name="wbwlib/geo/polygon.hpp">
+<area shape="rect" id="node1" title="多边形工具：有向面积/法面积、点包含、周长、凸多边形判断。" alt="" coords="5,5,166,33"/>
+<area shape="rect" id="node2" href="$geo_8hpp.html" title="geo 模块聚合头：一次引入本模块全部头文件。" alt="" coords="17,81,154,109"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="20,157,151,185"/>
+</map>

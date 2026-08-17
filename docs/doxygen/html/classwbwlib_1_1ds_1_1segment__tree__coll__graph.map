@@ -1,0 +1,3 @@
+<map id="wbwlib::ds::segment_tree&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;" name="wbwlib::ds::segment_tree&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;">
+<area shape="rect" id="node1" title="泛型懒标记线段树（递归实现，4n 空间）：策略全部固化在模板参数中。" alt="" coords="5,5,179,359"/>
+</map>

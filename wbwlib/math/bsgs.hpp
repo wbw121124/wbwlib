@@ -5,13 +5,17 @@
  * @file bsgs.hpp
  * @brief 大步小步法 Baby-Step-Giant-Step：解离散对数 a^x ≡ b (mod p)。
  *
- * 依赖：wbwlib/core/base.hpp, wbwlib/math/number-theory.hpp
- * 复杂度：O(sqrt(p)) 时间与空间（哈希表）。
+ * @par 依赖
+ * wbwlib/core/base.hpp, wbwlib/math/number-theory.hpp
+ * @par 复杂度
+ * O(sqrt(p)) 时间与空间（哈希表）。
  *
  * 要求 gcd(a, p) == 1（返回 -1 表示无解）。求最小非负 x。
  *
- * 用法：
+ * @par 示例
+ * @code{.cpp}
  *   long long x = wbwlib::math::bsgs(a, b, p);
+ * @endcode
  */
 
 #include <cmath>
@@ -22,6 +26,16 @@
 namespace wbwlib {
 namespace math {
 
+/**
+ * @brief 大步小步法（BSGS）：解离散对数 \f$a^x \equiv b \pmod p\f$。
+ *
+ * 要求 \f$\gcd(a, p) = 1\f$。取 \f$m = \lceil \sqrt p \rceil\f$，枚举小步 \f$b a^j\f$ 与大步 \f$a^{im}\f$，
+ * 复杂度 \f$O(\sqrt p)\f$ 时间与空间。
+ * @param a 底数
+ * @param b 目标值
+ * @param p 模数（与 a 互质）
+ * @return 满足同余式的最小非负 \f$x\f$；无解返回 -1
+ */
 inline i64 bsgs(i64 a, i64 b, i64 p) {
   a %= p; b %= p;
   if (b == 1) return 0;               // a^0 ≡ 1

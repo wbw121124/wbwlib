@@ -1,0 +1,14 @@
+<map id="wbwlib/string/ac&#45;automaton.hpp" name="wbwlib/string/ac&#45;automaton.hpp">
+<area shape="rect" id="node1" title="AC 自动机：多模式匹配（模板化字符类型 / 字母表 / 字符映射）。" alt="" coords="90,5,295,33"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,89,62,117"/>
+<area shape="rect" id="node3" title=" " alt="" coords="86,89,139,117"/>
+<area shape="rect" id="node4" title=" " alt="" coords="164,89,221,117"/>
+<area shape="rect" id="node5" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="245,89,393,117"/>
+<area shape="rect" id="node12" href="$char-map_8hpp.html" title="字符 → 字母表下标映射策略（供 Trie / AC 自动机 / 后缀自动机 / 回文自动机模板化使用）。" alt="" coords="417,81,543,125"/>
+<area shape="rect" id="node6" title=" " alt="" coords="66,173,126,201"/>
+<area shape="rect" id="node7" title=" " alt="" coords="151,173,215,201"/>
+<area shape="rect" id="node8" title=" " alt="" coords="239,173,303,201"/>
+<area shape="rect" id="node9" title=" " alt="" coords="328,173,406,201"/>
+<area shape="rect" id="node10" title=" " alt="" coords="430,173,512,201"/>
+<area shape="rect" id="node11" title=" " alt="" coords="537,173,589,201"/>
+</map>

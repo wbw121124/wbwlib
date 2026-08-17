@@ -1,0 +1,227 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::ds::FHQTreap&lt; T, Cmp &gt;::Node结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1ds.html">ds</a></li><li class="navelem"><a class="el" href="classwbwlib_1_1ds_1_1_f_h_q_treap.html">FHQTreap</a></li><li class="navelem"><a class="el" href="structwbwlib_1_1ds_1_1_f_h_q_treap_1_1_node.html">Node</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structwbwlib_1_1ds_1_1_f_h_q_treap_1_1_node-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::ds::FHQTreap&lt; T, Cmp &gt;::Node结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+wbwlib::ds::FHQTreap&lt; T, Cmp &gt;::Node 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="structwbwlib_1_1ds_1_1_f_h_q_treap_1_1_node__coll__graph.png" border="0" usemap="#awbwlib_1_1ds_1_1_f_h_q_treap_3_01_t_00_01_cmp_01_4_1_1_node_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1ds_1_1_f_h_q_treap_3_01_t_00_01_cmp_01_4_1_1_node_coll__map" id="awbwlib_1_1ds_1_1_f_h_q_treap_3_01_t_00_01_cmp_01_4_1_1_node_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,158,167"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ae31bbd2ddca2b622c503c0c0259ccd04"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1ds_1_1_f_h_q_treap_1_1_node.html#ae31bbd2ddca2b622c503c0c0259ccd04">val</a></td></tr>
+<tr class="separator:ae31bbd2ddca2b622c503c0c0259ccd04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69d644ad813d6941aff18a3156053e6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#aa1f002d4548f69dc1773725e50b3131c">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1ds_1_1_f_h_q_treap_1_1_node.html#a69d644ad813d6941aff18a3156053e6f">pri</a></td></tr>
+<tr class="separator:a69d644ad813d6941aff18a3156053e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63775ae88105ddebb93cad14d7acd40d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1ds_1_1_f_h_q_treap_1_1_node.html#a63775ae88105ddebb93cad14d7acd40d">sz</a></td></tr>
+<tr class="separator:a63775ae88105ddebb93cad14d7acd40d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad39204867dc3311b5b2d6a003334dd3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1ds_1_1_f_h_q_treap_1_1_node.html#aad39204867dc3311b5b2d6a003334dd3">l</a></td></tr>
+<tr class="separator:aad39204867dc3311b5b2d6a003334dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a3bb8eddd0f56bf3d98442fac5f75c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1ds_1_1_f_h_q_treap_1_1_node.html#a4a3bb8eddd0f56bf3d98442fac5f75c8">r</a></td></tr>
+<tr class="separator:a4a3bb8eddd0f56bf3d98442fac5f75c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="aad39204867dc3311b5b2d6a003334dd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad39204867dc3311b5b2d6a003334dd3">&#9670;&nbsp;</a></span>l</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Cmp  = std::less&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1_f_h_q_treap.html">wbwlib::ds::FHQTreap</a>&lt; T, Cmp &gt;::Node::l</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69d644ad813d6941aff18a3156053e6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69d644ad813d6941aff18a3156053e6f">&#9670;&nbsp;</a></span>pri</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Cmp  = std::less&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#aa1f002d4548f69dc1773725e50b3131c">u32</a> <a class="el" href="classwbwlib_1_1ds_1_1_f_h_q_treap.html">wbwlib::ds::FHQTreap</a>&lt; T, Cmp &gt;::Node::pri</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a3bb8eddd0f56bf3d98442fac5f75c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a3bb8eddd0f56bf3d98442fac5f75c8">&#9670;&nbsp;</a></span>r</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Cmp  = std::less&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1_f_h_q_treap.html">wbwlib::ds::FHQTreap</a>&lt; T, Cmp &gt;::Node::r</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63775ae88105ddebb93cad14d7acd40d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63775ae88105ddebb93cad14d7acd40d">&#9670;&nbsp;</a></span>sz</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Cmp  = std::less&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1_f_h_q_treap.html">wbwlib::ds::FHQTreap</a>&lt; T, Cmp &gt;::Node::sz</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae31bbd2ddca2b622c503c0c0259ccd04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae31bbd2ddca2b622c503c0c0259ccd04">&#9670;&nbsp;</a></span>val</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Cmp  = std::less&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classwbwlib_1_1ds_1_1_f_h_q_treap.html">wbwlib::ds::FHQTreap</a>&lt; T, Cmp &gt;::Node::val</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>wbwlib/datastruct/<a class="el" href="fhq-treap_8hpp_source.html">fhq-treap.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -5,9 +5,11 @@
  * @file mst.hpp
  * @brief 最小生成树：Kruskal（并查集）+ Prim（堆）。
  *
- * 依赖：wbwlib/core/base.hpp、wbwlib/graph/adjacency.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp、wbwlib/graph/adjacency.hpp
  *
- * 复杂度：Kruskal O(E log E)，Prim O(E log V)。
+ * @par 复杂度
+ * Kruskal O(E log E)，Prim O(E log V)。
  *
  * 返回 MstResult{ total, edges, ok }；不连通则 ok=false。
  */
@@ -23,8 +25,13 @@
 namespace wbwlib {
 namespace graph {
 
+/// MST 使用的无穷大上界
 inline i64 mst_INF() { return (i64)4e18; }
 
+/**
+ * @brief 最小生成树结果：总权值 + 树边 + 是否连通。
+ * @tparam W 权值类型
+ */
 template<class W>
 struct MstResult {
   i64 total = 0;
@@ -32,7 +39,12 @@ struct MstResult {
   bool ok = true;
 };
 
-/// 从带权邻接表中抽出无向边集 {u,v,w}（只取 u<v 的一份）
+/**
+ * @brief 从带权邻接表中抽出无向边集 {u,v,w}（只取 u<v 的一份）。
+ * @tparam W 边权类型
+ * @param g 带权邻接表（1 基）
+ * @return 边数组，每条为 {u, v, w}（1 基）
+ */
 template<class W>
 inline std::vector<std::array<int, 3>> extract_edges(const WAdj<W>& g) {
   std::vector<std::array<int, 3>> e;
@@ -42,7 +54,12 @@ inline std::vector<std::array<int, 3>> extract_edges(const WAdj<W>& g) {
   return e;
 }
 
-/// Kruskal：输入边集 {u,v,w}，1 基
+/**
+ * @brief Kruskal 求最小生成树：边按权值升序，并查集判连通合并。
+ * @param n 点数（1 基）
+ * @param edges 边集，每条为 {u, v, w}（1 基）
+ * @return MstResult；图不连通时 ok = false
+ */
 inline MstResult<i64> kruskal(int n,
                               const std::vector<std::array<int, 3>>& edges) {
   MstResult<i64> res;
@@ -72,12 +89,22 @@ inline MstResult<i64> kruskal(int n,
   return res;
 }
 
- /// 从带权邻接表直接跑 Kruskal
+/**
+ * @brief 从带权邻接表直接跑 Kruskal。
+ * @param g 带权邻接表（1 基）
+ * @return MstResult；图不连通时 ok = false
+ */
 inline MstResult<i64> kruskal(const WAdj<i64>& g) {
   return kruskal(g.n, extract_edges(g));
 }
 
-/// Prim（堆）：返回总权值，不连通返回 -1
+/**
+ * @brief Prim（堆）求最小生成树总权值：从点 1 出发不断加入最小 key 的未选点。
+ * @tparam W 边权类型
+ * @param n 点数（1 基）
+ * @param g 带权邻接表
+ * @return 最小生成树总权值；图不连通返回 -1
+ */
 template<class W>
 i64 prim(int n, const WAdj<W>& g) {
   const i64 INF = mst_INF();

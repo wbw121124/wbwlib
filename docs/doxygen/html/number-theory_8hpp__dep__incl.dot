@@ -1,0 +1,39 @@
+digraph "wbwlib/math/number-theory.hpp"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="wbwlib/math/number\l-theory.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="数论基础：快速幂、快速乘、gcd/lcm、扩展欧几里得、逆元、CRT/EXCRT、欧拉定理、整除分块。"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="wbwlib/math/bsgs.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bsgs_8hpp.html",tooltip="大步小步法 Baby-Step-Giant-Step：解离散对数 a^x ≡ b (mod p)。"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="wbwlib/math/math.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$math_8hpp.html",tooltip="math 模块聚合头：一次引入本模块全部头文件。"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="wbwlib/wbwlib.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$wbwlib_8hpp.html",tooltip="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="wbwlib/math/fraction.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fraction_8hpp.html",tooltip="精确有理数（分数）类：自动约分，支持全部算术/比较/输出。"];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="wbwlib/math/modular.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$modular_8hpp.html",tooltip="模意义整数类 modint（固定模版）与动态模版。"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="wbwlib/math/combinatorics.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$combinatorics_8hpp.html",tooltip="组合计数工具：阶乘/逆元预计算、组合数、排列数、Lucas、卡特兰、 两型斯特林数、错排数。"];
+  Node7 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="wbwlib/math/fourier.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fourier_8hpp.html",tooltip="卷积加速：复数 FFT 与数论变换 NTT。"];
+  Node8 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="wbwlib/math/polynomial.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$polynomial_8hpp.html",tooltip="多项式运算（形式幂级数，截断到指定长度）。"];
+  Node9 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="wbwlib/math/fwt.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fwt_8hpp.html",tooltip="快速沃尔什变换 FWT：集合幂级数的 OR / AND / XOR 卷积。"];
+  Node10 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="wbwlib/math/primes.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$primes_8hpp.html",tooltip="质数工具：线性筛（素数/欧拉函数/莫比乌斯函数）、Miller-Rabin 素性测试、 Pollard-Rho 质因数分解。"];
+  Node11 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="wbwlib/math/primitive\l-root.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$primitive-root_8hpp.html",tooltip="原根求解：求模 p 意义下的最小原根（常用 NTT 前置，p 为质数）。"];
+  Node12 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

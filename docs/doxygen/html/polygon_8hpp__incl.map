@@ -1,0 +1,14 @@
+<map id="wbwlib/geo/polygon.hpp" name="wbwlib/geo/polygon.hpp">
+<area shape="rect" id="node1" title="多边形工具：有向面积/法面积、点包含、周长、凸多边形判断。" alt="" coords="75,5,236,33"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,81,63,109"/>
+<area shape="rect" id="node3" title=" " alt="" coords="65,157,139,185"/>
+<area shape="rect" id="node4" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="246,157,393,185"/>
+<area shape="rect" id="node11" href="$point_8hpp.html" title="计算几何基础：二维点/向量，整数坐标（默认 i64）+ double 变体。" alt="" coords="138,81,282,109"/>
+<area shape="rect" id="node5" title=" " alt="" coords="67,233,127,261"/>
+<area shape="rect" id="node6" title=" " alt="" coords="151,233,216,261"/>
+<area shape="rect" id="node7" title=" " alt="" coords="239,233,304,261"/>
+<area shape="rect" id="node8" title=" " alt="" coords="328,233,407,261"/>
+<area shape="rect" id="node9" title=" " alt="" coords="430,233,513,261"/>
+<area shape="rect" id="node10" title=" " alt="" coords="537,233,590,261"/>
+<area shape="rect" id="node12" title=" " alt="" coords="164,157,221,185"/>
+</map>

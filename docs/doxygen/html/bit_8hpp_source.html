@@ -1,0 +1,253 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/datastruct/bit.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_8d69220e0774a19b26f749e5403d9fea.html">datastruct</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">bit.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="bit_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_DS_BIT_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_DS_BIT_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1ds.html">   26</a></span>&#160;<span class="keyword">namespace </span>ds {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T = i64&gt;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html">Fenwick</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick.html#ae3686ff507698bb1de42d364f34b18f7">   34</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#ae3686ff507698bb1de42d364f34b18f7">n_</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick.html#a8e34c8626651eb0dd5e359f3b0351817">   35</a></span>&#160;  std::vector&lt;T&gt; <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#a8e34c8626651eb0dd5e359f3b0351817">tr_</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick.html#a8b2f9926d1120c69ff76da336f06aca0">   41</a></span>&#160;  <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#a8b2f9926d1120c69ff76da336f06aca0">Fenwick</a>() : <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#ae3686ff507698bb1de42d364f34b18f7">n_</a>(0) {}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick.html#adca0be7d5b2f20fe18b7bf0f5887b481">   47</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#adca0be7d5b2f20fe18b7bf0f5887b481">Fenwick</a>(<span class="keywordtype">int</span> n) : <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#ae3686ff507698bb1de42d364f34b18f7">n_</a>(n), <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#a8e34c8626651eb0dd5e359f3b0351817">tr_</a>(n + 1, T()) {}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick.html#ad9a264db5e06db5231292082611efdbb">   53</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#ad9a264db5e06db5231292082611efdbb">init</a>(<span class="keywordtype">int</span> n) { <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#ae3686ff507698bb1de42d364f34b18f7">n_</a> = n; <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#a8e34c8626651eb0dd5e359f3b0351817">tr_</a>.assign(n + 1, T()); }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick.html#a31b3b40fdb40c6f335ef6d255f04c2a7">   60</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#a31b3b40fdb40c6f335ef6d255f04c2a7">add</a>(<span class="keywordtype">int</span> i, <span class="keyword">const</span> T&amp; v) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">for</span> (; i &lt;= <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#ae3686ff507698bb1de42d364f34b18f7">n_</a>; i += i &amp; -i) <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#a8e34c8626651eb0dd5e359f3b0351817">tr_</a>[i] += v;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick.html#ab3b3f2844b5aec44c921a4d739d1766b">   69</a></span>&#160;  T <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#ab3b3f2844b5aec44c921a4d739d1766b">sum</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    T s = T();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">for</span> (; i &gt; 0; i -= i &amp; -i) s += <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#a8e34c8626651eb0dd5e359f3b0351817">tr_</a>[i];</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> s;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick.html#a6ab12300bb02c2213edd8db895f580f8">   81</a></span>&#160;  T <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#a6ab12300bb02c2213edd8db895f580f8">range_sum</a>(<span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#ab3b3f2844b5aec44c921a4d739d1766b">sum</a>(r) - <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#ab3b3f2844b5aec44c921a4d739d1766b">sum</a>(l - 1); }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick.html#aa46c61f2bcc96ce69bd046dc06fe7190">   87</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#aa46c61f2bcc96ce69bd046dc06fe7190">build</a>(<span class="keyword">const</span> std::vector&lt;T&gt;&amp; a) {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#ae3686ff507698bb1de42d364f34b18f7">n_</a>; ++i) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#a8e34c8626651eb0dd5e359f3b0351817">tr_</a>[i] += a[i];</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <span class="keywordtype">int</span> j = i + (i &amp; -i);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keywordflow">if</span> (j &lt;= <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#ae3686ff507698bb1de42d364f34b18f7">n_</a>) <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#a8e34c8626651eb0dd5e359f3b0351817">tr_</a>[j] += <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#a8e34c8626651eb0dd5e359f3b0351817">tr_</a>[i];</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick.html#a0d9874a39927a9c0eaebccd46b8c2b0b">  100</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#a0d9874a39927a9c0eaebccd46b8c2b0b">lower_bound</a>(<span class="keyword">const</span> T&amp; k)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    T cur = T(); <span class="keywordtype">int</span> pos = 0, step = 1;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">while</span> (step &lt;&lt; 1 &lt;= <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#ae3686ff507698bb1de42d364f34b18f7">n_</a>) step &lt;&lt;= 1;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = step; i &gt; 0; i &gt;&gt;= 1) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="keywordtype">int</span> np = pos + i;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="keywordflow">if</span> (np &lt;= <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#ae3686ff507698bb1de42d364f34b18f7">n_</a> &amp;&amp; cur + <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#a8e34c8626651eb0dd5e359f3b0351817">tr_</a>[np] &lt; k) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        cur += <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html#a8e34c8626651eb0dd5e359f3b0351817">tr_</a>[np];</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        pos = np;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> pos + 1;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;};</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T = i64&gt;</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_range_b_i_t.html">  121</a></span>&#160;<span class="keyword">class </span><a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html">RangeBIT</a> {</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a8e4cbc460ec5436aaa298efa75d34ff9">  122</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a8e4cbc460ec5436aaa298efa75d34ff9">n_</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a8eac2b790b2cd80065a9e5742ba2380d">  123</a></span>&#160;  <a class="code" href="classwbwlib_1_1ds_1_1_fenwick.html">Fenwick&lt;T&gt;</a> <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a8eac2b790b2cd80065a9e5742ba2380d">b1_</a>, <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#afef12edde8be8d40f217bbd52f447e08">b2_</a>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a7362819d42dc5855d95568e24506deee">  130</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a7362819d42dc5855d95568e24506deee">RangeBIT</a>(<span class="keywordtype">int</span> n) : <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a8e4cbc460ec5436aaa298efa75d34ff9">n_</a>(n), <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a8eac2b790b2cd80065a9e5742ba2380d">b1_</a>(n), <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#afef12edde8be8d40f217bbd52f447e08">b2_</a>(n) {}</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#aacd0a879f9444cdded5adb271cd7a4b3">  138</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#aacd0a879f9444cdded5adb271cd7a4b3">add</a>(<span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r, <span class="keyword">const</span> T&amp; v) {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a8eac2b790b2cd80065a9e5742ba2380d">b1_</a>.add(l, v); <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a8eac2b790b2cd80065a9e5742ba2380d">b1_</a>.add(r + 1, -v);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#afef12edde8be8d40f217bbd52f447e08">b2_</a>.add(l, v * T(l - 1)); <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#afef12edde8be8d40f217bbd52f447e08">b2_</a>.add(r + 1, -v * T(r));</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a26ff9ed1b3e33e388c249f0f45cdb860">  148</a></span>&#160;  T <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a26ff9ed1b3e33e388c249f0f45cdb860">sum</a>(<span class="keywordtype">int</span> x)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a8eac2b790b2cd80065a9e5742ba2380d">b1_</a>.sum(x) * T(x) - <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#afef12edde8be8d40f217bbd52f447e08">b2_</a>.sum(x);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#af2c20f1c18ea9417c0c7493b26b5f10e">  158</a></span>&#160;  T <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#af2c20f1c18ea9417c0c7493b26b5f10e">range_sum</a>(<span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a26ff9ed1b3e33e388c249f0f45cdb860">sum</a>(r) - <a class="code" href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a26ff9ed1b3e33e388c249f0f45cdb860">sum</a>(l - 1); }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;};</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T = i64&gt;</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick2_d.html">  168</a></span>&#160;<span class="keyword">class </span><a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html">Fenwick2D</a> {</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#affa6e75ebaae230579748a5bba2dd06e">  169</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#acfb4a9188d8d5315cd8fc3e543cb522f">n_</a>, <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#affa6e75ebaae230579748a5bba2dd06e">m_</a>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#ace84a0976240734b95781a5fdf5387f5">  170</a></span>&#160;  std::vector&lt;std::vector&lt;T&gt;&gt; <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#ace84a0976240734b95781a5fdf5387f5">tr_</a>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#a58efe5cc54fab43945b70b8f43b5b4f1">  178</a></span>&#160;  <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#a58efe5cc54fab43945b70b8f43b5b4f1">Fenwick2D</a>(<span class="keywordtype">int</span> n, <span class="keywordtype">int</span> m) : <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#acfb4a9188d8d5315cd8fc3e543cb522f">n_</a>(n), <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#affa6e75ebaae230579748a5bba2dd06e">m_</a>(m), <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#ace84a0976240734b95781a5fdf5387f5">tr_</a>(n + 1, std::vector&lt;T&gt;(m + 1, T())) {}</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#afed43289394e499c636e64e628b5960e">  186</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#afed43289394e499c636e64e628b5960e">add</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keyword">const</span> T&amp; v) {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = x; i &lt;= <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#acfb4a9188d8d5315cd8fc3e543cb522f">n_</a>; i += i &amp; -i)</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = y; j &lt;= <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#affa6e75ebaae230579748a5bba2dd06e">m_</a>; j += j &amp; -j)</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#ace84a0976240734b95781a5fdf5387f5">tr_</a>[i][j] += v;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#a7ff80ca8917bf6f9c3802db6bb844212">  198</a></span>&#160;  T <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#a7ff80ca8917bf6f9c3802db6bb844212">sum</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    T s = T();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = x; i &gt; 0; i -= i &amp; -i)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = y; j &gt; 0; j -= j &amp; -j)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        s += <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#ace84a0976240734b95781a5fdf5387f5">tr_</a>[i][j];</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">return</span> s;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#a0d5efc9a8eff32b277226fb20940ab0b">  214</a></span>&#160;  T <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#a0d5efc9a8eff32b277226fb20940ab0b">range_sum</a>(<span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> y1, <span class="keywordtype">int</span> x2, <span class="keywordtype">int</span> y2)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#a7ff80ca8917bf6f9c3802db6bb844212">sum</a>(x2, y2) - <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#a7ff80ca8917bf6f9c3802db6bb844212">sum</a>(x1 - 1, y2) - <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#a7ff80ca8917bf6f9c3802db6bb844212">sum</a>(x2, y1 - 1) + <a class="code" href="classwbwlib_1_1ds_1_1_fenwick2_d.html#a7ff80ca8917bf6f9c3802db6bb844212">sum</a>(x1 - 1, y1 - 1);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;};</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;} <span class="comment">// namespace ds</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_DS_BIT_HPP</span></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick2_d_html"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick2_d.html">wbwlib::ds::Fenwick2D</a></div><div class="ttdoc">二维树状数组（单点加、子矩阵和），坐标 1 基。</div><div class="ttdef"><b>Definition:</b> bit.hpp:168</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick2_d_html_a0d5efc9a8eff32b277226fb20940ab0b"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick2_d.html#a0d5efc9a8eff32b277226fb20940ab0b">wbwlib::ds::Fenwick2D::range_sum</a></div><div class="ttdeci">T range_sum(int x1, int y1, int x2, int y2) const</div><div class="ttdoc">子矩阵和（容斥）： 。</div><div class="ttdef"><b>Definition:</b> bit.hpp:214</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick2_d_html_a58efe5cc54fab43945b70b8f43b5b4f1"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick2_d.html#a58efe5cc54fab43945b70b8f43b5b4f1">wbwlib::ds::Fenwick2D::Fenwick2D</a></div><div class="ttdeci">Fenwick2D(int n, int m)</div><div class="ttdoc">构造 n 行 m 列的二维树状数组（坐标 1 基，元素初始为 0）。</div><div class="ttdef"><b>Definition:</b> bit.hpp:178</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick2_d_html_a7ff80ca8917bf6f9c3802db6bb844212"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick2_d.html#a7ff80ca8917bf6f9c3802db6bb844212">wbwlib::ds::Fenwick2D::sum</a></div><div class="ttdeci">T sum(int x, int y) const</div><div class="ttdoc">前缀和 。</div><div class="ttdef"><b>Definition:</b> bit.hpp:198</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick2_d_html_ace84a0976240734b95781a5fdf5387f5"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick2_d.html#ace84a0976240734b95781a5fdf5387f5">wbwlib::ds::Fenwick2D::tr_</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; T &gt; &gt; tr_</div><div class="ttdef"><b>Definition:</b> bit.hpp:170</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick2_d_html_acfb4a9188d8d5315cd8fc3e543cb522f"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick2_d.html#acfb4a9188d8d5315cd8fc3e543cb522f">wbwlib::ds::Fenwick2D::n_</a></div><div class="ttdeci">int n_</div><div class="ttdef"><b>Definition:</b> bit.hpp:169</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick2_d_html_afed43289394e499c636e64e628b5960e"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick2_d.html#afed43289394e499c636e64e628b5960e">wbwlib::ds::Fenwick2D::add</a></div><div class="ttdeci">void add(int x, int y, const T &amp;v)</div><div class="ttdoc">单点加： 。</div><div class="ttdef"><b>Definition:</b> bit.hpp:186</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick2_d_html_affa6e75ebaae230579748a5bba2dd06e"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick2_d.html#affa6e75ebaae230579748a5bba2dd06e">wbwlib::ds::Fenwick2D::m_</a></div><div class="ttdeci">int m_</div><div class="ttdef"><b>Definition:</b> bit.hpp:169</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick_html"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick.html">wbwlib::ds::Fenwick</a></div><div class="ttdoc">树状数组（Fenwick）：单点加、前缀和与区间和。</div><div class="ttdef"><b>Definition:</b> bit.hpp:33</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick_html_a0d9874a39927a9c0eaebccd46b8c2b0b"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick.html#a0d9874a39927a9c0eaebccd46b8c2b0b">wbwlib::ds::Fenwick::lower_bound</a></div><div class="ttdeci">int lower_bound(const T &amp;k) const</div><div class="ttdoc">求最小的 i 使前缀和 （要求元素非负）。</div><div class="ttdef"><b>Definition:</b> bit.hpp:100</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick_html_a31b3b40fdb40c6f335ef6d255f04c2a7"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick.html#a31b3b40fdb40c6f335ef6d255f04c2a7">wbwlib::ds::Fenwick::add</a></div><div class="ttdeci">void add(int i, const T &amp;v)</div><div class="ttdoc">单点加： 。</div><div class="ttdef"><b>Definition:</b> bit.hpp:60</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick_html_a6ab12300bb02c2213edd8db895f580f8"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick.html#a6ab12300bb02c2213edd8db895f580f8">wbwlib::ds::Fenwick::range_sum</a></div><div class="ttdeci">T range_sum(int l, int r) const</div><div class="ttdoc">区间和 。</div><div class="ttdef"><b>Definition:</b> bit.hpp:81</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick_html_a8b2f9926d1120c69ff76da336f06aca0"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick.html#a8b2f9926d1120c69ff76da336f06aca0">wbwlib::ds::Fenwick::Fenwick</a></div><div class="ttdeci">Fenwick()</div><div class="ttdoc">默认构造空树（n=0），使用前需调用 init。</div><div class="ttdef"><b>Definition:</b> bit.hpp:41</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick_html_a8e34c8626651eb0dd5e359f3b0351817"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick.html#a8e34c8626651eb0dd5e359f3b0351817">wbwlib::ds::Fenwick::tr_</a></div><div class="ttdeci">std::vector&lt; T &gt; tr_</div><div class="ttdef"><b>Definition:</b> bit.hpp:35</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick_html_aa46c61f2bcc96ce69bd046dc06fe7190"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick.html#aa46c61f2bcc96ce69bd046dc06fe7190">wbwlib::ds::Fenwick::build</a></div><div class="ttdeci">void build(const std::vector&lt; T &gt; &amp;a)</div><div class="ttdoc">由 1 基数组 a 构造（a[0] 占位，长度 n+1）。</div><div class="ttdef"><b>Definition:</b> bit.hpp:87</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick_html_ab3b3f2844b5aec44c921a4d739d1766b"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick.html#ab3b3f2844b5aec44c921a4d739d1766b">wbwlib::ds::Fenwick::sum</a></div><div class="ttdeci">T sum(int i) const</div><div class="ttdoc">前缀和 。</div><div class="ttdef"><b>Definition:</b> bit.hpp:69</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick_html_ad9a264db5e06db5231292082611efdbb"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick.html#ad9a264db5e06db5231292082611efdbb">wbwlib::ds::Fenwick::init</a></div><div class="ttdeci">void init(int n)</div><div class="ttdoc">重置为大小为 n 的树状数组并清空所有元素。</div><div class="ttdef"><b>Definition:</b> bit.hpp:53</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick_html_adca0be7d5b2f20fe18b7bf0f5887b481"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick.html#adca0be7d5b2f20fe18b7bf0f5887b481">wbwlib::ds::Fenwick::Fenwick</a></div><div class="ttdeci">Fenwick(int n)</div><div class="ttdoc">构造大小为 n 的树状数组（下标 1..n，元素初始为 0）。</div><div class="ttdef"><b>Definition:</b> bit.hpp:47</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_fenwick_html_ae3686ff507698bb1de42d364f34b18f7"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_fenwick.html#ae3686ff507698bb1de42d364f34b18f7">wbwlib::ds::Fenwick::n_</a></div><div class="ttdeci">int n_</div><div class="ttdef"><b>Definition:</b> bit.hpp:34</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_range_b_i_t_html"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_range_b_i_t.html">wbwlib::ds::RangeBIT</a></div><div class="ttdoc">区间加 + 区间和的差分树状数组（双 BIT）。</div><div class="ttdef"><b>Definition:</b> bit.hpp:121</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_range_b_i_t_html_a26ff9ed1b3e33e388c249f0f45cdb860"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a26ff9ed1b3e33e388c249f0f45cdb860">wbwlib::ds::RangeBIT::sum</a></div><div class="ttdeci">T sum(int x) const</div><div class="ttdoc">前缀和 。</div><div class="ttdef"><b>Definition:</b> bit.hpp:148</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_range_b_i_t_html_a7362819d42dc5855d95568e24506deee"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a7362819d42dc5855d95568e24506deee">wbwlib::ds::RangeBIT::RangeBIT</a></div><div class="ttdeci">RangeBIT(int n)</div><div class="ttdoc">构造大小为 n 的差分树状数组（元素初始为 0）。</div><div class="ttdef"><b>Definition:</b> bit.hpp:130</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_range_b_i_t_html_a8e4cbc460ec5436aaa298efa75d34ff9"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a8e4cbc460ec5436aaa298efa75d34ff9">wbwlib::ds::RangeBIT::n_</a></div><div class="ttdeci">int n_</div><div class="ttdef"><b>Definition:</b> bit.hpp:122</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_range_b_i_t_html_a8eac2b790b2cd80065a9e5742ba2380d"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_range_b_i_t.html#a8eac2b790b2cd80065a9e5742ba2380d">wbwlib::ds::RangeBIT::b1_</a></div><div class="ttdeci">Fenwick&lt; T &gt; b1_</div><div class="ttdef"><b>Definition:</b> bit.hpp:123</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_range_b_i_t_html_aacd0a879f9444cdded5adb271cd7a4b3"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_range_b_i_t.html#aacd0a879f9444cdded5adb271cd7a4b3">wbwlib::ds::RangeBIT::add</a></div><div class="ttdeci">void add(int l, int r, const T &amp;v)</div><div class="ttdoc">区间加： 。</div><div class="ttdef"><b>Definition:</b> bit.hpp:138</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_range_b_i_t_html_af2c20f1c18ea9417c0c7493b26b5f10e"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_range_b_i_t.html#af2c20f1c18ea9417c0c7493b26b5f10e">wbwlib::ds::RangeBIT::range_sum</a></div><div class="ttdeci">T range_sum(int l, int r) const</div><div class="ttdoc">区间和 。</div><div class="ttdef"><b>Definition:</b> bit.hpp:158</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_range_b_i_t_html_afef12edde8be8d40f217bbd52f447e08"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_range_b_i_t.html#afef12edde8be8d40f217bbd52f447e08">wbwlib::ds::RangeBIT::b2_</a></div><div class="ttdeci">Fenwick&lt; T &gt; b2_</div><div class="ttdef"><b>Definition:</b> bit.hpp:123</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<map id="wbwlib/string/trie.hpp" name="wbwlib/string/trie.hpp">
+<area shape="rect" id="node1" title="字典树（Trie）：模板化字符映射与字母表大小；01&#45;Trie 模板化位宽与值类型。" alt="" coords="122,5,266,33"/>
+<area shape="rect" id="node2" title=" " alt="" coords="25,89,78,117"/>
+<area shape="rect" id="node3" title=" " alt="" coords="103,89,160,117"/>
+<area shape="rect" id="node4" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="185,89,332,117"/>
+<area shape="rect" id="node11" href="$char-map_8hpp.html" title="字符 → 字母表下标映射策略（供 Trie / AC 自动机 / 后缀自动机 / 回文自动机模板化使用）。" alt="" coords="356,81,483,125"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,173,66,201"/>
+<area shape="rect" id="node6" title=" " alt="" coords="90,173,154,201"/>
+<area shape="rect" id="node7" title=" " alt="" coords="178,173,242,201"/>
+<area shape="rect" id="node8" title=" " alt="" coords="267,173,345,201"/>
+<area shape="rect" id="node9" title=" " alt="" coords="369,173,451,201"/>
+<area shape="rect" id="node10" title=" " alt="" coords="476,173,528,201"/>
+</map>

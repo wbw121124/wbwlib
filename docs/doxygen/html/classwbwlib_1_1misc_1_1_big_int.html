@@ -1,0 +1,1235 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::misc::BigInt类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1misc.html">misc</a></li><li class="navelem"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="classwbwlib_1_1misc_1_1_big_int-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::misc::BigInt类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>高精度整数：符号 + 幅值，十进制 \(10^9\) 基（每 9 位一组，小端存储）。  
+ <a href="classwbwlib_1_1misc_1_1_big_int.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="big-int_8hpp_source.html">big-int.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::misc::BigInt 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwbwlib_1_1misc_1_1_big_int__coll__graph.png" border="0" usemap="#awbwlib_1_1misc_1_1_big_int_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1misc_1_1_big_int_coll__map" id="awbwlib_1_1misc_1_1_big_int_coll__map">
+<area shape="rect" title="高精度整数：符号 + 幅值，十进制 &#160;基（每 9 位一组，小端存储）。" alt="" coords="5,5,145,407"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1431af01819d3ec8e40009d34cb1a862"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#a1431af01819d3ec8e40009d34cb1a862">BigInt</a> ()</td></tr>
+<tr class="memdesc:a1431af01819d3ec8e40009d34cb1a862"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造：值 0。  <a href="classwbwlib_1_1misc_1_1_big_int.html#a1431af01819d3ec8e40009d34cb1a862">更多...</a><br /></td></tr>
+<tr class="separator:a1431af01819d3ec8e40009d34cb1a862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5a163a6f1dbab585491469f7eb00ab8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#ac5a163a6f1dbab585491469f7eb00ab8">BigInt</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> v)</td></tr>
+<tr class="memdesc:ac5a163a6f1dbab585491469f7eb00ab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 i64 构造。  <a href="classwbwlib_1_1misc_1_1_big_int.html#ac5a163a6f1dbab585491469f7eb00ab8">更多...</a><br /></td></tr>
+<tr class="separator:ac5a163a6f1dbab585491469f7eb00ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af31895b1a0b624d60aab1e28898fb92e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#af31895b1a0b624d60aab1e28898fb92e">BigInt</a> (const std::string &amp;s)</td></tr>
+<tr class="memdesc:af31895b1a0b624d60aab1e28898fb92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">从十进制字符串构造。  <a href="classwbwlib_1_1misc_1_1_big_int.html#af31895b1a0b624d60aab1e28898fb92e">更多...</a><br /></td></tr>
+<tr class="separator:af31895b1a0b624d60aab1e28898fb92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06e4afaa9def023178018dab732c912a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#a06e4afaa9def023178018dab732c912a">operator-</a> () const</td></tr>
+<tr class="memdesc:a06e4afaa9def023178018dab732c912a"><td class="mdescLeft">&#160;</td><td class="mdescRight">取负。  <a href="classwbwlib_1_1misc_1_1_big_int.html#a06e4afaa9def023178018dab732c912a">更多...</a><br /></td></tr>
+<tr class="separator:a06e4afaa9def023178018dab732c912a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5621d4d744babb4942ab5cfdaaf3882c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#a5621d4d744babb4942ab5cfdaaf3882c">is_zero</a> () const</td></tr>
+<tr class="memdesc:a5621d4d744babb4942ab5cfdaaf3882c"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断是否为零  <a href="classwbwlib_1_1misc_1_1_big_int.html#a5621d4d744babb4942ab5cfdaaf3882c">更多...</a><br /></td></tr>
+<tr class="separator:a5621d4d744babb4942ab5cfdaaf3882c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48c801d7713b76666743a1ce4337aadf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#a48c801d7713b76666743a1ce4337aadf">operator+</a> (const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;o) const</td></tr>
+<tr class="memdesc:a48c801d7713b76666743a1ce4337aadf"><td class="mdescLeft">&#160;</td><td class="mdescRight">加法。  <a href="classwbwlib_1_1misc_1_1_big_int.html#a48c801d7713b76666743a1ce4337aadf">更多...</a><br /></td></tr>
+<tr class="separator:a48c801d7713b76666743a1ce4337aadf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6a008adb1a2595c4117bfe864676265"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#ad6a008adb1a2595c4117bfe864676265">operator-</a> (const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;o) const</td></tr>
+<tr class="memdesc:ad6a008adb1a2595c4117bfe864676265"><td class="mdescLeft">&#160;</td><td class="mdescRight">减法。  <a href="classwbwlib_1_1misc_1_1_big_int.html#ad6a008adb1a2595c4117bfe864676265">更多...</a><br /></td></tr>
+<tr class="separator:ad6a008adb1a2595c4117bfe864676265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab98b9fda981d741e248b9191e8ce78e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#ab98b9fda981d741e248b9191e8ce78e8">operator*</a> (const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;o) const</td></tr>
+<tr class="memdesc:ab98b9fda981d741e248b9191e8ce78e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">乘法。  <a href="classwbwlib_1_1misc_1_1_big_int.html#ab98b9fda981d741e248b9191e8ce78e8">更多...</a><br /></td></tr>
+<tr class="separator:ab98b9fda981d741e248b9191e8ce78e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6615e5973d28f9dacdeb2ee1032ff92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#af6615e5973d28f9dacdeb2ee1032ff92">operator/</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> v) const</td></tr>
+<tr class="memdesc:af6615e5973d28f9dacdeb2ee1032ff92"><td class="mdescLeft">&#160;</td><td class="mdescRight">除以 i64。  <a href="classwbwlib_1_1misc_1_1_big_int.html#af6615e5973d28f9dacdeb2ee1032ff92">更多...</a><br /></td></tr>
+<tr class="separator:af6615e5973d28f9dacdeb2ee1032ff92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ec76417445b830f18acd5c361010d7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#a9ec76417445b830f18acd5c361010d7c">operator%</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> v) const</td></tr>
+<tr class="memdesc:a9ec76417445b830f18acd5c361010d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">对 i64 取模。  <a href="classwbwlib_1_1misc_1_1_big_int.html#a9ec76417445b830f18acd5c361010d7c">更多...</a><br /></td></tr>
+<tr class="separator:a9ec76417445b830f18acd5c361010d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e3e829964091073e952b25d3fe9de4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#a7e3e829964091073e952b25d3fe9de4a">mod_small</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> v) const</td></tr>
+<tr class="memdesc:a7e3e829964091073e952b25d3fe9de4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">对 i64 取模（直接逐位计算余数，不构造 BigInt）。  <a href="classwbwlib_1_1misc_1_1_big_int.html#a7e3e829964091073e952b25d3fe9de4a">更多...</a><br /></td></tr>
+<tr class="separator:a7e3e829964091073e952b25d3fe9de4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a405c10266d5686ec05b39a23265b5e9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#a405c10266d5686ec05b39a23265b5e9e">operator/</a> (const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;o) const</td></tr>
+<tr class="memdesc:a405c10266d5686ec05b39a23265b5e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">除以 BigInt（对幅值二分求商）。  <a href="classwbwlib_1_1misc_1_1_big_int.html#a405c10266d5686ec05b39a23265b5e9e">更多...</a><br /></td></tr>
+<tr class="separator:a405c10266d5686ec05b39a23265b5e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c2aab35e91776d499b771af768103e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#a5c2aab35e91776d499b771af768103e0">operator%</a> (const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;o) const</td></tr>
+<tr class="memdesc:a5c2aab35e91776d499b771af768103e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">对 <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html" title="高精度整数：符号 + 幅值，十进制  基（每 9 位一组，小端存储）。">BigInt</a> 取模。  <a href="classwbwlib_1_1misc_1_1_big_int.html#a5c2aab35e91776d499b771af768103e0">更多...</a><br /></td></tr>
+<tr class="separator:a5c2aab35e91776d499b771af768103e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1cd12f45915452d8d81a0cbc316e863"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#ad1cd12f45915452d8d81a0cbc316e863">pow</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> e) const</td></tr>
+<tr class="memdesc:ad1cd12f45915452d8d81a0cbc316e863"><td class="mdescLeft">&#160;</td><td class="mdescRight">快速幂。  <a href="classwbwlib_1_1misc_1_1_big_int.html#ad1cd12f45915452d8d81a0cbc316e863">更多...</a><br /></td></tr>
+<tr class="separator:ad1cd12f45915452d8d81a0cbc316e863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82b9eed3e4eaf7f0bcd16744e88fde71"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#a82b9eed3e4eaf7f0bcd16744e88fde71">to_string</a> () const</td></tr>
+<tr class="memdesc:a82b9eed3e4eaf7f0bcd16744e88fde71"><td class="mdescLeft">&#160;</td><td class="mdescRight">转为十进制字符串。  <a href="classwbwlib_1_1misc_1_1_big_int.html#a82b9eed3e4eaf7f0bcd16744e88fde71">更多...</a><br /></td></tr>
+<tr class="separator:a82b9eed3e4eaf7f0bcd16744e88fde71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a6cd88a3ced967cb27e006945a1d3d8a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#a6cd88a3ced967cb27e006945a1d3d8a8">trim</a> ()</td></tr>
+<tr class="memdesc:a6cd88a3ced967cb27e006945a1d3d8a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">去除高位前导零；零统一为非负  <a href="classwbwlib_1_1misc_1_1_big_int.html#a6cd88a3ced967cb27e006945a1d3d8a8">更多...</a><br /></td></tr>
+<tr class="separator:a6cd88a3ced967cb27e006945a1d3d8a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac05989ab248ca41c4b1553bbe191c5c1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#ac05989ab248ca41c4b1553bbe191c5c1">abs_cmp</a> (const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;o) const</td></tr>
+<tr class="memdesc:ac05989ab248ca41c4b1553bbe191c5c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">幅值比较（忽略符号）：本数大返回 +1，小返回 -1，相等返回 0  <a href="classwbwlib_1_1misc_1_1_big_int.html#ac05989ab248ca41c4b1553bbe191c5c1">更多...</a><br /></td></tr>
+<tr class="separator:ac05989ab248ca41c4b1553bbe191c5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa351ffd1f2c8e355e2f24324f011f413"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#aa351ffd1f2c8e355e2f24324f011f413">parse</a> (const std::string &amp;s)</td></tr>
+<tr class="memdesc:aa351ffd1f2c8e355e2f24324f011f413"><td class="mdescLeft">&#160;</td><td class="mdescRight">从十进制字符串解析（支持 + / - 号与前导零）  <a href="classwbwlib_1_1misc_1_1_big_int.html#aa351ffd1f2c8e355e2f24324f011f413">更多...</a><br /></td></tr>
+<tr class="separator:aa351ffd1f2c8e355e2f24324f011f413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a18717d61027b3dc6f361e52907ba5b6f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#a18717d61027b3dc6f361e52907ba5b6f">d</a></td></tr>
+<tr class="memdesc:a18717d61027b3dc6f361e52907ba5b6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">小端：d[0] 为低位  <a href="classwbwlib_1_1misc_1_1_big_int.html#a18717d61027b3dc6f361e52907ba5b6f">更多...</a><br /></td></tr>
+<tr class="separator:a18717d61027b3dc6f361e52907ba5b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a325568e5f1ebb0808e94e0de5e6a80c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#a325568e5f1ebb0808e94e0de5e6a80c9">neg</a></td></tr>
+<tr class="separator:a325568e5f1ebb0808e94e0de5e6a80c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:ab9ae56a5f937f9c4af829e2db0b58435"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#ab9ae56a5f937f9c4af829e2db0b58435">BASE</a> = 1000000000</td></tr>
+<tr class="separator:ab9ae56a5f937f9c4af829e2db0b58435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac796a59ec55c7fdaed43adfc47dce49a"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#ac796a59ec55c7fdaed43adfc47dce49a">WIDTH</a> = 9</td></tr>
+<tr class="separator:ac796a59ec55c7fdaed43adfc47dce49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a9965b82607faf4a2d27e53911f43773f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#a9965b82607faf4a2d27e53911f43773f">operator==</a> (const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;a, const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;b)</td></tr>
+<tr class="memdesc:a9965b82607faf4a2d27e53911f43773f"><td class="mdescLeft">&#160;</td><td class="mdescRight">相等比较。  <a href="classwbwlib_1_1misc_1_1_big_int.html#a9965b82607faf4a2d27e53911f43773f">更多...</a><br /></td></tr>
+<tr class="separator:a9965b82607faf4a2d27e53911f43773f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b84069166f6688a3d8d76d9ec20c6d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#ad8b84069166f6688a3d8d76d9ec20c6d">operator!=</a> (const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;a, const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;b)</td></tr>
+<tr class="memdesc:ad8b84069166f6688a3d8d76d9ec20c6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">不等比较。  <a href="classwbwlib_1_1misc_1_1_big_int.html#ad8b84069166f6688a3d8d76d9ec20c6d">更多...</a><br /></td></tr>
+<tr class="separator:ad8b84069166f6688a3d8d76d9ec20c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6b14de2bba24c0478b7efa932190d01"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#af6b14de2bba24c0478b7efa932190d01">operator&lt;</a> (const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;a, const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;b)</td></tr>
+<tr class="memdesc:af6b14de2bba24c0478b7efa932190d01"><td class="mdescLeft">&#160;</td><td class="mdescRight">小于比较。  <a href="classwbwlib_1_1misc_1_1_big_int.html#af6b14de2bba24c0478b7efa932190d01">更多...</a><br /></td></tr>
+<tr class="separator:af6b14de2bba24c0478b7efa932190d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a983eaea8ba326a099f99bce4c549e88b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#a983eaea8ba326a099f99bce4c549e88b">operator&gt;</a> (const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;a, const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;b)</td></tr>
+<tr class="memdesc:a983eaea8ba326a099f99bce4c549e88b"><td class="mdescLeft">&#160;</td><td class="mdescRight">大于比较。  <a href="classwbwlib_1_1misc_1_1_big_int.html#a983eaea8ba326a099f99bce4c549e88b">更多...</a><br /></td></tr>
+<tr class="separator:a983eaea8ba326a099f99bce4c549e88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad57ab1ea41721d4e2f6c6450db9ebbba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#ad57ab1ea41721d4e2f6c6450db9ebbba">operator&lt;=</a> (const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;a, const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;b)</td></tr>
+<tr class="memdesc:ad57ab1ea41721d4e2f6c6450db9ebbba"><td class="mdescLeft">&#160;</td><td class="mdescRight">小于等于比较。  <a href="classwbwlib_1_1misc_1_1_big_int.html#ad57ab1ea41721d4e2f6c6450db9ebbba">更多...</a><br /></td></tr>
+<tr class="separator:ad57ab1ea41721d4e2f6c6450db9ebbba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6253054c5127ed3304f637c952bffacd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#a6253054c5127ed3304f637c952bffacd">operator&gt;=</a> (const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;a, const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;b)</td></tr>
+<tr class="memdesc:a6253054c5127ed3304f637c952bffacd"><td class="mdescLeft">&#160;</td><td class="mdescRight">大于等于比较。  <a href="classwbwlib_1_1misc_1_1_big_int.html#a6253054c5127ed3304f637c952bffacd">更多...</a><br /></td></tr>
+<tr class="separator:a6253054c5127ed3304f637c952bffacd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b50b554d471bbd59b5aaa3f1e0b672d"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html#a6b50b554d471bbd59b5aaa3f1e0b672d">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;b)</td></tr>
+<tr class="memdesc:a6b50b554d471bbd59b5aaa3f1e0b672d"><td class="mdescLeft">&#160;</td><td class="mdescRight">流输出。  <a href="classwbwlib_1_1misc_1_1_big_int.html#a6b50b554d471bbd59b5aaa3f1e0b672d">更多...</a><br /></td></tr>
+<tr class="separator:a6b50b554d471bbd59b5aaa3f1e0b672d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>高精度整数：符号 + 幅值，十进制 \(10^9\) 基（每 9 位一组，小端存储）。 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a1431af01819d3ec8e40009d34cb1a862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1431af01819d3ec8e40009d34cb1a862">&#9670;&nbsp;</a></span>BigInt() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wbwlib::misc::BigInt::BigInt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认构造：值 0。 </p>
+
+</div>
+</div>
+<a id="ac5a163a6f1dbab585491469f7eb00ab8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5a163a6f1dbab585491469f7eb00ab8">&#9670;&nbsp;</a></span>BigInt() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wbwlib::misc::BigInt::BigInt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从 i64 构造。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>输入值。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af31895b1a0b624d60aab1e28898fb92e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af31895b1a0b624d60aab1e28898fb92e">&#9670;&nbsp;</a></span>BigInt() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wbwlib::misc::BigInt::BigInt </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从十进制字符串构造。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>十进制数字串，可含 + / - 号与前导零。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ac05989ab248ca41c4b1553bbe191c5c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac05989ab248ca41c4b1553bbe191c5c1">&#9670;&nbsp;</a></span>abs_cmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wbwlib::misc::BigInt::abs_cmp </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>幅值比较（忽略符号）：本数大返回 +1，小返回 -1，相等返回 0 </p>
+
+</div>
+</div>
+<a id="a5621d4d744babb4942ab5cfdaaf3882c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5621d4d744babb4942ab5cfdaaf3882c">&#9670;&nbsp;</a></span>is_zero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wbwlib::misc::BigInt::is_zero </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断是否为零 </p>
+
+</div>
+</div>
+<a id="a7e3e829964091073e952b25d3fe9de4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e3e829964091073e952b25d3fe9de4a">&#9670;&nbsp;</a></span>mod_small()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> wbwlib::misc::BigInt::mod_small </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>对 i64 取模（直接逐位计算余数，不构造 BigInt）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>模数（非零）。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>余数（符号与被除数一致）。 </dd></dl>
+
+</div>
+</div>
+<a id="a5c2aab35e91776d499b771af768103e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c2aab35e91776d499b771af768103e0">&#9670;&nbsp;</a></span>operator%() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> wbwlib::misc::BigInt::operator% </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>对 <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html" title="高精度整数：符号 + 幅值，十进制  基（每 9 位一组，小端存储）。">BigInt</a> 取模。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>模数（非零）。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>余数。 </dd></dl>
+
+</div>
+</div>
+<a id="a9ec76417445b830f18acd5c361010d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec76417445b830f18acd5c361010d7c">&#9670;&nbsp;</a></span>operator%() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> wbwlib::misc::BigInt::operator% </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>对 i64 取模。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>模数（非零）。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>余数（符号与被除数一致）。 </dd></dl>
+
+</div>
+</div>
+<a id="ab98b9fda981d741e248b9191e8ce78e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab98b9fda981d741e248b9191e8ce78e8">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> wbwlib::misc::BigInt::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>乘法。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>乘数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>两数之积。 </dd></dl>
+
+</div>
+</div>
+<a id="a48c801d7713b76666743a1ce4337aadf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48c801d7713b76666743a1ce4337aadf">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> wbwlib::misc::BigInt::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>加法。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>加数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>两数之和。 </dd></dl>
+
+</div>
+</div>
+<a id="a06e4afaa9def023178018dab732c912a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06e4afaa9def023178018dab732c912a">&#9670;&nbsp;</a></span>operator-() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> wbwlib::misc::BigInt::operator- </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>取负。 </p>
+<dl class="section return"><dt>返回</dt><dd>相反数；0 取负仍为 0。 </dd></dl>
+
+</div>
+</div>
+<a id="ad6a008adb1a2595c4117bfe864676265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6a008adb1a2595c4117bfe864676265">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> wbwlib::misc::BigInt::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>减法。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>减数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>两数之差。 </dd></dl>
+
+</div>
+</div>
+<a id="a405c10266d5686ec05b39a23265b5e9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a405c10266d5686ec05b39a23265b5e9e">&#9670;&nbsp;</a></span>operator/() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> wbwlib::misc::BigInt::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>除以 BigInt（对幅值二分求商）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>除数（非零）。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>商。 </dd></dl>
+
+</div>
+</div>
+<a id="af6615e5973d28f9dacdeb2ee1032ff92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6615e5973d28f9dacdeb2ee1032ff92">&#9670;&nbsp;</a></span>operator/() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> wbwlib::misc::BigInt::operator/ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>除以 i64。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>除数（非零）。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>商。 </dd></dl>
+
+</div>
+</div>
+<a id="aa351ffd1f2c8e355e2f24324f011f413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa351ffd1f2c8e355e2f24324f011f413">&#9670;&nbsp;</a></span>parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::misc::BigInt::parse </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从十进制字符串解析（支持 + / - 号与前导零） </p>
+
+</div>
+</div>
+<a id="ad1cd12f45915452d8d81a0cbc316e863"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1cd12f45915452d8d81a0cbc316e863">&#9670;&nbsp;</a></span>pow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> wbwlib::misc::BigInt::pow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>快速幂。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>指数（非负）。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>本数的 e 次方；负底数且 e 为奇数时结果为负，0 的非零次方为 0。 </dd></dl>
+
+</div>
+</div>
+<a id="a82b9eed3e4eaf7f0bcd16744e88fde71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82b9eed3e4eaf7f0bcd16744e88fde71">&#9670;&nbsp;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string wbwlib::misc::BigInt::to_string </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>转为十进制字符串。 </p>
+<dl class="section return"><dt>返回</dt><dd>十进制表示：零为 "0"，负数带 '-' 前缀。 </dd></dl>
+
+</div>
+</div>
+<a id="a6cd88a3ced967cb27e006945a1d3d8a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cd88a3ced967cb27e006945a1d3d8a8">&#9670;&nbsp;</a></span>trim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::misc::BigInt::trim </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>去除高位前导零；零统一为非负 </p>
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关函数文档</h2>
+<a id="ad8b84069166f6688a3d8d76d9ec20c6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8b84069166f6688a3d8d76d9ec20c6d">&#9670;&nbsp;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>不等比较。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>左操作数。 </td></tr>
+    <tr><td class="paramname">b</td><td>右操作数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>两数数值不等时返回 true。 </dd></dl>
+
+</div>
+</div>
+<a id="af6b14de2bba24c0478b7efa932190d01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6b14de2bba24c0478b7efa932190d01">&#9670;&nbsp;</a></span>operator&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>小于比较。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>左操作数。 </td></tr>
+    <tr><td class="paramname">b</td><td>右操作数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>a &lt; b 时返回 true。 </dd></dl>
+
+</div>
+</div>
+<a id="a6b50b554d471bbd59b5aaa3f1e0b672d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b50b554d471bbd59b5aaa3f1e0b672d">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>流输出。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>输出流。 </td></tr>
+    <tr><td class="paramname">b</td><td>待输出的大整数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>输出流引用。 </dd></dl>
+
+</div>
+</div>
+<a id="ad57ab1ea41721d4e2f6c6450db9ebbba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad57ab1ea41721d4e2f6c6450db9ebbba">&#9670;&nbsp;</a></span>operator&lt;=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>小于等于比较。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>左操作数。 </td></tr>
+    <tr><td class="paramname">b</td><td>右操作数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>a &lt;= b 时返回 true。 </dd></dl>
+
+</div>
+</div>
+<a id="a9965b82607faf4a2d27e53911f43773f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9965b82607faf4a2d27e53911f43773f">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>相等比较。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>左操作数。 </td></tr>
+    <tr><td class="paramname">b</td><td>右操作数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>两数数值相等时返回 true。 </dd></dl>
+
+</div>
+</div>
+<a id="a983eaea8ba326a099f99bce4c549e88b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a983eaea8ba326a099f99bce4c549e88b">&#9670;&nbsp;</a></span>operator&gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>大于比较。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>左操作数。 </td></tr>
+    <tr><td class="paramname">b</td><td>右操作数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>a &gt; b 时返回 true。 </dd></dl>
+
+</div>
+</div>
+<a id="a6253054c5127ed3304f637c952bffacd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6253054c5127ed3304f637c952bffacd">&#9670;&nbsp;</a></span>operator&gt;=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1misc_1_1_big_int.html">BigInt</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>大于等于比较。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>左操作数。 </td></tr>
+    <tr><td class="paramname">b</td><td>右操作数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>a &gt;= b 时返回 true。 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ab9ae56a5f937f9c4af829e2db0b58435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9ae56a5f937f9c4af829e2db0b58435">&#9670;&nbsp;</a></span>BASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int wbwlib::misc::BigInt::BASE = 1000000000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18717d61027b3dc6f361e52907ba5b6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18717d61027b3dc6f361e52907ba5b6f">&#9670;&nbsp;</a></span>d</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::misc::BigInt::d</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>小端：d[0] 为低位 </p>
+
+</div>
+</div>
+<a id="a325568e5f1ebb0808e94e0de5e6a80c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a325568e5f1ebb0808e94e0de5e6a80c9">&#9670;&nbsp;</a></span>neg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wbwlib::misc::BigInt::neg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac796a59ec55c7fdaed43adfc47dce49a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac796a59ec55c7fdaed43adfc47dce49a">&#9670;&nbsp;</a></span>WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int wbwlib::misc::BigInt::WIDTH = 9</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>wbwlib/misc/<a class="el" href="big-int_8hpp_source.html">big-int.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

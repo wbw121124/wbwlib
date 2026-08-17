@@ -1,0 +1,533 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::dp::LineContainer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1dp.html">dp</a></li><li class="navelem"><a class="el" href="classwbwlib_1_1dp_1_1_line_container.html">LineContainer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-types">Private 类型</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classwbwlib_1_1dp_1_1_line_container-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::dp::LineContainer类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>动态 CHT：内部按上凸壳维护「最大」，提供 max/min 两套接口（KACTL 风格）。  
+ <a href="classwbwlib_1_1dp_1_1_line_container.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="cht_8hpp_source.html">cht.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::dp::LineContainer 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwbwlib_1_1dp_1_1_line_container__coll__graph.png" border="0" usemap="#awbwlib_1_1dp_1_1_line_container_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1dp_1_1_line_container_coll__map" id="awbwlib_1_1dp_1_1_line_container_coll__map">
+<area shape="rect" title="动态 CHT：内部按上凸壳维护「最大」，提供 max/min 两套接口（KACTL 风格）。" alt="" coords="5,5,177,199"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html">Line</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">一条直线 y = k*x + m；p 为该直线成为最优的 x 区间下界（交点阈值）  <a href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa4e84a3ed5c88ce56b0a1003e03f8abc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1dp_1_1_line_container.html#aa4e84a3ed5c88ce56b0a1003e03f8abc">clear</a> ()</td></tr>
+<tr class="memdesc:aa4e84a3ed5c88ce56b0a1003e03f8abc"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空所有已插入的直线。  <a href="classwbwlib_1_1dp_1_1_line_container.html#aa4e84a3ed5c88ce56b0a1003e03f8abc">更多...</a><br /></td></tr>
+<tr class="separator:aa4e84a3ed5c88ce56b0a1003e03f8abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5781b24f5896896440855f8d03df4f44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1dp_1_1_line_container.html#a5781b24f5896896440855f8d03df4f44">add_line</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> k, <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> m)</td></tr>
+<tr class="memdesc:a5781b24f5896896440855f8d03df4f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入直线 \(y = k x + m\)（内部按最大值维护）。  <a href="classwbwlib_1_1dp_1_1_line_container.html#a5781b24f5896896440855f8d03df4f44">更多...</a><br /></td></tr>
+<tr class="separator:a5781b24f5896896440855f8d03df4f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaecc61877f68e84a1272bf0b55925d73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1dp_1_1_line_container.html#aaecc61877f68e84a1272bf0b55925d73">query</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> x)</td></tr>
+<tr class="memdesc:aaecc61877f68e84a1272bf0b55925d73"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询所有已插入直线在 x 处的最大值（空容器时行为未定义）。  <a href="classwbwlib_1_1dp_1_1_line_container.html#aaecc61877f68e84a1272bf0b55925d73">更多...</a><br /></td></tr>
+<tr class="separator:aaecc61877f68e84a1272bf0b55925d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37efe2b98a2517e231ec27df24791d39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1dp_1_1_line_container.html#a37efe2b98a2517e231ec27df24791d39">add_min_mode</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> k, <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> m)</td></tr>
+<tr class="memdesc:a37efe2b98a2517e231ec27df24791d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">以最小值模式插入直线 \(y = k x + m\)（内部对 k、m 取负后维护）。  <a href="classwbwlib_1_1dp_1_1_line_container.html#a37efe2b98a2517e231ec27df24791d39">更多...</a><br /></td></tr>
+<tr class="separator:a37efe2b98a2517e231ec27df24791d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61f2fd89dcb06389d32c89d4da067ba6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1dp_1_1_line_container.html#a61f2fd89dcb06389d32c89d4da067ba6">query_min_mode</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> x)</td></tr>
+<tr class="memdesc:a61f2fd89dcb06389d32c89d4da067ba6"><td class="mdescLeft">&#160;</td><td class="mdescRight">以最小值模式查询。  <a href="classwbwlib_1_1dp_1_1_line_container.html#a61f2fd89dcb06389d32c89d4da067ba6">更多...</a><br /></td></tr>
+<tr class="separator:a61f2fd89dcb06389d32c89d4da067ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private 类型</h2></td></tr>
+<tr class="memitem:aa68e1bb08e155e67a22cf6b4ccfca6b3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1dp_1_1_line_container.html#aa68e1bb08e155e67a22cf6b4ccfca6b3">It</a> = std::multiset&lt; <a class="el" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html">Line</a>, std::less&lt;&gt; &gt;::iterator</td></tr>
+<tr class="separator:aa68e1bb08e155e67a22cf6b4ccfca6b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a4d8fdaeebeb3201c54d19130232868e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1dp_1_1_line_container.html#a4d8fdaeebeb3201c54d19130232868e7">isect</a> (<a class="el" href="classwbwlib_1_1dp_1_1_line_container.html#aa68e1bb08e155e67a22cf6b4ccfca6b3">It</a> x, <a class="el" href="classwbwlib_1_1dp_1_1_line_container.html#aa68e1bb08e155e67a22cf6b4ccfca6b3">It</a> y)</td></tr>
+<tr class="memdesc:a4d8fdaeebeb3201c54d19130232868e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算直线 x 与 y 的交点阈值；若 x 已无存在意义返回 true  <a href="classwbwlib_1_1dp_1_1_line_container.html#a4d8fdaeebeb3201c54d19130232868e7">更多...</a><br /></td></tr>
+<tr class="separator:a4d8fdaeebeb3201c54d19130232868e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a97f1ab0d117adfccdaf8892e10e8d36a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1dp_1_1_line_container.html#a97f1ab0d117adfccdaf8892e10e8d36a">div_f</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> a, <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> b)</td></tr>
+<tr class="memdesc:a97f1ab0d117adfccdaf8892e10e8d36a"><td class="mdescLeft">&#160;</td><td class="mdescRight">向负无穷取整的除法（计算交点横坐标用）  <a href="classwbwlib_1_1dp_1_1_line_container.html#a97f1ab0d117adfccdaf8892e10e8d36a">更多...</a><br /></td></tr>
+<tr class="separator:a97f1ab0d117adfccdaf8892e10e8d36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a62b92b656decb2d904780c168a669b00"><td class="memItemLeft" align="right" valign="top">std::multiset&lt; <a class="el" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html">Line</a>, std::less&lt;&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1dp_1_1_line_container.html#a62b92b656decb2d904780c168a669b00">st_</a></td></tr>
+<tr class="separator:a62b92b656decb2d904780c168a669b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:ad31c53e26e25ce7546e37b8c2308b44a"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1dp_1_1_line_container.html#ad31c53e26e25ce7546e37b8c2308b44a">INF</a> = (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>)4e18</td></tr>
+<tr class="memdesc:ad31c53e26e25ce7546e37b8c2308b44a"><td class="mdescLeft">&#160;</td><td class="mdescRight">交点阈值上界（视为无穷）  <a href="classwbwlib_1_1dp_1_1_line_container.html#ad31c53e26e25ce7546e37b8c2308b44a">更多...</a><br /></td></tr>
+<tr class="separator:ad31c53e26e25ce7546e37b8c2308b44a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>动态 CHT：内部按上凸壳维护「最大」，提供 max/min 两套接口（KACTL 风格）。 </p>
+<p>支持任意顺序的插入与查询，单次 O(log n)；求最小通过在插入与查询时取负实现。 </p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="aa68e1bb08e155e67a22cf6b4ccfca6b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa68e1bb08e155e67a22cf6b4ccfca6b3">&#9670;&nbsp;</a></span>It</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classwbwlib_1_1dp_1_1_line_container.html#aa68e1bb08e155e67a22cf6b4ccfca6b3">wbwlib::dp::LineContainer::It</a> =  std::multiset&lt;<a class="el" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html">Line</a>, std::less&lt;&gt; &gt;::iterator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a5781b24f5896896440855f8d03df4f44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5781b24f5896896440855f8d03df4f44">&#9670;&nbsp;</a></span>add_line()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::dp::LineContainer::add_line </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>插入直线 \(y = k x + m\)（内部按最大值维护）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>直线斜率。 </td></tr>
+    <tr><td class="paramname">m</td><td>直线截距。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a37efe2b98a2517e231ec27df24791d39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37efe2b98a2517e231ec27df24791d39">&#9670;&nbsp;</a></span>add_min_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::dp::LineContainer::add_min_mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>以最小值模式插入直线 \(y = k x + m\)（内部对 k、m 取负后维护）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>直线斜率。 </td></tr>
+    <tr><td class="paramname">m</td><td>直线截距。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa4e84a3ed5c88ce56b0a1003e03f8abc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4e84a3ed5c88ce56b0a1003e03f8abc">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::dp::LineContainer::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>清空所有已插入的直线。 </p>
+
+</div>
+</div>
+<a id="a97f1ab0d117adfccdaf8892e10e8d36a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97f1ab0d117adfccdaf8892e10e8d36a">&#9670;&nbsp;</a></span>div_f()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> wbwlib::dp::LineContainer::div_f </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向负无穷取整的除法（计算交点横坐标用） </p>
+
+</div>
+</div>
+<a id="a4d8fdaeebeb3201c54d19130232868e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d8fdaeebeb3201c54d19130232868e7">&#9670;&nbsp;</a></span>isect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wbwlib::dp::LineContainer::isect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classwbwlib_1_1dp_1_1_line_container.html#aa68e1bb08e155e67a22cf6b4ccfca6b3">It</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classwbwlib_1_1dp_1_1_line_container.html#aa68e1bb08e155e67a22cf6b4ccfca6b3">It</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算直线 x 与 y 的交点阈值；若 x 已无存在意义返回 true </p>
+
+</div>
+</div>
+<a id="aaecc61877f68e84a1272bf0b55925d73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaecc61877f68e84a1272bf0b55925d73">&#9670;&nbsp;</a></span>query()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> wbwlib::dp::LineContainer::query </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>查询所有已插入直线在 x 处的最大值（空容器时行为未定义）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>查询横坐标。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(\max_i(k_i x + m_i)\)。 </dd></dl>
+
+</div>
+</div>
+<a id="a61f2fd89dcb06389d32c89d4da067ba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61f2fd89dcb06389d32c89d4da067ba6">&#9670;&nbsp;</a></span>query_min_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> wbwlib::dp::LineContainer::query_min_mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>以最小值模式查询。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>查询横坐标。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>所有已插入直线在 x 处的最小值。 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ad31c53e26e25ce7546e37b8c2308b44a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad31c53e26e25ce7546e37b8c2308b44a">&#9670;&nbsp;</a></span>INF</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> wbwlib::dp::LineContainer::INF = (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>)4e18</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>交点阈值上界（视为无穷） </p>
+
+</div>
+</div>
+<a id="a62b92b656decb2d904780c168a669b00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62b92b656decb2d904780c168a669b00">&#9670;&nbsp;</a></span>st_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::multiset&lt;<a class="el" href="structwbwlib_1_1dp_1_1_line_container_1_1_line.html">Line</a>, std::less&lt;&gt; &gt; wbwlib::dp::LineContainer::st_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>wbwlib/dp/<a class="el" href="cht_8hpp_source.html">cht.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

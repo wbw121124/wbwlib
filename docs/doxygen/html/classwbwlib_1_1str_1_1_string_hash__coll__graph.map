@@ -1,0 +1,3 @@
+<map id="wbwlib::str::StringHash&lt; MOD1, MOD2 &gt;" name="wbwlib::str::StringHash&lt; MOD1, MOD2 &gt;">
+<area shape="rect" id="node1" title="字符串双哈希：模数模板化（默认 1e9+7 / 1e9+9），预处理 O(n) 后子串哈希 O(1)。" alt="" coords="5,5,163,247"/>
+</map>

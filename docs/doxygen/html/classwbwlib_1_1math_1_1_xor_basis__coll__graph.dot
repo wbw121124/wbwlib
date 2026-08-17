@@ -1,0 +1,7 @@
+digraph "wbwlib::math::XorBasis"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::math::XorBasis\n|- p_\l- ok_kth_\l- kth_\l- B\l|+ XorBasis()\l+ reset()\l+ insert()\l+ max_xor()\l+ min_xor()\l+ has()\l+ rank()\l+ build_kth()\l+ kth_min()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="64 位异或线性基。"];
+}

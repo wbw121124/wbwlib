@@ -1,0 +1,14 @@
+<map id="wbwlib/math/fwt.hpp" name="wbwlib/math/fwt.hpp">
+<area shape="rect" id="node1" title="快速沃尔什变换 FWT：集合幂级数的 OR / AND / XOR 卷积。" alt="" coords="163,5,305,33"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,249,63,277"/>
+<area shape="rect" id="node3" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="166,249,313,277"/>
+<area shape="rect" id="node10" href="$modular_8hpp.html" title="模意义整数类 modint（固定模版）与动态模版。" alt="" coords="149,81,319,109"/>
+<area shape="rect" id="node4" title=" " alt="" coords="505,325,566,353"/>
+<area shape="rect" id="node5" title=" " alt="" coords="119,325,184,353"/>
+<area shape="rect" id="node6" title=" " alt="" coords="207,325,272,353"/>
+<area shape="rect" id="node7" title=" " alt="" coords="296,325,375,353"/>
+<area shape="rect" id="node8" title=" " alt="" coords="398,325,481,353"/>
+<area shape="rect" id="node9" title=" " alt="" coords="43,325,95,353"/>
+<area shape="rect" id="node11" title=" " alt="" coords="272,165,343,193"/>
+<area shape="rect" id="node12" href="$number-theory_8hpp.html" title="数论基础：快速幂、快速乘、gcd/lcm、扩展欧几里得、逆元、CRT/EXCRT、欧拉定理、整除分块。" alt="" coords="55,157,197,201"/>
+</map>

@@ -1,0 +1,210 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/geo/half-plane.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_2ecdf383c720a2d71ee413e323799741.html">geo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">half-plane.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="half-plane_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_GEO_HALF_PLANE_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_GEO_HALF_PLANE_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;deque&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="point_8hpp.html">wbwlib/geo/point.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>geo {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structwbwlib_1_1geo_1_1_half_plane.html">   31</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html">HalfPlane</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structwbwlib_1_1geo_1_1_half_plane.html#afc3bf38d76890287a4c4920755d67414">   32</a></span>&#160;  <a class="code" href="structwbwlib_1_1geo_1_1_point.html">PointD</a> <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#afc3bf38d76890287a4c4920755d67414">a</a>, <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#a9244a24f4127b5815c0a5acfb9334ee9">b</a>;      </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structwbwlib_1_1geo_1_1_half_plane.html#a70a603453c3bcb2977bf4b86e4741899">   33</a></span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#a70a603453c3bcb2977bf4b86e4741899">ang</a>;  </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structwbwlib_1_1geo_1_1_half_plane.html#a0466280640979fe38879e06dd548f7e7">   37</a></span>&#160;  <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#a0466280640979fe38879e06dd548f7e7">HalfPlane</a>() {}</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structwbwlib_1_1geo_1_1_half_plane.html#ab68233119766880281b586daf264eddd">   43</a></span>&#160;  <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#ab68233119766880281b586daf264eddd">HalfPlane</a>(<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1geo_1_1_point.html">PointD</a>&amp; a_, <span class="keyword">const</span> <a class="code" href="structwbwlib_1_1geo_1_1_point.html">PointD</a>&amp; b_) : <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#afc3bf38d76890287a4c4920755d67414">a</a>(a_), <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#a9244a24f4127b5815c0a5acfb9334ee9">b</a>(b_) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#a70a603453c3bcb2977bf4b86e4741899">ang</a> = std::atan2(<a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#a9244a24f4127b5815c0a5acfb9334ee9">b</a>.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a910d502bad9af5c3c88127ec8e39afb4">y</a> - <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#afc3bf38d76890287a4c4920755d67414">a</a>.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a910d502bad9af5c3c88127ec8e39afb4">y</a>, <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#a9244a24f4127b5815c0a5acfb9334ee9">b</a>.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a6dc3f48aff7297f17de31316254ad3de">x</a> - <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#afc3bf38d76890287a4c4920755d67414">a</a>.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a6dc3f48aff7297f17de31316254ad3de">x</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structwbwlib_1_1geo_1_1_half_plane.html#a846c843e2166cf89e5b9a42094823d98">   51</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#a846c843e2166cf89e5b9a42094823d98">contains</a>(<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1geo_1_1_point.html">PointD</a>&amp; p)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#a9244a24f4127b5815c0a5acfb9334ee9">b</a> - <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#afc3bf38d76890287a4c4920755d67414">a</a>).cross(p - <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#afc3bf38d76890287a4c4920755d67414">a</a>) &gt;= -1e-12L;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1geo.html#a3d4ea1721d3451cf01eeb04572e27e38">   62</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structwbwlib_1_1geo_1_1_point.html">PointD</a> <a class="code" href="namespacewbwlib_1_1geo.html#a3d4ea1721d3451cf01eeb04572e27e38">hp_intersect</a>(<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html">HalfPlane</a>&amp; x, <span class="keyword">const</span> <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html">HalfPlane</a>&amp; y) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="structwbwlib_1_1geo_1_1_point.html">PointD</a> u = x.<a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#a9244a24f4127b5815c0a5acfb9334ee9">b</a> - x.<a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#afc3bf38d76890287a4c4920755d67414">a</a>, v = y.<a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#a9244a24f4127b5815c0a5acfb9334ee9">b</a> - y.<a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#afc3bf38d76890287a4c4920755d67414">a</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> den = u.<a class="code" href="structwbwlib_1_1geo_1_1_point.html#a0116d437097698e6875c444d1b612bd1">cross</a>(v);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="comment">// den 不为 0（平行边已剔除）</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> t = (y.<a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#afc3bf38d76890287a4c4920755d67414">a</a> - x.<a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#afc3bf38d76890287a4c4920755d67414">a</a>).<a class="code" href="namespacewbwlib_1_1geo.html#a40d95f6ebdfc8c0b5e40ee7b15a42e54">cross</a>(v) / den;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">return</span> x.<a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html#afc3bf38d76890287a4c4920755d67414">a</a> + u * t;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1geo.html#afc2b70803ce619042090da9cd79ebc71">   75</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;PointD&gt; <a class="code" href="namespacewbwlib_1_1geo.html#afc2b70803ce619042090da9cd79ebc71">half_plane_intersection</a>(std::vector&lt;HalfPlane&gt; hps) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="comment">// 极角增序；同角保留最左（最紧）：更严格的先排，去重时保留第一个</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  std::sort(hps.begin(), hps.end(), [](<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html">HalfPlane</a>&amp; A, <span class="keyword">const</span> <a class="code" href="structwbwlib_1_1geo_1_1_half_plane.html">HalfPlane</a>&amp; B) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    if (std::fabs(A.ang - B.ang) &gt; 1e-12L) return A.ang &lt; B.ang;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    return (A.b - A.a).cross(B.a - A.a) &lt; 0;   <span class="comment">// A 比 B 更靠左（更严格）</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  });</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  std::vector&lt;HalfPlane&gt; uniq;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; hp : hps) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> (!uniq.empty() &amp;&amp; std::fabs(hp.ang - uniq.back().ang) &lt;= 1e-12L)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordflow">continue</span>;   <span class="comment">// 同极角时 uniq 已保留更严格的</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    uniq.push_back(hp);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  std::deque&lt;HalfPlane&gt; q;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  std::deque&lt;PointD&gt; pts;      <span class="comment">// q[i] 与 q[i+1] 的交点</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; hp : uniq) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">while</span> (q.size() &gt;= 2 &amp;&amp; !hp.contains(pts.back())) { q.pop_back(); pts.pop_back(); }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">while</span> (q.size() &gt;= 2 &amp;&amp; !hp.contains(pts.front())) { q.pop_front(); pts.pop_front(); }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> (!q.empty()) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordtype">long</span> <span class="keywordtype">double</span> den = (hp.b - hp.a).<a class="code" href="namespacewbwlib_1_1geo.html#a40d95f6ebdfc8c0b5e40ee7b15a42e54">cross</a>(q.back().b - q.back().a);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keywordflow">if</span> (std::fabs(den) &lt;= 1e-12L) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="comment">// 平行：若反方向，无解</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">if</span> ((hp.b - hp.a).dot(q.back().b - q.back().a) &lt; 0) <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      pts.push_back(<a class="code" href="namespacewbwlib_1_1geo.html#a3d4ea1721d3451cf01eeb04572e27e38">hp_intersect</a>(q.back(), hp));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    q.push_back(hp);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordflow">while</span> (q.size() &gt;= 2 &amp;&amp; !q.front().contains(pts.back())) { q.pop_back(); pts.pop_back(); }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordflow">while</span> (q.size() &gt;= 2 &amp;&amp; !q.back().contains(pts.front())) { q.pop_front(); pts.pop_front(); }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordflow">if</span> (q.size() &lt; 3) <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="comment">// 首尾交点</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  std::vector&lt;PointD&gt; res;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i + 1 &lt; q.size(); ++i) res.push_back(pts[i]);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  res.push_back(<a class="code" href="namespacewbwlib_1_1geo.html#a3d4ea1721d3451cf01eeb04572e27e38">hp_intersect</a>(q.back(), q.front()));</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;} <span class="comment">// namespace geo</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_GEO_HALF_PLANE_HPP</span></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1geo_html_a3d4ea1721d3451cf01eeb04572e27e38"><div class="ttname"><a href="namespacewbwlib_1_1geo.html#a3d4ea1721d3451cf01eeb04572e27e38">wbwlib::geo::hp_intersect</a></div><div class="ttdeci">PointD hp_intersect(const HalfPlane &amp;x, const HalfPlane &amp;y)</div><div class="ttdoc">计算两条半平面边界直线的交点。</div><div class="ttdef"><b>Definition:</b> half-plane.hpp:62</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1geo_html_a40d95f6ebdfc8c0b5e40ee7b15a42e54"><div class="ttname"><a href="namespacewbwlib_1_1geo.html#a40d95f6ebdfc8c0b5e40ee7b15a42e54">wbwlib::geo::cross</a></div><div class="ttdeci">T cross(const Point&lt; T &gt; &amp;a, const Point&lt; T &gt; &amp;b)</div><div class="ttdoc">向量叉积（自由函数版）。</div><div class="ttdef"><b>Definition:</b> point.hpp:111</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1geo_html_afc2b70803ce619042090da9cd79ebc71"><div class="ttname"><a href="namespacewbwlib_1_1geo.html#afc2b70803ce619042090da9cd79ebc71">wbwlib::geo::half_plane_intersection</a></div><div class="ttdeci">std::vector&lt; PointD &gt; half_plane_intersection(std::vector&lt; HalfPlane &gt; hps)</div><div class="ttdoc">半平面交：求所有半平面可行区域的交集。</div><div class="ttdef"><b>Definition:</b> half-plane.hpp:75</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+<div class="ttc" id="apoint_8hpp_html"><div class="ttname"><a href="point_8hpp.html">point.hpp</a></div><div class="ttdoc">计算几何基础：二维点/向量，整数坐标（默认 i64）+ double 变体。</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_half_plane_html"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_half_plane.html">wbwlib::geo::HalfPlane</a></div><div class="ttdoc">半平面：有向直线 a→b 的左侧（含直线）为可行区域。</div><div class="ttdef"><b>Definition:</b> half-plane.hpp:31</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_half_plane_html_a0466280640979fe38879e06dd548f7e7"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_half_plane.html#a0466280640979fe38879e06dd548f7e7">wbwlib::geo::HalfPlane::HalfPlane</a></div><div class="ttdeci">HalfPlane()</div><div class="ttdoc">默认构造（成员未初始化）。</div><div class="ttdef"><b>Definition:</b> half-plane.hpp:37</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_half_plane_html_a70a603453c3bcb2977bf4b86e4741899"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_half_plane.html#a70a603453c3bcb2977bf4b86e4741899">wbwlib::geo::HalfPlane::ang</a></div><div class="ttdeci">long double ang</div><div class="ttdoc">方向角</div><div class="ttdef"><b>Definition:</b> half-plane.hpp:33</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_half_plane_html_a846c843e2166cf89e5b9a42094823d98"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_half_plane.html#a846c843e2166cf89e5b9a42094823d98">wbwlib::geo::HalfPlane::contains</a></div><div class="ttdeci">bool contains(const PointD &amp;p) const</div><div class="ttdoc">判断点是否在半平面内。</div><div class="ttdef"><b>Definition:</b> half-plane.hpp:51</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_half_plane_html_a9244a24f4127b5815c0a5acfb9334ee9"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_half_plane.html#a9244a24f4127b5815c0a5acfb9334ee9">wbwlib::geo::HalfPlane::b</a></div><div class="ttdeci">PointD b</div><div class="ttdoc">有向直线端点</div><div class="ttdef"><b>Definition:</b> half-plane.hpp:32</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_half_plane_html_ab68233119766880281b586daf264eddd"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_half_plane.html#ab68233119766880281b586daf264eddd">wbwlib::geo::HalfPlane::HalfPlane</a></div><div class="ttdeci">HalfPlane(const PointD &amp;a_, const PointD &amp;b_)</div><div class="ttdoc">以有向直线两端点构造半平面。</div><div class="ttdef"><b>Definition:</b> half-plane.hpp:43</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_half_plane_html_afc3bf38d76890287a4c4920755d67414"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_half_plane.html#afc3bf38d76890287a4c4920755d67414">wbwlib::geo::HalfPlane::a</a></div><div class="ttdeci">PointD a</div><div class="ttdef"><b>Definition:</b> half-plane.hpp:32</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_point_html"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_point.html">wbwlib::geo::Point&lt; long double &gt;</a></div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_point_html_a0116d437097698e6875c444d1b612bd1"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_point.html#a0116d437097698e6875c444d1b612bd1">wbwlib::geo::Point::cross</a></div><div class="ttdeci">T cross(const Point &amp;o) const</div><div class="ttdoc">叉积（二维标量形式）。</div><div class="ttdef"><b>Definition:</b> point.hpp:90</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_point_html_a6dc3f48aff7297f17de31316254ad3de"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_point.html#a6dc3f48aff7297f17de31316254ad3de">wbwlib::geo::Point::x</a></div><div class="ttdeci">T x</div><div class="ttdef"><b>Definition:</b> point.hpp:28</div></div>
+<div class="ttc" id="astructwbwlib_1_1geo_1_1_point_html_a910d502bad9af5c3c88127ec8e39afb4"><div class="ttname"><a href="structwbwlib_1_1geo_1_1_point.html#a910d502bad9af5c3c88127ec8e39afb4">wbwlib::geo::Point::y</a></div><div class="ttdeci">T y</div><div class="ttdoc">坐标分量</div><div class="ttdef"><b>Definition:</b> point.hpp:28</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

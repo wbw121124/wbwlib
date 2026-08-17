@@ -5,7 +5,8 @@
  * @file bipartite.hpp
  * @brief 二分图判定（黑白染色）+ 最大匹配（匈牙利）+ 最小点覆盖/最大独立集。
  *
- * 依赖：wbwlib/core/base.hpp、wbwlib/graph/adjacency.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp、wbwlib/graph/adjacency.hpp
  *
  * 复杂度：
  *   染色 O(V+E)；匈牙利 O(VE)。
@@ -24,7 +25,12 @@
 namespace wbwlib {
 namespace graph {
 
-/// 二分图判定：返回是否可二染色；color[1..n] ∈ {0,1,2}（0=未访问）
+/**
+ * @brief 二分图判定：BFS 黑白染色，同色邻边即非二分图。
+ * @param g 无权邻接表（1 基）
+ * @param color 输出参数，接收 color[1..n] ∈ {0,1,2}（0 = 未访问）
+ * @return 可二染色返回 true，否则 false
+ */
 inline bool is_bipartite(const Adj& g, std::vector<int>& color) {
   int n = (int)g.size() - 1;
   color.assign(n + 1, 0);
@@ -49,8 +55,14 @@ inline bool is_bipartite(const Adj& g, std::vector<int>& color) {
   return true;
 }
 
-/// 匈牙利最大匹配：adjL[u] 为左点 u 连的右点集合。
-/// 返回最大匹配大小；matchR 非空时填入 matchR[v]=匹配的左点（0=未匹配）。
+/**
+ * @brief 匈牙利算法求二分图最大匹配。
+ * @param nL 左部点数（逻辑编号 1..nL）
+ * @param nR 右部点数（逻辑编号 1..nR）
+ * @param adjL adjL[u] 为左点 u 连接的右点集合（1 基）
+ * @param matchR 可选输出参数，非空时接收 matchR[v] = 匹配的左点（0 = 未匹配）
+ * @return 最大匹配大小
+ */
 inline int max_matching(int nL, int nR, const Adj& adjL,
                         std::vector<int>* matchR = nullptr) {
   std::vector<int> mL(nL + 1, 0), mR(nR + 1, 0);

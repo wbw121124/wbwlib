@@ -1,0 +1,970 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::math::modint_dyn类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1math.html">math</a></li><li class="navelem"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classwbwlib_1_1math_1_1modint__dyn-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::math::modint_dyn类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>动态模数的模整数类：模数可在运行时用 set_mod 设置。  
+ <a href="classwbwlib_1_1math_1_1modint__dyn.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="modular_8hpp_source.html">modular.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::math::modint_dyn 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwbwlib_1_1math_1_1modint__dyn__coll__graph.png" border="0" usemap="#awbwlib_1_1math_1_1modint__dyn_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1math_1_1modint__dyn_coll__map" id="awbwlib_1_1math_1_1modint__dyn_coll__map">
+<area shape="rect" title="动态模数的模整数类：模数可在运行时用 set_mod 设置。" alt="" coords="5,5,179,327"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:aa978ca51306c77fff17677061fd405e1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#aa978ca51306c77fff17677061fd405e1">value_type</a> = <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a></td></tr>
+<tr class="separator:aa978ca51306c77fff17677061fd405e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aba46b5feff67e462d154b5b66e234bf9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#aba46b5feff67e462d154b5b66e234bf9">modint_dyn</a> ()=default</td></tr>
+<tr class="memdesc:aba46b5feff67e462d154b5b66e234bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造：值为 0。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#aba46b5feff67e462d154b5b66e234bf9">更多...</a><br /></td></tr>
+<tr class="separator:aba46b5feff67e462d154b5b66e234bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade447cb3db34cdad057c72c53d181394"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#ade447cb3db34cdad057c72c53d181394">modint_dyn</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> v)</td></tr>
+<tr class="memdesc:ade447cb3db34cdad057c72c53d181394"><td class="mdescLeft">&#160;</td><td class="mdescRight">从整数构造（自动取模归一）。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#ade447cb3db34cdad057c72c53d181394">更多...</a><br /></td></tr>
+<tr class="separator:ade447cb3db34cdad057c72c53d181394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dcd4d379151a9d7a35a87075e09727c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#a0dcd4d379151a9d7a35a87075e09727c">val</a> () const</td></tr>
+<tr class="memdesc:a0dcd4d379151a9d7a35a87075e09727c"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回内部数值（[0, 当前模数) 内）  <a href="classwbwlib_1_1math_1_1modint__dyn.html#a0dcd4d379151a9d7a35a87075e09727c">更多...</a><br /></td></tr>
+<tr class="separator:a0dcd4d379151a9d7a35a87075e09727c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b6a187fac426e4a58b9fcacda6b1858"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#a9b6a187fac426e4a58b9fcacda6b1858">operator i64</a> () const</td></tr>
+<tr class="memdesc:a9b6a187fac426e4a58b9fcacda6b1858"><td class="mdescLeft">&#160;</td><td class="mdescRight">显式转换为 i64。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#a9b6a187fac426e4a58b9fcacda6b1858">更多...</a><br /></td></tr>
+<tr class="separator:a9b6a187fac426e4a58b9fcacda6b1858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1a301fd8758c2abe7387ce92e7bfd8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#ad1a301fd8758c2abe7387ce92e7bfd8a">operator+</a> (const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;o) const</td></tr>
+<tr class="memdesc:ad1a301fd8758c2abe7387ce92e7bfd8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">加法。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#ad1a301fd8758c2abe7387ce92e7bfd8a">更多...</a><br /></td></tr>
+<tr class="separator:ad1a301fd8758c2abe7387ce92e7bfd8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a9f3d1549187c867a43db8b6ce4038"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#a19a9f3d1549187c867a43db8b6ce4038">operator-</a> (const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;o) const</td></tr>
+<tr class="memdesc:a19a9f3d1549187c867a43db8b6ce4038"><td class="mdescLeft">&#160;</td><td class="mdescRight">减法。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#a19a9f3d1549187c867a43db8b6ce4038">更多...</a><br /></td></tr>
+<tr class="separator:a19a9f3d1549187c867a43db8b6ce4038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d2727af2af0a20ca7522118a736f94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#ac3d2727af2af0a20ca7522118a736f94">operator*</a> (const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;o) const</td></tr>
+<tr class="memdesc:ac3d2727af2af0a20ca7522118a736f94"><td class="mdescLeft">&#160;</td><td class="mdescRight">乘法。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#ac3d2727af2af0a20ca7522118a736f94">更多...</a><br /></td></tr>
+<tr class="separator:ac3d2727af2af0a20ca7522118a736f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d3d98b33432445196aadb53bf70cb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#aa8d3d98b33432445196aadb53bf70cb1">operator/</a> (const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;o) const</td></tr>
+<tr class="memdesc:aa8d3d98b33432445196aadb53bf70cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">除法：乘以 o 的逆元（要求与当前模数互质）。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#aa8d3d98b33432445196aadb53bf70cb1">更多...</a><br /></td></tr>
+<tr class="separator:aa8d3d98b33432445196aadb53bf70cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35f5d3b1460c31da1cdb07edfaa179ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#a35f5d3b1460c31da1cdb07edfaa179ae">operator+=</a> (const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;o)</td></tr>
+<tr class="memdesc:a35f5d3b1460c31da1cdb07edfaa179ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">加法赋值。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#a35f5d3b1460c31da1cdb07edfaa179ae">更多...</a><br /></td></tr>
+<tr class="separator:a35f5d3b1460c31da1cdb07edfaa179ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f59c36cd1e9013589b74f7f8999591d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#a7f59c36cd1e9013589b74f7f8999591d">operator-=</a> (const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;o)</td></tr>
+<tr class="memdesc:a7f59c36cd1e9013589b74f7f8999591d"><td class="mdescLeft">&#160;</td><td class="mdescRight">减法赋值。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#a7f59c36cd1e9013589b74f7f8999591d">更多...</a><br /></td></tr>
+<tr class="separator:a7f59c36cd1e9013589b74f7f8999591d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eaa52cbc4322643af2f56d91a6395fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#a8eaa52cbc4322643af2f56d91a6395fe">operator*=</a> (const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;o)</td></tr>
+<tr class="memdesc:a8eaa52cbc4322643af2f56d91a6395fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">乘法赋值。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#a8eaa52cbc4322643af2f56d91a6395fe">更多...</a><br /></td></tr>
+<tr class="separator:a8eaa52cbc4322643af2f56d91a6395fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89bedaf66eed88e5016e917cc2ee9380"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#a89bedaf66eed88e5016e917cc2ee9380">operator/=</a> (const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;o)</td></tr>
+<tr class="memdesc:a89bedaf66eed88e5016e917cc2ee9380"><td class="mdescLeft">&#160;</td><td class="mdescRight">除法赋值。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#a89bedaf66eed88e5016e917cc2ee9380">更多...</a><br /></td></tr>
+<tr class="separator:a89bedaf66eed88e5016e917cc2ee9380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14edb75da58dd1b9c01173c0d9e4c73e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#a14edb75da58dd1b9c01173c0d9e4c73e">operator-</a> () const</td></tr>
+<tr class="memdesc:a14edb75da58dd1b9c01173c0d9e4c73e"><td class="mdescLeft">&#160;</td><td class="mdescRight">一元负号。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#a14edb75da58dd1b9c01173c0d9e4c73e">更多...</a><br /></td></tr>
+<tr class="separator:a14edb75da58dd1b9c01173c0d9e4c73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27c1af340491dc8fad30d9d6afd2e002"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#a27c1af340491dc8fad30d9d6afd2e002">operator==</a> (const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;o) const</td></tr>
+<tr class="memdesc:a27c1af340491dc8fad30d9d6afd2e002"><td class="mdescLeft">&#160;</td><td class="mdescRight">相等比较。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#a27c1af340491dc8fad30d9d6afd2e002">更多...</a><br /></td></tr>
+<tr class="separator:a27c1af340491dc8fad30d9d6afd2e002"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a263eb4a5c85b1e3ba7ca1ea8ed39cf2a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#a263eb4a5c85b1e3ba7ca1ea8ed39cf2a">operator!=</a> (const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;o) const</td></tr>
+<tr class="memdesc:a263eb4a5c85b1e3ba7ca1ea8ed39cf2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">不等比较。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#a263eb4a5c85b1e3ba7ca1ea8ed39cf2a">更多...</a><br /></td></tr>
+<tr class="separator:a263eb4a5c85b1e3ba7ca1ea8ed39cf2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3003c28c974b189c2fd842ecd843ca4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#aa3003c28c974b189c2fd842ecd843ca4">pow</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> p) const</td></tr>
+<tr class="memdesc:aa3003c28c974b189c2fd842ecd843ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">快速幂：计算 \(a^p\) 对当前模数取模。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#aa3003c28c974b189c2fd842ecd843ca4">更多...</a><br /></td></tr>
+<tr class="separator:aa3003c28c974b189c2fd842ecd843ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03bb92a1f19baa95c1a9365f429d043e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#a03bb92a1f19baa95c1a9365f429d043e">inv</a> () const</td></tr>
+<tr class="memdesc:a03bb92a1f19baa95c1a9365f429d043e"><td class="mdescLeft">&#160;</td><td class="mdescRight">求逆元（扩展欧几里得；要求与当前模数互质）。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#a03bb92a1f19baa95c1a9365f429d043e">更多...</a><br /></td></tr>
+<tr class="separator:a03bb92a1f19baa95c1a9365f429d043e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a89d9fbd5d5cb0947611ceaae888058af"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#a89d9fbd5d5cb0947611ceaae888058af">mod_value</a> ()</td></tr>
+<tr class="memdesc:a89d9fbd5d5cb0947611ceaae888058af"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前模数  <a href="classwbwlib_1_1math_1_1modint__dyn.html#a89d9fbd5d5cb0947611ceaae888058af">更多...</a><br /></td></tr>
+<tr class="separator:a89d9fbd5d5cb0947611ceaae888058af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed1aed86902f86d1de2ede2dfb166f2d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#aed1aed86902f86d1de2ede2dfb166f2d">set_mod</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> mod)</td></tr>
+<tr class="memdesc:aed1aed86902f86d1de2ede2dfb166f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置全局模数（须为正）。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#aed1aed86902f86d1de2ede2dfb166f2d">更多...</a><br /></td></tr>
+<tr class="separator:aed1aed86902f86d1de2ede2dfb166f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a631ae89d67e7c63bb638e03468231532"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#a631ae89d67e7c63bb638e03468231532">get_mod</a> ()</td></tr>
+<tr class="memdesc:a631ae89d67e7c63bb638e03468231532"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回当前模数  <a href="classwbwlib_1_1math_1_1modint__dyn.html#a631ae89d67e7c63bb638e03468231532">更多...</a><br /></td></tr>
+<tr class="separator:a631ae89d67e7c63bb638e03468231532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a17e61c314818a55252b3195bc926bccf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#a17e61c314818a55252b3195bc926bccf">m</a> ()</td></tr>
+<tr class="memdesc:a17e61c314818a55252b3195bc926bccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前全局模数（函数局部静态，默认 1000000007）  <a href="classwbwlib_1_1math_1_1modint__dyn.html#a17e61c314818a55252b3195bc926bccf">更多...</a><br /></td></tr>
+<tr class="separator:a17e61c314818a55252b3195bc926bccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bef191ea098ede01c47183000737993"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#a3bef191ea098ede01c47183000737993">norm</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> x)</td></tr>
+<tr class="memdesc:a3bef191ea098ede01c47183000737993"><td class="mdescLeft">&#160;</td><td class="mdescRight">将 x 归一到 [0, 当前模数) 区间  <a href="classwbwlib_1_1math_1_1modint__dyn.html#a3bef191ea098ede01c47183000737993">更多...</a><br /></td></tr>
+<tr class="separator:a3bef191ea098ede01c47183000737993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a49ba4016c9b8156e7d2f0ba2e2f93ead"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#a49ba4016c9b8156e7d2f0ba2e2f93ead">v_</a></td></tr>
+<tr class="separator:a49ba4016c9b8156e7d2f0ba2e2f93ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>动态模数的模整数类：模数可在运行时用 set_mod 设置。 </p>
+<p>内部用函数局部静态变量保存模数，多线程不安全（OI 无害）。运算与固定版一致； 逆元同样依赖于被调用时的当前模数。 </p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="aa978ca51306c77fff17677061fd405e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa978ca51306c77fff17677061fd405e1">&#9670;&nbsp;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html#aa978ca51306c77fff17677061fd405e1">wbwlib::math::modint_dyn::value_type</a> =  <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aba46b5feff67e462d154b5b66e234bf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba46b5feff67e462d154b5b66e234bf9">&#9670;&nbsp;</a></span>modint_dyn() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wbwlib::math::modint_dyn::modint_dyn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认构造：值为 0。 </p>
+
+</div>
+</div>
+<a id="ade447cb3db34cdad057c72c53d181394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade447cb3db34cdad057c72c53d181394">&#9670;&nbsp;</a></span>modint_dyn() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wbwlib::math::modint_dyn::modint_dyn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从整数构造（自动取模归一）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>初始值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a631ae89d67e7c63bb638e03468231532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a631ae89d67e7c63bb638e03468231532">&#9670;&nbsp;</a></span>get_mod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> wbwlib::math::modint_dyn::get_mod </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回当前模数 </p>
+
+</div>
+</div>
+<a id="a03bb92a1f19baa95c1a9365f429d043e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03bb92a1f19baa95c1a9365f429d043e">&#9670;&nbsp;</a></span>inv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> wbwlib::math::modint_dyn::inv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>求逆元（扩展欧几里得；要求与当前模数互质）。 </p>
+<dl class="section return"><dt>返回</dt><dd>满足 \(v \cdot x \equiv 1\)（当前模数）的 x；v 为 0 时报错 </dd></dl>
+
+</div>
+</div>
+<a id="a17e61c314818a55252b3195bc926bccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17e61c314818a55252b3195bc926bccf">&#9670;&nbsp;</a></span>m()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&amp; wbwlib::math::modint_dyn::m </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前全局模数（函数局部静态，默认 1000000007） </p>
+
+</div>
+</div>
+<a id="a89d9fbd5d5cb0947611ceaae888058af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d9fbd5d5cb0947611ceaae888058af">&#9670;&nbsp;</a></span>mod_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> wbwlib::math::modint_dyn::mod_value </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前模数 </p>
+
+</div>
+</div>
+<a id="a3bef191ea098ede01c47183000737993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bef191ea098ede01c47183000737993">&#9670;&nbsp;</a></span>norm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> wbwlib::math::modint_dyn::norm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将 x 归一到 [0, 当前模数) 区间 </p>
+
+</div>
+</div>
+<a id="a9b6a187fac426e4a58b9fcacda6b1858"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b6a187fac426e4a58b9fcacda6b1858">&#9670;&nbsp;</a></span>operator i64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wbwlib::math::modint_dyn::operator <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>显式转换为 i64。 </p>
+<dl class="section return"><dt>返回</dt><dd>内部数值 </dd></dl>
+
+</div>
+</div>
+<a id="a263eb4a5c85b1e3ba7ca1ea8ed39cf2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a263eb4a5c85b1e3ba7ca1ea8ed39cf2a">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wbwlib::math::modint_dyn::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>不等比较。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>比较对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>数值不等返回 true </dd></dl>
+
+</div>
+</div>
+<a id="ac3d2727af2af0a20ca7522118a736f94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3d2727af2af0a20ca7522118a736f94">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> wbwlib::math::modint_dyn::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>乘法。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>乘数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>积（已取模） </dd></dl>
+
+</div>
+</div>
+<a id="a8eaa52cbc4322643af2f56d91a6395fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eaa52cbc4322643af2f56d91a6395fe">&#9670;&nbsp;</a></span>operator*=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a>&amp; wbwlib::math::modint_dyn::operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>乘法赋值。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>乘数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>自身引用 </dd></dl>
+
+</div>
+</div>
+<a id="ad1a301fd8758c2abe7387ce92e7bfd8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1a301fd8758c2abe7387ce92e7bfd8a">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> wbwlib::math::modint_dyn::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>加法。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>加数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>和（已取模） </dd></dl>
+
+</div>
+</div>
+<a id="a35f5d3b1460c31da1cdb07edfaa179ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35f5d3b1460c31da1cdb07edfaa179ae">&#9670;&nbsp;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a>&amp; wbwlib::math::modint_dyn::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>加法赋值。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>加数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>自身引用 </dd></dl>
+
+</div>
+</div>
+<a id="a14edb75da58dd1b9c01173c0d9e4c73e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14edb75da58dd1b9c01173c0d9e4c73e">&#9670;&nbsp;</a></span>operator-() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> wbwlib::math::modint_dyn::operator- </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>一元负号。 </p>
+<dl class="section return"><dt>返回</dt><dd>相反数（已取模） </dd></dl>
+
+</div>
+</div>
+<a id="a19a9f3d1549187c867a43db8b6ce4038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19a9f3d1549187c867a43db8b6ce4038">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> wbwlib::math::modint_dyn::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>减法。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>减数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>差（已取模） </dd></dl>
+
+</div>
+</div>
+<a id="a7f59c36cd1e9013589b74f7f8999591d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f59c36cd1e9013589b74f7f8999591d">&#9670;&nbsp;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a>&amp; wbwlib::math::modint_dyn::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>减法赋值。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>减数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>自身引用 </dd></dl>
+
+</div>
+</div>
+<a id="aa8d3d98b33432445196aadb53bf70cb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8d3d98b33432445196aadb53bf70cb1">&#9670;&nbsp;</a></span>operator/()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> wbwlib::math::modint_dyn::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>除法：乘以 o 的逆元（要求与当前模数互质）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>除数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>商（已取模） </dd></dl>
+
+</div>
+</div>
+<a id="a89bedaf66eed88e5016e917cc2ee9380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89bedaf66eed88e5016e917cc2ee9380">&#9670;&nbsp;</a></span>operator/=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a>&amp; wbwlib::math::modint_dyn::operator/= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>除法赋值。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>除数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>自身引用 </dd></dl>
+
+</div>
+</div>
+<a id="a27c1af340491dc8fad30d9d6afd2e002"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27c1af340491dc8fad30d9d6afd2e002">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wbwlib::math::modint_dyn::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>相等比较。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>比较对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>数值相等返回 true </dd></dl>
+
+</div>
+</div>
+<a id="aa3003c28c974b189c2fd842ecd843ca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3003c28c974b189c2fd842ecd843ca4">&#9670;&nbsp;</a></span>pow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> wbwlib::math::modint_dyn::pow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>快速幂：计算 \(a^p\) 对当前模数取模。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>指数（非负） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(a^p \bmod m\) </dd></dl>
+
+</div>
+</div>
+<a id="aed1aed86902f86d1de2ede2dfb166f2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed1aed86902f86d1de2ede2dfb166f2d">&#9670;&nbsp;</a></span>set_mod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void wbwlib::math::modint_dyn::set_mod </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>mod</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置全局模数（须为正）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mod</td><td>新模数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0dcd4d379151a9d7a35a87075e09727c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dcd4d379151a9d7a35a87075e09727c">&#9670;&nbsp;</a></span>val()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> wbwlib::math::modint_dyn::val </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回内部数值（[0, 当前模数) 内） </p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a49ba4016c9b8156e7d2f0ba2e2f93ead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49ba4016c9b8156e7d2f0ba2e2f93ead">&#9670;&nbsp;</a></span>v_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> wbwlib::math::modint_dyn::v_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>wbwlib/math/<a class="el" href="modular_8hpp_source.html">modular.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,7 @@
+digraph "wbwlib::ds::CartesianTree"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::ds::CartesianTree\n|+ root\l+ l\l+ r\l+ fa\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="笛卡尔树构建结果：根下标及每个节点的左右孩子、父节点（0 表示无）。"];
+}

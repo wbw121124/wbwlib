@@ -1,0 +1,18 @@
+
+digraph wbwlib {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef2ff", fontname="Microsoft YaHei"];
+  "core" [label="core\n基础"];
+  "math" [label="math\n数学"];
+  "ds"   [label="datastruct\n数据结构"];
+  "str"  [label="string\n字符串"];
+  "graph"[label="graph\n图论"];
+  "dp"   [label="dp\n动态规划"];
+  "geo"  [label="geo\n计算几何"];
+  "misc" [label="misc\n大整数"];
+  "wbw"  [label="wbwlib.hpp\n聚合入口", fillcolor="#dbeafe"];
+  "math" -> "core"; "ds" -> "core"; "str" -> "core"; "graph" -> "core"; "dp" -> "core"; "geo" -> "core"; "misc" -> "core";
+  "graph" -> "ds"; "graph" -> "str";
+  "dp" -> "ds"; "dp" -> "geo";
+  "wbw" -> {"core" "math" "ds" "str" "graph" "dp" "geo" "misc"};
+}

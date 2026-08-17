@@ -5,13 +5,18 @@
  * @file cartesian-tree.hpp
  * @brief 笛卡尔树：中序遍历为原序列、满足堆性质的二叉树。
  *
- * 依赖：wbwlib/core/base.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp
  *
- * 复杂度：O(n)（单调栈）。
+ * @par 复杂度
+ * O(n)（单调栈）。
  *
- * 用法：构建小根笛卡尔树（值越小越接近根）：
+ * @par 示例
+ * @code{.cpp}
+ * 构建小根笛卡尔树（值越小越接近根）：
  *   auto [root, l, r] = wbwlib::ds::cartesian_tree(a, false);
  *   // l[i], r[i] 为 i 的左右孩子（0 表示无）；root 为根
+ * @endcode
  */
 
 #include <functional>
@@ -21,12 +26,24 @@
 namespace wbwlib {
 namespace ds {
 
+/**
+ * @brief 笛卡尔树构建结果：根下标及每个节点的左右孩子、父节点（0 表示无）。
+ */
 struct CartesianTree {
   int root = 0;              ///< 根的下标（1 基）
   std::vector<int> l, r, fa; ///< 左孩子、右孩子、父节点（无则 0）
 };
 
-/// a 为 1 基（a[0] 占位）。is_max=true 建大根笛卡尔树，否则小根。
+/**
+ * @brief 构建笛卡尔树：中序遍历为原序列、满足堆性质的二叉树。
+ *
+ * is_max=true 建大根笛卡尔树，否则小根。
+ * @tparam T 元素类型
+ * @tparam Cmp 比较器（默认 std::less，用于大根模式）
+ * @param a 1 基数组（a[0] 占位）
+ * @param is_max true 建大根笛卡尔树，false 建小根
+ * @return 笛卡尔树（root 为根下标，l/r/fa 为左右孩子与父节点，0 表示无）
+ */
 template<class T, class Cmp = std::less<T>>
 inline CartesianTree cartesian_tree(const std::vector<T>& a, bool is_max = false) {
   int n = (int)a.size() - 1;

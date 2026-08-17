@@ -1,0 +1,303 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::str::Trie01&lt; T, BITS &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1str.html">str</a></li><li class="navelem"><a class="el" href="classwbwlib_1_1str_1_1_trie01.html">Trie01</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classwbwlib_1_1str_1_1_trie01-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::str::Trie01&lt; T, BITS &gt; 模板类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>模板化 01-Trie：值类型与位宽可自定义，支持插入与异或最大值查询。  
+ <a href="classwbwlib_1_1str_1_1_trie01.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="trie_8hpp_source.html">trie.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::str::Trie01&lt; T, BITS &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwbwlib_1_1str_1_1_trie01__coll__graph.png" border="0" usemap="#awbwlib_1_1str_1_1_trie01_3_01_t_00_01_b_i_t_s_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1str_1_1_trie01_3_01_t_00_01_b_i_t_s_01_4_coll__map" id="awbwlib_1_1str_1_1_trie01_3_01_t_00_01_b_i_t_s_01_4_coll__map">
+<area shape="rect" title="模板化 01&#45;Trie：值类型与位宽可自定义，支持插入与异或最大值查询。" alt="" coords="5,5,134,135"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1str_1_1_trie01_1_1_node.html">Node</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ace0851377fc36ff68546a3da9e4c0b7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_trie01.html#ace0851377fc36ff68546a3da9e4c0b7f">Trie01</a> ()</td></tr>
+<tr class="memdesc:ace0851377fc36ff68546a3da9e4c0b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造空 01-Trie，自动创建根节点 tr_[0]  <a href="classwbwlib_1_1str_1_1_trie01.html#ace0851377fc36ff68546a3da9e4c0b7f">更多...</a><br /></td></tr>
+<tr class="separator:ace0851377fc36ff68546a3da9e4c0b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ff47b017ff1cbb1da139bc21b9f05fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_trie01.html#a1ff47b017ff1cbb1da139bc21b9f05fe">insert</a> (T x)</td></tr>
+<tr class="memdesc:a1ff47b017ff1cbb1da139bc21b9f05fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入一个 T 类型整数（取其低 BITS 位）。  <a href="classwbwlib_1_1str_1_1_trie01.html#a1ff47b017ff1cbb1da139bc21b9f05fe">更多...</a><br /></td></tr>
+<tr class="separator:a1ff47b017ff1cbb1da139bc21b9f05fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef072d663ec6e667bda9e4b7ce9045d2"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_trie01.html#aef072d663ec6e667bda9e4b7ce9045d2">xor_max</a> (T x) const</td></tr>
+<tr class="memdesc:aef072d663ec6e667bda9e4b7ce9045d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询与 x 异或最大值 \(\max_y (x \oplus y)\)，其中 y 遍历已插入元素。  <a href="classwbwlib_1_1str_1_1_trie01.html#aef072d663ec6e667bda9e4b7ce9045d2">更多...</a><br /></td></tr>
+<tr class="separator:aef072d663ec6e667bda9e4b7ce9045d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a2237e3a150c8cac7ddee779e8fd91f81"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structwbwlib_1_1str_1_1_trie01_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_trie01.html#a2237e3a150c8cac7ddee779e8fd91f81">tr_</a></td></tr>
+<tr class="separator:a2237e3a150c8cac7ddee779e8fd91f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><h3>template&lt;class T = u32, int BITS = 32&gt;<br />
+class wbwlib::str::Trie01&lt; T, BITS &gt;</h3>
+
+<p>模板化 01-Trie：值类型与位宽可自定义，支持插入与异或最大值查询。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>值类型（须为无符号整型，默认 u32） </td></tr>
+    <tr><td class="paramname">BITS</td><td>位宽（默认 32；64 位可传 64） </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ace0851377fc36ff68546a3da9e4c0b7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace0851377fc36ff68546a3da9e4c0b7f">&#9670;&nbsp;</a></span>Trie01()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = u32, int BITS = 32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1str_1_1_trie01.html">wbwlib::str::Trie01</a>&lt; T, BITS &gt;::<a class="el" href="classwbwlib_1_1str_1_1_trie01.html">Trie01</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造空 01-Trie，自动创建根节点 tr_[0] </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a1ff47b017ff1cbb1da139bc21b9f05fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ff47b017ff1cbb1da139bc21b9f05fe">&#9670;&nbsp;</a></span>insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = u32, int BITS = 32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1str_1_1_trie01.html">wbwlib::str::Trie01</a>&lt; T, BITS &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>插入一个 T 类型整数（取其低 BITS 位）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>待插入整数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aef072d663ec6e667bda9e4b7ce9045d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef072d663ec6e667bda9e4b7ce9045d2">&#9670;&nbsp;</a></span>xor_max()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = u32, int BITS = 32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classwbwlib_1_1str_1_1_trie01.html">wbwlib::str::Trie01</a>&lt; T, BITS &gt;::xor_max </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>查询与 x 异或最大值 \(\max_y (x \oplus y)\)，其中 y 遍历已插入元素。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>查询值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>最大异或值 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a2237e3a150c8cac7ddee779e8fd91f81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2237e3a150c8cac7ddee779e8fd91f81">&#9670;&nbsp;</a></span>tr_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = u32, int BITS = 32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structwbwlib_1_1str_1_1_trie01_1_1_node.html">Node</a>&gt; <a class="el" href="classwbwlib_1_1str_1_1_trie01.html">wbwlib::str::Trie01</a>&lt; T, BITS &gt;::tr_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>wbwlib/string/<a class="el" href="trie_8hpp_source.html">trie.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

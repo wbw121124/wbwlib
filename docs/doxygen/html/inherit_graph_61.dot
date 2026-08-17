@@ -1,0 +1,8 @@
+digraph "类继承关系图"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="wbwlib::math::SieveResult",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwbwlib_1_1math_1_1_sieve_result.html",tooltip="线性筛的结果：素数列表、欧拉函数、莫比乌斯函数与素性标记（均含下标 0..n）。"];
+}

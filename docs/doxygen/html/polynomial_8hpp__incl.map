@@ -1,0 +1,18 @@
+<map id="wbwlib/math/polynomial.hpp" name="wbwlib/math/polynomial.hpp">
+<area shape="rect" id="node1" title="多项式运算（形式幂级数，截断到指定长度）。" alt="" coords="127,5,313,33"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,81,80,109"/>
+<area shape="rect" id="node3" title=" " alt="" coords="139,325,197,353"/>
+<area shape="rect" id="node4" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="473,325,620,353"/>
+<area shape="rect" id="node11" href="$fourier_8hpp.html" title="卷积加速：复数 FFT 与数论变换 NTT。" alt="" coords="199,81,358,109"/>
+<area shape="rect" id="node5" title=" " alt="" coords="771,401,831,429"/>
+<area shape="rect" id="node6" title=" " alt="" coords="385,401,449,429"/>
+<area shape="rect" id="node7" title=" " alt="" coords="473,401,537,429"/>
+<area shape="rect" id="node8" title=" " alt="" coords="562,401,640,429"/>
+<area shape="rect" id="node9" title=" " alt="" coords="664,401,746,429"/>
+<area shape="rect" id="node10" title=" " alt="" coords="308,401,361,429"/>
+<area shape="rect" id="node12" title=" " alt="" coords="206,157,263,185"/>
+<area shape="rect" id="node13" title=" " alt="" coords="287,157,358,185"/>
+<area shape="rect" id="node14" href="$modular_8hpp.html" title="模意义整数类 modint（固定模版）与动态模版。" alt="" coords="382,157,551,185"/>
+<area shape="rect" id="node15" title=" " alt="" coords="480,241,552,269"/>
+<area shape="rect" id="node16" href="$number-theory_8hpp.html" title="数论基础：快速幂、快速乘、gcd/lcm、扩展欧几里得、逆元、CRT/EXCRT、欧拉定理、整除分块。" alt="" coords="264,233,405,277"/>
+</map>

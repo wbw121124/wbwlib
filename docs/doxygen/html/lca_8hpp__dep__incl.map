@@ -1,0 +1,6 @@
+<map id="wbwlib/graph/lca.hpp" name="wbwlib/graph/lca.hpp">
+<area shape="rect" id="node1" title="LCA：倍增法（O(n log n) 预处理，O(log n) 查询）+ 树深/距离/第 k 祖先。" alt="" coords="13,5,156,33"/>
+<area shape="rect" id="node2" href="$graph_8hpp.html" title="graph 模块聚合头：一次引入本模块全部头文件。" alt="" coords="5,173,164,201"/>
+<area shape="rect" id="node4" href="$virtual-tree_8hpp.html" title="虚树：保留关键点及其两两 LCA，压缩成 O(k) 规模的树。" alt="" coords="70,81,206,125"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="19,249,150,277"/>
+</map>

@@ -1,0 +1,7 @@
+digraph "wbwlib::graph::LCA"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::graph::LCA\n|+ fa\l+ dep\l+ sz\l+ tin\l+ tout\l+ LOG\l- up_\l|+ LCA()\l+ build()\l+ is_ancestor()\l+ query()\l+ kth()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="LCA：倍增法，O(n log n) 预处理、O(log n) 查询，附树深/子树大小/DFS 序/第 k 祖先。"];
+}

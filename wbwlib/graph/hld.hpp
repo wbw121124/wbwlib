@@ -5,15 +5,19 @@
  * @file hld.hpp
  * @brief 树链剖分（HLD）：剖分 + 路径/子树区间映射，供线段树等配合。
  *
- * 依赖：wbwlib/core/base.hpp、wbwlib/graph/adjacency.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp、wbwlib/graph/adjacency.hpp
  *
- * 复杂度：预处理 O(n)，单次路径 O(log^2 n) 段，子树 O(1) 区间。
+ * @par 复杂度
+ * 预处理 O(n)，单次路径 O(log^2 n) 段，子树 O(1) 区间。
  *
- * 用法：
+ * @par 示例
+ * @code{.cpp}
  *   wbwlib::graph::HLD hld(g, 1);
  *   hld.path(u, v, [&](int l, int r){ seg.update(l, r, x); });  // 含重链区间，顺序为 u→v
  *   hld.subtree(u, [&](int l, int r){ ... });                    // 子树对应区间 [l,r]
  *   节点权值直接用 posIn[u]（轻链底端朝上）；边权把权挂到子节点。
+ * @endcode
  */
 
 #include <vector>
@@ -25,14 +29,27 @@
 namespace wbwlib {
 namespace graph {
 
+/**
+ * @brief 树链剖分 HLD：轻重链剖分，把路径/子树映射为基础数组区间，供线段树等配合。
+ */
 class HLD {
  public:
   std::vector<int> fa, dep, sz, son, top, pos;  ///< pos = 点在基础数组中的下标（1 基）
   std::vector<int> order;                       ///< 剖分顺序（按重链）
   int n, timer;
 
+  /**
+   * @brief 构建树链剖分。
+   * @param g 树的邻接表（无向，1 基）
+   * @param root 根节点，默认 1
+   */
   HLD(const Adj& g, int root = 1) { build(g, root); }
 
+  /**
+   * @brief 构建：第一遍 DFS 求 fa/dep/sz/son，第二遍重儿子优先线性化。
+   * @param g 树的邻接表（无向，1 基）
+   * @param root 根节点，默认 1
+   */
   void build(const Adj& g, int root = 1) {
     n = (int)g.size() - 1;
     timer = 0;
@@ -71,13 +88,24 @@ class HLD {
     dfs2(root, root);
   }
 
-  /// u 子树在基础数组中的区间为 [pos[u], pos[u] + sz[u] - 1]
+  /**
+   * @brief 枚举 u 子树对应的区间，回调 cb(l, r)（连续区间 [pos[u], pos[u]+sz[u]-1]）。
+   * @tparam F 回调类型
+   * @param u 子树根（1 基）
+   * @param cb 接收区间 [l, r] 的回调
+   */
   template<class F>
   void subtree(int u, F&& cb) {
     cb(pos[u], pos[u] + sz[u] - 1);
   }
 
-  /// 枚举 u→v 路径拆成的 [l,r] 段（重链顶端朝下递增），顺序为从 u 一直朝 v
+  /**
+   * @brief 枚举 u→v 路径拆成的 [l,r] 段（重链顶端朝下递增），顺序为从 u 一直到 v。
+   * @tparam F 回调类型
+   * @param u 路径起点（1 基）
+   * @param v 路径终点（1 基）
+   * @param cb 按顺序接收每段区间 [l, r] 的回调
+   */
   template<class F>
   void path(int u, int v, F&& cb) {
     std::vector<std::pair<int, int>> left, right;
@@ -98,7 +126,12 @@ class HLD {
       cb(right[i].first, right[i].second);
   }
 
-  /// 路径 LCA（树链上直接可得）
+  /**
+   * @brief 求 u 与 v 的最近公共祖先（利用链顶跳跃）。
+   * @param u 点（1 基）
+   * @param v 点（1 基）
+   * @return LCA 节点编号
+   */
   int lca(int u, int v) const {
     while (top[u] != top[v]) {
       if (dep[top[u]] < dep[top[v]]) std::swap(u, v);

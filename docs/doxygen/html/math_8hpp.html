@@ -1,0 +1,188 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/math/math.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_3daf11f4f079b8f8f9a94cd388c9bdee.html">math</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">math.hpp 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>math 模块聚合头：一次引入本模块全部头文件。  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="bsgs_8hpp_source.html">wbwlib/math/bsgs.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="combinatorics_8hpp_source.html">wbwlib/math/combinatorics.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="floor-sum_8hpp_source.html">wbwlib/math/floor-sum.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fourier_8hpp_source.html">wbwlib/math/fourier.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fraction_8hpp_source.html">wbwlib/math/fraction.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fwt_8hpp_source.html">wbwlib/math/fwt.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="linalg_8hpp_source.html">wbwlib/math/linalg.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="matrix_8hpp_source.html">wbwlib/math/matrix.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="modular_8hpp_source.html">wbwlib/math/modular.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="number-theory_8hpp_source.html">wbwlib/math/number-theory.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="polynomial_8hpp_source.html">wbwlib/math/polynomial.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="primes_8hpp_source.html">wbwlib/math/primes.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="primitive-root_8hpp_source.html">wbwlib/math/primitive-root.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+math.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="math_8hpp__incl.png" border="0" usemap="#awbwlib_2math_2math_8hpp" alt=""/></div>
+<map name="awbwlib_2math_2math_8hpp" id="awbwlib_2math_2math_8hpp">
+<area shape="rect" title="math 模块聚合头：一次引入本模块全部头文件。" alt="" coords="856,5,1009,33"/>
+<area shape="rect" href="bsgs_8hpp.html" title="大步小步法 Baby&#45;Step&#45;Giant&#45;Step：解离散对数 a^x ≡ b (mod p)。" alt="" coords="579,249,731,277"/>
+<area shape="rect" href="number-theory_8hpp.html" title="数论基础：快速幂、快速乘、gcd/lcm、扩展欧几里得、逆元、CRT/EXCRT、欧拉定理、整除分块。" alt="" coords="736,325,878,369"/>
+<area shape="rect" href="combinatorics_8hpp.html" title="组合计数工具：阶乘/逆元预计算、组合数、排列数、Lucas、卡特兰、 两型斯特林数、错排数。" alt="" coords="192,165,396,193"/>
+<area shape="rect" href="modular_8hpp.html" title="模意义整数类 modint（固定模版）与动态模版。" alt="" coords="284,249,453,277"/>
+<area shape="rect" href="floor-sum_8hpp.html" title="数论求和：ACL 风格 floor_sum（I/(n,m,a,b)：sum_{i=0}^{n&#45;1} floor((a*i+b)/m)）。" alt="" coords="1332,249,1509,277"/>
+<area shape="rect" href="fourier_8hpp.html" title="卷积加速：复数 FFT 与数论变换 NTT。" alt="" coords="970,165,1129,193"/>
+<area shape="rect" href="fraction_8hpp.html" title="精确有理数（分数）类：自动约分，支持全部算术/比较/输出。" alt="" coords="43,249,209,277"/>
+<area shape="rect" href="fwt_8hpp.html" title="快速沃尔什变换 FWT：集合幂级数的 OR / AND / XOR 卷积。" alt="" coords="471,165,612,193"/>
+<area shape="rect" href="linalg_8hpp.html" title="线性代数：高斯消元（复杂类型通用，支持浮点/模）、异或线性基。" alt="" coords="857,249,1010,277"/>
+<area shape="rect" href="matrix_8hpp.html" title="矩阵类：加/乘、快速幂、转置、单位阵、向量乘法。" alt="" coords="1638,333,1797,361"/>
+<area shape="rect" href="polynomial_8hpp.html" title="多项式运算（形式幂级数，截断到指定长度）。" alt="" coords="1454,81,1640,109"/>
+<area shape="rect" href="primes_8hpp.html" title="质数工具：线性筛（素数/欧拉函数/莫比乌斯函数）、Miller&#45;Rabin 素性测试、 Pollard&#45;Rho 质因数分解。" alt="" coords="1635,249,1798,277"/>
+<area shape="rect" href="primitive-root_8hpp.html" title="原根求解：求模 p 意义下的最小原根（常用 NTT 前置，p 为质数）。" alt="" coords="1161,157,1309,201"/>
+<area shape="rect" title=" " alt="" coords="902,333,960,361"/>
+<area shape="rect" title=" " alt="" coords="603,333,713,361"/>
+<area shape="rect" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="924,417,1071,445"/>
+<area shape="rect" title=" " alt="" coords="1152,493,1212,521"/>
+<area shape="rect" title=" " alt="" coords="766,493,830,521"/>
+<area shape="rect" title=" " alt="" coords="854,493,918,521"/>
+<area shape="rect" title=" " alt="" coords="943,493,1021,521"/>
+<area shape="rect" title=" " alt="" coords="1045,493,1127,521"/>
+<area shape="rect" title=" " alt="" coords="1236,493,1288,521"/>
+<area shape="rect" title=" " alt="" coords="1284,417,1341,445"/>
+<area shape="rect" title=" " alt="" coords="305,333,376,361"/>
+<area shape="rect" title=" " alt="" coords="1350,333,1424,361"/>
+<area shape="rect" title=" " alt="" coords="1085,249,1156,277"/>
+<area shape="rect" title=" " alt="" coords="5,333,65,361"/>
+<area shape="rect" title=" " alt="" coords="89,333,157,361"/>
+<area shape="rect" title=" " alt="" coords="1550,333,1614,361"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="math_8hpp__dep__incl.png" border="0" usemap="#awbwlib_2math_2math_8hppdep" alt=""/></div>
+<map name="awbwlib_2math_2math_8hppdep" id="awbwlib_2math_2math_8hppdep">
+<area shape="rect" title="math 模块聚合头：一次引入本模块全部头文件。" alt="" coords="5,5,158,33"/>
+<area shape="rect" href="wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="16,81,147,109"/>
+</map>
+</div>
+</div>
+<p><a href="math_8hpp_source.html">浏览源代码.</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>math 模块聚合头：一次引入本模块全部头文件。 </p>
+<dl class="section user"><dt>依赖</dt><dd>各子头文件自带依赖（include guard 保证幂等）。</dd></dl>
+<dl class="section user"><dt>示例</dt><dd><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="math_8hpp.html">wbwlib/math/math.hpp</a>&gt;</span></div>
+<div class="ttc" id="amath_8hpp_html"><div class="ttname"><a href="math_8hpp.html">math.hpp</a></div><div class="ttdoc">math 模块聚合头：一次引入本模块全部头文件。</div></div>
+</div><!-- fragment --> </dd></dl>
+</div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

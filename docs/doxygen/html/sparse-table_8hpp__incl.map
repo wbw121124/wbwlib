@@ -1,0 +1,13 @@
+<map id="wbwlib/datastruct/sparse&#45;table.hpp" name="wbwlib/datastruct/sparse&#45;table.hpp">
+<area shape="rect" id="node1" title="Sparse Table ST 表：静态区间幂等查询（取 min/max/gcd/…），O(1) 查询。" alt="" coords="105,5,271,49"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,97,80,125"/>
+<area shape="rect" id="node3" title=" " alt="" coords="104,97,181,125"/>
+<area shape="rect" id="node4" title=" " alt="" coords="206,97,263,125"/>
+<area shape="rect" id="node5" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="288,97,435,125"/>
+<area shape="rect" id="node6" title=" " alt="" coords="108,173,169,201"/>
+<area shape="rect" id="node7" title=" " alt="" coords="193,173,257,201"/>
+<area shape="rect" id="node8" title=" " alt="" coords="281,173,345,201"/>
+<area shape="rect" id="node9" title=" " alt="" coords="370,173,448,201"/>
+<area shape="rect" id="node10" title=" " alt="" coords="472,173,554,201"/>
+<area shape="rect" id="node11" title=" " alt="" coords="579,173,631,201"/>
+</map>

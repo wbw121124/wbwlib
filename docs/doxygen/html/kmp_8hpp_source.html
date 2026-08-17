@@ -1,0 +1,172 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/string/kmp.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_afebc595d8b67017c6a69c4771c58b6b.html">string</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">kmp.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="kmp_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_STR_KMP_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_STR_KMP_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>str {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1str.html#aa245432ff2fd9237be2802b5d0844052">   34</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;int&gt; <a class="code" href="namespacewbwlib_1_1str.html#aa245432ff2fd9237be2802b5d0844052">prefix_function</a>(<span class="keyword">const</span> std::string&amp; s) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">int</span> n = (int)s.size();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  std::vector&lt;int&gt; pi(n, 0);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; n; ++i) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> j = pi[i - 1];</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">while</span> (j &gt; 0 &amp;&amp; s[i] != s[j]) j = pi[j - 1];</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span> (s[i] == s[j]) ++j;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    pi[i] = j;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">return</span> pi;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1str.html#a5b324d2cbf4dda075bf73b2dcc9b20ab">   52</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;int&gt; <a class="code" href="namespacewbwlib_1_1str.html#a5b324d2cbf4dda075bf73b2dcc9b20ab">kmp_search</a>(<span class="keyword">const</span> std::string&amp; pat, <span class="keyword">const</span> std::string&amp; text) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">int</span> m = (int)pat.size();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  std::vector&lt;int&gt; pos;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">if</span> (m == 0) <span class="keywordflow">return</span> pos;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  std::vector&lt;int&gt; pi = <a class="code" href="namespacewbwlib_1_1str.html#aa245432ff2fd9237be2802b5d0844052">prefix_function</a>(pat);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">int</span> j = 0;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; (int)text.size(); ++i) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">while</span> (j &gt; 0 &amp;&amp; text[i] != pat[j]) j = pi[j - 1];</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (text[i] == pat[j]) ++j;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (j == m) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      pos.push_back(i + 1);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      j = pi[j - 1];</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">return</span> pos;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1str.html#a875bd75c537e63d4ea5ccdd2d4d271f6">   74</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespacewbwlib_1_1str.html#a875bd75c537e63d4ea5ccdd2d4d271f6">min_cycle</a>(<span class="keyword">const</span> std::string&amp; s) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">int</span> n = (int)s.size();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  std::vector&lt;int&gt; pi = <a class="code" href="namespacewbwlib_1_1str.html#aa245432ff2fd9237be2802b5d0844052">prefix_function</a>(s);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">return</span> n - pi[n - 1];</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;} <span class="comment">// namespace str</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_STR_KMP_HPP</span></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1str_html_a5b324d2cbf4dda075bf73b2dcc9b20ab"><div class="ttname"><a href="namespacewbwlib_1_1str.html#a5b324d2cbf4dda075bf73b2dcc9b20ab">wbwlib::str::kmp_search</a></div><div class="ttdeci">std::vector&lt; int &gt; kmp_search(const std::string &amp;pat, const std::string &amp;text)</div><div class="ttdoc">KMP 单模式匹配：借助前缀函数线性扫描文本。</div><div class="ttdef"><b>Definition:</b> kmp.hpp:52</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1str_html_a875bd75c537e63d4ea5ccdd2d4d271f6"><div class="ttname"><a href="namespacewbwlib_1_1str.html#a875bd75c537e63d4ea5ccdd2d4d271f6">wbwlib::str::min_cycle</a></div><div class="ttdeci">int min_cycle(const std::string &amp;s)</div><div class="ttdoc">最短循环节：  的最小周期长度为 （能被整除时  为循环次数）。</div><div class="ttdef"><b>Definition:</b> kmp.hpp:74</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1str_html_aa245432ff2fd9237be2802b5d0844052"><div class="ttname"><a href="namespacewbwlib_1_1str.html#aa245432ff2fd9237be2802b5d0844052">wbwlib::str::prefix_function</a></div><div class="ttdeci">std::vector&lt; int &gt; prefix_function(const std::string &amp;s)</div><div class="ttdoc">前缀函数：  = 子串 [0..i] 的最长相等真前后缀长度，满足 。</div><div class="ttdef"><b>Definition:</b> kmp.hpp:34</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

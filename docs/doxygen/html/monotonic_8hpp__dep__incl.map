@@ -1,0 +1,5 @@
+<map id="wbwlib/datastruct/monotonic.hpp" name="wbwlib/datastruct/monotonic.hpp">
+<area shape="rect" id="node1" title="单调栈、单调队列（滑动窗口最值）、最近小/大元素。" alt="" coords="5,5,218,33"/>
+<area shape="rect" id="node2" href="$datastruct_8hpp.html" title="datastruct 模块聚合头：一次引入本模块全部头文件。" alt="" coords="6,81,217,109"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="46,157,177,185"/>
+</map>

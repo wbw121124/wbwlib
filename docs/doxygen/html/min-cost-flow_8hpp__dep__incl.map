@@ -1,0 +1,5 @@
+<map id="wbwlib/graph/min&#45;cost&#45;flow.hpp" name="wbwlib/graph/min&#45;cost&#45;flow.hpp">
+<area shape="rect" id="node1" title="最小费用最大流：SPFA 增广（允许负费用边，判负环场景另处理）。" alt="" coords="9,5,160,49"/>
+<area shape="rect" id="node2" href="$graph_8hpp.html" title="graph 模块聚合头：一次引入本模块全部头文件。" alt="" coords="5,97,164,125"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="19,173,150,201"/>
+</map>

@@ -1,0 +1,7 @@
+digraph "wbwlib::math::Fraction"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::math::Fraction\n|- num_\l- den_\l|+ Fraction()\l+ norm()\l+ num()\l+ den()\l+ operator-()\l+ operator+()\l+ operator-()\l+ operator*()\l+ operator/()\l+ operator+=()\l和 10 更多...\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="精确有理数（分数）类：自动约分，支持全部算术/比较/输出。"];
+}

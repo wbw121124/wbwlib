@@ -1,0 +1,8 @@
+digraph "类继承关系图"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="wbwlib::str::PAM\< Char,\l ALPHA, CharMap \>::Node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwbwlib_1_1str_1_1_p_a_m_1_1_node.html",tooltip="PAM 节点：表示一个回文串及其转移/失配信息。"];
+}

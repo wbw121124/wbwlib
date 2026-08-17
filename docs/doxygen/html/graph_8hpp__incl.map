@@ -1,0 +1,33 @@
+<map id="wbwlib/graph/graph.hpp" name="wbwlib/graph/graph.hpp">
+<area shape="rect" id="node1" title="graph 模块聚合头：一次引入本模块全部头文件。" alt="" coords="1208,5,1366,33"/>
+<area shape="rect" id="node2" href="$adjacency_8hpp.html" title="图表示约定：1 基邻接表 + 常用辅助。" alt="" coords="728,273,913,301"/>
+<area shape="rect" id="node13" href="$bipartite_8hpp.html" title="二分图判定（黑白染色）+ 最大匹配（匈牙利）+ 最小点覆盖/最大独立集。" alt="" coords="1264,181,1436,209"/>
+<area shape="rect" id="node16" href="$euler-path_8hpp.html" title="欧拉路径 / 欧拉回路（Hierholzer，有向/无向）。" alt="" coords="897,173,1027,217"/>
+<area shape="rect" id="node18" href="$hld_8hpp.html" title="树链剖分（HLD）：剖分 + 路径/子树区间映射，供线段树等配合。" alt="" coords="244,181,387,209"/>
+<area shape="rect" id="node19" href="$lca_8hpp.html" title="LCA：倍增法（O(n log n) 预处理，O(log n) 查询）+ 树深/距离/第 k 祖先。" alt="" coords="594,181,738,209"/>
+<area shape="rect" id="node20" href="$link-cut-tree_8hpp.html" title="动态树 LCT：link/cut/makeroot/findroot/路径和查询/路径加/点权修改。" alt="" coords="1406,265,1550,309"/>
+<area shape="rect" id="node21" href="$min-cost-flow_8hpp.html" title="最小费用最大流：SPFA 增广（允许负费用边，判负环场景另处理）。" alt="" coords="2102,173,2254,217"/>
+<area shape="rect" id="node23" href="$mst_8hpp.html" title="最小生成树：Kruskal（并查集）+ Prim（堆）。" alt="" coords="1686,181,1835,209"/>
+<area shape="rect" id="node25" href="$network-flow_8hpp.html" title="最大流：Dinic（当前弧优化 + 分层）。" alt="" coords="1922,173,2069,217"/>
+<area shape="rect" id="node26" href="$shortest-path_8hpp.html" title="最短路：Dijkstra（堆）/ SPFA（判负环）/ Floyd / 0&#45;1 BFS / 拓扑序 DAG。" alt="" coords="2285,173,2433,217"/>
+<area shape="rect" id="node28" href="$tarjan_8hpp.html" title="强连通分量 / 割点 / 桥（Tarjan）。" alt="" coords="412,181,570,209"/>
+<area shape="rect" id="node29" href="$topo_8hpp.html" title="拓扑排序（Kahn，返回字典序可选）+ 判环 + 关键路径。" alt="" coords="1512,181,1663,209"/>
+<area shape="rect" id="node30" href="$tree-dp_8hpp.html" title="树上 DP 套路：直径、中心、换根 DP 模板。" alt="" coords="52,181,218,209"/>
+<area shape="rect" id="node31" href="$virtual-tree_8hpp.html" title="虚树：保留关键点及其两两 LCA，压缩成 O(k) 规模的树。" alt="" coords="1158,81,1294,125"/>
+<area shape="rect" id="node3" title=" " alt="" coords="1075,357,1132,385"/>
+<area shape="rect" id="node4" title=" " alt="" coords="877,433,929,461"/>
+<area shape="rect" id="node5" title=" " alt="" coords="387,357,436,385"/>
+<area shape="rect" id="node6" title=" " alt="" coords="1677,357,1751,385"/>
+<area shape="rect" id="node7" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="1194,357,1341,385"/>
+<area shape="rect" id="node8" title=" " alt="" coords="1333,433,1393,461"/>
+<area shape="rect" id="node9" title=" " alt="" coords="1418,433,1482,461"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1035,433,1099,461"/>
+<area shape="rect" id="node11" title=" " alt="" coords="1124,433,1202,461"/>
+<area shape="rect" id="node12" title=" " alt="" coords="1226,433,1308,461"/>
+<area shape="rect" id="node14" title=" " alt="" coords="627,273,705,301"/>
+<area shape="rect" id="node15" title=" " alt="" coords="1827,273,1883,301"/>
+<area shape="rect" id="node17" title=" " alt="" coords="937,273,976,301"/>
+<area shape="rect" id="node22" title=" " alt="" coords="2286,273,2339,301"/>
+<area shape="rect" id="node24" title=" " alt="" coords="1907,273,1958,301"/>
+<area shape="rect" id="node27" title=" " alt="" coords="2566,273,2622,301"/>
+</map>

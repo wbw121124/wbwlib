@@ -1,0 +1,515 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::str::SAM&lt; Char, ALPHA, CharMap &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1str.html">str</a></li><li class="navelem"><a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html">SAM</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="classwbwlib_1_1str_1_1_s_a_m-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::str::SAM&lt; Char, ALPHA, CharMap &gt; 模板类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>后缀自动机 SAM：线性构建，支持本质不同子串数、子串出现次数等查询。  
+ <a href="classwbwlib_1_1str_1_1_s_a_m.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="suffix-automaton_8hpp_source.html">suffix-automaton.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::str::SAM&lt; Char, ALPHA, CharMap &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwbwlib_1_1str_1_1_s_a_m__coll__graph.png" border="0" usemap="#awbwlib_1_1str_1_1_s_a_m_3_01_char_00_01_a_l_p_h_a_00_01_char_map_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1str_1_1_s_a_m_3_01_char_00_01_a_l_p_h_a_00_01_char_map_01_4_coll__map" id="awbwlib_1_1str_1_1_s_a_m_3_01_char_00_01_a_l_p_h_a_00_01_char_map_01_4_coll__map">
+<area shape="rect" title="后缀自动机 SAM：线性构建，支持本质不同子串数、子串出现次数等查询。" alt="" coords="5,5,171,247"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1str_1_1_s_a_m_1_1_state.html">State</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html" title="后缀自动机 SAM：线性构建，支持本质不同子串数、子串出现次数等查询。">SAM</a> 状态（等价类），len 为状态内最长串长度，link 为后缀链接。  <a href="structwbwlib_1_1str_1_1_s_a_m_1_1_state.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:afd06b72c5fe93a06484182301663dfee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html#afd06b72c5fe93a06484182301663dfee">SAM</a> ()</td></tr>
+<tr class="memdesc:afd06b72c5fe93a06484182301663dfee"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造空 SAM（等价于 reset）  <a href="classwbwlib_1_1str_1_1_s_a_m.html#afd06b72c5fe93a06484182301663dfee">更多...</a><br /></td></tr>
+<tr class="separator:afd06b72c5fe93a06484182301663dfee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6540344976f98724e5ca6cfc071e318e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html#a6540344976f98724e5ca6cfc071e318e">reset</a> ()</td></tr>
+<tr class="memdesc:a6540344976f98724e5ca6cfc071e318e"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空所有状态并重置到初始状态（只含根）  <a href="classwbwlib_1_1str_1_1_s_a_m.html#a6540344976f98724e5ca6cfc071e318e">更多...</a><br /></td></tr>
+<tr class="separator:a6540344976f98724e5ca6cfc071e318e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3cf14376ad9c5cdf96e7504f69a41f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html#a6e3cf14376ad9c5cdf96e7504f69a41f">extend</a> (int c)</td></tr>
+<tr class="memdesc:a6e3cf14376ad9c5cdf96e7504f69a41f"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入一个字符（0 基编码），必要时克隆状态并更新后缀链接。  <a href="classwbwlib_1_1str_1_1_s_a_m.html#a6e3cf14376ad9c5cdf96e7504f69a41f">更多...</a><br /></td></tr>
+<tr class="separator:a6e3cf14376ad9c5cdf96e7504f69a41f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aa2374e05abf25d6fd620315c46fa56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html#a0aa2374e05abf25d6fd620315c46fa56">build</a> (const std::basic_string&lt; Char &gt; &amp;s)</td></tr>
+<tr class="memdesc:a0aa2374e05abf25d6fd620315c46fa56"><td class="mdescLeft">&#160;</td><td class="mdescRight">直接按字符串构建：逐个字符 extend。  <a href="classwbwlib_1_1str_1_1_s_a_m.html#a0aa2374e05abf25d6fd620315c46fa56">更多...</a><br /></td></tr>
+<tr class="separator:a0aa2374e05abf25d6fd620315c46fa56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9ced96c78b6f5b64bcd40f25149d3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html#a0e9ced96c78b6f5b64bcd40f25149d3b">build_cnt</a> ()</td></tr>
+<tr class="memdesc:a0e9ced96c78b6f5b64bcd40f25149d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">按 len 桶排序拓扑序，沿后缀链接从长到短累加 endpos 计数（需在全部 extend 完成后调用一次）。  <a href="classwbwlib_1_1str_1_1_s_a_m.html#a0e9ced96c78b6f5b64bcd40f25149d3b">更多...</a><br /></td></tr>
+<tr class="separator:a0e9ced96c78b6f5b64bcd40f25149d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4067b623636132ea1155f9213bd356b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html#ad4067b623636132ea1155f9213bd356b">distinct_substr</a> () const</td></tr>
+<tr class="memdesc:ad4067b623636132ea1155f9213bd356b"><td class="mdescLeft">&#160;</td><td class="mdescRight">本质不同子串数量，即 \(\sum_i (len[i] - len[link[i]])\)。  <a href="classwbwlib_1_1str_1_1_s_a_m.html#ad4067b623636132ea1155f9213bd356b">更多...</a><br /></td></tr>
+<tr class="separator:ad4067b623636132ea1155f9213bd356b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0ebd7b17149866444f4a213c6fbcb0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html#aa0ebd7b17149866444f4a213c6fbcb0d">count_occurrence</a> (const std::basic_string&lt; Char &gt; &amp;pat) const</td></tr>
+<tr class="memdesc:aa0ebd7b17149866444f4a213c6fbcb0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">某子串在整串中的出现次数（沿转移走完子串所在状态后取 cnt）。  <a href="classwbwlib_1_1str_1_1_s_a_m.html#aa0ebd7b17149866444f4a213c6fbcb0d">更多...</a><br /></td></tr>
+<tr class="separator:aa0ebd7b17149866444f4a213c6fbcb0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c10c3231b9c5994de7e9fa1a67ba4c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html#ae8c10c3231b9c5994de7e9fa1a67ba4c">size</a> () const</td></tr>
+<tr class="memdesc:ae8c10c3231b9c5994de7e9fa1a67ba4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回状态总数（含初始状态）  <a href="classwbwlib_1_1str_1_1_s_a_m.html#ae8c10c3231b9c5994de7e9fa1a67ba4c">更多...</a><br /></td></tr>
+<tr class="separator:ae8c10c3231b9c5994de7e9fa1a67ba4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca2c9a3f6b6960166ba1dad4d5817055"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html#aca2c9a3f6b6960166ba1dad4d5817055">last</a> () const</td></tr>
+<tr class="memdesc:aca2c9a3f6b6960166ba1dad4d5817055"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回最后一个字符所在状态  <a href="classwbwlib_1_1str_1_1_s_a_m.html#aca2c9a3f6b6960166ba1dad4d5817055">更多...</a><br /></td></tr>
+<tr class="separator:aca2c9a3f6b6960166ba1dad4d5817055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:aa5eaeb445e2988d3e8910102e12f1990"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structwbwlib_1_1str_1_1_s_a_m_1_1_state.html">State</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html#aa5eaeb445e2988d3e8910102e12f1990">st_</a></td></tr>
+<tr class="separator:aa5eaeb445e2988d3e8910102e12f1990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab438fb985fa9d5ad691e1917d78812e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html#aab438fb985fa9d5ad691e1917d78812e">last_</a></td></tr>
+<tr class="separator:aab438fb985fa9d5ad691e1917d78812e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><h3>template&lt;class Char = char, int ALPHA = 26, class CharMap = LowerCharMap&gt;<br />
+class wbwlib::str::SAM&lt; Char, ALPHA, CharMap &gt;</h3>
+
+<p>后缀自动机 SAM：线性构建，支持本质不同子串数、子串出现次数等查询。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Char</td><td>字符类型（默认 char） </td></tr>
+    <tr><td class="paramname">ALPHA</td><td>字母表大小（默认 26） </td></tr>
+    <tr><td class="paramname">CharMap</td><td>字符映射策略（默认小写字母 LowerCharMap） </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="afd06b72c5fe93a06484182301663dfee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd06b72c5fe93a06484182301663dfee">&#9670;&nbsp;</a></span>SAM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Char  = char, int ALPHA = 26, class CharMap  = LowerCharMap&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html">wbwlib::str::SAM</a>&lt; Char, ALPHA, CharMap &gt;::<a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html">SAM</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造空 SAM（等价于 reset） </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a0aa2374e05abf25d6fd620315c46fa56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aa2374e05abf25d6fd620315c46fa56">&#9670;&nbsp;</a></span>build()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Char  = char, int ALPHA = 26, class CharMap  = LowerCharMap&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html">wbwlib::str::SAM</a>&lt; Char, ALPHA, CharMap &gt;::build </td>
+          <td>(</td>
+          <td class="paramtype">const std::basic_string&lt; Char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>直接按字符串构建：逐个字符 extend。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>输入字符串（字符集须被 CharMap::valid 覆盖） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0e9ced96c78b6f5b64bcd40f25149d3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e9ced96c78b6f5b64bcd40f25149d3b">&#9670;&nbsp;</a></span>build_cnt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Char  = char, int ALPHA = 26, class CharMap  = LowerCharMap&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html">wbwlib::str::SAM</a>&lt; Char, ALPHA, CharMap &gt;::build_cnt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>按 len 桶排序拓扑序，沿后缀链接从长到短累加 endpos 计数（需在全部 extend 完成后调用一次）。 </p>
+
+</div>
+</div>
+<a id="aa0ebd7b17149866444f4a213c6fbcb0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0ebd7b17149866444f4a213c6fbcb0d">&#9670;&nbsp;</a></span>count_occurrence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Char  = char, int ALPHA = 26, class CharMap  = LowerCharMap&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html">wbwlib::str::SAM</a>&lt; Char, ALPHA, CharMap &gt;::count_occurrence </td>
+          <td>(</td>
+          <td class="paramtype">const std::basic_string&lt; Char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pat</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>某子串在整串中的出现次数（沿转移走完子串所在状态后取 cnt）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pat</td><td>待查询子串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>出现次数（不存在返回 0；需先调用 build_cnt） </dd></dl>
+
+</div>
+</div>
+<a id="ad4067b623636132ea1155f9213bd356b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4067b623636132ea1155f9213bd356b">&#9670;&nbsp;</a></span>distinct_substr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Char  = char, int ALPHA = 26, class CharMap  = LowerCharMap&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html">wbwlib::str::SAM</a>&lt; Char, ALPHA, CharMap &gt;::distinct_substr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>本质不同子串数量，即 \(\sum_i (len[i] - len[link[i]])\)。 </p>
+<dl class="section return"><dt>返回</dt><dd>本质不同子串个数（调用前需完整构建） </dd></dl>
+
+</div>
+</div>
+<a id="a6e3cf14376ad9c5cdf96e7504f69a41f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e3cf14376ad9c5cdf96e7504f69a41f">&#9670;&nbsp;</a></span>extend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Char  = char, int ALPHA = 26, class CharMap  = LowerCharMap&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html">wbwlib::str::SAM</a>&lt; Char, ALPHA, CharMap &gt;::extend </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>插入一个字符（0 基编码），必要时克隆状态并更新后缀链接。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>字符编码（0..25） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aca2c9a3f6b6960166ba1dad4d5817055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca2c9a3f6b6960166ba1dad4d5817055">&#9670;&nbsp;</a></span>last()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Char  = char, int ALPHA = 26, class CharMap  = LowerCharMap&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html">wbwlib::str::SAM</a>&lt; Char, ALPHA, CharMap &gt;::last </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回最后一个字符所在状态 </p>
+
+</div>
+</div>
+<a id="a6540344976f98724e5ca6cfc071e318e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6540344976f98724e5ca6cfc071e318e">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Char  = char, int ALPHA = 26, class CharMap  = LowerCharMap&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html">wbwlib::str::SAM</a>&lt; Char, ALPHA, CharMap &gt;::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>清空所有状态并重置到初始状态（只含根） </p>
+
+</div>
+</div>
+<a id="ae8c10c3231b9c5994de7e9fa1a67ba4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8c10c3231b9c5994de7e9fa1a67ba4c">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Char  = char, int ALPHA = 26, class CharMap  = LowerCharMap&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html">wbwlib::str::SAM</a>&lt; Char, ALPHA, CharMap &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回状态总数（含初始状态） </p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="aab438fb985fa9d5ad691e1917d78812e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab438fb985fa9d5ad691e1917d78812e">&#9670;&nbsp;</a></span>last_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Char  = char, int ALPHA = 26, class CharMap  = LowerCharMap&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html">wbwlib::str::SAM</a>&lt; Char, ALPHA, CharMap &gt;::last_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5eaeb445e2988d3e8910102e12f1990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5eaeb445e2988d3e8910102e12f1990">&#9670;&nbsp;</a></span>st_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Char  = char, int ALPHA = 26, class CharMap  = LowerCharMap&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structwbwlib_1_1str_1_1_s_a_m_1_1_state.html">State</a>&gt; <a class="el" href="classwbwlib_1_1str_1_1_s_a_m.html">wbwlib::str::SAM</a>&lt; Char, ALPHA, CharMap &gt;::st_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>wbwlib/string/<a class="el" href="suffix-automaton_8hpp_source.html">suffix-automaton.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

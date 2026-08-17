@@ -1,0 +1,7 @@
+digraph "wbwlib::math::modint&lt; MOD, Base &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::math::modint\l\< MOD, Base \>\n|- v_\l|+ modint()\l+ modint()\l+ modint()\l+ val()\l+ operator+()\l+ operator-()\l+ operator*()\l+ operator/()\l+ operator+=()\l+ operator-=()\l和 10 更多...\l+ mod_value()\l- norm()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="固定模数的模整数类：所有运算自动取模，支持与原生整数混合运算。"];
+}

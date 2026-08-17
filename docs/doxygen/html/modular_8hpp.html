@@ -1,0 +1,231 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/math/modular.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_3daf11f4f079b8f8f9a94cd388c9bdee.html">math</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">modular.hpp 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>模意义整数类 modint（固定模版）与动态模版。  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="base_8hpp_source.html">wbwlib/core/base.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="number-theory_8hpp_source.html">wbwlib/math/number-theory.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+modular.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="modular_8hpp__incl.png" border="0" usemap="#awbwlib_2math_2modular_8hpp" alt=""/></div>
+<map name="awbwlib_2math_2modular_8hpp" id="awbwlib_2math_2modular_8hpp">
+<area shape="rect" title="模意义整数类 modint（固定模版）与动态模版。" alt="" coords="223,5,392,33"/>
+<area shape="rect" title=" " alt="" coords="199,89,270,117"/>
+<area shape="rect" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="233,173,380,201"/>
+<area shape="rect" href="number-theory_8hpp.html" title="数论基础：快速幂、快速乘、gcd/lcm、扩展欧几里得、逆元、CRT/EXCRT、欧拉定理、整除分块。" alt="" coords="346,81,488,125"/>
+<area shape="rect" title=" " alt="" coords="5,249,66,277"/>
+<area shape="rect" title=" " alt="" coords="90,249,154,277"/>
+<area shape="rect" title=" " alt="" coords="178,249,242,277"/>
+<area shape="rect" title=" " alt="" coords="267,249,345,277"/>
+<area shape="rect" title=" " alt="" coords="369,249,451,277"/>
+<area shape="rect" title=" " alt="" coords="476,249,528,277"/>
+<area shape="rect" title=" " alt="" coords="455,173,512,201"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="modular_8hpp__dep__incl.png" border="0" usemap="#awbwlib_2math_2modular_8hppdep" alt=""/></div>
+<map name="awbwlib_2math_2modular_8hppdep" id="awbwlib_2math_2modular_8hppdep">
+<area shape="rect" title="模意义整数类 modint（固定模版）与动态模版。" alt="" coords="222,5,391,33"/>
+<area shape="rect" href="combinatorics_8hpp.html" title="组合计数工具：阶乘/逆元预计算、组合数、排列数、Lucas、卡特兰、 两型斯特林数、错排数。" alt="" coords="5,81,210,109"/>
+<area shape="rect" href="math_8hpp.html" title="math 模块聚合头：一次引入本模块全部头文件。" alt="" coords="222,233,374,261"/>
+<area shape="rect" href="fourier_8hpp.html" title="卷积加速：复数 FFT 与数论变换 NTT。" alt="" coords="285,81,445,109"/>
+<area shape="rect" href="fwt_8hpp.html" title="快速沃尔什变换 FWT：集合幂级数的 OR / AND / XOR 卷积。" alt="" coords="546,157,688,185"/>
+<area shape="rect" href="wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="233,309,363,337"/>
+<area shape="rect" href="polynomial_8hpp.html" title="多项式运算（形式幂级数，截断到指定长度）。" alt="" coords="336,157,522,185"/>
+</map>
+</div>
+</div>
+<p><a href="modular_8hpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint.html">wbwlib::math::modint&lt; MOD, Base &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">固定模数的模整数类：所有运算自动取模，支持与原生整数混合运算。  <a href="classwbwlib_1_1math_1_1modint.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">wbwlib::math::modint_dyn</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">动态模数的模整数类：模数可在运行时用 set_mod 设置。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacewbwlib"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib.html">wbwlib</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacewbwlib_1_1math"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html">wbwlib::math</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a0337c8498b6059468150a54542c2b39e"><td class="memTemplParams" colspan="2">template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:a0337c8498b6059468150a54542c2b39e"><td class="memTemplItemLeft" align="right" valign="top">modint&lt; MOD, Base &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a0337c8498b6059468150a54542c2b39e">wbwlib::math::operator+</a> (const modint&lt; MOD, Base &gt; &amp;a, T b)</td></tr>
+<tr class="memdesc:a0337c8498b6059468150a54542c2b39e"><td class="mdescLeft">&#160;</td><td class="mdescRight">modint 与整数的加法（整数在右侧）。  <a href="namespacewbwlib_1_1math.html#a0337c8498b6059468150a54542c2b39e">更多...</a><br /></td></tr>
+<tr class="separator:a0337c8498b6059468150a54542c2b39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cdf2cd8f128f8503a398b92fd8963bd"><td class="memTemplParams" colspan="2">template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:a2cdf2cd8f128f8503a398b92fd8963bd"><td class="memTemplItemLeft" align="right" valign="top">modint&lt; MOD, Base &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a2cdf2cd8f128f8503a398b92fd8963bd">wbwlib::math::operator+</a> (T a, const modint&lt; MOD, Base &gt; &amp;b)</td></tr>
+<tr class="memdesc:a2cdf2cd8f128f8503a398b92fd8963bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">整数与 modint 的加法（整数在左侧）。  <a href="namespacewbwlib_1_1math.html#a2cdf2cd8f128f8503a398b92fd8963bd">更多...</a><br /></td></tr>
+<tr class="separator:a2cdf2cd8f128f8503a398b92fd8963bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a246248dffc786c85506ab5c1bc8f68b5"><td class="memTemplParams" colspan="2">template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:a246248dffc786c85506ab5c1bc8f68b5"><td class="memTemplItemLeft" align="right" valign="top">modint&lt; MOD, Base &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a246248dffc786c85506ab5c1bc8f68b5">wbwlib::math::operator-</a> (const modint&lt; MOD, Base &gt; &amp;a, T b)</td></tr>
+<tr class="memdesc:a246248dffc786c85506ab5c1bc8f68b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">modint 与整数的减法（整数在右侧）。  <a href="namespacewbwlib_1_1math.html#a246248dffc786c85506ab5c1bc8f68b5">更多...</a><br /></td></tr>
+<tr class="separator:a246248dffc786c85506ab5c1bc8f68b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c3c4a0086f23c034d2c410e2f54d9f"><td class="memTemplParams" colspan="2">template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:af6c3c4a0086f23c034d2c410e2f54d9f"><td class="memTemplItemLeft" align="right" valign="top">modint&lt; MOD, Base &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#af6c3c4a0086f23c034d2c410e2f54d9f">wbwlib::math::operator-</a> (T a, const modint&lt; MOD, Base &gt; &amp;b)</td></tr>
+<tr class="memdesc:af6c3c4a0086f23c034d2c410e2f54d9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">整数与 modint 的减法（整数在左侧）。  <a href="namespacewbwlib_1_1math.html#af6c3c4a0086f23c034d2c410e2f54d9f">更多...</a><br /></td></tr>
+<tr class="separator:af6c3c4a0086f23c034d2c410e2f54d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7500cbe6ed9237620fbd1c3ce9238fdd"><td class="memTemplParams" colspan="2">template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:a7500cbe6ed9237620fbd1c3ce9238fdd"><td class="memTemplItemLeft" align="right" valign="top">modint&lt; MOD, Base &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a7500cbe6ed9237620fbd1c3ce9238fdd">wbwlib::math::operator*</a> (const modint&lt; MOD, Base &gt; &amp;a, T b)</td></tr>
+<tr class="memdesc:a7500cbe6ed9237620fbd1c3ce9238fdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">modint 与整数的乘法（整数在右侧）。  <a href="namespacewbwlib_1_1math.html#a7500cbe6ed9237620fbd1c3ce9238fdd">更多...</a><br /></td></tr>
+<tr class="separator:a7500cbe6ed9237620fbd1c3ce9238fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbad4bd2564d49411888c1b3df2baa46"><td class="memTemplParams" colspan="2">template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:acbad4bd2564d49411888c1b3df2baa46"><td class="memTemplItemLeft" align="right" valign="top">modint&lt; MOD, Base &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#acbad4bd2564d49411888c1b3df2baa46">wbwlib::math::operator*</a> (T a, const modint&lt; MOD, Base &gt; &amp;b)</td></tr>
+<tr class="memdesc:acbad4bd2564d49411888c1b3df2baa46"><td class="mdescLeft">&#160;</td><td class="mdescRight">整数与 modint 的乘法（整数在左侧）。  <a href="namespacewbwlib_1_1math.html#acbad4bd2564d49411888c1b3df2baa46">更多...</a><br /></td></tr>
+<tr class="separator:acbad4bd2564d49411888c1b3df2baa46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c60f6e5aac8363f7600ff320efdddd"><td class="memTemplParams" colspan="2">template&lt;u64 MOD, class Base &gt; </td></tr>
+<tr class="memitem:a05c60f6e5aac8363f7600ff320efdddd"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a05c60f6e5aac8363f7600ff320efdddd">wbwlib::math::operator&lt;&lt;</a> (std::ostream &amp;os, const modint&lt; MOD, Base &gt; &amp;m)</td></tr>
+<tr class="memdesc:a05c60f6e5aac8363f7600ff320efdddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出 modint 的数值。  <a href="namespacewbwlib_1_1math.html#a05c60f6e5aac8363f7600ff320efdddd">更多...</a><br /></td></tr>
+<tr class="separator:a05c60f6e5aac8363f7600ff320efdddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac57d0057e9af7cbe3e5918d00482e262"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#ac57d0057e9af7cbe3e5918d00482e262">wbwlib::math::operator&lt;&lt;</a> (std::ostream &amp;os, const modint_dyn &amp;m)</td></tr>
+<tr class="memdesc:ac57d0057e9af7cbe3e5918d00482e262"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出 <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html" title="动态模数的模整数类：模数可在运行时用 set_mod 设置。">modint_dyn</a> 的数值。  <a href="namespacewbwlib_1_1math.html#ac57d0057e9af7cbe3e5918d00482e262">更多...</a><br /></td></tr>
+<tr class="separator:ac57d0057e9af7cbe3e5918d00482e262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>模意义整数类 modint（固定模版）与动态模版。 </p>
+<dl class="section user"><dt>依赖</dt><dd><a class="el" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。">wbwlib/core/base.hpp</a>, <a class="el" href="number-theory_8hpp.html" title="数论基础：快速幂、快速乘、gcd/lcm、扩展欧几里得、逆元、CRT/EXCRT、欧拉定理、整除分块。">wbwlib/math/number-theory.hpp</a></dd></dl>
+<p>特性：</p><ul>
+<li>自动约分（加/减/乘后立即取模）；</li>
+<li>支持全部主流运算符，与原生整数混合运算；</li>
+<li>逆元用扩展欧几里得（模数为任意互质值均可），快速幂用倍增；</li>
+<li>固定模版为编译期常量，运算最快。</li>
+</ul>
+<dl class="section user"><dt>示例</dt><dd><div class="fragment"><div class="line"><span class="keyword">using</span> <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a> = <a class="code" href="classwbwlib_1_1math_1_1modint.html">wbwlib::math::modint&lt;998244353&gt;</a>;</div>
+<div class="line"><a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a> a = 3, b = 5;</div>
+<div class="line"><a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a> c = a * b + 9;         <span class="comment">// 24</span></div>
+<div class="line"><a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a> d = <a class="code" href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">M</a>(10).<a class="code" href="classwbwlib_1_1math_1_1modint.html#a8b97d6d1f2d5b016e4623e8c7d15e599">pow</a>(5);      <span class="comment">// 100000 ... mod</span></div>
+<div class="line">动态模：wbwlib::math::modint_dyn::set_mod(1e9+7);</div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1modint_html"><div class="ttname"><a href="classwbwlib_1_1math_1_1modint.html">wbwlib::math::modint</a></div><div class="ttdoc">固定模数的模整数类：所有运算自动取模，支持与原生整数混合运算。</div><div class="ttdef"><b>Definition:</b> modular.hpp:41</div></div>
+<div class="ttc" id="aclasswbwlib_1_1math_1_1modint_html_a8b97d6d1f2d5b016e4623e8c7d15e599"><div class="ttname"><a href="classwbwlib_1_1math_1_1modint.html#a8b97d6d1f2d5b016e4623e8c7d15e599">wbwlib::math::modint::pow</a></div><div class="ttdeci">modint pow(i64 p) const</div><div class="ttdoc">快速幂：计算 。</div><div class="ttdef"><b>Definition:</b> modular.hpp:186</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1math_1_1poly_html_ae4a100da6c5ade020129268cefb3fb3b"><div class="ttname"><a href="namespacewbwlib_1_1math_1_1poly.html#ae4a100da6c5ade020129268cefb3fb3b">wbwlib::math::poly::M</a></div><div class="ttdeci">poly_mod M</div><div class="ttdef"><b>Definition:</b> polynomial.hpp:42</div></div>
+</div><!-- fragment --> </dd></dl>
+</div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

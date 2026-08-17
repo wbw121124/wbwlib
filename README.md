@@ -8,6 +8,7 @@
 #include <wbwlib.h>          // 全量聚合
 // 或按需引入子头文件：
 #include <wbwlib/wbwlib.hpp>
+#include <wbwlib/string/string.hpp>   // 模块聚合头（8 个模块均有同名聚合头）
 #include <wbwlib/datastruct/segtree.hpp>
 #include <wbwlib/graph/shortest-path.hpp>
 ```
@@ -32,6 +33,26 @@ g++ -O2 -std=c++14 -Wall -I D:/wbwlib main.cpp
 | `geo/` | 点/向量、凸包、多边形、极角排序、半平面交、圆 |
 | `misc/` | 压位大整数 |
 | `tests/` | 冒烟测试与批量编译脚本 |
+
+@dot 模块依赖总览
+digraph wbwlib {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef2ff", fontname="Microsoft YaHei"];
+  "core" [label="core\n基础"];
+  "math" [label="math\n数学"];
+  "ds"   [label="datastruct\n数据结构"];
+  "str"  [label="string\n字符串"];
+  "graph"[label="graph\n图论"];
+  "dp"   [label="dp\n动态规划"];
+  "geo"  [label="geo\n计算几何"];
+  "misc" [label="misc\n大整数"];
+  "wbw"  [label="wbwlib.hpp\n聚合入口", fillcolor="#dbeafe"];
+  "math" -> "core"; "ds" -> "core"; "str" -> "core"; "graph" -> "core"; "dp" -> "core"; "geo" -> "core"; "misc" -> "core";
+  "graph" -> "ds"; "graph" -> "str";
+  "dp" -> "ds"; "dp" -> "geo";
+  "wbw" -> {"core" "math" "ds" "str" "graph" "dp" "geo" "misc"};
+}
+@enddot
 
 ## 惯例
 - 全局函数风格：`wbw::math::gcd`、`wbw::ds::BIT`、`wbw::graph::dijkstra`。

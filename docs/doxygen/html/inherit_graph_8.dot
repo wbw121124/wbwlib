@@ -1,0 +1,8 @@
+digraph "类继承关系图"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="wbwlib::dp::MonoCHT\l::Line",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwbwlib_1_1dp_1_1_mono_c_h_t_1_1_line.html",tooltip="一条直线 y = m*x + b"];
+}

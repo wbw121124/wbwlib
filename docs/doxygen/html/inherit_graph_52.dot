@@ -1,0 +1,8 @@
+digraph "类继承关系图"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="wbwlib::graph::WeightedLCA\< W \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwbwlib_1_1graph_1_1_weighted_l_c_a.html",tooltip="带边权 LCA：额外维护各点到根的距离，支持 O(log n) 求树上任意两点距离。"];
+}

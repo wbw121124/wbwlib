@@ -1,0 +1,183 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/geo/convex-hull.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_2ecdf383c720a2d71ee413e323799741.html">geo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">convex-hull.hpp 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>凸包：Andrew 单调链（整数坐标）。  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &quot;<a class="el" href="base_8hpp_source.html">wbwlib/core/base.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="point_8hpp_source.html">wbwlib/geo/point.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+convex-hull.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="convex-hull_8hpp__incl.png" border="0" usemap="#awbwlib_2geo_2convex-hull_8hpp" alt=""/></div>
+<map name="awbwlib_2geo_2convex-hull_8hpp" id="awbwlib_2geo_2convex-hull_8hpp">
+<area shape="rect" title="凸包：Andrew 单调链（整数坐标）。" alt="" coords="65,5,246,33"/>
+<area shape="rect" title=" " alt="" coords="5,81,63,109"/>
+<area shape="rect" title=" " alt="" coords="65,157,139,185"/>
+<area shape="rect" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="246,157,393,185"/>
+<area shape="rect" href="point_8hpp.html" title="计算几何基础：二维点/向量，整数坐标（默认 i64）+ double 变体。" alt="" coords="138,81,282,109"/>
+<area shape="rect" title=" " alt="" coords="67,233,127,261"/>
+<area shape="rect" title=" " alt="" coords="151,233,216,261"/>
+<area shape="rect" title=" " alt="" coords="239,233,304,261"/>
+<area shape="rect" title=" " alt="" coords="328,233,407,261"/>
+<area shape="rect" title=" " alt="" coords="430,233,513,261"/>
+<area shape="rect" title=" " alt="" coords="537,233,590,261"/>
+<area shape="rect" title=" " alt="" coords="164,157,221,185"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="convex-hull_8hpp__dep__incl.png" border="0" usemap="#awbwlib_2geo_2convex-hull_8hppdep" alt=""/></div>
+<map name="awbwlib_2geo_2convex-hull_8hppdep" id="awbwlib_2geo_2convex-hull_8hppdep">
+<area shape="rect" title="凸包：Andrew 单调链（整数坐标）。" alt="" coords="5,5,187,33"/>
+<area shape="rect" href="geo_8hpp.html" title="geo 模块聚合头：一次引入本模块全部头文件。" alt="" coords="28,81,164,109"/>
+<area shape="rect" href="wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="31,157,161,185"/>
+</map>
+</div>
+</div>
+<p><a href="convex-hull_8hpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacewbwlib"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib.html">wbwlib</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacewbwlib_1_1geo"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1geo.html">wbwlib::geo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ae0b124e920c9b70fa2db113f6e219445"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ae0b124e920c9b70fa2db113f6e219445"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; Point&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1geo.html#ae0b124e920c9b70fa2db113f6e219445">wbwlib::geo::convex_hull</a> (std::vector&lt; Point&lt; T &gt;&gt; ps, bool keep_collinear=false)</td></tr>
+<tr class="memdesc:ae0b124e920c9b70fa2db113f6e219445"><td class="mdescLeft">&#160;</td><td class="mdescRight">求点集凸包（Andrew 单调链），返回逆时针凸包顶点（首尾不重复）。  <a href="namespacewbwlib_1_1geo.html#ae0b124e920c9b70fa2db113f6e219445">更多...</a><br /></td></tr>
+<tr class="separator:ae0b124e920c9b70fa2db113f6e219445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9b58d236131acf9bad37463d82d80a"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a5f9b58d236131acf9bad37463d82d80a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1geo.html#a5f9b58d236131acf9bad37463d82d80a">wbwlib::geo::point_in_convex</a> (const std::vector&lt; Point&lt; T &gt;&gt; &amp;hull, const Point&lt; T &gt; &amp;p)</td></tr>
+<tr class="memdesc:a5f9b58d236131acf9bad37463d82d80a"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断点是否在凸包内（含边界），凸包须按逆时针给出（二分角度法）。  <a href="namespacewbwlib_1_1geo.html#a5f9b58d236131acf9bad37463d82d80a">更多...</a><br /></td></tr>
+<tr class="separator:a5f9b58d236131acf9bad37463d82d80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>凸包：Andrew 单调链（整数坐标）。 </p>
+<dl class="section user"><dt>依赖</dt><dd><a class="el" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。">wbwlib/core/base.hpp</a>、wbwlib/geo/point.hpp</dd></dl>
+<dl class="section user"><dt>复杂度</dt><dd>O(n log n)。</dd></dl>
+<p>返回：逆时针凸包顶点（首尾不重复）。若去掉共线以 bool 控制， keep_collinear=false 时只保留凸包严格拐点。 </p>
+</div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

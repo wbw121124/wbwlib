@@ -1,0 +1,3 @@
+<map id="wbwlib::math::modint_dyn" name="wbwlib::math::modint_dyn">
+<area shape="rect" id="node1" title="动态模数的模整数类：模数可在运行时用 set_mod 设置。" alt="" coords="5,5,179,327"/>
+</map>

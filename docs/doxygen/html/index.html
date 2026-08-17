@@ -1,0 +1,171 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">wbwlib </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a> 信息学竞赛（NOIP / CSP / NOI）C++ 头文件库：只含头文件，命名空间 <code>wbwlib</code>，中文注释，强类型模板，C++14 基线（自动启用 C++17/20 特性）。</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+使用</h1>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;wbwlib.h&gt;</span>          <span class="comment">// 全量聚合</span></div>
+<div class="line"><span class="comment">// 或按需引入子头文件：</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="wbwlib_8hpp.html">wbwlib/wbwlib.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="string_8hpp.html">wbwlib/string/string.hpp</a>&gt;</span>   <span class="comment">// 模块聚合头（8 个模块均有同名聚合头）</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="segtree_8hpp.html">wbwlib/datastruct/segtree.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="shortest-path_8hpp.html">wbwlib/graph/shortest-path.hpp</a>&gt;</span></div>
+<div class="ttc" id="asegtree_8hpp_html"><div class="ttname"><a href="segtree_8hpp.html">segtree.hpp</a></div><div class="ttdoc">线段树。</div></div>
+<div class="ttc" id="ashortest-path_8hpp_html"><div class="ttname"><a href="shortest-path_8hpp.html">shortest-path.hpp</a></div><div class="ttdoc">最短路：Dijkstra（堆）/ SPFA（判负环）/ Floyd / 0-1 BFS / 拓扑序 DAG。</div></div>
+<div class="ttc" id="astring_8hpp_html"><div class="ttname"><a href="string_8hpp.html">string.hpp</a></div><div class="ttdoc">string 模块聚合头：一次引入本模块全部头文件。</div></div>
+<div class="ttc" id="awbwlib_8hpp_html"><div class="ttname"><a href="wbwlib_8hpp.html">wbwlib.hpp</a></div><div class="ttdoc">wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。</div></div>
+</div><!-- fragment --><p>编译时把仓库根目录加入 <code>-I</code>，无需链接额外库：</p>
+<div class="fragment"><div class="line">g++ -O2 -std=c++14 -Wall -I D:/wbwlib main.cpp</div>
+<div class="line"># C++17：-std=c++17，C++20：需定义 WBWLIB_HAS_CPP20（或编译自动检测）</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
+目录总览</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">目录   </th><th class="markdownTableHeadNone">内容    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>core/</code>   </td><td class="markdownTableBodyNone">宏与特性探测、类型别名、快读快写、随机、抗卡哈希、通用工具（离散化、min/max）    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>math/</code>   </td><td class="markdownTableBodyNone">数论（gcd/exgcd/CRT/线性筛/Miller-Rabin/Pollard-Rho）、ModInt、组合数学、矩阵、线性代数、FFT/NTT、多项式、BSGS、数论分块、原根、有理数、FWT    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>datastruct/</code>   </td><td class="markdownTableBodyNone">树状数组、线段树（Lazy/Beats/主席树）、ST 表、FHQ Treap、Splay、左偏树、并查集（带权/可撤销）、莫队、分块、单调栈/队列、李超树、笛卡尔树    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>string/</code>   </td><td class="markdownTableBodyNone">KMP、Z 函数、Manacher、Trie/01-Trie、AC 自动机、后缀数组、后缀自动机、回文自动机、字符串哈希、最小表示法    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>graph/</code>   </td><td class="markdownTableBodyNone">邻接表封装、最短路、最小生成树、拓扑、Tarjan 全家桶、欧拉路径、二分图、网络流、费用流、LCA、树 DP、树链剖分、虚树、LCT    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>dp/</code>   </td><td class="markdownTableBodyNone">斜率优化 CHT、决策单调性分治 DP、数位 DP、状压辅助    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>geo/</code>   </td><td class="markdownTableBodyNone">点/向量、凸包、多边形、极角排序、半平面交、圆    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>misc/</code>   </td><td class="markdownTableBodyNone">压位大整数    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>tests/</code>   </td><td class="markdownTableBodyNone">冒烟测试与批量编译脚本   </td></tr>
+</table>
+<div class="dotgraph">
+<img src="dot_inline_dotgraph_3.png" alt="dot_inline_dotgraph_3.png" border="0" usemap="#dot_inline_dotgraph_3.map"/>
+<div class="caption">
+模块依赖总览</div>
+</div>
+<h1><a class="anchor" id="autotoc_md3"></a>
+惯例</h1>
+<ul>
+<li>全局函数风格：<code>wbw::math::gcd</code>、<code>wbw::ds::BIT</code>、<code>wbw::graph::dijkstra</code>。</li>
+<li>默认错误处理用 <code>assert</code>；<code>#define WBWLIB_THROW</code> 可改为抛异常。</li>
+<li>每个头文件顶部注释包含时间/空间复杂度、依赖与用法示例。</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+测试</h1>
+<div class="fragment"><div class="line">pwsh D:/wbwlib/tests/run-tests.ps1</div>
+</div><!-- fragment --><p> 以 <code>-std=c++14</code> 与 <code>-std=c++17</code> 编译运行全部断言。 </p>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

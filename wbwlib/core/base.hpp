@@ -70,12 +70,20 @@ namespace wbwlib {
 // ---------- 错误处理 ----------
 // 统一断言/抛异常策略。默认 assert；定义 WBWLIB_THROW 后抛 std::logic_error。
 #ifdef WBWLIB_THROW
+/**
+ * @brief 报告错误：抛出 std::logic_error（定义 WBWLIB_THROW 时启用）。
+ * @param msg 错误信息字符串
+ */
 [[noreturn]] inline void wbw_error(const char* msg) {
   throw std::logic_error(msg);
 }
 #define WBWLIB_ASSERT(cond) \
   do { if (!(cond)) ::wbwlib::wbw_error(#cond); } while (0)
 #else
+/**
+ * @brief 报告错误：断言失败并中止程序（默认模式）。
+ * @param msg 错误信息字符串
+ */
 [[noreturn]] inline void wbw_error(const char* msg) {
   assert(false && msg);
   std::abort();

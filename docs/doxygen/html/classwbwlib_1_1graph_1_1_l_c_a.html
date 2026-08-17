@@ -1,0 +1,523 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::graph::LCA类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1graph.html">graph</a></li><li class="navelem"><a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html">LCA</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classwbwlib_1_1graph_1_1_l_c_a-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::graph::LCA类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>LCA：倍增法，O(n log n) 预处理、O(log n) 查询，附树深/子树大小/DFS 序/第 k 祖先。  
+ <a href="classwbwlib_1_1graph_1_1_l_c_a.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="lca_8hpp_source.html">lca.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::graph::LCA 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwbwlib_1_1graph_1_1_l_c_a__coll__graph.png" border="0" usemap="#awbwlib_1_1graph_1_1_l_c_a_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1graph_1_1_l_c_a_coll__map" id="awbwlib_1_1graph_1_1_l_c_a_coll__map">
+<area shape="rect" title="LCA：倍增法，O(n log n) 预处理、O(log n) 查询，附树深/子树大小/DFS 序/第 k 祖先。" alt="" coords="5,5,141,247"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4b14c38d00e018c848aaffaaad26daaf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html#a4b14c38d00e018c848aaffaaad26daaf">LCA</a> (const <a class="el" href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">Adj</a> &amp;g, int root=1)</td></tr>
+<tr class="memdesc:a4b14c38d00e018c848aaffaaad26daaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">由树邻接表构建 <a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html" title="LCA：倍增法，O(n log n) 预处理、O(log n) 查询，附树深/子树大小/DFS 序/第 k 祖先。">LCA</a> 倍增表。  <a href="classwbwlib_1_1graph_1_1_l_c_a.html#a4b14c38d00e018c848aaffaaad26daaf">更多...</a><br /></td></tr>
+<tr class="separator:a4b14c38d00e018c848aaffaaad26daaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3561b7ecaf7477db57a5b762b71c158e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html#a3561b7ecaf7477db57a5b762b71c158e">build</a> (const <a class="el" href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">Adj</a> &amp;g, int root=1)</td></tr>
+<tr class="memdesc:a3561b7ecaf7477db57a5b762b71c158e"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建：DFS 求 fa/dep/sz/tin/tout，再倍增填 up 表。  <a href="classwbwlib_1_1graph_1_1_l_c_a.html#a3561b7ecaf7477db57a5b762b71c158e">更多...</a><br /></td></tr>
+<tr class="separator:a3561b7ecaf7477db57a5b762b71c158e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9099e3c2a16b5bcfc0f126fda1674a1e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html#a9099e3c2a16b5bcfc0f126fda1674a1e">is_ancestor</a> (int u, int v) const</td></tr>
+<tr class="memdesc:a9099e3c2a16b5bcfc0f126fda1674a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断 u 是否是 v 的祖先（含自身）。  <a href="classwbwlib_1_1graph_1_1_l_c_a.html#a9099e3c2a16b5bcfc0f126fda1674a1e">更多...</a><br /></td></tr>
+<tr class="separator:a9099e3c2a16b5bcfc0f126fda1674a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d38cb4021617936ac92035a7105e691"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1d38cb4021617936ac92035a7105e691">query</a> (int u, int v) const</td></tr>
+<tr class="memdesc:a1d38cb4021617936ac92035a7105e691"><td class="mdescLeft">&#160;</td><td class="mdescRight">求 u 与 v 的最近公共祖先。  <a href="classwbwlib_1_1graph_1_1_l_c_a.html#a1d38cb4021617936ac92035a7105e691">更多...</a><br /></td></tr>
+<tr class="separator:a1d38cb4021617936ac92035a7105e691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5fc2a5c84b03f7fced891641365dcda"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html#ad5fc2a5c84b03f7fced891641365dcda">kth</a> (int u, int k) const</td></tr>
+<tr class="memdesc:ad5fc2a5c84b03f7fced891641365dcda"><td class="mdescLeft">&#160;</td><td class="mdescRight">u 向上第 k 个祖先。  <a href="classwbwlib_1_1graph_1_1_l_c_a.html#ad5fc2a5c84b03f7fced891641365dcda">更多...</a><br /></td></tr>
+<tr class="separator:ad5fc2a5c84b03f7fced891641365dcda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a7c18504eb3839ea97363d7a0acbf5d0f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html#a7c18504eb3839ea97363d7a0acbf5d0f">fa</a></td></tr>
+<tr class="separator:a7c18504eb3839ea97363d7a0acbf5d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a954c618ae1c18acab397398a19ebe355"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html#a954c618ae1c18acab397398a19ebe355">dep</a></td></tr>
+<tr class="separator:a954c618ae1c18acab397398a19ebe355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f14cdbc601f57ebbe1dae712f93401b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html#a3f14cdbc601f57ebbe1dae712f93401b">sz</a></td></tr>
+<tr class="separator:a3f14cdbc601f57ebbe1dae712f93401b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af93c17894521b3ee43fe18b3389ba8d0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html#af93c17894521b3ee43fe18b3389ba8d0">tin</a></td></tr>
+<tr class="separator:af93c17894521b3ee43fe18b3389ba8d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa466ce40d178aecc803cad65ee243198"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html#aa466ce40d178aecc803cad65ee243198">tout</a></td></tr>
+<tr class="memdesc:aa466ce40d178aecc803cad65ee243198"><td class="mdescLeft">&#160;</td><td class="mdescRight">DFS 序（进出时间戳）  <a href="classwbwlib_1_1graph_1_1_l_c_a.html#aa466ce40d178aecc803cad65ee243198">更多...</a><br /></td></tr>
+<tr class="separator:aa466ce40d178aecc803cad65ee243198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c9ffe62e31a35e2a642dc12edc4b446"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html#a6c9ffe62e31a35e2a642dc12edc4b446">LOG</a></td></tr>
+<tr class="separator:a6c9ffe62e31a35e2a642dc12edc4b446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a1294a069692b3301c519f3512bb6460d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html#a1294a069692b3301c519f3512bb6460d">up_</a></td></tr>
+<tr class="memdesc:a1294a069692b3301c519f3512bb6460d"><td class="mdescLeft">&#160;</td><td class="mdescRight">倍增表：up[u][j] 为 u 向上 2^j 层的祖先  <a href="classwbwlib_1_1graph_1_1_l_c_a.html#a1294a069692b3301c519f3512bb6460d">更多...</a><br /></td></tr>
+<tr class="separator:a1294a069692b3301c519f3512bb6460d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>LCA：倍增法，O(n log n) 预处理、O(log n) 查询，附树深/子树大小/DFS 序/第 k 祖先。 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a4b14c38d00e018c848aaffaaad26daaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b14c38d00e018c848aaffaaad26daaf">&#9670;&nbsp;</a></span>LCA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wbwlib::graph::LCA::LCA </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">Adj</a> &amp;&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>root</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>由树邻接表构建 <a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html" title="LCA：倍增法，O(n log n) 预处理、O(log n) 查询，附树深/子树大小/DFS 序/第 k 祖先。">LCA</a> 倍增表。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>树的邻接表（无向，1 基） </td></tr>
+    <tr><td class="paramname">root</td><td>根节点，默认 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a3561b7ecaf7477db57a5b762b71c158e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3561b7ecaf7477db57a5b762b71c158e">&#9670;&nbsp;</a></span>build()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::graph::LCA::build </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacewbwlib_1_1graph.html#ae493c082be88e701442a1a1630178911">Adj</a> &amp;&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>root</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构建：DFS 求 fa/dep/sz/tin/tout，再倍增填 up 表。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>树的邻接表（无向，1 基） </td></tr>
+    <tr><td class="paramname">root</td><td>根节点，默认 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9099e3c2a16b5bcfc0f126fda1674a1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9099e3c2a16b5bcfc0f126fda1674a1e">&#9670;&nbsp;</a></span>is_ancestor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wbwlib::graph::LCA::is_ancestor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断 u 是否是 v 的祖先（含自身）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">u</td><td>候选祖先（1 基） </td></tr>
+    <tr><td class="paramname">v</td><td>后代（1 基） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是祖先返回 true </dd></dl>
+
+</div>
+</div>
+<a id="ad5fc2a5c84b03f7fced891641365dcda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5fc2a5c84b03f7fced891641365dcda">&#9670;&nbsp;</a></span>kth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wbwlib::graph::LCA::kth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>u 向上第 k 个祖先。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">u</td><td>起始点（1 基） </td></tr>
+    <tr><td class="paramname">k</td><td>向上步数（k &gt;= 1） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>第 k 个祖先编号；超出树根返回 0 </dd></dl>
+
+</div>
+</div>
+<a id="a1d38cb4021617936ac92035a7105e691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d38cb4021617936ac92035a7105e691">&#9670;&nbsp;</a></span>query()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wbwlib::graph::LCA::query </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>求 u 与 v 的最近公共祖先。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">u</td><td>点（1 基） </td></tr>
+    <tr><td class="paramname">v</td><td>点（1 基） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="classwbwlib_1_1graph_1_1_l_c_a.html" title="LCA：倍增法，O(n log n) 预处理、O(log n) 查询，附树深/子树大小/DFS 序/第 k 祖先。">LCA</a> 节点编号 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a954c618ae1c18acab397398a19ebe355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a954c618ae1c18acab397398a19ebe355">&#9670;&nbsp;</a></span>dep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::graph::LCA::dep</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c18504eb3839ea97363d7a0acbf5d0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c18504eb3839ea97363d7a0acbf5d0f">&#9670;&nbsp;</a></span>fa</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::graph::LCA::fa</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c9ffe62e31a35e2a642dc12edc4b446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c9ffe62e31a35e2a642dc12edc4b446">&#9670;&nbsp;</a></span>LOG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wbwlib::graph::LCA::LOG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f14cdbc601f57ebbe1dae712f93401b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f14cdbc601f57ebbe1dae712f93401b">&#9670;&nbsp;</a></span>sz</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::graph::LCA::sz</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af93c17894521b3ee43fe18b3389ba8d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af93c17894521b3ee43fe18b3389ba8d0">&#9670;&nbsp;</a></span>tin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::graph::LCA::tin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa466ce40d178aecc803cad65ee243198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa466ce40d178aecc803cad65ee243198">&#9670;&nbsp;</a></span>tout</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::graph::LCA::tout</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DFS 序（进出时间戳） </p>
+
+</div>
+</div>
+<a id="a1294a069692b3301c519f3512bb6460d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1294a069692b3301c519f3512bb6460d">&#9670;&nbsp;</a></span>up_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::vector&lt;int&gt; &gt; wbwlib::graph::LCA::up_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>倍增表：up[u][j] 为 u 向上 2^j 层的祖先 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>wbwlib/graph/<a class="el" href="lca_8hpp_source.html">lca.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

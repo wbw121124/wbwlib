@@ -5,7 +5,8 @@
  * @file utils.hpp
  * @brief 通用小工具：多变元 min/max、clamp、离散化（坐标压缩）、计时器。
  *
- * 依赖：core/base.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp
  */
 
 #include <algorithm>
@@ -17,25 +18,55 @@ namespace wbwlib {
 namespace core {
 
 // ---------- 多变元 min / max ----------
+/**
+ * @brief 单参数兜底版本，直接返回自身。
+ * @param a 待返回的值
+ * @return a
+ */
 template<class T>
 inline T wmin(const T& a) { return a; }                  // 单参数兜底
 
+/**
+ * @brief 多变元最小值：返回 a, b, rest... 中的最小值。
+ * @param a 第一个值
+ * @param b 第二个值
+ * @param rest 其余值（可为空）
+ * @return 全部参数中的最小值
+ */
 template<class T, class U, class... Rest>
 inline auto wmin(const T& a, const U& b, const Rest&... rest)
-    -> decltype(std::min(a, b)) {                        // 语法保证返回类型一致
+    -> typename std::decay<decltype(std::min(a, b))>::type {
   return wmin(std::min(a, b), rest...);
 }
 
+/**
+ * @brief 单参数兜底版本，直接返回自身。
+ * @param a 待返回的值
+ * @return a
+ */
 template<class T>
 inline T wmax(const T& a) { return a; }
 
+/**
+ * @brief 多变元最大值：返回 a, b, rest... 中的最大值。
+ * @param a 第一个值
+ * @param b 第二个值
+ * @param rest 其余值（可为空）
+ * @return 全部参数中的最大值
+ */
 template<class T, class U, class... Rest>
 inline auto wmax(const T& a, const U& b, const Rest&... rest)
-    -> decltype(std::max(a, b)) {
+    -> typename std::decay<decltype(std::max(a, b))>::type {
   return wmax(std::max(a, b), rest...);
 }
 
-/// 将 v 夹到 [lo, hi]（v < lo 返回 lo，v > hi 返回 hi）
+/**
+ * @brief 将 v 夹到 [lo, hi] 区间内。
+ * @param v 待夹取的值
+ * @param lo 区间下界
+ * @param hi 区间上界
+ * @return \f$\min(\max(v, lo), hi)\f$
+ */
 template<class T>
 inline const T& clamp(const T& v, const T& lo, const T& hi) {
   return (v < lo) ? lo : ((hi < v) ? hi : v);
@@ -43,13 +74,13 @@ inline const T& clamp(const T& v, const T& lo, const T& hi) {
 
 // ---------- 离散化（坐标压缩） ----------
 /**
- * 将序列 a 离散化，返回每个 a[i] 对应到的 0 基排名。
- * std::unique 支持自定义去重方式（额外可传入比较器？此处提供两种重载）。
- * 原地修改传入的 rank 结果。
+ * @brief 将序列 a 离散化（坐标压缩），返回每个 a[i] 对应的 0 基排名。
  *
- * 用法：
- *   vector<long long> a = {3, 1, 4, 1};
- *   vector<long long>& r = discretize(a);   // 返回引用，r 为 {2,0,1,0}
+ * 排名公式：\f$r_i = |\{j : x_j < a_i\}|\f$，其中 \f$x\f$ 为 a 去重排序后的序列。
+ *
+ * @tparam T 元素类型（需支持 < 比较）
+ * @param a 原序列
+ * @return 与 a 等长的排名序列（值域为 0..去重后个数-1）
  */
 template<class T>
 inline std::vector<T> discretize(const std::vector<T>& a) {
@@ -62,7 +93,12 @@ inline std::vector<T> discretize(const std::vector<T>& a) {
   return r;
 }
 
-/// 返回 (rank, sorted_unique)，避免重复排序
+/**
+ * @brief 离散化并同时返回去重排序后的序列，避免重复排序。
+ * @tparam T 元素类型（需支持 < 比较）
+ * @param a 原序列
+ * @return pair：first 为排名序列，second 为去重排序后的唯一值序列
+ */
 template<class T>
 std::pair<std::vector<T>, std::vector<T>> discretize_full(const std::vector<T>& a) {
   std::vector<T> xs(a);
@@ -75,13 +111,27 @@ std::pair<std::vector<T>, std::vector<T>> discretize_full(const std::vector<T>& 
 }
 
 // ---------- 计时器（本地调试用） ----------
+/**
+ * @brief 计时器（本地调试用）：基于 steady_clock 测量耗时。
+ */
 class Stopwatch {
   using clk = std::chrono::steady_clock;
   clk::time_point t0_;
  public:
+  /**
+   * @brief 构造并开始计时。
+   */
   Stopwatch() { reset(); }
+
+  /**
+   * @brief 重置计时起点为当前时刻。
+   */
   void reset() { t0_ = clk::now(); }
-  /// 返回自上次 reset 以来的毫秒数
+
+  /**
+   * @brief 返回自上次 reset 以来的毫秒数。
+   * @return 已耗时（毫秒，double）
+   */
   double ms() const {
     return std::chrono::duration<double, std::milli>(clk::now() - t0_).count();
   }

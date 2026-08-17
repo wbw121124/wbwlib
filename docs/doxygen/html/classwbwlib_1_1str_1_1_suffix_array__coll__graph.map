@@ -1,0 +1,3 @@
+<map id="wbwlib::str::SuffixArray" name="wbwlib::str::SuffixArray">
+<area shape="rect" id="node1" title="后缀数组：倍增 + 计数排序构造，附 rank、height（LCP）数组。" alt="" coords="5,5,162,199"/>
+</map>

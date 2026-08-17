@@ -1,0 +1,5 @@
+<map id="wbwlib/string/ac&#45;automaton.hpp" name="wbwlib/string/ac&#45;automaton.hpp">
+<area shape="rect" id="node1" title="AC 自动机：多模式匹配（模板化字符类型 / 字母表 / 字符映射）。" alt="" coords="5,5,211,33"/>
+<area shape="rect" id="node2" href="$string_8hpp.html" title="string 模块聚合头：一次引入本模块全部头文件。" alt="" coords="29,81,187,109"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="43,157,173,185"/>
+</map>

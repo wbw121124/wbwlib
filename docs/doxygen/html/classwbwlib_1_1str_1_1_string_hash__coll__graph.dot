@@ -1,0 +1,7 @@
+digraph "wbwlib::str::StringHash&lt; MOD1, MOD2 &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::str::StringHash\l\< MOD1, MOD2 \>\n|- h1_\l- h2_\l- p1_\l- p2_\l- n_\l- base_\l|+ StringHash()\l+ StringHash()\l+ build()\l+ sub()\l+ all()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="字符串双哈希：模数模板化（默认 1e9+7 / 1e9+9），预处理 O(n) 后子串哈希 O(1)。"];
+}

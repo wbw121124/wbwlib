@@ -5,27 +5,35 @@
  * @file manacher.hpp
  * @brief Manacher 回文算法。
  *
- * 依赖：wbwlib/core/base.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp
  *
- * 复杂度：O(n)。
+ * @par 复杂度
+ * O(n)。
  *
  * 返回：
  *   d1[i] —— 以 i 为中心（0 基）的奇回文半径（含中心），回文长 = 2*d1[i]-1；
  *   d2[i] —— 以 i 与 i+1 之间为中心的偶回文半径，回文长 = 2*d2[i]。
  *
- * 用法：
+ * @par 示例
+ * @code{.cpp}
  *   auto [d1, d2] = wbwlib::str::manacher(s);
+ * @endcode
  */
 
 #include <string>
 #include <vector>
-#include <utility>
 #include "wbwlib/core/base.hpp"
+#include "wbwlib/string/palindromic-pam.hpp"
 
 namespace wbwlib {
 namespace str {
 
-/// 返回 (d1, d2)
+/**
+ * @brief Manacher 算法，线性求全部回文半径。
+ * @param s 输入字符串
+ * @return pair(d1, d2)：d1[i] 为以 i（0 基）为中心的奇回文半径（含中心，回文长 \f$2\cdot d1[i]-1\f$）；d2[i] 为以 i 与 i+1 之间为中心的偶回文半径（回文长 \f$2\cdot d2[i]\f$）
+ */
 inline std::pair<std::vector<int>, std::vector<int>> manacher(const std::string& s) {
   int n = (int)s.size();
   std::vector<int> d1(n), d2(n);
@@ -44,15 +52,15 @@ inline std::pair<std::vector<int>, std::vector<int>> manacher(const std::string&
   return {d1, d2};
 }
 
-/// 本质不同回文子串个数（另一种做法见回文自动机）
+/**
+ * @brief 本质不同回文子串个数（经回文自动机统计；manacher 仅能数含重复的总数）。
+ * @param s 输入字符串
+ * @return 本质不同回文子串数量
+ */
 inline i64 count_distinct_palindromes(const std::string& s) {
-  std::pair<std::vector<int>, std::vector<int>> d = manacher(s);
-  const std::vector<int>& d1 = d.first;
-  const std::vector<int>& d2 = d.second;
-  i64 cnt = 0;
-  for (int x : d1) cnt += x;
-  for (int x : d2) cnt += x;
-  return cnt;
+  PAM<> pam;
+  pam.build(s);
+  return pam.distinct();
 }
 
 } // namespace str

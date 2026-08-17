@@ -5,14 +5,18 @@
  * @file kmp.hpp
  * @brief KMP 单模式匹配。
  *
- * 依赖：wbwlib/core/base.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp
  *
- * 复杂度：O(n+m)。
+ * @par 复杂度
+ * O(n+m)。
  *
- * 用法：
+ * @par 示例
+ * @code{.cpp}
  *   std::string t = "aba", s = "ababa";
  *   auto pi = wbwlib::str::prefix_function(t);     // 失配数组
  *   auto pos = wbwlib::str::kmp_search(t, s);      // 返回所有匹配结束位置(1 基)
+ * @endcode
  */
 
 #include <string>
@@ -22,7 +26,11 @@
 namespace wbwlib {
 namespace str {
 
-/// 前缀函数：pi[i] = 子串 [0..i] 的最长相等真前后缀长度
+/**
+ * @brief 前缀函数：\f$\pi[i]\f$ = 子串 [0..i] 的最长相等真前后缀长度，满足 \f$\pi[i] = \max\{k : s[0..k-1] = s[i-k+1..i]\}\f$。
+ * @param s 输入字符串
+ * @return 与 s 等长的前缀函数数组 pi
+ */
 inline std::vector<int> prefix_function(const std::string& s) {
   int n = (int)s.size();
   std::vector<int> pi(n, 0);
@@ -35,7 +43,12 @@ inline std::vector<int> prefix_function(const std::string& s) {
   return pi;
 }
 
-/// KMP：返回模式 pat 在 text 中所有匹配的「结束位置+1」（1 基闭区间端点）
+/**
+ * @brief KMP 单模式匹配：借助前缀函数线性扫描文本。
+ * @param pat 模式串
+ * @param text 文本串
+ * @return 所有匹配的「结束位置 + 1」（1 基闭区间端点）；pat 为空时返回空数组
+ */
 inline std::vector<int> kmp_search(const std::string& pat, const std::string& text) {
   int m = (int)pat.size();
   std::vector<int> pos;
@@ -53,7 +66,11 @@ inline std::vector<int> kmp_search(const std::string& pat, const std::string& te
   return pos;
 }
 
-/// 最短循环节：len - pi[n-1]（能整除则 n/(n-pi[n-1]) 为循环次数）
+/**
+ * @brief 最短循环节：\f$s\f$ 的最小周期长度为 \f$n - \pi[n-1]\f$（能被整除时 \f$\frac{n}{n-\pi[n-1]}\f$ 为循环次数）。
+ * @param s 输入字符串
+ * @return 最短循环节长度
+ */
 inline int min_cycle(const std::string& s) {
   int n = (int)s.size();
   std::vector<int> pi = prefix_function(s);

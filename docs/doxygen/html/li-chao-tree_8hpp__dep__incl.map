@@ -1,0 +1,5 @@
+<map id="wbwlib/datastruct/li&#45;chao&#45;tree.hpp" name="wbwlib/datastruct/li&#45;chao&#45;tree.hpp">
+<area shape="rect" id="node1" title="李超线段树：维护直线族 y = k*x + b 的最值查询。" alt="" coords="44,5,177,49"/>
+<area shape="rect" id="node2" href="$datastruct_8hpp.html" title="datastruct 模块聚合头：一次引入本模块全部头文件。" alt="" coords="5,97,216,125"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="45,173,176,201"/>
+</map>

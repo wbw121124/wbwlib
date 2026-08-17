@@ -1,0 +1,286 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/datastruct/segtree-beats.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_8d69220e0774a19b26f749e5403d9fea.html">datastruct</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">segtree-beats.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="segtree-beats_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_DS_SEGTREE_BEATS_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_DS_SEGTREE_BEATS_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span>ds {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T = i64&gt;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html">   43</a></span>&#160;<span class="keyword">class </span><a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html">SegBeats</a> {</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html">   44</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html">Node</a> {</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#aa052b4519790f7e7578145a73d126c97">   45</a></span>&#160;    T <a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#aa052b4519790f7e7578145a73d126c97">mx</a>, <a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#a8ba0dc1fc608cfb0071f232ccbacebc6">mx2</a>, <a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#af1846c2e6ed489382caa8f8582fad23f">sum</a>;   </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#adb6200d021c4f53429cc34eab3ee720c">   46</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#adb6200d021c4f53429cc34eab3ee720c">cmx</a>;          </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#ad1b0ac70be8e3b544c4a228f12feee32">   47</a></span>&#160;    T <a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#ad1b0ac70be8e3b544c4a228f12feee32">lz</a>;             </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  };</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#ad2681cb1dd6d311a0d35af2345965e8c">   49</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#ad2681cb1dd6d311a0d35af2345965e8c">n_</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">   50</a></span>&#160;  std::vector&lt;Node&gt; <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#aa128fddb0c63e662f4ea1d49061cbe93">   51</a></span>&#160;  T <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aa128fddb0c63e662f4ea1d49061cbe93">neg_inf_</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#a65a07a09b9f32469743cd05710c6846b">   54</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a65a07a09b9f32469743cd05710c6846b">pull</a>(<span class="keywordtype">int</span> p) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html">Node</a> &amp;u = <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p], &amp;a = <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p &lt;&lt; 1], &amp;b = <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p &lt;&lt; 1 | 1];</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    u.<a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#af1846c2e6ed489382caa8f8582fad23f">sum</a> = a.sum + b.sum;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (a.mx &gt; b.mx) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      u.<a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#aa052b4519790f7e7578145a73d126c97">mx</a> = a.mx; u.<a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#adb6200d021c4f53429cc34eab3ee720c">cmx</a> = a.cmx;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      u.<a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#a8ba0dc1fc608cfb0071f232ccbacebc6">mx2</a> = std::max(a.mx2, b.mx);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a.mx &lt; b.mx) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      u.<a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#aa052b4519790f7e7578145a73d126c97">mx</a> = b.mx; u.<a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#adb6200d021c4f53429cc34eab3ee720c">cmx</a> = b.cmx;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      u.<a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#a8ba0dc1fc608cfb0071f232ccbacebc6">mx2</a> = std::max(a.mx, b.mx2);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      u.<a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#aa052b4519790f7e7578145a73d126c97">mx</a> = a.mx; u.<a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#adb6200d021c4f53429cc34eab3ee720c">cmx</a> = a.cmx + b.cmx;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      u.<a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#a8ba0dc1fc608cfb0071f232ccbacebc6">mx2</a> = std::max(a.mx2, b.mx2);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#afc4244020a0f231cd5866feecb206db6">   70</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#afc4244020a0f231cd5866feecb206db6">apply_add</a>(<span class="keywordtype">int</span> p, <span class="keywordtype">int</span> len, <span class="keyword">const</span> T&amp; v) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].mx += v;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].mx2 != <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aa128fddb0c63e662f4ea1d49061cbe93">neg_inf_</a>) <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].mx2 += v;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].sum += v * T(len);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].lz += v;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#a97131d97dff48c276942945afb84e323">   78</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a97131d97dff48c276942945afb84e323">apply_min</a>(<span class="keywordtype">int</span> p, <span class="keywordtype">int</span> len, <span class="keyword">const</span> T&amp; x) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    (void)len;                            <span class="comment">// chmin 无需区间长度</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> (x &gt;= <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].mx) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].sum += (x - <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].mx) * T(<a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].cmx);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].mx = x;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#a523692be277f72a657935477b0458da4">   86</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a523692be277f72a657935477b0458da4">push</a>(<span class="keywordtype">int</span> p, <span class="keywordtype">int</span> len) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> (len &lt;= 1) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].lz != T()) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#afc4244020a0f231cd5866feecb206db6">apply_add</a>(p &lt;&lt; 1, len - (len &gt;&gt; 1), <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].lz);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#afc4244020a0f231cd5866feecb206db6">apply_add</a>(p &lt;&lt; 1 | 1, len &gt;&gt; 1, <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].lz);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].lz = T();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a97131d97dff48c276942945afb84e323">apply_min</a>(p &lt;&lt; 1, len - (len &gt;&gt; 1), <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].mx);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a97131d97dff48c276942945afb84e323">apply_min</a>(p &lt;&lt; 1 | 1, len &gt;&gt; 1, <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].mx);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#a609deae67a72e3dd570f64d779f080a3">   98</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a609deae67a72e3dd570f64d779f080a3">build</a>(<span class="keywordtype">int</span> p, <span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r, <span class="keyword">const</span> std::vector&lt;T&gt;&amp; a) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p] = <a class="code" href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html">Node</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> (l == r) {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].mx = <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].sum = a[l];</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].mx2 = <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aa128fddb0c63e662f4ea1d49061cbe93">neg_inf_</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].cmx = 1;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">int</span> mid = (l + r) &gt;&gt; 1;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a609deae67a72e3dd570f64d779f080a3">build</a>(p &lt;&lt; 1, l, mid, a);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a609deae67a72e3dd570f64d779f080a3">build</a>(p &lt;&lt; 1 | 1, mid + 1, r, a);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a65a07a09b9f32469743cd05710c6846b">pull</a>(p);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#a148594a225325718209f5ddfc7d0a5d0">  113</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a148594a225325718209f5ddfc7d0a5d0">add</a>(<span class="keywordtype">int</span> p, <span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r, <span class="keywordtype">int</span> ql, <span class="keywordtype">int</span> qr, <span class="keyword">const</span> T&amp; v) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">if</span> (ql &lt;= l &amp;&amp; r &lt;= qr) { <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#afc4244020a0f231cd5866feecb206db6">apply_add</a>(p, r - l + 1, v); <span class="keywordflow">return</span>; }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a523692be277f72a657935477b0458da4">push</a>(p, r - l + 1);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">int</span> mid = (l + r) &gt;&gt; 1;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">if</span> (ql &lt;= mid) <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a148594a225325718209f5ddfc7d0a5d0">add</a>(p &lt;&lt; 1, l, mid, ql, qr, v);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span> (qr &gt; mid) <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a148594a225325718209f5ddfc7d0a5d0">add</a>(p &lt;&lt; 1 | 1, mid + 1, r, ql, qr, v);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a65a07a09b9f32469743cd05710c6846b">pull</a>(p);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#aa6c84468fbf9a057052c25e517f78d45">  123</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aa6c84468fbf9a057052c25e517f78d45">chmin</a>(<span class="keywordtype">int</span> p, <span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r, <span class="keywordtype">int</span> ql, <span class="keywordtype">int</span> qr, <span class="keyword">const</span> T&amp; x) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">if</span> (x &gt;= <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].mx) <span class="keywordflow">return</span>;                 <span class="comment">// 剪枝：全部无需改</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">if</span> (ql &lt;= l &amp;&amp; r &lt;= qr &amp;&amp; x &gt; <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].mx2) { <span class="comment">// 整体取 min 生效</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a97131d97dff48c276942945afb84e323">apply_min</a>(p, r - l + 1, x);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a523692be277f72a657935477b0458da4">push</a>(p, r - l + 1);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">int</span> mid = (l + r) &gt;&gt; 1;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">if</span> (ql &lt;= mid) <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aa6c84468fbf9a057052c25e517f78d45">chmin</a>(p &lt;&lt; 1, l, mid, ql, qr, x);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span> (qr &gt; mid) <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aa6c84468fbf9a057052c25e517f78d45">chmin</a>(p &lt;&lt; 1 | 1, mid + 1, r, ql, qr, x);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a65a07a09b9f32469743cd05710c6846b">pull</a>(p);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#a5eb4d08c729f872ca48683e2ddc258f1">  137</a></span>&#160;  T <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a5eb4d08c729f872ca48683e2ddc258f1">qsum</a>(<span class="keywordtype">int</span> p, <span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r, <span class="keywordtype">int</span> ql, <span class="keywordtype">int</span> qr) {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">if</span> (ql &lt;= l &amp;&amp; r &lt;= qr) <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].sum;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a523692be277f72a657935477b0458da4">push</a>(p, r - l + 1);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">int</span> mid = (l + r) &gt;&gt; 1;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    T rs = T();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">if</span> (ql &lt;= mid) rs += <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a5eb4d08c729f872ca48683e2ddc258f1">qsum</a>(p &lt;&lt; 1, l, mid, ql, qr);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">if</span> (qr &gt; mid) rs += <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a5eb4d08c729f872ca48683e2ddc258f1">qsum</a>(p &lt;&lt; 1 | 1, mid + 1, r, ql, qr);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span> rs;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#a76c92e47d74a58681556298e0aadd440">  148</a></span>&#160;  T <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a76c92e47d74a58681556298e0aadd440">qmax</a>(<span class="keywordtype">int</span> p, <span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r, <span class="keywordtype">int</span> ql, <span class="keywordtype">int</span> qr) {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">if</span> (ql &lt;= l &amp;&amp; r &lt;= qr) <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>[p].mx;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a523692be277f72a657935477b0458da4">push</a>(p, r - l + 1);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">int</span> mid = (l + r) &gt;&gt; 1;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    T m = <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aa128fddb0c63e662f4ea1d49061cbe93">neg_inf_</a>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">if</span> (ql &lt;= mid) m = std::max(m, <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a76c92e47d74a58681556298e0aadd440">qmax</a>(p &lt;&lt; 1, l, mid, ql, qr));</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">if</span> (qr &gt; mid) m = std::max(m, <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a76c92e47d74a58681556298e0aadd440">qmax</a>(p &lt;&lt; 1 | 1, mid + 1, r, ql, qr));</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">return</span> m;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#a30f076f9044999bc3d5afc0c9140d4f1">  163</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a30f076f9044999bc3d5afc0c9140d4f1">SegBeats</a>(<span class="keywordtype">int</span> n) : <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#ad2681cb1dd6d311a0d35af2345965e8c">n_</a>(n), <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">t_</a>(4 * n + 4),</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                             <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aa128fddb0c63e662f4ea1d49061cbe93">neg_inf_</a>(-std::numeric_limits&lt;<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&gt;::<a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#afb1e8daed1e44ff28becb6bc2ac4be61">max</a>()) {}</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#a6b37a0f861d05be855391143bb85fc00">  170</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a6b37a0f861d05be855391143bb85fc00">build</a>(<span class="keyword">const</span> std::vector&lt;T&gt;&amp; a) { <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a6b37a0f861d05be855391143bb85fc00">build</a>(1, 1, <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#ad2681cb1dd6d311a0d35af2345965e8c">n_</a>, a); }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#aa5adf0172ff230b877f82238828097ff">  178</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aa5adf0172ff230b877f82238828097ff">add</a>(<span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r, <span class="keyword">const</span> T&amp; v) { <span class="keywordflow">if</span> (l &lt;= r) <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aa5adf0172ff230b877f82238828097ff">add</a>(1, 1, <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#ad2681cb1dd6d311a0d35af2345965e8c">n_</a>, l, r, v); }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#a8b9305e4466bda7089800f7ffd4b34b6">  186</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a8b9305e4466bda7089800f7ffd4b34b6">chmin</a>(<span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r, <span class="keyword">const</span> T&amp; x) { <span class="keywordflow">if</span> (l &lt;= r) <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a8b9305e4466bda7089800f7ffd4b34b6">chmin</a>(1, 1, <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#ad2681cb1dd6d311a0d35af2345965e8c">n_</a>, l, r, x); }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#ad33e79ea3780c05992e2719c51dadeb2">  194</a></span>&#160;  T <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#ad33e79ea3780c05992e2719c51dadeb2">sum</a>(<span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r) { <span class="keywordflow">return</span> (l &lt;= r) ? <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a5eb4d08c729f872ca48683e2ddc258f1">qsum</a>(1, 1, <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#ad2681cb1dd6d311a0d35af2345965e8c">n_</a>, l, r) : T(); }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="classwbwlib_1_1ds_1_1_seg_beats.html#afb1e8daed1e44ff28becb6bc2ac4be61">  202</a></span>&#160;  T <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#afb1e8daed1e44ff28becb6bc2ac4be61">max</a>(<span class="keywordtype">int</span> l, <span class="keywordtype">int</span> r) {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">if</span> (l &gt; r) <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#aa128fddb0c63e662f4ea1d49061cbe93">neg_inf_</a>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#a76c92e47d74a58681556298e0aadd440">qmax</a>(1, 1, <a class="code" href="classwbwlib_1_1ds_1_1_seg_beats.html#ad2681cb1dd6d311a0d35af2345965e8c">n_</a>, l, r);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;};</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;} <span class="comment">// namespace ds</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_DS_SEGTREE_BEATS_HPP</span></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html">wbwlib::ds::SegBeats</a></div><div class="ttdoc">吉司机线段树（Segment Tree Beats）：区间取 min、区间加、区间和、区间最大值。</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:43</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_a148594a225325718209f5ddfc7d0a5d0"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#a148594a225325718209f5ddfc7d0a5d0">wbwlib::ds::SegBeats::add</a></div><div class="ttdeci">void add(int p, int l, int r, int ql, int qr, const T &amp;v)</div><div class="ttdoc">递归区间加</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:113</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_a30f076f9044999bc3d5afc0c9140d4f1"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#a30f076f9044999bc3d5afc0c9140d4f1">wbwlib::ds::SegBeats::SegBeats</a></div><div class="ttdeci">SegBeats(int n)</div><div class="ttdoc">构造覆盖 [1, n] 的吉司机线段树（元素初始为 0）。</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:163</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_a523692be277f72a657935477b0458da4"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#a523692be277f72a657935477b0458da4">wbwlib::ds::SegBeats::push</a></div><div class="ttdeci">void push(int p, int len)</div><div class="ttdoc">下传节点 p 的懒标记（加法 + 取 min）</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:86</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_a5eb4d08c729f872ca48683e2ddc258f1"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#a5eb4d08c729f872ca48683e2ddc258f1">wbwlib::ds::SegBeats::qsum</a></div><div class="ttdeci">T qsum(int p, int l, int r, int ql, int qr)</div><div class="ttdoc">递归区间和</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:137</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_a609deae67a72e3dd570f64d779f080a3"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#a609deae67a72e3dd570f64d779f080a3">wbwlib::ds::SegBeats::build</a></div><div class="ttdeci">void build(int p, int l, int r, const std::vector&lt; T &gt; &amp;a)</div><div class="ttdoc">递归建树（叶子取 a[l]）</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:98</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_a65a07a09b9f32469743cd05710c6846b"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#a65a07a09b9f32469743cd05710c6846b">wbwlib::ds::SegBeats::pull</a></div><div class="ttdeci">void pull(int p)</div><div class="ttdoc">用左右子信息上拉节点 p</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:54</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_a6b37a0f861d05be855391143bb85fc00"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#a6b37a0f861d05be855391143bb85fc00">wbwlib::ds::SegBeats::build</a></div><div class="ttdeci">void build(const std::vector&lt; T &gt; &amp;a)</div><div class="ttdoc">从 1 基数组 a 构造（仅使用 a[1..n]）。</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:170</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_a76c92e47d74a58681556298e0aadd440"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#a76c92e47d74a58681556298e0aadd440">wbwlib::ds::SegBeats::qmax</a></div><div class="ttdeci">T qmax(int p, int l, int r, int ql, int qr)</div><div class="ttdoc">递归区间最大值</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:148</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_a8b9305e4466bda7089800f7ffd4b34b6"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#a8b9305e4466bda7089800f7ffd4b34b6">wbwlib::ds::SegBeats::chmin</a></div><div class="ttdeci">void chmin(int l, int r, const T &amp;x)</div><div class="ttdoc">区间取 min： （ ）。</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:186</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_a97131d97dff48c276942945afb84e323"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#a97131d97dff48c276942945afb84e323">wbwlib::ds::SegBeats::apply_min</a></div><div class="ttdeci">void apply_min(int p, int len, const T &amp;x)</div><div class="ttdoc">给节点 p 整体取 min（x &lt; mx 时才生效）</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:78</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_aa128fddb0c63e662f4ea1d49061cbe93"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#aa128fddb0c63e662f4ea1d49061cbe93">wbwlib::ds::SegBeats::neg_inf_</a></div><div class="ttdeci">T neg_inf_</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:51</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_aa5adf0172ff230b877f82238828097ff"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#aa5adf0172ff230b877f82238828097ff">wbwlib::ds::SegBeats::add</a></div><div class="ttdeci">void add(int l, int r, const T &amp;v)</div><div class="ttdoc">区间加： 。</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:178</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_aa6c84468fbf9a057052c25e517f78d45"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#aa6c84468fbf9a057052c25e517f78d45">wbwlib::ds::SegBeats::chmin</a></div><div class="ttdeci">void chmin(int p, int l, int r, int ql, int qr, const T &amp;x)</div><div class="ttdoc">递归区间取 min（吉司机剪枝）</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:123</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_aba92cafe78aa05f648367946679c5127"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#aba92cafe78aa05f648367946679c5127">wbwlib::ds::SegBeats::t_</a></div><div class="ttdeci">std::vector&lt; Node &gt; t_</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:50</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_ad2681cb1dd6d311a0d35af2345965e8c"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#ad2681cb1dd6d311a0d35af2345965e8c">wbwlib::ds::SegBeats::n_</a></div><div class="ttdeci">int n_</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:49</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_ad33e79ea3780c05992e2719c51dadeb2"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#ad33e79ea3780c05992e2719c51dadeb2">wbwlib::ds::SegBeats::sum</a></div><div class="ttdeci">T sum(int l, int r)</div><div class="ttdoc">区间和： 。</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:194</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_afb1e8daed1e44ff28becb6bc2ac4be61"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#afb1e8daed1e44ff28becb6bc2ac4be61">wbwlib::ds::SegBeats::max</a></div><div class="ttdeci">T max(int l, int r)</div><div class="ttdoc">区间最大值： 。</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:202</div></div>
+<div class="ttc" id="aclasswbwlib_1_1ds_1_1_seg_beats_html_afc4244020a0f231cd5866feecb206db6"><div class="ttname"><a href="classwbwlib_1_1ds_1_1_seg_beats.html#afc4244020a0f231cd5866feecb206db6">wbwlib::ds::SegBeats::apply_add</a></div><div class="ttdeci">void apply_add(int p, int len, const T &amp;v)</div><div class="ttdoc">给节点 p 整体加 v（区间长为 len）</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:70</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+<div class="ttc" id="anamespacewbwlib_html_a86ab7e3b77fa0c682d473301d8c617c6"><div class="ttname"><a href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">wbwlib::i64</a></div><div class="ttdeci">std::int64_t i64</div><div class="ttdoc">64 位有符号整数</div><div class="ttdef"><b>Definition:</b> base.hpp:98</div></div>
+<div class="ttc" id="astructwbwlib_1_1ds_1_1_seg_beats_1_1_node_html"><div class="ttname"><a href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html">wbwlib::ds::SegBeats::Node</a></div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:44</div></div>
+<div class="ttc" id="astructwbwlib_1_1ds_1_1_seg_beats_1_1_node_html_a8ba0dc1fc608cfb0071f232ccbacebc6"><div class="ttname"><a href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#a8ba0dc1fc608cfb0071f232ccbacebc6">wbwlib::ds::SegBeats::Node::mx2</a></div><div class="ttdeci">T mx2</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:45</div></div>
+<div class="ttc" id="astructwbwlib_1_1ds_1_1_seg_beats_1_1_node_html_aa052b4519790f7e7578145a73d126c97"><div class="ttname"><a href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#aa052b4519790f7e7578145a73d126c97">wbwlib::ds::SegBeats::Node::mx</a></div><div class="ttdeci">T mx</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:45</div></div>
+<div class="ttc" id="astructwbwlib_1_1ds_1_1_seg_beats_1_1_node_html_ad1b0ac70be8e3b544c4a228f12feee32"><div class="ttname"><a href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#ad1b0ac70be8e3b544c4a228f12feee32">wbwlib::ds::SegBeats::Node::lz</a></div><div class="ttdeci">T lz</div><div class="ttdoc">加法懒标记</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:47</div></div>
+<div class="ttc" id="astructwbwlib_1_1ds_1_1_seg_beats_1_1_node_html_adb6200d021c4f53429cc34eab3ee720c"><div class="ttname"><a href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#adb6200d021c4f53429cc34eab3ee720c">wbwlib::ds::SegBeats::Node::cmx</a></div><div class="ttdeci">int cmx</div><div class="ttdoc">最大值的个数</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:46</div></div>
+<div class="ttc" id="astructwbwlib_1_1ds_1_1_seg_beats_1_1_node_html_af1846c2e6ed489382caa8f8582fad23f"><div class="ttname"><a href="structwbwlib_1_1ds_1_1_seg_beats_1_1_node.html#af1846c2e6ed489382caa8f8582fad23f">wbwlib::ds::SegBeats::Node::sum</a></div><div class="ttdeci">T sum</div><div class="ttdoc">最大、次大（严格）、和</div><div class="ttdef"><b>Definition:</b> segtree-beats.hpp:45</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

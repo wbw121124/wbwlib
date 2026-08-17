@@ -1,0 +1,13 @@
+<map id="wbwlib/datastruct/segtree&#45;beats.hpp" name="wbwlib/datastruct/segtree&#45;beats.hpp">
+<area shape="rect" id="node1" title="吉司机线段树（Segment Tree Beats）：区间取 min / 区间加 / 区间和、区间最大值。" alt="" coords="84,5,254,49"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,97,80,125"/>
+<area shape="rect" id="node3" title=" " alt="" coords="104,97,157,125"/>
+<area shape="rect" id="node4" title=" " alt="" coords="181,97,238,125"/>
+<area shape="rect" id="node5" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="262,97,410,125"/>
+<area shape="rect" id="node6" title=" " alt="" coords="83,173,143,201"/>
+<area shape="rect" id="node7" title=" " alt="" coords="168,173,232,201"/>
+<area shape="rect" id="node8" title=" " alt="" coords="256,173,320,201"/>
+<area shape="rect" id="node9" title=" " alt="" coords="345,173,423,201"/>
+<area shape="rect" id="node10" title=" " alt="" coords="447,173,529,201"/>
+<area shape="rect" id="node11" title=" " alt="" coords="554,173,606,201"/>
+</map>

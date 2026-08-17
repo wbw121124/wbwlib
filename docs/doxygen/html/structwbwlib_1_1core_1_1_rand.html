@@ -1,0 +1,508 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::core::Rand结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1core.html">core</a></li><li class="navelem"><a class="el" href="structwbwlib_1_1core_1_1_rand.html">Rand</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structwbwlib_1_1core_1_1_rand-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::core::Rand结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>MT19937_64 无缝封装（线程不安全，OI 单线程足够）。  
+ <a href="structwbwlib_1_1core_1_1_rand.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="random_8hpp_source.html">random.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::core::Rand 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="structwbwlib_1_1core_1_1_rand__coll__graph.png" border="0" usemap="#awbwlib_1_1core_1_1_rand_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1core_1_1_rand_coll__map" id="awbwlib_1_1core_1_1_rand_coll__map">
+<area shape="rect" title="MT19937_64 无缝封装（线程不安全，OI 单线程足够）。" alt="" coords="5,5,139,215"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a8114b848257d16be4448d5ad86ae4b0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1core_1_1_rand.html#a8114b848257d16be4448d5ad86ae4b0e">Rand</a> ()</td></tr>
+<tr class="memdesc:a8114b848257d16be4448d5ad86ae4b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造：以系统时钟+地址偏移生成的种子初始化 mt19937_64。  <a href="structwbwlib_1_1core_1_1_rand.html#a8114b848257d16be4448d5ad86ae4b0e">更多...</a><br /></td></tr>
+<tr class="separator:a8114b848257d16be4448d5ad86ae4b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab03ea2c54f716a3f0858acfce67d2f99"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1core_1_1_rand.html#ab03ea2c54f716a3f0858acfce67d2f99">Rand</a> (<a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> s)</td></tr>
+<tr class="memdesc:ab03ea2c54f716a3f0858acfce67d2f99"><td class="mdescLeft">&#160;</td><td class="mdescRight">用指定种子构造。  <a href="structwbwlib_1_1core_1_1_rand.html#ab03ea2c54f716a3f0858acfce67d2f99">更多...</a><br /></td></tr>
+<tr class="separator:ab03ea2c54f716a3f0858acfce67d2f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab338045101aced942be40f8bfdd3d942"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1core_1_1_rand.html#ab338045101aced942be40f8bfdd3d942">next</a> ()</td></tr>
+<tr class="memdesc:ab338045101aced942be40f8bfdd3d942"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成 [0, 2^64) 均匀分布的随机数。  <a href="structwbwlib_1_1core_1_1_rand.html#ab338045101aced942be40f8bfdd3d942">更多...</a><br /></td></tr>
+<tr class="separator:ab338045101aced942be40f8bfdd3d942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455df3e9f9ed7744b2b6b717fe5ab529"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1core_1_1_rand.html#a455df3e9f9ed7744b2b6b717fe5ab529">range</a> (<a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> l, <a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> r)</td></tr>
+<tr class="memdesc:a455df3e9f9ed7744b2b6b717fe5ab529"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成 [l, r] 闭区间内的随机数。  <a href="structwbwlib_1_1core_1_1_rand.html#a455df3e9f9ed7744b2b6b717fe5ab529">更多...</a><br /></td></tr>
+<tr class="separator:a455df3e9f9ed7744b2b6b717fe5ab529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a936d4208cae32420270d6c3efdc60628"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1core_1_1_rand.html#a936d4208cae32420270d6c3efdc60628">below</a> (<a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> n)</td></tr>
+<tr class="memdesc:a936d4208cae32420270d6c3efdc60628"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成 [0, n) 内的随机数。  <a href="structwbwlib_1_1core_1_1_rand.html#a936d4208cae32420270d6c3efdc60628">更多...</a><br /></td></tr>
+<tr class="separator:a936d4208cae32420270d6c3efdc60628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f4dc865a9fd90056429e494aa0d6679"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1core_1_1_rand.html#a3f4dc865a9fd90056429e494aa0d6679">coin</a> ()</td></tr>
+<tr class="memdesc:a3f4dc865a9fd90056429e494aa0d6679"><td class="mdescLeft">&#160;</td><td class="mdescRight">0/1 掷硬币。  <a href="structwbwlib_1_1core_1_1_rand.html#a3f4dc865a9fd90056429e494aa0d6679">更多...</a><br /></td></tr>
+<tr class="separator:a3f4dc865a9fd90056429e494aa0d6679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa382cc8d9d4eecc2220e5cce568c3db9"><td class="memTemplParams" colspan="2">template&lt;class Iter &gt; </td></tr>
+<tr class="memitem:aa382cc8d9d4eecc2220e5cce568c3db9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1core_1_1_rand.html#aa382cc8d9d4eecc2220e5cce568c3db9">shuffle</a> (Iter first, Iter last)</td></tr>
+<tr class="memdesc:aa382cc8d9d4eecc2220e5cce568c3db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">打乱容器（传入迭代器对）。  <a href="structwbwlib_1_1core_1_1_rand.html#aa382cc8d9d4eecc2220e5cce568c3db9">更多...</a><br /></td></tr>
+<tr class="separator:aa382cc8d9d4eecc2220e5cce568c3db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d799ff5477a507606a0e8a3266228ed"><td class="memTemplParams" colspan="2">template&lt;class Container &gt; </td></tr>
+<tr class="memitem:a0d799ff5477a507606a0e8a3266228ed"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1core_1_1_rand.html#a0d799ff5477a507606a0e8a3266228ed">shuffle</a> (Container &amp;c)</td></tr>
+<tr class="memdesc:a0d799ff5477a507606a0e8a3266228ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">打乱容器的引用重载（与迭代器对版本互不冲突）。  <a href="structwbwlib_1_1core_1_1_rand.html#a0d799ff5477a507606a0e8a3266228ed">更多...</a><br /></td></tr>
+<tr class="separator:a0d799ff5477a507606a0e8a3266228ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a2df7e1f1293cab67001d6a3d96d1b804"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1core_1_1_rand.html#a2df7e1f1293cab67001d6a3d96d1b804">seed</a> ()</td></tr>
+<tr class="memdesc:a2df7e1f1293cab67001d6a3d96d1b804"><td class="mdescLeft">&#160;</td><td class="mdescRight">用系统时钟（纳秒）+ 地址偏移构造种子，保证每次运行不同。  <a href="structwbwlib_1_1core_1_1_rand.html#a2df7e1f1293cab67001d6a3d96d1b804">更多...</a><br /></td></tr>
+<tr class="separator:a2df7e1f1293cab67001d6a3d96d1b804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a62ad80f1b320f261ab712bcae6bbf7b3"><td class="memItemLeft" align="right" valign="top">std::mt19937_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1core_1_1_rand.html#a62ad80f1b320f261ab712bcae6bbf7b3">mt</a></td></tr>
+<tr class="separator:a62ad80f1b320f261ab712bcae6bbf7b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>MT19937_64 无缝封装（线程不安全，OI 单线程足够）。 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a8114b848257d16be4448d5ad86ae4b0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8114b848257d16be4448d5ad86ae4b0e">&#9670;&nbsp;</a></span>Rand() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wbwlib::core::Rand::Rand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造：以系统时钟+地址偏移生成的种子初始化 mt19937_64。 </p>
+
+</div>
+</div>
+<a id="ab03ea2c54f716a3f0858acfce67d2f99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab03ea2c54f716a3f0858acfce67d2f99">&#9670;&nbsp;</a></span>Rand() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wbwlib::core::Rand::Rand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>用指定种子构造。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>种子值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a936d4208cae32420270d6c3efdc60628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a936d4208cae32420270d6c3efdc60628">&#9670;&nbsp;</a></span>below()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> wbwlib::core::Rand::below </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>生成 [0, n) 内的随机数。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>上界（不含） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>模 n 的均匀随机整数 </dd></dl>
+
+</div>
+</div>
+<a id="a3f4dc865a9fd90056429e494aa0d6679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f4dc865a9fd90056429e494aa0d6679">&#9670;&nbsp;</a></span>coin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wbwlib::core::Rand::coin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>0/1 掷硬币。 </p>
+<dl class="section return"><dt>返回</dt><dd>以近似等概率返回 true/false </dd></dl>
+
+</div>
+</div>
+<a id="ab338045101aced942be40f8bfdd3d942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab338045101aced942be40f8bfdd3d942">&#9670;&nbsp;</a></span>next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> wbwlib::core::Rand::next </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>生成 [0, 2^64) 均匀分布的随机数。 </p>
+<dl class="section return"><dt>返回</dt><dd>64 位无符号随机数 </dd></dl>
+
+</div>
+</div>
+<a id="a455df3e9f9ed7744b2b6b717fe5ab529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a455df3e9f9ed7744b2b6b717fe5ab529">&#9670;&nbsp;</a></span>range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> wbwlib::core::Rand::range </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>生成 [l, r] 闭区间内的随机数。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>区间左端点 </td></tr>
+    <tr><td class="paramname">r</td><td>区间右端点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>区间内均匀的随机整数 </dd></dl>
+
+</div>
+</div>
+<a id="a2df7e1f1293cab67001d6a3d96d1b804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df7e1f1293cab67001d6a3d96d1b804">&#9670;&nbsp;</a></span>seed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> wbwlib::core::Rand::seed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>用系统时钟（纳秒）+ 地址偏移构造种子，保证每次运行不同。 </p>
+<dl class="section return"><dt>返回</dt><dd>64 位种子值 </dd></dl>
+
+</div>
+</div>
+<a id="a0d799ff5477a507606a0e8a3266228ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d799ff5477a507606a0e8a3266228ed">&#9670;&nbsp;</a></span>shuffle() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Container &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::core::Rand::shuffle </td>
+          <td>(</td>
+          <td class="paramtype">Container &amp;&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>打乱容器的引用重载（与迭代器对版本互不冲突）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>待打乱的容器 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa382cc8d9d4eecc2220e5cce568c3db9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa382cc8d9d4eecc2220e5cce568c3db9">&#9670;&nbsp;</a></span>shuffle() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Iter &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::core::Rand::shuffle </td>
+          <td>(</td>
+          <td class="paramtype">Iter&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Iter&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>打乱容器（传入迭代器对）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td>起始迭代器 </td></tr>
+    <tr><td class="paramname">last</td><td>末尾迭代器 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a62ad80f1b320f261ab712bcae6bbf7b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62ad80f1b320f261ab712bcae6bbf7b3">&#9670;&nbsp;</a></span>mt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mt19937_64 wbwlib::core::Rand::mt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>wbwlib/core/<a class="el" href="random_8hpp_source.html">random.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

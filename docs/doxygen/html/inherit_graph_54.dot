@@ -1,0 +1,8 @@
+digraph "类继承关系图"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="wbwlib::math::Comb\< M \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwbwlib_1_1math_1_1_comb.html",tooltip="组合数学预计算结构体：阶乘与阶乘逆元，O(1) 查询组合数/排列数。"];
+}

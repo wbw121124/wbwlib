@@ -1,0 +1,8 @@
+digraph "类继承关系图"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="wbwlib::graph::WAdj\< W \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwbwlib_1_1graph_1_1_w_adj.html",tooltip="带权邻接表（1 基）：g[u] 为 (邻点 v, 边权 w) 列表。"];
+}

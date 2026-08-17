@@ -1,0 +1,15 @@
+<map id="wbwlib/string/manacher.hpp" name="wbwlib/string/manacher.hpp">
+<area shape="rect" id="node1" title="Manacher 回文算法。" alt="" coords="78,5,261,33"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,181,59,209"/>
+<area shape="rect" id="node3" title=" " alt="" coords="83,181,141,209"/>
+<area shape="rect" id="node4" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="413,181,560,209"/>
+<area shape="rect" id="node11" href="$palindromic-pam_8hpp.html" title="回文自动机（回文树）PAM：模板化字符类型 / 字母表 / 字符映射。" alt="" coords="147,81,314,125"/>
+<area shape="rect" id="node5" title=" " alt="" coords="234,265,294,293"/>
+<area shape="rect" id="node6" title=" " alt="" coords="319,265,383,293"/>
+<area shape="rect" id="node7" title=" " alt="" coords="407,265,471,293"/>
+<area shape="rect" id="node8" title=" " alt="" coords="496,265,574,293"/>
+<area shape="rect" id="node9" title=" " alt="" coords="598,265,680,293"/>
+<area shape="rect" id="node10" title=" " alt="" coords="705,265,757,293"/>
+<area shape="rect" id="node12" title=" " alt="" coords="315,181,389,209"/>
+<area shape="rect" id="node13" href="$char-map_8hpp.html" title="字符 → 字母表下标映射策略（供 Trie / AC 自动机 / 后缀自动机 / 回文自动机模板化使用）。" alt="" coords="165,173,291,217"/>
+</map>

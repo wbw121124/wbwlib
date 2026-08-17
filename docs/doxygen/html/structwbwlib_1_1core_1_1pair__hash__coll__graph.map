@@ -1,0 +1,3 @@
+<map id="wbwlib::core::pair_hash" name="wbwlib::core::pair_hash">
+<area shape="rect" id="node1" title="pair 哈希：两级 splitmix64 混合（用于二维哈希表键）。" alt="" coords="5,5,164,87"/>
+</map>

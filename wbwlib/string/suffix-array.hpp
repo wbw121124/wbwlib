@@ -5,19 +5,23 @@
  * @file suffix-array.hpp
  * @brief 后缀数组（倍增 + 计数排序，含身扩展：LCP、第 k 大）。
  *
- * 依赖：wbwlib/core/base.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp
  *
- * 复杂度：O(n log n) 时间，O(n) 空间。
+ * @par 复杂度
+ * O(n log n) 时间，O(n) 空间。
  *
  * 结果（0 基字符串 s，长度 n）：
  *   sa[1..n]    —— 第 i 小的后缀的起始位置（0 基）；（sa[0] 恒为 0，未使用）
  *   rank[i]     —— 起始位置 i 的后缀排名（1 基）
  *   height[1..n]—— height[i] = LCP(sa[i-1], sa[i])，height[1] = 0
  *
- * 用法：
+ * @par 示例
+ * @code{.cpp}
  *   wbwlib::str::SuffixArray SA("banana");
  *   for (int i = 1; i <= SA.size(); ++i) std::cout << SA.sa[i];
  *   int lcp = SA.lcp(x, y);     // 位置 x 与 y 两后缀的 LCP 长度
+ * @endcode
  */
 
 #include <algorithm>
@@ -29,6 +33,14 @@
 namespace wbwlib {
 namespace str {
 
+/**
+ * @brief 后缀数组：倍增 + 计数排序构造，附 rank、height（LCP）数组。
+ *
+ * 结果（0 基字符串 s，长度 n）：
+ *   sa[1..n]    第 i 小的后缀的起始位置（0 基），sa[0] 恒为 0 未使用；
+ *   rank[i]     起始位置 i 的后缀排名（1 基）；
+ *   height[1..n]  height[i] = LCP(sa[i-1], sa[i])，height[1] = 0。
+ */
 class SuffixArray {
   int n_;
   std::vector<int> cnt_;
@@ -36,8 +48,16 @@ class SuffixArray {
  public:
   std::vector<int> sa, rank, height;
 
+  /**
+   * @brief 由字符串 s 直接构造后缀数组。
+   * @param s 输入字符串（0 基）
+   */
   explicit SuffixArray(const std::string& s) { build(s); }
 
+  /**
+   * @brief 构建后缀数组：倍增 + 计数排序，最后用 Kasai 求 height。
+   * @param s 输入字符串（0 基）
+   */
   void build(const std::string& s) {
     int n = (int)s.size();
     n_ = n;
@@ -127,9 +147,15 @@ class SuffixArray {
     }
   }
 
+  /// 返回字符串长度 n
   int size() const { return n_; }
 
-  /// 位置 i 与 j 两后缀的 LCP 长度
+  /**
+   * @brief 位置 i 与 j 两后缀的 LCP 长度（朴素区间 height 最小值，O(n)；需要 O(1) 请配 ST 表）。
+   * @param i 后缀起始位置（0 基）
+   * @param j 后缀起始位置（0 基）
+   * @return 最长公共前缀长度
+   */
   int lcp(int i, int j) const {
     if (i == j) return n_ - i;
     int ri = rank[i], rj = rank[j];

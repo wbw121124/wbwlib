@@ -1,0 +1,7 @@
+digraph "wbwlib::ds::SegBeats&lt; T &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::ds::SegBeats\< T \>\n|- n_\l- t_\l- neg_inf_\l|+ SegBeats()\l+ build()\l+ add()\l+ chmin()\l+ sum()\l+ max()\l- pull()\l- apply_add()\l- apply_min()\l- push()\l- build()\l- add()\l- chmin()\l- qsum()\l- qmax()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="吉司机线段树（Segment Tree Beats）：区间取 min、区间加、区间和、区间最大值。"];
+}

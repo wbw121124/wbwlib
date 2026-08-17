@@ -1,0 +1,11 @@
+
+digraph pushdown {
+  rankdir=TB; node [shape=box, style="rounded,filled", fillcolor="#fef3c7"];
+  root [label="[1,4]  sum+=2\n标记 tag=2"];
+  lc   [label="[1,2]  sum+=2\n标记 tag=2"];
+  rc   [label="[3,4]  sum+=2\n标记 tag=2"];
+  leaf [label="[1,1]  sum+=2"];
+  root -> lc [label="push 下传", style=dashed];
+  root -> rc [label="push 下传", style=dashed];
+  lc -> leaf;
+}

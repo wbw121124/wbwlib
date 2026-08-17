@@ -1,0 +1,891 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::ds::segment_tree&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1ds.html">ds</a></li><li class="navelem"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">segment_tree</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classwbwlib_1_1ds_1_1segment__tree-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::ds::segment_tree&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt; 模板类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>泛型懒标记线段树（递归实现，4n 空间）：策略全部固化在模板参数中。  
+ <a href="classwbwlib_1_1ds_1_1segment__tree.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="segment__tree_8hpp_source.html">segment_tree.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::ds::segment_tree&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwbwlib_1_1ds_1_1segment__tree__coll__graph.png" border="0" usemap="#awbwlib_1_1ds_1_1segment__tree_3_01_tval_00_01_ttag_00_01pushup_00_01addtag_00_01hastag_00_01merge_00_01nullval_00_01compose__tag_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1ds_1_1segment__tree_3_01_tval_00_01_ttag_00_01pushup_00_01addtag_00_01hastag_00_01merge_00_01nullval_00_01compose__tag_01_4_coll__map" id="awbwlib_1_1ds_1_1segment__tree_3_01_tval_00_01_ttag_00_01pushup_00_01addtag_00_01hastag_00_01merge_00_01nullval_00_01compose__tag_01_4_coll__map">
+<area shape="rect" title="泛型懒标记线段树（递归实现，4n 空间）：策略全部固化在模板参数中。" alt="" coords="5,5,179,359"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a69259a88034485528bbd77d926af6c20"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html#a69259a88034485528bbd77d926af6c20">segment_tree</a> (int n)</td></tr>
+<tr class="memdesc:a69259a88034485528bbd77d926af6c20"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造覆盖 [1, n] 的线段树（元素初始为 Tval()）。  <a href="classwbwlib_1_1ds_1_1segment__tree.html#a69259a88034485528bbd77d926af6c20">更多...</a><br /></td></tr>
+<tr class="separator:a69259a88034485528bbd77d926af6c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7803bec74a5becfe2bae9c4d2796ccfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html#a7803bec74a5becfe2bae9c4d2796ccfd">build</a> (const std::vector&lt; Tval &gt; &amp;a)</td></tr>
+<tr class="memdesc:a7803bec74a5becfe2bae9c4d2796ccfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 1 基数组 a 构造（仅使用 a[1..n]）。  <a href="classwbwlib_1_1ds_1_1segment__tree.html#a7803bec74a5becfe2bae9c4d2796ccfd">更多...</a><br /></td></tr>
+<tr class="separator:a7803bec74a5becfe2bae9c4d2796ccfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad98b180bfd6fbe3927aa978bb9522d9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html#ad98b180bfd6fbe3927aa978bb9522d9a">range_apply</a> (int l, int r, const Ttag &amp;t)</td></tr>
+<tr class="memdesc:ad98b180bfd6fbe3927aa978bb9522d9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">区间应用标记： \(a[l..r]\) 处复合 t（如区间加）。  <a href="classwbwlib_1_1ds_1_1segment__tree.html#ad98b180bfd6fbe3927aa978bb9522d9a">更多...</a><br /></td></tr>
+<tr class="separator:ad98b180bfd6fbe3927aa978bb9522d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb6f5680143420330cceeaafaaef1eed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html#aeb6f5680143420330cceeaafaaef1eed">set</a> (int p, const Tval &amp;v)</td></tr>
+<tr class="memdesc:aeb6f5680143420330cceeaafaaef1eed"><td class="mdescLeft">&#160;</td><td class="mdescRight">单点赋值：a[p] = v。  <a href="classwbwlib_1_1ds_1_1segment__tree.html#aeb6f5680143420330cceeaafaaef1eed">更多...</a><br /></td></tr>
+<tr class="separator:aeb6f5680143420330cceeaafaaef1eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f4a7eee7fb9e9657f537e3b0837833b"><td class="memItemLeft" align="right" valign="top">Tval&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html#a8f4a7eee7fb9e9657f537e3b0837833b">query</a> (int l, int r)</td></tr>
+<tr class="memdesc:a8f4a7eee7fb9e9657f537e3b0837833b"><td class="mdescLeft">&#160;</td><td class="mdescRight">区间查询：merge 按序合并 a[l..r] 的聚合值。  <a href="classwbwlib_1_1ds_1_1segment__tree.html#a8f4a7eee7fb9e9657f537e3b0837833b">更多...</a><br /></td></tr>
+<tr class="separator:a8f4a7eee7fb9e9657f537e3b0837833b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4278771b88e5559917309d8623447bbb"><td class="memItemLeft" align="right" valign="top">Tval&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html#a4278771b88e5559917309d8623447bbb">all</a> () const</td></tr>
+<tr class="memdesc:a4278771b88e5559917309d8623447bbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回整棵树的聚合值（根节点）  <a href="classwbwlib_1_1ds_1_1segment__tree.html#a4278771b88e5559917309d8623447bbb">更多...</a><br /></td></tr>
+<tr class="separator:a4278771b88e5559917309d8623447bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aec62ebbcd9efbc08c701f1c823f8bb0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html#aec62ebbcd9efbc08c701f1c823f8bb0e">apply_node</a> (int p, int l, int r, const Ttag &amp;t)</td></tr>
+<tr class="memdesc:aec62ebbcd9efbc08c701f1c823f8bb0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">把标记 t 应用到节点 p（改值 + 复合懒标记）  <a href="classwbwlib_1_1ds_1_1segment__tree.html#aec62ebbcd9efbc08c701f1c823f8bb0e">更多...</a><br /></td></tr>
+<tr class="separator:aec62ebbcd9efbc08c701f1c823f8bb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3193e5a6dc326032378759eb3e743835"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html#a3193e5a6dc326032378759eb3e743835">push</a> (int p, int l, int r)</td></tr>
+<tr class="memdesc:a3193e5a6dc326032378759eb3e743835"><td class="mdescLeft">&#160;</td><td class="mdescRight">下传节点 p 的懒标记  <a href="classwbwlib_1_1ds_1_1segment__tree.html#a3193e5a6dc326032378759eb3e743835">更多...</a><br /></td></tr>
+<tr class="separator:a3193e5a6dc326032378759eb3e743835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea57203211bc7bd041db27b245cdef7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html#abea57203211bc7bd041db27b245cdef7">pull</a> (int p)</td></tr>
+<tr class="memdesc:abea57203211bc7bd041db27b245cdef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">用左右子值上拉节点 p  <a href="classwbwlib_1_1ds_1_1segment__tree.html#abea57203211bc7bd041db27b245cdef7">更多...</a><br /></td></tr>
+<tr class="separator:abea57203211bc7bd041db27b245cdef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5aa9cda60b4f3c298e0225d54b5b207"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html#ab5aa9cda60b4f3c298e0225d54b5b207">build</a> (int p, int l, int r, const std::vector&lt; Tval &gt; &amp;a)</td></tr>
+<tr class="memdesc:ab5aa9cda60b4f3c298e0225d54b5b207"><td class="mdescLeft">&#160;</td><td class="mdescRight">递归建树（叶子取 a[l]）  <a href="classwbwlib_1_1ds_1_1segment__tree.html#ab5aa9cda60b4f3c298e0225d54b5b207">更多...</a><br /></td></tr>
+<tr class="separator:ab5aa9cda60b4f3c298e0225d54b5b207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07a79886abf1b6a788d75826642e926f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html#a07a79886abf1b6a788d75826642e926f">apply</a> (int p, int l, int r, int ql, int qr, const Ttag &amp;t)</td></tr>
+<tr class="memdesc:a07a79886abf1b6a788d75826642e926f"><td class="mdescLeft">&#160;</td><td class="mdescRight">递归区间应用标记 t  <a href="classwbwlib_1_1ds_1_1segment__tree.html#a07a79886abf1b6a788d75826642e926f">更多...</a><br /></td></tr>
+<tr class="separator:a07a79886abf1b6a788d75826642e926f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c318290996e63048db39fff9614319a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html#a7c318290996e63048db39fff9614319a">point_set</a> (int p, int l, int r, int pos, const Tval &amp;v)</td></tr>
+<tr class="memdesc:a7c318290996e63048db39fff9614319a"><td class="mdescLeft">&#160;</td><td class="mdescRight">递归单点赋值（清空路径上的懒标记）  <a href="classwbwlib_1_1ds_1_1segment__tree.html#a7c318290996e63048db39fff9614319a">更多...</a><br /></td></tr>
+<tr class="separator:a7c318290996e63048db39fff9614319a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24b640b4a89002211c3c7295cb9e79bf"><td class="memItemLeft" align="right" valign="top">Tval&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html#a24b640b4a89002211c3c7295cb9e79bf">query</a> (int p, int l, int r, int ql, int qr)</td></tr>
+<tr class="memdesc:a24b640b4a89002211c3c7295cb9e79bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">递归区间查询（merge 按序合并结果）  <a href="classwbwlib_1_1ds_1_1segment__tree.html#a24b640b4a89002211c3c7295cb9e79bf">更多...</a><br /></td></tr>
+<tr class="separator:a24b640b4a89002211c3c7295cb9e79bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a9b8a4106dbf19f4ac406038fa3e93bd1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html#a9b8a4106dbf19f4ac406038fa3e93bd1">n_</a></td></tr>
+<tr class="separator:a9b8a4106dbf19f4ac406038fa3e93bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa2209a913449e4f543cf5513996aa4a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Tval &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html#aaa2209a913449e4f543cf5513996aa4a">val_</a></td></tr>
+<tr class="separator:aaa2209a913449e4f543cf5513996aa4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2717ff4d7a0dfae2e6a3204283d9ba18"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Ttag &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html#a2717ff4d7a0dfae2e6a3204283d9ba18">tag_</a></td></tr>
+<tr class="separator:a2717ff4d7a0dfae2e6a3204283d9ba18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><h3>template&lt;class Tval = i64, class Ttag = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt;<br />
+class wbwlib::ds::segment_tree&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;</h3>
+
+<p>泛型懒标记线段树（递归实现，4n 空间）：策略全部固化在模板参数中。 </p>
+<p>函数指针模板参数（pushup/addtag/hastag/merge/nullval/compose_tag）说明见文件头， 默认组合为「区间加 + 区间和」。 </p><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tval</td><td>节点聚合值类型（默认 i64） </td></tr>
+    <tr><td class="paramname">Ttag</td><td>懒标记类型（默认 i64；约定 Ttag() 为空标记） </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a69259a88034485528bbd77d926af6c20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69259a88034485528bbd77d926af6c20">&#9670;&nbsp;</a></span>segment_tree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tval  = i64, class Ttag  = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">wbwlib::ds::segment_tree</a>&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;::<a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">segment_tree</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造覆盖 [1, n] 的线段树（元素初始为 Tval()）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>元素个数（1 基闭区间 [1, n]） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a4278771b88e5559917309d8623447bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4278771b88e5559917309d8623447bbb">&#9670;&nbsp;</a></span>all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tval  = i64, class Ttag  = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tval <a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">wbwlib::ds::segment_tree</a>&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;::all </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回整棵树的聚合值（根节点） </p>
+
+</div>
+</div>
+<a id="a07a79886abf1b6a788d75826642e926f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07a79886abf1b6a788d75826642e926f">&#9670;&nbsp;</a></span>apply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tval  = i64, class Ttag  = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">wbwlib::ds::segment_tree</a>&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;::apply </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ql</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>qr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Ttag &amp;&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>递归区间应用标记 t </p>
+
+</div>
+</div>
+<a id="aec62ebbcd9efbc08c701f1c823f8bb0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec62ebbcd9efbc08c701f1c823f8bb0e">&#9670;&nbsp;</a></span>apply_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tval  = i64, class Ttag  = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">wbwlib::ds::segment_tree</a>&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;::apply_node </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Ttag &amp;&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>把标记 t 应用到节点 p（改值 + 复合懒标记） </p>
+
+</div>
+</div>
+<a id="a7803bec74a5becfe2bae9c4d2796ccfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7803bec74a5becfe2bae9c4d2796ccfd">&#9670;&nbsp;</a></span>build() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tval  = i64, class Ttag  = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">wbwlib::ds::segment_tree</a>&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;::build </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; Tval &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从 1 基数组 a 构造（仅使用 a[1..n]）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>1 基数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab5aa9cda60b4f3c298e0225d54b5b207"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5aa9cda60b4f3c298e0225d54b5b207">&#9670;&nbsp;</a></span>build() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tval  = i64, class Ttag  = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">wbwlib::ds::segment_tree</a>&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;::build </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; Tval &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>递归建树（叶子取 a[l]） </p>
+
+</div>
+</div>
+<a id="a7c318290996e63048db39fff9614319a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c318290996e63048db39fff9614319a">&#9670;&nbsp;</a></span>point_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tval  = i64, class Ttag  = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">wbwlib::ds::segment_tree</a>&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;::point_set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Tval &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>递归单点赋值（清空路径上的懒标记） </p>
+
+</div>
+</div>
+<a id="abea57203211bc7bd041db27b245cdef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abea57203211bc7bd041db27b245cdef7">&#9670;&nbsp;</a></span>pull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tval  = i64, class Ttag  = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">wbwlib::ds::segment_tree</a>&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;::pull </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>用左右子值上拉节点 p </p>
+
+</div>
+</div>
+<a id="a3193e5a6dc326032378759eb3e743835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3193e5a6dc326032378759eb3e743835">&#9670;&nbsp;</a></span>push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tval  = i64, class Ttag  = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">wbwlib::ds::segment_tree</a>&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;::push </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>下传节点 p 的懒标记 </p>
+
+</div>
+</div>
+<a id="a8f4a7eee7fb9e9657f537e3b0837833b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f4a7eee7fb9e9657f537e3b0837833b">&#9670;&nbsp;</a></span>query() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tval  = i64, class Ttag  = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tval <a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">wbwlib::ds::segment_tree</a>&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;::query </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>区间查询：merge 按序合并 a[l..r] 的聚合值。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>区间左端点（1 基闭区间） </td></tr>
+    <tr><td class="paramname">r</td><td>区间右端点（1 基闭区间） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>聚合结果；l &gt; r 时返回 nullval() </dd></dl>
+
+</div>
+</div>
+<a id="a24b640b4a89002211c3c7295cb9e79bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24b640b4a89002211c3c7295cb9e79bf">&#9670;&nbsp;</a></span>query() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tval  = i64, class Ttag  = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tval <a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">wbwlib::ds::segment_tree</a>&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;::query </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ql</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>qr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>递归区间查询（merge 按序合并结果） </p>
+
+</div>
+</div>
+<a id="ad98b180bfd6fbe3927aa978bb9522d9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad98b180bfd6fbe3927aa978bb9522d9a">&#9670;&nbsp;</a></span>range_apply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tval  = i64, class Ttag  = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">wbwlib::ds::segment_tree</a>&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;::range_apply </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Ttag &amp;&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>区间应用标记： \(a[l..r]\) 处复合 t（如区间加）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>区间左端点（1 基闭区间） </td></tr>
+    <tr><td class="paramname">r</td><td>区间右端点（1 基闭区间） </td></tr>
+    <tr><td class="paramname">t</td><td>待应用的标记 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeb6f5680143420330cceeaafaaef1eed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb6f5680143420330cceeaafaaef1eed">&#9670;&nbsp;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tval  = i64, class Ttag  = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">wbwlib::ds::segment_tree</a>&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;::set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Tval &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>单点赋值：a[p] = v。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>位置（1 基） </td></tr>
+    <tr><td class="paramname">v</td><td>新值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a9b8a4106dbf19f4ac406038fa3e93bd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b8a4106dbf19f4ac406038fa3e93bd1">&#9670;&nbsp;</a></span>n_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tval  = i64, class Ttag  = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">wbwlib::ds::segment_tree</a>&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;::n_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2717ff4d7a0dfae2e6a3204283d9ba18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2717ff4d7a0dfae2e6a3204283d9ba18">&#9670;&nbsp;</a></span>tag_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tval  = i64, class Ttag  = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Ttag&gt; <a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">wbwlib::ds::segment_tree</a>&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;::tag_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa2209a913449e4f543cf5513996aa4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa2209a913449e4f543cf5513996aa4a">&#9670;&nbsp;</a></span>val_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tval  = i64, class Ttag  = i64, void(*)(Tval &amp;, const Tval &amp;, const Tval &amp;) pushup = &amp;segdetail::def_pushup&lt;Tval&gt;, void(*)(Tval &amp;, const Ttag &amp;, int, int) addtag = &amp;segdetail::def_addtag&lt;Tval, Ttag&gt;, bool(*)(const Ttag &amp;) hastag = &amp;segdetail::def_hastag&lt;Ttag&gt;, Tval(*)(const Tval &amp;, const Tval &amp;) merge = &amp;segdetail::def_merge&lt;Tval&gt;, Tval(*)() nullval = &amp;segdetail::def_nullval&lt;Tval&gt;, void(*)(Ttag &amp;, const Ttag &amp;) compose_tag = &amp;segdetail::def_compose&lt;Ttag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Tval&gt; <a class="el" href="classwbwlib_1_1ds_1_1segment__tree.html">wbwlib::ds::segment_tree</a>&lt; Tval, Ttag, pushup, addtag, hastag, merge, nullval, compose_tag &gt;::val_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>wbwlib/datastruct/<a class="el" href="segment__tree_8hpp_source.html">segment_tree.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

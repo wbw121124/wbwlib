@@ -1,0 +1,3056 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::math 命名空间参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1math.html">math</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#nested-classes">类</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::math 命名空间参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacewbwlib_1_1math_1_1details"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math_1_1details.html">details</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacewbwlib_1_1math_1_1poly"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math_1_1poly.html">poly</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1math_1_1_comb.html">Comb</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">组合数学预计算结构体：阶乘与阶乘逆元，O(1) 查询组合数/排列数。  <a href="structwbwlib_1_1math_1_1_comb.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_fraction.html">Fraction</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">精确有理数（分数）类：自动约分，支持全部算术/比较/输出。  <a href="classwbwlib_1_1math_1_1_fraction.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_xor_basis.html">XorBasis</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">64 位异或线性基。  <a href="classwbwlib_1_1math_1_1_xor_basis.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1_mat.html">Mat</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">稠密矩阵类：加/减/乘、快速幂、转置、单位阵与向量乘法。  <a href="classwbwlib_1_1math_1_1_mat.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">固定模数的模整数类：所有运算自动取模，支持与原生整数混合运算。  <a href="classwbwlib_1_1math_1_1modint.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">动态模数的模整数类：模数可在运行时用 set_mod 设置。  <a href="classwbwlib_1_1math_1_1modint__dyn.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1math_1_1_excrt_result.html">ExcrtResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">扩展中国剩余定理（EXCRT）的求解结果。  <a href="structwbwlib_1_1math_1_1_excrt_result.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1math_1_1_int_block.html">IntBlock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">整除分块：按 \(\lfloor n / i \rfloor\) 取值相同分块，用于 \(\sum_{i=1}^{n} f(\lfloor n/i \rfloor)\) 类求和。  <a href="structwbwlib_1_1math_1_1_int_block.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1math_1_1_sieve_result.html">SieveResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">线性筛的结果：素数列表、欧拉函数、莫比乌斯函数与素性标记（均含下标 0..n）。  <a href="structwbwlib_1_1math_1_1_sieve_result.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:acba21834175ea3d16b66d688e4c43cd7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#acba21834175ea3d16b66d688e4c43cd7">poly_mod</a> = <a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; 998244353 &gt;</td></tr>
+<tr class="memdesc:acba21834175ea3d16b66d688e4c43cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认多项式环元素  <a href="namespacewbwlib_1_1math.html#acba21834175ea3d16b66d688e4c43cd7">更多...</a><br /></td></tr>
+<tr class="separator:acba21834175ea3d16b66d688e4c43cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:af07d3dc0a94e4bdd830934d4d5708a27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#af07d3dc0a94e4bdd830934d4d5708a27">bsgs</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> a, <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> b, <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> p)</td></tr>
+<tr class="memdesc:af07d3dc0a94e4bdd830934d4d5708a27"><td class="mdescLeft">&#160;</td><td class="mdescRight">大步小步法（BSGS）：解离散对数 \(a^x \equiv b \pmod p\)。  <a href="namespacewbwlib_1_1math.html#af07d3dc0a94e4bdd830934d4d5708a27">更多...</a><br /></td></tr>
+<tr class="separator:af07d3dc0a94e4bdd830934d4d5708a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1ea42fec3bd014e15693e86e136024"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:a2a1ea42fec3bd014e15693e86e136024"><td class="memTemplItemLeft" align="right" valign="top">M&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a2a1ea42fec3bd014e15693e86e136024">lucas_comb</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> n, <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> k, <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> p, const <a class="el" href="structwbwlib_1_1math_1_1_comb.html">Comb</a>&lt; M &gt; &amp;cb)</td></tr>
+<tr class="memdesc:a2a1ea42fec3bd014e15693e86e136024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lucas 定理求组合数 \(\binom{n}{k} \bmod p\)，p 为质数，用于 n, k 超过预计算范围。  <a href="namespacewbwlib_1_1math.html#a2a1ea42fec3bd014e15693e86e136024">更多...</a><br /></td></tr>
+<tr class="separator:a2a1ea42fec3bd014e15693e86e136024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06910c4b3c1f5d01eb21d830cf1374b9"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:a06910c4b3c1f5d01eb21d830cf1374b9"><td class="memTemplItemLeft" align="right" valign="top">M&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a06910c4b3c1f5d01eb21d830cf1374b9">catalan</a> (int n, const <a class="el" href="structwbwlib_1_1math_1_1_comb.html">Comb</a>&lt; M &gt; &amp;cb)</td></tr>
+<tr class="memdesc:a06910c4b3c1f5d01eb21d830cf1374b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">卡特兰数： \(Cat(n) = \frac{1}{n+1}\binom{2n}{n}\)。  <a href="namespacewbwlib_1_1math.html#a06910c4b3c1f5d01eb21d830cf1374b9">更多...</a><br /></td></tr>
+<tr class="separator:a06910c4b3c1f5d01eb21d830cf1374b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1de8db070152a63f2b2c7ba04f33003e"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:a1de8db070152a63f2b2c7ba04f33003e"><td class="memTemplItemLeft" align="right" valign="top">M&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a1de8db070152a63f2b2c7ba04f33003e">stirling2</a> (int n, int k)</td></tr>
+<tr class="memdesc:a1de8db070152a63f2b2c7ba04f33003e"><td class="mdescLeft">&#160;</td><td class="mdescRight">第二类斯特林数 \(S(n, k)\)：把 n 个有区别的球放入 k 个非空集合的方案数。  <a href="namespacewbwlib_1_1math.html#a1de8db070152a63f2b2c7ba04f33003e">更多...</a><br /></td></tr>
+<tr class="separator:a1de8db070152a63f2b2c7ba04f33003e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94268b4b8a69c2106612930188d4b515"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:a94268b4b8a69c2106612930188d4b515"><td class="memTemplItemLeft" align="right" valign="top">M&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a94268b4b8a69c2106612930188d4b515">stirling1</a> (int n, int k)</td></tr>
+<tr class="memdesc:a94268b4b8a69c2106612930188d4b515"><td class="mdescLeft">&#160;</td><td class="mdescRight">第一类斯特林数 \(S_1(n, k)\)：把 n 个元素排列成 k 个环的方案数。  <a href="namespacewbwlib_1_1math.html#a94268b4b8a69c2106612930188d4b515">更多...</a><br /></td></tr>
+<tr class="separator:a94268b4b8a69c2106612930188d4b515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a4d6aa48f0d1cf3ef3caff7c15a5c4b"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:a5a4d6aa48f0d1cf3ef3caff7c15a5c4b"><td class="memTemplItemLeft" align="right" valign="top">M&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a5a4d6aa48f0d1cf3ef3caff7c15a5c4b">derangement</a> (int n)</td></tr>
+<tr class="memdesc:a5a4d6aa48f0d1cf3ef3caff7c15a5c4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">错排数：n 个元素全排列中没有任何一个元素留在原位的方案数。  <a href="namespacewbwlib_1_1math.html#a5a4d6aa48f0d1cf3ef3caff7c15a5c4b">更多...</a><br /></td></tr>
+<tr class="separator:a5a4d6aa48f0d1cf3ef3caff7c15a5c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12388c26f93ff53c3799fd1eaf670daa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a12388c26f93ff53c3799fd1eaf670daa">floor_sum</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> n, <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> m, <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> a, <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> b)</td></tr>
+<tr class="memdesc:a12388c26f93ff53c3799fd1eaf670daa"><td class="mdescLeft">&#160;</td><td class="mdescRight">ACL 风格 floor_sum：计算 \(\sum_{i=0}^{n-1} \left\lfloor \frac{a \cdot i + b}{m} \right\rfloor\)。  <a href="namespacewbwlib_1_1math.html#a12388c26f93ff53c3799fd1eaf670daa">更多...</a><br /></td></tr>
+<tr class="separator:a12388c26f93ff53c3799fd1eaf670daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb71ad2eda63f3c601fa936762f363f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#acb71ad2eda63f3c601fa936762f363f5">fft</a> (std::vector&lt; std::complex&lt; double &gt;&gt; &amp;a, bool invert)</td></tr>
+<tr class="memdesc:acb71ad2eda63f3c601fa936762f363f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">迭代版 Cooley-Tukey FFT：计算离散傅里叶变换 \(X_k = \sum_{j=0}^{n-1} x_j \omega_n^{jk}\)。  <a href="namespacewbwlib_1_1math.html#acb71ad2eda63f3c601fa936762f363f5">更多...</a><br /></td></tr>
+<tr class="separator:acb71ad2eda63f3c601fa936762f363f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a920f34ceb494af48ea20f96ce173d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#aa8a920f34ceb494af48ea20f96ce173d">convolution_fft</a> (const std::vector&lt; double &gt; &amp;a, const std::vector&lt; double &gt; &amp;b)</td></tr>
+<tr class="memdesc:aa8a920f34ceb494af48ea20f96ce173d"><td class="mdescLeft">&#160;</td><td class="mdescRight">两个双精度序列的卷积（FFT）： \(c_k = \sum_{i+j=k} a_i b_j\)。  <a href="namespacewbwlib_1_1math.html#aa8a920f34ceb494af48ea20f96ce173d">更多...</a><br /></td></tr>
+<tr class="separator:aa8a920f34ceb494af48ea20f96ce173d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca0ee61ac44883121f55d6da0abde743"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:aca0ee61ac44883121f55d6da0abde743"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#aca0ee61ac44883121f55d6da0abde743">ntt</a> (std::vector&lt; M &gt; &amp;a, bool invert)</td></tr>
+<tr class="memdesc:aca0ee61ac44883121f55d6da0abde743"><td class="mdescLeft">&#160;</td><td class="mdescRight">标准 NTT：模 998244353，原根 3；a 长度必须是 2 的幂。  <a href="namespacewbwlib_1_1math.html#aca0ee61ac44883121f55d6da0abde743">更多...</a><br /></td></tr>
+<tr class="separator:aca0ee61ac44883121f55d6da0abde743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb0b8fce32f3bf2db9f775d047be4f25"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:aeb0b8fce32f3bf2db9f775d047be4f25"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#aeb0b8fce32f3bf2db9f775d047be4f25">ntt_g</a> (std::vector&lt; M &gt; &amp;a, bool invert, int g)</td></tr>
+<tr class="memdesc:aeb0b8fce32f3bf2db9f775d047be4f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">通用 NTT：可指定原根 g（要求模数存在对应阶的单位根）。  <a href="namespacewbwlib_1_1math.html#aeb0b8fce32f3bf2db9f775d047be4f25">更多...</a><br /></td></tr>
+<tr class="separator:aeb0b8fce32f3bf2db9f775d047be4f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ef93a0142291ad1d6eb275055ec2a7"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:a74ef93a0142291ad1d6eb275055ec2a7"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; M &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a74ef93a0142291ad1d6eb275055ec2a7">convolution_ntt</a> (std::vector&lt; M &gt; a, std::vector&lt; M &gt; b)</td></tr>
+<tr class="memdesc:a74ef93a0142291ad1d6eb275055ec2a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">模数卷积（NTT）： \(c_k = \sum_{i+j=k} a_i b_j \bmod p\)。  <a href="namespacewbwlib_1_1math.html#a74ef93a0142291ad1d6eb275055ec2a7">更多...</a><br /></td></tr>
+<tr class="separator:a74ef93a0142291ad1d6eb275055ec2a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00329c9663160311a645d313973c64e2"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:a00329c9663160311a645d313973c64e2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a00329c9663160311a645d313973c64e2">fwt_or</a> (std::vector&lt; M &gt; &amp;a)</td></tr>
+<tr class="memdesc:a00329c9663160311a645d313973c64e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">OR 卷积正变换（原地；长度需为 2 的幂）。  <a href="namespacewbwlib_1_1math.html#a00329c9663160311a645d313973c64e2">更多...</a><br /></td></tr>
+<tr class="separator:a00329c9663160311a645d313973c64e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a28129f9b8c2cbada236c5fe02f20d5"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:a3a28129f9b8c2cbada236c5fe02f20d5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a3a28129f9b8c2cbada236c5fe02f20d5">ifwt_or</a> (std::vector&lt; M &gt; &amp;a)</td></tr>
+<tr class="memdesc:a3a28129f9b8c2cbada236c5fe02f20d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">OR 卷积逆变换（原地；长度需为 2 的幂）。  <a href="namespacewbwlib_1_1math.html#a3a28129f9b8c2cbada236c5fe02f20d5">更多...</a><br /></td></tr>
+<tr class="separator:a3a28129f9b8c2cbada236c5fe02f20d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9fbfbdbc05c931d384e18dc819ae496"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:ab9fbfbdbc05c931d384e18dc819ae496"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#ab9fbfbdbc05c931d384e18dc819ae496">fwt_and</a> (std::vector&lt; M &gt; &amp;a)</td></tr>
+<tr class="memdesc:ab9fbfbdbc05c931d384e18dc819ae496"><td class="mdescLeft">&#160;</td><td class="mdescRight">AND 卷积正变换（原地；长度需为 2 的幂）。  <a href="namespacewbwlib_1_1math.html#ab9fbfbdbc05c931d384e18dc819ae496">更多...</a><br /></td></tr>
+<tr class="separator:ab9fbfbdbc05c931d384e18dc819ae496"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03dd9f227421187bc6010c124e43de66"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:a03dd9f227421187bc6010c124e43de66"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a03dd9f227421187bc6010c124e43de66">ifwt_and</a> (std::vector&lt; M &gt; &amp;a)</td></tr>
+<tr class="memdesc:a03dd9f227421187bc6010c124e43de66"><td class="mdescLeft">&#160;</td><td class="mdescRight">AND 卷积逆变换（原地；长度需为 2 的幂）。  <a href="namespacewbwlib_1_1math.html#a03dd9f227421187bc6010c124e43de66">更多...</a><br /></td></tr>
+<tr class="separator:a03dd9f227421187bc6010c124e43de66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11f6d2df79cbd51dd247ab6d4882d763"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:a11f6d2df79cbd51dd247ab6d4882d763"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a11f6d2df79cbd51dd247ab6d4882d763">fwt_xor</a> (std::vector&lt; M &gt; &amp;a)</td></tr>
+<tr class="memdesc:a11f6d2df79cbd51dd247ab6d4882d763"><td class="mdescLeft">&#160;</td><td class="mdescRight">XOR 卷积正变换（原地；长度需为 2 的幂）。  <a href="namespacewbwlib_1_1math.html#a11f6d2df79cbd51dd247ab6d4882d763">更多...</a><br /></td></tr>
+<tr class="separator:a11f6d2df79cbd51dd247ab6d4882d763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf2feb8619e2d9de47391dd2d9d913d8"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:aaf2feb8619e2d9de47391dd2d9d913d8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#aaf2feb8619e2d9de47391dd2d9d913d8">ifwt_xor</a> (std::vector&lt; M &gt; &amp;a)</td></tr>
+<tr class="memdesc:aaf2feb8619e2d9de47391dd2d9d913d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">XOR 卷积逆变换（原地；长度需为 2 的幂）。  <a href="namespacewbwlib_1_1math.html#aaf2feb8619e2d9de47391dd2d9d913d8">更多...</a><br /></td></tr>
+<tr class="separator:aaf2feb8619e2d9de47391dd2d9d913d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2918666865e4cbeab0864335046a2c3e"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:a2918666865e4cbeab0864335046a2c3e"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; M &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a2918666865e4cbeab0864335046a2c3e">convolution_or</a> (std::vector&lt; M &gt; a, std::vector&lt; M &gt; b)</td></tr>
+<tr class="memdesc:a2918666865e4cbeab0864335046a2c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">OR 卷积： \(c_k = \sum_{i | j = k} a_i b_j\)。  <a href="namespacewbwlib_1_1math.html#a2918666865e4cbeab0864335046a2c3e">更多...</a><br /></td></tr>
+<tr class="separator:a2918666865e4cbeab0864335046a2c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5987766522bb2859772432e787c9853"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:ad5987766522bb2859772432e787c9853"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; M &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#ad5987766522bb2859772432e787c9853">convolution_and</a> (std::vector&lt; M &gt; a, std::vector&lt; M &gt; b)</td></tr>
+<tr class="memdesc:ad5987766522bb2859772432e787c9853"><td class="mdescLeft">&#160;</td><td class="mdescRight">AND 卷积： \(c_k = \sum_{i \&amp; j = k} a_i b_j\)。  <a href="namespacewbwlib_1_1math.html#ad5987766522bb2859772432e787c9853">更多...</a><br /></td></tr>
+<tr class="separator:ad5987766522bb2859772432e787c9853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af548b9ad964b97053402d4385f57d871"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:af548b9ad964b97053402d4385f57d871"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; M &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#af548b9ad964b97053402d4385f57d871">convolution_xor</a> (std::vector&lt; M &gt; a, std::vector&lt; M &gt; b)</td></tr>
+<tr class="memdesc:af548b9ad964b97053402d4385f57d871"><td class="mdescLeft">&#160;</td><td class="mdescRight">XOR 卷积： \(c_k = \sum_{i \oplus j = k} a_i b_j\)。  <a href="namespacewbwlib_1_1math.html#af548b9ad964b97053402d4385f57d871">更多...</a><br /></td></tr>
+<tr class="separator:af548b9ad964b97053402d4385f57d871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b29de3f85cc3bee9c7d18550fa5915"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a99b29de3f85cc3bee9c7d18550fa5915"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a99b29de3f85cc3bee9c7d18550fa5915">gauss_elim</a> (std::vector&lt; std::vector&lt; T &gt;&gt; &amp;a, double fp_eps=1e-9)</td></tr>
+<tr class="memdesc:a99b29de3f85cc3bee9c7d18550fa5915"><td class="mdescLeft">&#160;</td><td class="mdescRight">对增广矩阵 a（n 行 × (m+1) 列，最后一列为常数列）做高斯消元，返回秩。  <a href="namespacewbwlib_1_1math.html#a99b29de3f85cc3bee9c7d18550fa5915">更多...</a><br /></td></tr>
+<tr class="separator:a99b29de3f85cc3bee9c7d18550fa5915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a471123643b46d93051d7d1c2a688237c"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a471123643b46d93051d7d1c2a688237c"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a471123643b46d93051d7d1c2a688237c">solve_linear</a> (std::vector&lt; std::vector&lt; T &gt;&gt; A, std::vector&lt; T &gt; b, std::vector&lt; T &gt; &amp;x)</td></tr>
+<tr class="memdesc:a471123643b46d93051d7d1c2a688237c"><td class="mdescLeft">&#160;</td><td class="mdescRight">求解 n 元线性方程组 \(A x = b\)（A 为方阵）。  <a href="namespacewbwlib_1_1math.html#a471123643b46d93051d7d1c2a688237c">更多...</a><br /></td></tr>
+<tr class="separator:a471123643b46d93051d7d1c2a688237c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfb8bbec9329926e0739a8ab02445aee"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:adfb8bbec9329926e0739a8ab02445aee"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#adfb8bbec9329926e0739a8ab02445aee">det</a> (std::vector&lt; std::vector&lt; T &gt;&gt; a)</td></tr>
+<tr class="memdesc:adfb8bbec9329926e0739a8ab02445aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列式：高斯消元后取对角元乘积， \(\det A = \prod_i A_{ii}\)（消元后）。  <a href="namespacewbwlib_1_1math.html#adfb8bbec9329926e0739a8ab02445aee">更多...</a><br /></td></tr>
+<tr class="separator:adfb8bbec9329926e0739a8ab02445aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0337c8498b6059468150a54542c2b39e"><td class="memTemplParams" colspan="2">template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:a0337c8498b6059468150a54542c2b39e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a0337c8498b6059468150a54542c2b39e">operator+</a> (const <a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt; &amp;a, T b)</td></tr>
+<tr class="memdesc:a0337c8498b6059468150a54542c2b39e"><td class="mdescLeft">&#160;</td><td class="mdescRight">modint 与整数的加法（整数在右侧）。  <a href="namespacewbwlib_1_1math.html#a0337c8498b6059468150a54542c2b39e">更多...</a><br /></td></tr>
+<tr class="separator:a0337c8498b6059468150a54542c2b39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cdf2cd8f128f8503a398b92fd8963bd"><td class="memTemplParams" colspan="2">template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:a2cdf2cd8f128f8503a398b92fd8963bd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a2cdf2cd8f128f8503a398b92fd8963bd">operator+</a> (T a, const <a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt; &amp;b)</td></tr>
+<tr class="memdesc:a2cdf2cd8f128f8503a398b92fd8963bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">整数与 modint 的加法（整数在左侧）。  <a href="namespacewbwlib_1_1math.html#a2cdf2cd8f128f8503a398b92fd8963bd">更多...</a><br /></td></tr>
+<tr class="separator:a2cdf2cd8f128f8503a398b92fd8963bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a246248dffc786c85506ab5c1bc8f68b5"><td class="memTemplParams" colspan="2">template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:a246248dffc786c85506ab5c1bc8f68b5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a246248dffc786c85506ab5c1bc8f68b5">operator-</a> (const <a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt; &amp;a, T b)</td></tr>
+<tr class="memdesc:a246248dffc786c85506ab5c1bc8f68b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">modint 与整数的减法（整数在右侧）。  <a href="namespacewbwlib_1_1math.html#a246248dffc786c85506ab5c1bc8f68b5">更多...</a><br /></td></tr>
+<tr class="separator:a246248dffc786c85506ab5c1bc8f68b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c3c4a0086f23c034d2c410e2f54d9f"><td class="memTemplParams" colspan="2">template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:af6c3c4a0086f23c034d2c410e2f54d9f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#af6c3c4a0086f23c034d2c410e2f54d9f">operator-</a> (T a, const <a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt; &amp;b)</td></tr>
+<tr class="memdesc:af6c3c4a0086f23c034d2c410e2f54d9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">整数与 modint 的减法（整数在左侧）。  <a href="namespacewbwlib_1_1math.html#af6c3c4a0086f23c034d2c410e2f54d9f">更多...</a><br /></td></tr>
+<tr class="separator:af6c3c4a0086f23c034d2c410e2f54d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7500cbe6ed9237620fbd1c3ce9238fdd"><td class="memTemplParams" colspan="2">template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:a7500cbe6ed9237620fbd1c3ce9238fdd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a7500cbe6ed9237620fbd1c3ce9238fdd">operator*</a> (const <a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt; &amp;a, T b)</td></tr>
+<tr class="memdesc:a7500cbe6ed9237620fbd1c3ce9238fdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">modint 与整数的乘法（整数在右侧）。  <a href="namespacewbwlib_1_1math.html#a7500cbe6ed9237620fbd1c3ce9238fdd">更多...</a><br /></td></tr>
+<tr class="separator:a7500cbe6ed9237620fbd1c3ce9238fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbad4bd2564d49411888c1b3df2baa46"><td class="memTemplParams" colspan="2">template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:acbad4bd2564d49411888c1b3df2baa46"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#acbad4bd2564d49411888c1b3df2baa46">operator*</a> (T a, const <a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt; &amp;b)</td></tr>
+<tr class="memdesc:acbad4bd2564d49411888c1b3df2baa46"><td class="mdescLeft">&#160;</td><td class="mdescRight">整数与 modint 的乘法（整数在左侧）。  <a href="namespacewbwlib_1_1math.html#acbad4bd2564d49411888c1b3df2baa46">更多...</a><br /></td></tr>
+<tr class="separator:acbad4bd2564d49411888c1b3df2baa46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c60f6e5aac8363f7600ff320efdddd"><td class="memTemplParams" colspan="2">template&lt;u64 MOD, class Base &gt; </td></tr>
+<tr class="memitem:a05c60f6e5aac8363f7600ff320efdddd"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a05c60f6e5aac8363f7600ff320efdddd">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt; &amp;m)</td></tr>
+<tr class="memdesc:a05c60f6e5aac8363f7600ff320efdddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出 modint 的数值。  <a href="namespacewbwlib_1_1math.html#a05c60f6e5aac8363f7600ff320efdddd">更多...</a><br /></td></tr>
+<tr class="separator:a05c60f6e5aac8363f7600ff320efdddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac57d0057e9af7cbe3e5918d00482e262"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#ac57d0057e9af7cbe3e5918d00482e262">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;m)</td></tr>
+<tr class="memdesc:ac57d0057e9af7cbe3e5918d00482e262"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出 <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html" title="动态模数的模整数类：模数可在运行时用 set_mod 设置。">modint_dyn</a> 的数值。  <a href="namespacewbwlib_1_1math.html#ac57d0057e9af7cbe3e5918d00482e262">更多...</a><br /></td></tr>
+<tr class="separator:ac57d0057e9af7cbe3e5918d00482e262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98a7e4305bd60b9f791338c1d362839d"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a98a7e4305bd60b9f791338c1d362839d"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a98a7e4305bd60b9f791338c1d362839d">qpow</a> (T a, <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> p, T mod)</td></tr>
+<tr class="memdesc:a98a7e4305bd60b9f791338c1d362839d"><td class="mdescLeft">&#160;</td><td class="mdescRight">快速幂：计算 \(a^p \bmod mod\)，p 可为任意非负整数。  <a href="namespacewbwlib_1_1math.html#a98a7e4305bd60b9f791338c1d362839d">更多...</a><br /></td></tr>
+<tr class="separator:a98a7e4305bd60b9f791338c1d362839d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a485768859468bde0dc8d9c8f6342e1a2"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a485768859468bde0dc8d9c8f6342e1a2"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a485768859468bde0dc8d9c8f6342e1a2">qpow_plain</a> (T a, <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> p)</td></tr>
+<tr class="memdesc:a485768859468bde0dc8d9c8f6342e1a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">无取模的快速幂：直接计算 \(a^p\)（用于不进位的浮点/或溢出可接受的加速场景）。  <a href="namespacewbwlib_1_1math.html#a485768859468bde0dc8d9c8f6342e1a2">更多...</a><br /></td></tr>
+<tr class="separator:a485768859468bde0dc8d9c8f6342e1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8630eefb667f064818be11f8a5b15611"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a8630eefb667f064818be11f8a5b15611"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a8630eefb667f064818be11f8a5b15611">mul_mod</a> (T a, T b, T mod)</td></tr>
+<tr class="memdesc:a8630eefb667f064818be11f8a5b15611"><td class="mdescLeft">&#160;</td><td class="mdescRight">快速乘：精确计算 \(a \cdot b \bmod mod\)，适用于 mod 超过 1e18、i64 乘法溢出的场景。  <a href="namespacewbwlib_1_1math.html#a8630eefb667f064818be11f8a5b15611">更多...</a><br /></td></tr>
+<tr class="separator:a8630eefb667f064818be11f8a5b15611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad63e5d15b740179eb999725b580fa22a"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ad63e5d15b740179eb999725b580fa22a"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#ad63e5d15b740179eb999725b580fa22a">gcd</a> (T a, T b)</td></tr>
+<tr class="memdesc:ad63e5d15b740179eb999725b580fa22a"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大公约数（结果非负）。  <a href="namespacewbwlib_1_1math.html#ad63e5d15b740179eb999725b580fa22a">更多...</a><br /></td></tr>
+<tr class="separator:ad63e5d15b740179eb999725b580fa22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c4fc393a17d41a9667d66119bc61f34"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a3c4fc393a17d41a9667d66119bc61f34"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a3c4fc393a17d41a9667d66119bc61f34">lcm</a> (T a, T b)</td></tr>
+<tr class="memdesc:a3c4fc393a17d41a9667d66119bc61f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小公倍数： \(\operatorname{lcm}(a, b) = \frac{a \cdot b}{\gcd(a, b)}\)。  <a href="namespacewbwlib_1_1math.html#a3c4fc393a17d41a9667d66119bc61f34">更多...</a><br /></td></tr>
+<tr class="separator:a3c4fc393a17d41a9667d66119bc61f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aaf6c4425d159eed5d042d870390856"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a7aaf6c4425d159eed5d042d870390856"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a7aaf6c4425d159eed5d042d870390856">ext_gcd</a> (T a, T b, T &amp;x, T &amp;y)</td></tr>
+<tr class="memdesc:a7aaf6c4425d159eed5d042d870390856"><td class="mdescLeft">&#160;</td><td class="mdescRight">扩展欧几里得：求 \(ax + by = \gcd(a, b)\) 的一组整数解 \((x, y)\)。  <a href="namespacewbwlib_1_1math.html#a7aaf6c4425d159eed5d042d870390856">更多...</a><br /></td></tr>
+<tr class="separator:a7aaf6c4425d159eed5d042d870390856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a681bee043826fa9dd557d87f8c4f40be"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a681bee043826fa9dd557d87f8c4f40be"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a681bee043826fa9dd557d87f8c4f40be">inv</a> (T a, T mod)</td></tr>
+<tr class="memdesc:a681bee043826fa9dd557d87f8c4f40be"><td class="mdescLeft">&#160;</td><td class="mdescRight">a 在模 mod 意义下的乘法逆元（仅要求 \(\gcd(a, mod) = 1\)，不要求 mod 为质数）。  <a href="namespacewbwlib_1_1math.html#a681bee043826fa9dd557d87f8c4f40be">更多...</a><br /></td></tr>
+<tr class="separator:a681bee043826fa9dd557d87f8c4f40be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0233c5b1e0a574e180f024ce44eba57"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aa0233c5b1e0a574e180f024ce44eba57"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#aa0233c5b1e0a574e180f024ce44eba57">mod_inv_prime</a> (T a, T mod)</td></tr>
+<tr class="memdesc:aa0233c5b1e0a574e180f024ce44eba57"><td class="mdescLeft">&#160;</td><td class="mdescRight">费马小定理求逆元（仅当 mod 为质数时成立）。  <a href="namespacewbwlib_1_1math.html#aa0233c5b1e0a574e180f024ce44eba57">更多...</a><br /></td></tr>
+<tr class="separator:aa0233c5b1e0a574e180f024ce44eba57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f38a54f9fa76a10dd536c949413d0d"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aa4f38a54f9fa76a10dd536c949413d0d"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#aa4f38a54f9fa76a10dd536c949413d0d">crt</a> (const std::vector&lt; T &gt; &amp;a, const std::vector&lt; T &gt; &amp;m, T M)</td></tr>
+<tr class="memdesc:aa4f38a54f9fa76a10dd536c949413d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">中国剩余定理（CRT）：解同余方程组 \(x \equiv a_i \pmod{m_i}\)（ \(m_i\) 两两互质）。  <a href="namespacewbwlib_1_1math.html#aa4f38a54f9fa76a10dd536c949413d0d">更多...</a><br /></td></tr>
+<tr class="separator:aa4f38a54f9fa76a10dd536c949413d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a260265713cb827022d0a36b300902161"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a260265713cb827022d0a36b300902161">inv_inline</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> a, <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> mod)</td></tr>
+<tr class="memdesc:a260265713cb827022d0a36b300902161"><td class="mdescLeft">&#160;</td><td class="mdescRight">供 excrt 使用的 i64 逆元（调用处保证互质，逆元必存在）。  <a href="namespacewbwlib_1_1math.html#a260265713cb827022d0a36b300902161">更多...</a><br /></td></tr>
+<tr class="separator:a260265713cb827022d0a36b300902161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbab613ec3bc93768c15cfb2cf385eb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwbwlib_1_1math_1_1_excrt_result.html">ExcrtResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#acbab613ec3bc93768c15cfb2cf385eb2">excrt</a> (const std::vector&lt; <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> &gt; &amp;a, const std::vector&lt; <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> &gt; &amp;m)</td></tr>
+<tr class="memdesc:acbab613ec3bc93768c15cfb2cf385eb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">扩展中国剩余定理（EXCRT）：解同余方程组 \(x \equiv a_i \pmod{m_i}\)， \(m_i\) 不必两两互质。  <a href="namespacewbwlib_1_1math.html#acbab613ec3bc93768c15cfb2cf385eb2">更多...</a><br /></td></tr>
+<tr class="separator:acbab613ec3bc93768c15cfb2cf385eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2afbd6b7fc008f1b75877df25029691"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ae2afbd6b7fc008f1b75877df25029691"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#ae2afbd6b7fc008f1b75877df25029691">phi</a> (T n)</td></tr>
+<tr class="memdesc:ae2afbd6b7fc008f1b75877df25029691"><td class="mdescLeft">&#160;</td><td class="mdescRight">欧拉函数：1..n 中与 n 互质的个数， \(\varphi(n) = n \prod_{p \mid n} (1 - \frac{1}{p})\)。  <a href="namespacewbwlib_1_1math.html#ae2afbd6b7fc008f1b75877df25029691">更多...</a><br /></td></tr>
+<tr class="separator:ae2afbd6b7fc008f1b75877df25029691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb77072a2edab1bdbcdc10a5ade0f6f6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structwbwlib_1_1math_1_1_int_block.html">IntBlock</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#afb77072a2edab1bdbcdc10a5ade0f6f6">floor_blocks</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> n)</td></tr>
+<tr class="memdesc:afb77072a2edab1bdbcdc10a5ade0f6f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">求所有 \(\lfloor n/i \rfloor\) 取值相同的块 \([l, r]\)。  <a href="namespacewbwlib_1_1math.html#afb77072a2edab1bdbcdc10a5ade0f6f6">更多...</a><br /></td></tr>
+<tr class="separator:afb77072a2edab1bdbcdc10a5ade0f6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66018940a67345819158d8ccf981aa1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a66018940a67345819158d8ccf981aa1f">sum_floor</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> n)</td></tr>
+<tr class="memdesc:a66018940a67345819158d8ccf981aa1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算 \(\sum_{i=1}^{n} \lfloor n / i \rfloor\) 的经典整除分块公式，复杂度 \(O(\sqrt n)\)。  <a href="namespacewbwlib_1_1math.html#a66018940a67345819158d8ccf981aa1f">更多...</a><br /></td></tr>
+<tr class="separator:a66018940a67345819158d8ccf981aa1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5f3a90ec71723ca6895d9b4c1a89e8d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#ae5f3a90ec71723ca6895d9b4c1a89e8d">sieve</a> (int n)</td></tr>
+<tr class="memdesc:ae5f3a90ec71723ca6895d9b4c1a89e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">线性欧拉筛：返回 [2, n] 的所有素数。  <a href="namespacewbwlib_1_1math.html#ae5f3a90ec71723ca6895d9b4c1a89e8d">更多...</a><br /></td></tr>
+<tr class="separator:ae5f3a90ec71723ca6895d9b4c1a89e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3140b389bd34577156a10454a7a7f68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwbwlib_1_1math_1_1_sieve_result.html">SieveResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#ad3140b389bd34577156a10454a7a7f68">linear_sieve</a> (int n)</td></tr>
+<tr class="memdesc:ad3140b389bd34577156a10454a7a7f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">线性筛同时求欧拉函数 phi 与莫比乌斯函数 mu（n &lt;= 1e7）。  <a href="namespacewbwlib_1_1math.html#ad3140b389bd34577156a10454a7a7f68">更多...</a><br /></td></tr>
+<tr class="separator:ad3140b389bd34577156a10454a7a7f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af9d76ca843ef0ded57d8ee91ccfc40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a8af9d76ca843ef0ded57d8ee91ccfc40">is_prime64</a> (<a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> n)</td></tr>
+<tr class="memdesc:a8af9d76ca843ef0ded57d8ee91ccfc40"><td class="mdescLeft">&#160;</td><td class="mdescRight">对 64 位整数做确定性 Miller-Rabin 素性测试。  <a href="namespacewbwlib_1_1math.html#a8af9d76ca843ef0ded57d8ee91ccfc40">更多...</a><br /></td></tr>
+<tr class="separator:a8af9d76ca843ef0ded57d8ee91ccfc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa371fedd94ed8e074c30dcc407708134"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aa371fedd94ed8e074c30dcc407708134"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#aa371fedd94ed8e074c30dcc407708134">is_prime_small</a> (T n)</td></tr>
+<tr class="memdesc:aa371fedd94ed8e074c30dcc407708134"><td class="mdescLeft">&#160;</td><td class="mdescRight">试除法素性测试（适合小整数），复杂度 \(O(\sqrt n)\)。  <a href="namespacewbwlib_1_1math.html#aa371fedd94ed8e074c30dcc407708134">更多...</a><br /></td></tr>
+<tr class="separator:aa371fedd94ed8e074c30dcc407708134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4dfb14aa554cc767bb64bf4b1ab86da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#ab4dfb14aa554cc767bb64bf4b1ab86da">pollard_rho</a> (<a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> n)</td></tr>
+<tr class="memdesc:ab4dfb14aa554cc767bb64bf4b1ab86da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pollard-Rho 伪随机游走：找到 n 的一个非平凡因子。  <a href="namespacewbwlib_1_1math.html#ab4dfb14aa554cc767bb64bf4b1ab86da">更多...</a><br /></td></tr>
+<tr class="separator:ab4dfb14aa554cc767bb64bf4b1ab86da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475a0a40f86134abd4c957da6fbdd4cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a475a0a40f86134abd4c957da6fbdd4cd">rho_factor</a> (<a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> n, std::vector&lt; <a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> &gt; &amp;factors)</td></tr>
+<tr class="memdesc:a475a0a40f86134abd4c957da6fbdd4cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">递归分解：把 n 的所有质因子（含重数）放入 factors。  <a href="namespacewbwlib_1_1math.html#a475a0a40f86134abd4c957da6fbdd4cd">更多...</a><br /></td></tr>
+<tr class="separator:a475a0a40f86134abd4c957da6fbdd4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1d08082651e922d01afda5621b5479d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#aa1d08082651e922d01afda5621b5479d">factorize</a> (<a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> n)</td></tr>
+<tr class="memdesc:aa1d08082651e922d01afda5621b5479d"><td class="mdescLeft">&#160;</td><td class="mdescRight">分解质因数，返回排序后的质因子列表（含重复）。  <a href="namespacewbwlib_1_1math.html#aa1d08082651e922d01afda5621b5479d">更多...</a><br /></td></tr>
+<tr class="separator:aa1d08082651e922d01afda5621b5479d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a136e7706dcc601cf2b63c3a7a660616f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; <a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a136e7706dcc601cf2b63c3a7a660616f">factor_exp</a> (<a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> n)</td></tr>
+<tr class="memdesc:a136e7706dcc601cf2b63c3a7a660616f"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回 \((p, e)\) 形式的质因数分解（质因子去重，附指数）。  <a href="namespacewbwlib_1_1math.html#a136e7706dcc601cf2b63c3a7a660616f">更多...</a><br /></td></tr>
+<tr class="separator:a136e7706dcc601cf2b63c3a7a660616f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c6de3de8878bb07cdec51681a11a81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a35c6de3de8878bb07cdec51681a11a81">primitive_root</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> p)</td></tr>
+<tr class="memdesc:a35c6de3de8878bb07cdec51681a11a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">求模 p（质数）的最小原根；p &lt;= 2 时不存在，返回 -1。  <a href="namespacewbwlib_1_1math.html#a35c6de3de8878bb07cdec51681a11a81">更多...</a><br /></td></tr>
+<tr class="separator:a35c6de3de8878bb07cdec51681a11a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d0f12423c5fa6697bb7cd91f40c43c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a6d0f12423c5fa6697bb7cd91f40c43c4">count_primitive_roots</a> (<a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> p)</td></tr>
+<tr class="memdesc:a6d0f12423c5fa6697bb7cd91f40c43c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">模 p（质数）的原根个数： \(\varphi(p-1)\)（用于理解，不验证）。  <a href="namespacewbwlib_1_1math.html#a6d0f12423c5fa6697bb7cd91f40c43c4">更多...</a><br /></td></tr>
+<tr class="separator:a6d0f12423c5fa6697bb7cd91f40c43c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a11fbf635b85846f1bba1d9b97d61feab"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a11fbf635b85846f1bba1d9b97d61feab">kPolyMod</a> = 998244353</td></tr>
+<tr class="memdesc:a11fbf635b85846f1bba1d9b97d61feab"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认多项式环模数  <a href="namespacewbwlib_1_1math.html#a11fbf635b85846f1bba1d9b97d61feab">更多...</a><br /></td></tr>
+<tr class="separator:a11fbf635b85846f1bba1d9b97d61feab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="acba21834175ea3d16b66d688e4c43cd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acba21834175ea3d16b66d688e4c43cd7">&#9670;&nbsp;</a></span>poly_mod</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacewbwlib_1_1math.html#acba21834175ea3d16b66d688e4c43cd7">wbwlib::math::poly_mod</a> = typedef <a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt;998244353&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>默认多项式环元素 </p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="af07d3dc0a94e4bdd830934d4d5708a27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af07d3dc0a94e4bdd830934d4d5708a27">&#9670;&nbsp;</a></span>bsgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> wbwlib::math::bsgs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>大步小步法（BSGS）：解离散对数 \(a^x \equiv b \pmod p\)。 </p>
+<p>要求 \(\gcd(a, p) = 1\)。取 \(m = \lceil \sqrt p \rceil\)，枚举小步 \(b a^j\) 与大步 \(a^{im}\)， 复杂度 \(O(\sqrt p)\) 时间与空间。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>底数 </td></tr>
+    <tr><td class="paramname">b</td><td>目标值 </td></tr>
+    <tr><td class="paramname">p</td><td>模数（与 a 互质） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>满足同余式的最小非负 \(x\)；无解返回 -1 </dd></dl>
+
+</div>
+</div>
+<a id="a06910c4b3c1f5d01eb21d830cf1374b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06910c4b3c1f5d01eb21d830cf1374b9">&#9670;&nbsp;</a></span>catalan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">M wbwlib::math::catalan </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structwbwlib_1_1math_1_1_comb.html">Comb</a>&lt; M &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>卡特兰数： \(Cat(n) = \frac{1}{n+1}\binom{2n}{n}\)。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>下标（非负） </td></tr>
+    <tr><td class="paramname">cb</td><td>已预计算的组合数结构（需覆盖 2n） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(Cat(n)\) </dd></dl>
+
+</div>
+</div>
+<a id="ad5987766522bb2859772432e787c9853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5987766522bb2859772432e787c9853">&#9670;&nbsp;</a></span>convolution_and()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;M&gt; wbwlib::math::convolution_and </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; M &gt;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; M &gt;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AND 卷积： \(c_k = \sum_{i \&amp; j = k} a_i b_j\)。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>序列 1 </td></tr>
+    <tr><td class="paramname">b</td><td>序列 2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>卷积结果（长度向上取整到 2 的幂） </dd></dl>
+
+</div>
+</div>
+<a id="aa8a920f34ceb494af48ea20f96ce173d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8a920f34ceb494af48ea20f96ce173d">&#9670;&nbsp;</a></span>convolution_fft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; wbwlib::math::convolution_fft </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>两个双精度序列的卷积（FFT）： \(c_k = \sum_{i+j=k} a_i b_j\)。 </p>
+<p>结果含浮点误差，取整请用 round。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>序列 1 </td></tr>
+    <tr><td class="paramname">b</td><td>序列 2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>卷积结果，长度 \(|a| + |b| - 1\) </dd></dl>
+
+</div>
+</div>
+<a id="a74ef93a0142291ad1d6eb275055ec2a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74ef93a0142291ad1d6eb275055ec2a7">&#9670;&nbsp;</a></span>convolution_ntt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;M&gt; wbwlib::math::convolution_ntt </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; M &gt;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; M &gt;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>模数卷积（NTT）： \(c_k = \sum_{i+j=k} a_i b_j \bmod p\)。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类（需 NTT 友好，如 modint&lt;998244353&gt;） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>序列 1 </td></tr>
+    <tr><td class="paramname">b</td><td>序列 2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>卷积结果，长度 \(|a| + |b| - 1\) </dd></dl>
+
+</div>
+</div>
+<a id="a2918666865e4cbeab0864335046a2c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2918666865e4cbeab0864335046a2c3e">&#9670;&nbsp;</a></span>convolution_or()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;M&gt; wbwlib::math::convolution_or </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; M &gt;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; M &gt;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OR 卷积： \(c_k = \sum_{i | j = k} a_i b_j\)。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>序列 1 </td></tr>
+    <tr><td class="paramname">b</td><td>序列 2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>卷积结果（长度向上取整到 2 的幂） </dd></dl>
+
+</div>
+</div>
+<a id="af548b9ad964b97053402d4385f57d871"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af548b9ad964b97053402d4385f57d871">&#9670;&nbsp;</a></span>convolution_xor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;M&gt; wbwlib::math::convolution_xor </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; M &gt;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; M &gt;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>XOR 卷积： \(c_k = \sum_{i \oplus j = k} a_i b_j\)。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>序列 1 </td></tr>
+    <tr><td class="paramname">b</td><td>序列 2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>卷积结果（长度向上取整到 2 的幂） </dd></dl>
+
+</div>
+</div>
+<a id="a6d0f12423c5fa6697bb7cd91f40c43c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d0f12423c5fa6697bb7cd91f40c43c4">&#9670;&nbsp;</a></span>count_primitive_roots()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> wbwlib::math::count_primitive_roots </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>模 p（质数）的原根个数： \(\varphi(p-1)\)（用于理解，不验证）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>质数模数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(\varphi(p-1)\) </dd></dl>
+
+</div>
+</div>
+<a id="aa4f38a54f9fa76a10dd536c949413d0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4f38a54f9fa76a10dd536c949413d0d">&#9670;&nbsp;</a></span>crt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T wbwlib::math::crt </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>M</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>中国剩余定理（CRT）：解同余方程组 \(x \equiv a_i \pmod{m_i}\)（ \(m_i\) 两两互质）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>整数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>余数列表 </td></tr>
+    <tr><td class="paramname">m</td><td>模数列表（两两互质） </td></tr>
+    <tr><td class="paramname">M</td><td>各模数之积（由调用方保证不溢出） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>最小非负解 \(x\)（ \(0 \le x &lt; M\)） </dd></dl>
+
+</div>
+</div>
+<a id="a5a4d6aa48f0d1cf3ef3caff7c15a5c4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a4d6aa48f0d1cf3ef3caff7c15a5c4b">&#9670;&nbsp;</a></span>derangement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">M wbwlib::math::derangement </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>错排数：n 个元素全排列中没有任何一个元素留在原位的方案数。 </p>
+<p>递推： \(D(n) = (n-1)(D(n-1) + D(n-2))\)，边界 \(D(0) = 1, D(1) = 0\)。 </p><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>元素数（非负） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(D(n)\) </dd></dl>
+
+</div>
+</div>
+<a id="adfb8bbec9329926e0739a8ab02445aee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfb8bbec9329926e0739a8ab02445aee">&#9670;&nbsp;</a></span>det()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T wbwlib::math::det </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>行列式：高斯消元后取对角元乘积， \(\det A = \prod_i A_{ii}\)（消元后）。 </p>
+<p>行交换会翻转符号；浮点类型可用，模意义下亦精确。 </p><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>元素类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>方阵（按值传入以保留原矩阵） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(\det A\) </dd></dl>
+
+</div>
+</div>
+<a id="acbab613ec3bc93768c15cfb2cf385eb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbab613ec3bc93768c15cfb2cf385eb2">&#9670;&nbsp;</a></span>excrt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structwbwlib_1_1math_1_1_excrt_result.html">ExcrtResult</a> wbwlib::math::excrt </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>扩展中国剩余定理（EXCRT）：解同余方程组 \(x \equiv a_i \pmod{m_i}\)， \(m_i\) 不必两两互质。 </p>
+<p>复杂度 \(O(n \log m)\)。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>余数列表 </td></tr>
+    <tr><td class="paramname">m</td><td>模数列表（不必两两互质） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>求解结果，无解时 valid 为 false </dd></dl>
+
+</div>
+</div>
+<a id="a7aaf6c4425d159eed5d042d870390856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aaf6c4425d159eed5d042d870390856">&#9670;&nbsp;</a></span>ext_gcd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T wbwlib::math::ext_gcd </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>扩展欧几里得：求 \(ax + by = \gcd(a, b)\) 的一组整数解 \((x, y)\)。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>整数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>系数 </td></tr>
+    <tr><td class="paramname">b</td><td>系数 </td></tr>
+    <tr><td class="paramname">x</td><td>输出参数，方程的一组解 x </td></tr>
+    <tr><td class="paramname">y</td><td>输出参数，方程的一组解 y </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(\gcd(a, b)\)（非负） </dd></dl>
+
+</div>
+</div>
+<a id="a136e7706dcc601cf2b63c3a7a660616f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a136e7706dcc601cf2b63c3a7a660616f">&#9670;&nbsp;</a></span>factor_exp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::pair&lt;<a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>, int&gt; &gt; wbwlib::math::factor_exp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回 \((p, e)\) 形式的质因数分解（质因子去重，附指数）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>待分解的整数（n &gt; 1） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>形如 \(\{(p_1, e_1), (p_2, e_2), \dots\}\) 的列表，满足 \(n = \prod p_i^{e_i}\) </dd></dl>
+
+</div>
+</div>
+<a id="aa1d08082651e922d01afda5621b5479d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1d08082651e922d01afda5621b5479d">&#9670;&nbsp;</a></span>factorize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&gt; wbwlib::math::factorize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>分解质因数，返回排序后的质因子列表（含重复）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>待分解的整数（n &gt; 1） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>升序质因子列表，如 12 -&gt; {2, 2, 3} </dd></dl>
+
+</div>
+</div>
+<a id="acb71ad2eda63f3c601fa936762f363f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb71ad2eda63f3c601fa936762f363f5">&#9670;&nbsp;</a></span>fft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::math::fft </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::complex&lt; double &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>invert</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>迭代版 Cooley-Tukey FFT：计算离散傅里叶变换 \(X_k = \sum_{j=0}^{n-1} x_j \omega_n^{jk}\)。 </p>
+<p>n 必须是 2 的幂；invert 为真时做逆变换并除以 n。原地修改 a，复杂度 \(O(n \log n)\)。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>输入/输出序列（原地变换） </td></tr>
+    <tr><td class="paramname">invert</td><td>false 为正变换，true 为逆变换 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afb77072a2edab1bdbcdc10a5ade0f6f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb77072a2edab1bdbcdc10a5ade0f6f6">&#9670;&nbsp;</a></span>floor_blocks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structwbwlib_1_1math_1_1_int_block.html">IntBlock</a>&gt; wbwlib::math::floor_blocks </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>求所有 \(\lfloor n/i \rfloor\) 取值相同的块 \([l, r]\)。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>正整数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>块列表（ \(O(\sqrt n)\) 个），块内 \(\lfloor n/i \rfloor\) 相同 </dd></dl>
+
+</div>
+</div>
+<a id="a12388c26f93ff53c3799fd1eaf670daa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12388c26f93ff53c3799fd1eaf670daa">&#9670;&nbsp;</a></span>floor_sum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> wbwlib::math::floor_sum </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ACL 风格 floor_sum：计算 \(\sum_{i=0}^{n-1} \left\lfloor \frac{a \cdot i + b}{m} \right\rfloor\)。 </p>
+<p>用类欧几里得思想递归化归，复杂度 \(O(\log(m + a))\)。 要求 n, m, a, b 均为非负整数。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>项数 </td></tr>
+    <tr><td class="paramname">m</td><td>分母 </td></tr>
+    <tr><td class="paramname">a</td><td>一次项系数 </td></tr>
+    <tr><td class="paramname">b</td><td>常数项 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(\sum_{i=0}^{n-1} \left\lfloor \frac{ai + b}{m} \right\rfloor\) </dd></dl>
+
+</div>
+</div>
+<a id="ab9fbfbdbc05c931d384e18dc819ae496"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9fbfbdbc05c931d384e18dc819ae496">&#9670;&nbsp;</a></span>fwt_and()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::math::fwt_and </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; M &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AND 卷积正变换（原地；长度需为 2 的幂）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>待变换序列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a00329c9663160311a645d313973c64e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00329c9663160311a645d313973c64e2">&#9670;&nbsp;</a></span>fwt_or()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::math::fwt_or </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; M &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OR 卷积正变换（原地；长度需为 2 的幂）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>待变换序列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a11f6d2df79cbd51dd247ab6d4882d763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11f6d2df79cbd51dd247ab6d4882d763">&#9670;&nbsp;</a></span>fwt_xor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::math::fwt_xor </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; M &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>XOR 卷积正变换（原地；长度需为 2 的幂）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>待变换序列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a99b29de3f85cc3bee9c7d18550fa5915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b29de3f85cc3bee9c7d18550fa5915">&#9670;&nbsp;</a></span>gauss_elim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int wbwlib::math::gauss_elim </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>fp_eps</em> = <code>1e-9</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>对增广矩阵 a（n 行 × (m+1) 列，最后一列为常数列）做高斯消元，返回秩。 </p>
+<ul>
+<li>算术类型（int/double 等）：绝对值部分主元消元，稳定性好；</li>
+<li>自定义类型（如 modint）：精确首非零主元消元。</li>
+</ul>
+<p>消元后矩阵化为行最简形（主元列单位化、其余行消为 0）。 </p><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>元素类型（需支持 0、1、+、-、*、/、==） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>增广矩阵，原地修改 </td></tr>
+    <tr><td class="paramname">fp_eps</td><td>浮点近零判定阈值（精确类型使用时忽略，默认 1e-9） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>矩阵的秩 </dd></dl>
+
+</div>
+</div>
+<a id="ad63e5d15b740179eb999725b580fa22a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad63e5d15b740179eb999725b580fa22a">&#9670;&nbsp;</a></span>gcd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T wbwlib::math::gcd </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最大公约数（结果非负）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>整数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>整数 </td></tr>
+    <tr><td class="paramname">b</td><td>整数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(\gcd(a, b)\)（非负） </dd></dl>
+
+</div>
+</div>
+<a id="a03dd9f227421187bc6010c124e43de66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03dd9f227421187bc6010c124e43de66">&#9670;&nbsp;</a></span>ifwt_and()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::math::ifwt_and </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; M &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AND 卷积逆变换（原地；长度需为 2 的幂）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>待逆变换序列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3a28129f9b8c2cbada236c5fe02f20d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a28129f9b8c2cbada236c5fe02f20d5">&#9670;&nbsp;</a></span>ifwt_or()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::math::ifwt_or </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; M &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OR 卷积逆变换（原地；长度需为 2 的幂）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>待逆变换序列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaf2feb8619e2d9de47391dd2d9d913d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf2feb8619e2d9de47391dd2d9d913d8">&#9670;&nbsp;</a></span>ifwt_xor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::math::ifwt_xor </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; M &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>XOR 卷积逆变换（原地；长度需为 2 的幂）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>待逆变换序列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a681bee043826fa9dd557d87f8c4f40be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a681bee043826fa9dd557d87f8c4f40be">&#9670;&nbsp;</a></span>inv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T wbwlib::math::inv </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>mod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>a 在模 mod 意义下的乘法逆元（仅要求 \(\gcd(a, mod) = 1\)，不要求 mod 为质数）。 </p>
+<p>使用扩展欧几里得， \(O(\log mod)\)。返回 0 表示无逆元。 </p><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>整数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>求逆的数 </td></tr>
+    <tr><td class="paramname">mod</td><td>模数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>满足 \(a \cdot x \equiv 1 \pmod{mod}\) 的 x（[0, mod) 内），无逆元时返回 0 </dd></dl>
+
+</div>
+</div>
+<a id="a260265713cb827022d0a36b300902161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a260265713cb827022d0a36b300902161">&#9670;&nbsp;</a></span>inv_inline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> wbwlib::math::inv_inline </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>mod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>供 excrt 使用的 i64 逆元（调用处保证互质，逆元必存在）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>求逆的数（与 mod 互质） </td></tr>
+    <tr><td class="paramname">mod</td><td>模数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(a^{-1} \bmod mod\)（[0, mod) 内） </dd></dl>
+
+</div>
+</div>
+<a id="a8af9d76ca843ef0ded57d8ee91ccfc40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8af9d76ca843ef0ded57d8ee91ccfc40">&#9670;&nbsp;</a></span>is_prime64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wbwlib::math::is_prime64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>对 64 位整数做确定性 Miller-Rabin 素性测试。 </p>
+<p>原理：验证 \(a^{d \cdot 2^s} \equiv 1 \pmod n\) 的分解性质；7 组基底可确定性覆盖 &lt; 2^64 全部整数。 复杂度 O(k log n)。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>待测整数（u64） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>n 为素数返回 true，否则 false </dd></dl>
+
+</div>
+</div>
+<a id="aa371fedd94ed8e074c30dcc407708134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa371fedd94ed8e074c30dcc407708134">&#9670;&nbsp;</a></span>is_prime_small()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wbwlib::math::is_prime_small </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>试除法素性测试（适合小整数），复杂度 \(O(\sqrt n)\)。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>整数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>待测整数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>n 为素数返回 true，否则 false </dd></dl>
+
+</div>
+</div>
+<a id="a3c4fc393a17d41a9667d66119bc61f34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c4fc393a17d41a9667d66119bc61f34">&#9670;&nbsp;</a></span>lcm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T wbwlib::math::lcm </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最小公倍数： \(\operatorname{lcm}(a, b) = \frac{a \cdot b}{\gcd(a, b)}\)。 </p>
+<p>结果以 T 截断，注意可能溢出，需要时转 i128。 </p><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>整数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>整数 </td></tr>
+    <tr><td class="paramname">b</td><td>整数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(\operatorname{lcm}(a, b)\) </dd></dl>
+
+</div>
+</div>
+<a id="ad3140b389bd34577156a10454a7a7f68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3140b389bd34577156a10454a7a7f68">&#9670;&nbsp;</a></span>linear_sieve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structwbwlib_1_1math_1_1_sieve_result.html">SieveResult</a> wbwlib::math::linear_sieve </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>线性筛同时求欧拉函数 phi 与莫比乌斯函数 mu（n &lt;= 1e7）。 </p>
+<p>返回 phi（n+1 长度，phi[1]=1），mu（n+1 长度，mu[1]=1，取值为 -1/0/1）。 复杂度 O(n)。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>上界（含） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>筛结果 </dd></dl>
+
+</div>
+</div>
+<a id="a2a1ea42fec3bd014e15693e86e136024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a1ea42fec3bd014e15693e86e136024">&#9670;&nbsp;</a></span>lucas_comb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">M wbwlib::math::lucas_comb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structwbwlib_1_1math_1_1_comb.html">Comb</a>&lt; M &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lucas 定理求组合数 \(\binom{n}{k} \bmod p\)，p 为质数，用于 n, k 超过预计算范围。 </p>
+<p>递归式： \(\binom{n}{k} \equiv \binom{n \bmod p}{k \bmod p} \cdot \binom{\lfloor n/p \rfloor}{\lfloor k/p \rfloor} \pmod p\)， 复杂度 \(O(p + \log_p n)\)。需要 <a class="el" href="structwbwlib_1_1math_1_1_comb.html" title="组合数学预计算结构体：阶乘与阶乘逆元，O(1) 查询组合数/排列数。">Comb</a> 已预计算阶乘（至少到 p-1）。</p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>总数（可大于预计算范围） </td></tr>
+    <tr><td class="paramname">k</td><td>选取数 </td></tr>
+    <tr><td class="paramname">p</td><td>质数模数 </td></tr>
+    <tr><td class="paramname">cb</td><td>已预计算的组合数结构（阶乘至少覆盖 0..p-1） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(\binom{n}{k} \bmod p\)；越界返回 0 </dd></dl>
+
+</div>
+</div>
+<a id="aa0233c5b1e0a574e180f024ce44eba57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0233c5b1e0a574e180f024ce44eba57">&#9670;&nbsp;</a></span>mod_inv_prime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T wbwlib::math::mod_inv_prime </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>mod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>费马小定理求逆元（仅当 mod 为质数时成立）。 </p>
+<p>由 \(a^{mod-1} \equiv 1 \pmod{mod}\) 得 \(a^{-1} \equiv a^{mod-2} \pmod{mod}\)， \(O(\log mod)\)。 </p><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>整数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>求逆的数（a 与 mod 互质） </td></tr>
+    <tr><td class="paramname">mod</td><td>质数模数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(a^{-1} \bmod mod\) </dd></dl>
+
+</div>
+</div>
+<a id="a8630eefb667f064818be11f8a5b15611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8630eefb667f064818be11f8a5b15611">&#9670;&nbsp;</a></span>mul_mod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T wbwlib::math::mul_mod </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>mod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>快速乘：精确计算 \(a \cdot b \bmod mod\)，适用于 mod 超过 1e18、i64 乘法溢出的场景。 </p>
+<p>有 __int128 时直接转 128 位；否则用「龟速乘」加法倍增， \(O(\log b)\)。 </p><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>整数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>乘数 </td></tr>
+    <tr><td class="paramname">b</td><td>乘数 </td></tr>
+    <tr><td class="paramname">mod</td><td>模数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(a \cdot b \bmod mod\) </dd></dl>
+
+</div>
+</div>
+<a id="aca0ee61ac44883121f55d6da0abde743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca0ee61ac44883121f55d6da0abde743">&#9670;&nbsp;</a></span>ntt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::math::ntt </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; M &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>invert</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>标准 NTT：模 998244353，原根 3；a 长度必须是 2 的幂。 </p>
+<p>用原根 \(g\) 的第 \(\frac{p-1}{len}\) 次幂作为 len 阶单位根。 </p><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类（mod_value() 须为 998244353） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>输入/输出序列（原地变换） </td></tr>
+    <tr><td class="paramname">invert</td><td>false 为正变换，true 为逆变换 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeb0b8fce32f3bf2db9f775d047be4f25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb0b8fce32f3bf2db9f775d047be4f25">&#9670;&nbsp;</a></span>ntt_g()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::math::ntt_g </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; M &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>invert</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>g</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>通用 NTT：可指定原根 g（要求模数存在对应阶的单位根）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>输入/输出序列（原地变换，长度需为 2 的幂） </td></tr>
+    <tr><td class="paramname">invert</td><td>false 为正变换，true 为逆变换 </td></tr>
+    <tr><td class="paramname">g</td><td>模意义下的原根 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7500cbe6ed9237620fbd1c3ce9238fdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7500cbe6ed9237620fbd1c3ce9238fdd">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt;MOD, Base&gt; wbwlib::math::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>modint 与整数的乘法（整数在右侧）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>整数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>modint </td></tr>
+    <tr><td class="paramname">b</td><td>整数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>积 </dd></dl>
+
+</div>
+</div>
+<a id="acbad4bd2564d49411888c1b3df2baa46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbad4bd2564d49411888c1b3df2baa46">&#9670;&nbsp;</a></span>operator*() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt;MOD, Base&gt; wbwlib::math::operator* </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>整数与 modint 的乘法（整数在左侧）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>整数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>整数 </td></tr>
+    <tr><td class="paramname">b</td><td>modint </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>积 </dd></dl>
+
+</div>
+</div>
+<a id="a0337c8498b6059468150a54542c2b39e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0337c8498b6059468150a54542c2b39e">&#9670;&nbsp;</a></span>operator+() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt;MOD, Base&gt; wbwlib::math::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>modint 与整数的加法（整数在右侧）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>整数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>modint </td></tr>
+    <tr><td class="paramname">b</td><td>整数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>和 </dd></dl>
+
+</div>
+</div>
+<a id="a2cdf2cd8f128f8503a398b92fd8963bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cdf2cd8f128f8503a398b92fd8963bd">&#9670;&nbsp;</a></span>operator+() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt;MOD, Base&gt; wbwlib::math::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>整数与 modint 的加法（整数在左侧）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>整数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>整数 </td></tr>
+    <tr><td class="paramname">b</td><td>modint </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>和 </dd></dl>
+
+</div>
+</div>
+<a id="a246248dffc786c85506ab5c1bc8f68b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a246248dffc786c85506ab5c1bc8f68b5">&#9670;&nbsp;</a></span>operator-() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt;MOD, Base&gt; wbwlib::math::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>modint 与整数的减法（整数在右侧）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>整数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>modint </td></tr>
+    <tr><td class="paramname">b</td><td>整数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>差 </dd></dl>
+
+</div>
+</div>
+<a id="af6c3c4a0086f23c034d2c410e2f54d9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c3c4a0086f23c034d2c410e2f54d9f">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;u64 MOD, class Base , class T , typename  = enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt;MOD, Base&gt; wbwlib::math::operator- </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>整数与 modint 的减法（整数在左侧）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>整数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>整数 </td></tr>
+    <tr><td class="paramname">b</td><td>modint </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>差 </dd></dl>
+
+</div>
+</div>
+<a id="a05c60f6e5aac8363f7600ff320efdddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c60f6e5aac8363f7600ff320efdddd">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;u64 MOD, class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; wbwlib::math::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint.html">modint</a>&lt; MOD, Base &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>输出 modint 的数值。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>输出流 </td></tr>
+    <tr><td class="paramname">m</td><td>modint 对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>输出流引用 </dd></dl>
+
+</div>
+</div>
+<a id="ac57d0057e9af7cbe3e5918d00482e262"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac57d0057e9af7cbe3e5918d00482e262">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; wbwlib::math::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html">modint_dyn</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>输出 <a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html" title="动态模数的模整数类：模数可在运行时用 set_mod 设置。">modint_dyn</a> 的数值。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>输出流 </td></tr>
+    <tr><td class="paramname">m</td><td><a class="el" href="classwbwlib_1_1math_1_1modint__dyn.html" title="动态模数的模整数类：模数可在运行时用 set_mod 设置。">modint_dyn</a> 对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>输出流引用 </dd></dl>
+
+</div>
+</div>
+<a id="ae2afbd6b7fc008f1b75877df25029691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2afbd6b7fc008f1b75877df25029691">&#9670;&nbsp;</a></span>phi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T wbwlib::math::phi </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>欧拉函数：1..n 中与 n 互质的个数， \(\varphi(n) = n \prod_{p \mid n} (1 - \frac{1}{p})\)。 </p>
+<p>复杂度 \(O(\sqrt n)\) 试除法。 </p><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>整数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>正整数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(\varphi(n)\) </dd></dl>
+
+</div>
+</div>
+<a id="ab4dfb14aa554cc767bb64bf4b1ab86da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4dfb14aa554cc767bb64bf4b1ab86da">&#9670;&nbsp;</a></span>pollard_rho()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> wbwlib::math::pollard_rho </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pollard-Rho 伪随机游走：找到 n 的一个非平凡因子。 </p>
+<p>迭代 \(f(x) = x^2 + c \pmod n\)，用 Floyd 判圈并求 \(\gcd(|x - y|, n)\)。 期望复杂度 \(O(n^{1/4})\)。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>合数（&gt; 1） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>n 的一个非平凡因子（可能等于 n 的退化情况会内部重试） </dd></dl>
+
+</div>
+</div>
+<a id="a35c6de3de8878bb07cdec51681a11a81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35c6de3de8878bb07cdec51681a11a81">&#9670;&nbsp;</a></span>primitive_root()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> wbwlib::math::primitive_root </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>求模 p（质数）的最小原根；p &lt;= 2 时不存在，返回 -1。 </p>
+<p>判定条件：对所有 p-1 的质因子 q，满足 \(g^{(p-1)/q} \not\equiv 1 \pmod p\)。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>质数模数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>最小原根（2 &lt;= g &lt; p）；p &lt; 3 时返回 -1 </dd></dl>
+
+</div>
+</div>
+<a id="a98a7e4305bd60b9f791338c1d362839d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98a7e4305bd60b9f791338c1d362839d">&#9670;&nbsp;</a></span>qpow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T wbwlib::math::qpow </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>mod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>快速幂：计算 \(a^p \bmod mod\)，p 可为任意非负整数。 </p>
+<p>使用倍增法，复杂度 \(O(\log p)\)。 </p><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>整数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>底数 </td></tr>
+    <tr><td class="paramname">p</td><td>指数（非负） </td></tr>
+    <tr><td class="paramname">mod</td><td>模数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(a^p \bmod mod\) </dd></dl>
+
+</div>
+</div>
+<a id="a485768859468bde0dc8d9c8f6342e1a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a485768859468bde0dc8d9c8f6342e1a2">&#9670;&nbsp;</a></span>qpow_plain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T wbwlib::math::qpow_plain </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>无取模的快速幂：直接计算 \(a^p\)（用于不进位的浮点/或溢出可接受的加速场景）。 </p>
+<dl class="section attention"><dt>注意</dt><dd>不同语义，安全起见限制为非负指数。 </dd></dl>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>支持 * 运算的类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>底数 </td></tr>
+    <tr><td class="paramname">p</td><td>指数（非负） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(a^p\) </dd></dl>
+
+</div>
+</div>
+<a id="a475a0a40f86134abd4c957da6fbdd4cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475a0a40f86134abd4c957da6fbdd4cd">&#9670;&nbsp;</a></span>rho_factor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::math::rho_factor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a>&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacewbwlib.html#a03099a64026b5d6da75d85536641664e">u64</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>factors</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>递归分解：把 n 的所有质因子（含重数）放入 factors。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>待分解的整数 </td></tr>
+    <tr><td class="paramname">factors</td><td>输出参数，质因子列表（无序、含重数） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae5f3a90ec71723ca6895d9b4c1a89e8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5f3a90ec71723ca6895d9b4c1a89e8d">&#9670;&nbsp;</a></span>sieve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::math::sieve </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>线性欧拉筛：返回 [2, n] 的所有素数。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>上界（含） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>素数升序列表 </dd></dl>
+
+</div>
+</div>
+<a id="a471123643b46d93051d7d1c2a688237c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a471123643b46d93051d7d1c2a688237c">&#9670;&nbsp;</a></span>solve_linear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int wbwlib::math::solve_linear </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>求解 n 元线性方程组 \(A x = b\)（A 为方阵）。 </p>
+<p>内部先高斯消元成行最简形再回代到 x。 </p><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>元素类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>系数矩阵（n×n，按值传入以保留原矩阵） </td></tr>
+    <tr><td class="paramname">b</td><td>常数向量（长度 n） </td></tr>
+    <tr><td class="paramname">x</td><td>输出参数，唯一解时写入解向量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 表示唯一解（解写入 x），1 表示无穷解，-1 表示无解 </dd></dl>
+
+</div>
+</div>
+<a id="a94268b4b8a69c2106612930188d4b515"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94268b4b8a69c2106612930188d4b515">&#9670;&nbsp;</a></span>stirling1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">M wbwlib::math::stirling1 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>第一类斯特林数 \(S_1(n, k)\)：把 n 个元素排列成 k 个环的方案数。 </p>
+<p>递推： \(S_1(n, k) = S_1(n-1, k-1) + (n-1) \cdot S_1(n-1, k)\)。 时间复杂度 \(O(nk)\)，空间 \(O(k)\)。 </p><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>元素数 </td></tr>
+    <tr><td class="paramname">k</td><td>环数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(S_1(n, k)\)；越界返回 0 </dd></dl>
+
+</div>
+</div>
+<a id="a1de8db070152a63f2b2c7ba04f33003e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1de8db070152a63f2b2c7ba04f33003e">&#9670;&nbsp;</a></span>stirling2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class M &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">M wbwlib::math::stirling2 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>第二类斯特林数 \(S(n, k)\)：把 n 个有区别的球放入 k 个非空集合的方案数。 </p>
+<p>递推： \(S(n, k) = S(n-1, k-1) + k \cdot S(n-1, k)\)。时间复杂度 \(O(nk)\)，空间 \(O(k)\)。 </p><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">M</td><td>模整数类 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>球数 </td></tr>
+    <tr><td class="paramname">k</td><td>集合数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(S(n, k)\)；越界返回 0 </dd></dl>
+
+</div>
+</div>
+<a id="a66018940a67345819158d8ccf981aa1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66018940a67345819158d8ccf981aa1f">&#9670;&nbsp;</a></span>sum_floor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> wbwlib::math::sum_floor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算 \(\sum_{i=1}^{n} \lfloor n / i \rfloor\) 的经典整除分块公式，复杂度 \(O(\sqrt n)\)。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>正整数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>\(\sum_{i=1}^{n} \lfloor n / i \rfloor\) </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a11fbf635b85846f1bba1d9b97d61feab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11fbf635b85846f1bba1d9b97d61feab">&#9670;&nbsp;</a></span>kPolyMod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> wbwlib::math::kPolyMod = 998244353</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认多项式环模数 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

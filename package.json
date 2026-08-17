@@ -1,0 +1,12 @@
+{
+  "name": "wbwlib",
+  "version": "0.1.0",
+  "description": "C++14 header-only 算法竞赛库",
+  "private": true,
+  "scripts": {
+    "docs": "node tools/build-docs.js"
+  },
+  "devDependencies": {
+    "doxygen": "^0.4.0"
+  }
+}

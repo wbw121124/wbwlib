@@ -1,0 +1,5 @@
+<map id="wbwlib/datastruct/splay.hpp" name="wbwlib/datastruct/splay.hpp">
+<area shape="rect" id="node1" title="伸展树 Splay（序列模式，文艺平衡树）。" alt="" coords="19,5,202,33"/>
+<area shape="rect" id="node2" href="$datastruct_8hpp.html" title="datastruct 模块聚合头：一次引入本模块全部头文件。" alt="" coords="5,81,216,109"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="45,157,176,185"/>
+</map>

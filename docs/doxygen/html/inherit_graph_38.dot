@@ -1,0 +1,8 @@
+digraph "类继承关系图"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="wbwlib::geo::HalfPlane",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwbwlib_1_1geo_1_1_half_plane.html",tooltip="半平面：有向直线 a→b 的左侧（含直线）为可行区域。"];
+}

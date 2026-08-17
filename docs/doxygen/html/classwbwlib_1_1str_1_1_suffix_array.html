@@ -1,0 +1,404 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::str::SuffixArray类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1str.html">str</a></li><li class="navelem"><a class="el" href="classwbwlib_1_1str_1_1_suffix_array.html">SuffixArray</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classwbwlib_1_1str_1_1_suffix_array-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::str::SuffixArray类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>后缀数组：倍增 + 计数排序构造，附 rank、height（LCP）数组。  
+ <a href="classwbwlib_1_1str_1_1_suffix_array.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="suffix-array_8hpp_source.html">suffix-array.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::str::SuffixArray 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwbwlib_1_1str_1_1_suffix_array__coll__graph.png" border="0" usemap="#awbwlib_1_1str_1_1_suffix_array_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1str_1_1_suffix_array_coll__map" id="awbwlib_1_1str_1_1_suffix_array_coll__map">
+<area shape="rect" title="后缀数组：倍增 + 计数排序构造，附 rank、height（LCP）数组。" alt="" coords="5,5,162,199"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:acfafeb934fbc2b43b48898c383ebbdea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_suffix_array.html#acfafeb934fbc2b43b48898c383ebbdea">SuffixArray</a> (const std::string &amp;s)</td></tr>
+<tr class="memdesc:acfafeb934fbc2b43b48898c383ebbdea"><td class="mdescLeft">&#160;</td><td class="mdescRight">由字符串 s 直接构造后缀数组。  <a href="classwbwlib_1_1str_1_1_suffix_array.html#acfafeb934fbc2b43b48898c383ebbdea">更多...</a><br /></td></tr>
+<tr class="separator:acfafeb934fbc2b43b48898c383ebbdea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a416a67ed470bca1f9a4dd102006ce761"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_suffix_array.html#a416a67ed470bca1f9a4dd102006ce761">build</a> (const std::string &amp;s)</td></tr>
+<tr class="memdesc:a416a67ed470bca1f9a4dd102006ce761"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建后缀数组：倍增 + 计数排序，最后用 Kasai 求 height。  <a href="classwbwlib_1_1str_1_1_suffix_array.html#a416a67ed470bca1f9a4dd102006ce761">更多...</a><br /></td></tr>
+<tr class="separator:a416a67ed470bca1f9a4dd102006ce761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47e4797b527964ff15d4c45067661dac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_suffix_array.html#a47e4797b527964ff15d4c45067661dac">size</a> () const</td></tr>
+<tr class="memdesc:a47e4797b527964ff15d4c45067661dac"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回字符串长度 n  <a href="classwbwlib_1_1str_1_1_suffix_array.html#a47e4797b527964ff15d4c45067661dac">更多...</a><br /></td></tr>
+<tr class="separator:a47e4797b527964ff15d4c45067661dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaadcf1d93d052949722beda651ccf0c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_suffix_array.html#aaaadcf1d93d052949722beda651ccf0c">lcp</a> (int i, int j) const</td></tr>
+<tr class="memdesc:aaaadcf1d93d052949722beda651ccf0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">位置 i 与 j 两后缀的 LCP 长度（朴素区间 height 最小值，O(n)；需要 O(1) 请配 ST 表）。  <a href="classwbwlib_1_1str_1_1_suffix_array.html#aaaadcf1d93d052949722beda651ccf0c">更多...</a><br /></td></tr>
+<tr class="separator:aaaadcf1d93d052949722beda651ccf0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a7cffd879d88c64072593a092199e012b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_suffix_array.html#a7cffd879d88c64072593a092199e012b">sa</a></td></tr>
+<tr class="separator:a7cffd879d88c64072593a092199e012b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac17a8c38ff67a558c0c7bfa360884ec1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_suffix_array.html#ac17a8c38ff67a558c0c7bfa360884ec1">rank</a></td></tr>
+<tr class="separator:ac17a8c38ff67a558c0c7bfa360884ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd618723f39011bdfcce20812b8b282d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_suffix_array.html#acd618723f39011bdfcce20812b8b282d">height</a></td></tr>
+<tr class="separator:acd618723f39011bdfcce20812b8b282d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:afe632ce1698dacba9c483c6d459f1034"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_suffix_array.html#afe632ce1698dacba9c483c6d459f1034">n_</a></td></tr>
+<tr class="separator:afe632ce1698dacba9c483c6d459f1034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac934f85c5ab23b59d26c169885008471"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1str_1_1_suffix_array.html#ac934f85c5ab23b59d26c169885008471">cnt_</a></td></tr>
+<tr class="separator:ac934f85c5ab23b59d26c169885008471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>后缀数组：倍增 + 计数排序构造，附 rank、height（LCP）数组。 </p>
+<p>结果（0 基字符串 s，长度 n）： sa[1..n] 第 i 小的后缀的起始位置（0 基），sa[0] 恒为 0 未使用； rank[i] 起始位置 i 的后缀排名（1 基）； height[1..n] height[i] = LCP(sa[i-1], sa[i])，height[1] = 0。 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="acfafeb934fbc2b43b48898c383ebbdea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfafeb934fbc2b43b48898c383ebbdea">&#9670;&nbsp;</a></span>SuffixArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wbwlib::str::SuffixArray::SuffixArray </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>由字符串 s 直接构造后缀数组。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>输入字符串（0 基） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a416a67ed470bca1f9a4dd102006ce761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a416a67ed470bca1f9a4dd102006ce761">&#9670;&nbsp;</a></span>build()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wbwlib::str::SuffixArray::build </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构建后缀数组：倍增 + 计数排序，最后用 Kasai 求 height。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>输入字符串（0 基） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaaadcf1d93d052949722beda651ccf0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaadcf1d93d052949722beda651ccf0c">&#9670;&nbsp;</a></span>lcp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wbwlib::str::SuffixArray::lcp </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>位置 i 与 j 两后缀的 LCP 长度（朴素区间 height 最小值，O(n)；需要 O(1) 请配 ST 表）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>后缀起始位置（0 基） </td></tr>
+    <tr><td class="paramname">j</td><td>后缀起始位置（0 基） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>最长公共前缀长度 </dd></dl>
+
+</div>
+</div>
+<a id="a47e4797b527964ff15d4c45067661dac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47e4797b527964ff15d4c45067661dac">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wbwlib::str::SuffixArray::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回字符串长度 n </p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ac934f85c5ab23b59d26c169885008471"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac934f85c5ab23b59d26c169885008471">&#9670;&nbsp;</a></span>cnt_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::str::SuffixArray::cnt_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd618723f39011bdfcce20812b8b282d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd618723f39011bdfcce20812b8b282d">&#9670;&nbsp;</a></span>height</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::str::SuffixArray::height</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe632ce1698dacba9c483c6d459f1034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe632ce1698dacba9c483c6d459f1034">&#9670;&nbsp;</a></span>n_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wbwlib::str::SuffixArray::n_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac17a8c38ff67a558c0c7bfa360884ec1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac17a8c38ff67a558c0c7bfa360884ec1">&#9670;&nbsp;</a></span>rank</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::str::SuffixArray::rank</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7cffd879d88c64072593a092199e012b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cffd879d88c64072593a092199e012b">&#9670;&nbsp;</a></span>sa</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; wbwlib::str::SuffixArray::sa</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>wbwlib/string/<a class="el" href="suffix-array_8hpp_source.html">suffix-array.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

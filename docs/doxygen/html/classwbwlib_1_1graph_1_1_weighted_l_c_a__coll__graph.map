@@ -1,0 +1,4 @@
+<map id="wbwlib::graph::WeightedLCA&lt; W &gt;" name="wbwlib::graph::WeightedLCA&lt; W &gt;">
+<area shape="rect" id="node1" title="带边权 LCA：额外维护各点到根的距离，支持 O(log n) 求树上任意两点距离。" alt="" coords="5,311,232,440"/>
+<area shape="rect" id="node2" href="$classwbwlib_1_1graph_1_1_l_c_a.html" title="LCA：倍增法，O(n log n) 预处理、O(log n) 查询，附树深/子树大小/DFS 序/第 k 祖先。" alt="" coords="51,5,186,247"/>
+</map>

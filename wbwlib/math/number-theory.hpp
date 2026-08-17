@@ -5,7 +5,8 @@
  * @file number-theory.hpp
  * @brief 数论基础：快速幂、快速乘、gcd/lcm、扩展欧几里得、逆元、CRT/EXCRT、欧拉定理、整除分块。
  *
- * 依赖：core/base.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp
  *
  * 函数均模板化，建议使用 i64（必要时借助 WBWLIB_HAS_INT128 的 wbwlib::i128 防溢出）。
  */
@@ -19,8 +20,14 @@ namespace math {
 
 // ================= 快速幂 =================
 /**
- * a^p 对 mod 取模。p 可为任意非负整数，满足 0 <= p。
- * 使用倍增法，O(log p)。
+ * @brief 快速幂：计算 \f$a^p \bmod mod\f$，p 可为任意非负整数。
+ *
+ * 使用倍增法，复杂度 \f$O(\log p)\f$。
+ * @tparam T 整数类型
+ * @param a 底数
+ * @param p 指数（非负）
+ * @param mod 模数
+ * @return \f$a^p \bmod mod\f$
  */
 template<class T>
 inline T qpow(T a, i64 p, T mod) {
@@ -35,8 +42,13 @@ inline T qpow(T a, i64 p, T mod) {
 }
 
 /**
- * 无取模的快速幂（用于不进位的浮点/或溢出可接受的加速场景）。
- * 注意：不同语义，安全起见限制为非负指数。
+ * @brief 无取模的快速幂：直接计算 \f$a^p\f$（用于不进位的浮点/或溢出可接受的加速场景）。
+ *
+ * @attention 不同语义，安全起见限制为非负指数。
+ * @tparam T 支持 * 运算的类型
+ * @param a 底数
+ * @param p 指数（非负）
+ * @return \f$a^p\f$
  */
 template<class T>
 inline T qpow_plain(T a, i64 p) {
@@ -51,8 +63,14 @@ inline T qpow_plain(T a, i64 p) {
 
 // ================= 快速乘（防溢出） =================
 /**
- * a * b % mod 精确计算，适用于 mod 超过 1e18、i64 乘法溢出场景。
- * 有 __int128 时直接转 128 位；否则用「龟速乘」加法倍增，O(log b)。
+ * @brief 快速乘：精确计算 \f$a \cdot b \bmod mod\f$，适用于 mod 超过 1e18、i64 乘法溢出的场景。
+ *
+ * 有 __int128 时直接转 128 位；否则用「龟速乘」加法倍增，\f$O(\log b)\f$。
+ * @tparam T 整数类型
+ * @param a 乘数
+ * @param b 乘数
+ * @param mod 模数
+ * @return \f$a \cdot b \bmod mod\f$
  */
 template<class T>
 inline T mul_mod(T a, T b, T mod) {
@@ -71,20 +89,42 @@ inline T mul_mod(T a, T b, T mod) {
 }
 
 // ================= gcd / lcm / 扩展欧几里得 =================
-/// 最大公约数（非负）
+/**
+ * @brief 最大公约数（结果非负）。
+ * @tparam T 整数类型
+ * @param a 整数
+ * @param b 整数
+ * @return \f$\gcd(a, b)\f$（非负）
+ */
 template<class T>
 inline T gcd(T a, T b) {
   while (b) { T t = a % b; a = b; b = t; }
   return a < 0 ? -a : a;
 }
 
-/// 最小公倍数（结果以 T 截断，注意可能溢出，需要时转 i128）
+/**
+ * @brief 最小公倍数：\f$\operatorname{lcm}(a, b) = \frac{a \cdot b}{\gcd(a, b)}\f$。
+ *
+ * 结果以 T 截断，注意可能溢出，需要时转 i128。
+ * @tparam T 整数类型
+ * @param a 整数
+ * @param b 整数
+ * @return \f$\operatorname{lcm}(a, b)\f$
+ */
 template<class T>
 inline T lcm(T a, T b) {
   return a / gcd(a, b) * b;
 }
 
-/// 扩展欧几里得：求 ax + by = gcd(a, b)，返回 gcd，解 (x, y)
+/**
+ * @brief 扩展欧几里得：求 \f$ax + by = \gcd(a, b)\f$ 的一组整数解 \f$(x, y)\f$。
+ * @tparam T 整数类型
+ * @param a 系数
+ * @param b 系数
+ * @param x 输出参数，方程的一组解 x
+ * @param y 输出参数，方程的一组解 y
+ * @return \f$\gcd(a, b)\f$（非负）
+ */
 template<class T>
 inline T ext_gcd(T a, T b, T& x, T& y) {
   if (b == 0) { x = 1; y = 0; return a < 0 ? -a : a; }
@@ -97,8 +137,13 @@ inline T ext_gcd(T a, T b, T& x, T& y) {
 
 // ================= 逆元 =================
 /**
- * a 在模 mod 意义下的乘法逆元（要求 gcd(a, mod) == 1 且 mod 为质数？不要求，仅要求互质）。
- * 使用扩展欧几里得，O(log mod)。返回 0 表示无逆元。
+ * @brief a 在模 mod 意义下的乘法逆元（仅要求 \f$\gcd(a, mod) = 1\f$，不要求 mod 为质数）。
+ *
+ * 使用扩展欧几里得，\f$O(\log mod)\f$。返回 0 表示无逆元。
+ * @tparam T 整数类型
+ * @param a 求逆的数
+ * @param mod 模数
+ * @return 满足 \f$a \cdot x \equiv 1 \pmod{mod}\f$ 的 x（[0, mod) 内），无逆元时返回 0
  */
 template<class T>
 inline T inv(T a, T mod) {
@@ -110,7 +155,15 @@ inline T inv(T a, T mod) {
   return x < 0 ? T(x + mod) : T(x);
 }
 
-/// 费马小定理逆元（仅当 mod 为质数），O(log mod)
+/**
+ * @brief 费马小定理求逆元（仅当 mod 为质数时成立）。
+ *
+ * 由 \f$a^{mod-1} \equiv 1 \pmod{mod}\f$ 得 \f$a^{-1} \equiv a^{mod-2} \pmod{mod}\f$，\f$O(\log mod)\f$。
+ * @tparam T 整数类型
+ * @param a 求逆的数（a 与 mod 互质）
+ * @param mod 质数模数
+ * @return \f$a^{-1} \bmod mod\f$
+ */
 template<class T>
 inline T mod_inv_prime(T a, T mod) {
   return qpow(a, mod - 2, mod);
@@ -118,8 +171,13 @@ inline T mod_inv_prime(T a, T mod) {
 
 // ================= 中国剩余定理 =================
 /**
- * CRT：解同余方程组 x = a_i (mod m_i)，其中 m_i 两两互质。
- * 返回最小非负解。M 为各 m_i 之积（由调用方保证不溢出）。
+ * @brief 中国剩余定理（CRT）：解同余方程组 \f$x \equiv a_i \pmod{m_i}\f$（\f$m_i\f$ 两两互质）。
+ *
+ * @tparam T 整数类型
+ * @param a 余数列表
+ * @param m 模数列表（两两互质）
+ * @param M 各模数之积（由调用方保证不溢出）
+ * @return 最小非负解 \f$x\f$（\f$0 \le x < M\f$）
  */
 template<class T>
 inline T crt(const std::vector<T>& a, const std::vector<T>& m, T M) {
@@ -132,22 +190,34 @@ inline T crt(const std::vector<T>& a, const std::vector<T>& m, T M) {
 }
 
 /**
- * EXCRT：m_i 不必两两互质。返回最小非负解与最小公倍周期，
- * 无解时返回 -1（可通过 TBound 区分）。（返回小技巧：用 pair<bool,...> 更清晰）
+ * @brief 供 excrt 使用的 i64 逆元（调用处保证互质，逆元必存在）。
+ * @param a 求逆的数（与 mod 互质）
+ * @param mod 模数
+ * @return \f$a^{-1} \bmod mod\f$（[0, mod) 内）
  */
-// 供 excrt 使用的 i64 逆元（调用处保证互质，逆元必存在）
 inline i64 inv_inline(i64 a, i64 mod) {
   i64 x, y;
   ext_gcd(a, mod, x, y);
   return (x % mod + mod) % mod;
 }
 
+/**
+ * @brief 扩展中国剩余定理（EXCRT）的求解结果。
+ */
 struct ExcrtResult {
   bool valid;   ///< 是否有解
   i64 x;        ///< 最小非负解
   i64 lcm;      ///< 解的周期（模意义下的最小公倍数）
 };
 
+/**
+ * @brief 扩展中国剩余定理（EXCRT）：解同余方程组 \f$x \equiv a_i \pmod{m_i}\f$，\f$m_i\f$ 不必两两互质。
+ *
+ * 复杂度 \f$O(n \log m)\f$。
+ * @param a 余数列表
+ * @param m 模数列表（不必两两互质）
+ * @return 求解结果，无解时 valid 为 false
+ */
 inline ExcrtResult excrt(const std::vector<i64>& a, const std::vector<i64>& m) {
   i64 x = 0, cur = 1;   // 已处理方程的通解 x + k*cur（cur 为已处理模数的最小公倍数）
   for (size_t i = 0; i < a.size(); ++i) {
@@ -167,7 +237,14 @@ inline ExcrtResult excrt(const std::vector<i64>& a, const std::vector<i64>& m) {
 }
 
 // ================= 欧拉定理 / 欧拉函数 =================
-/// 欧拉函数 phi(n)：1..n 中与 n 互质的个数。O(sqrt(n)) 试除法。
+/**
+ * @brief 欧拉函数：1..n 中与 n 互质的个数，\f$\varphi(n) = n \prod_{p \mid n} (1 - \frac{1}{p})\f$。
+ *
+ * 复杂度 \f$O(\sqrt n)\f$ 试除法。
+ * @tparam T 整数类型
+ * @param n 正整数
+ * @return \f$\varphi(n)\f$
+ */
 template<class T>
 inline T phi(T n) {
   T r = n;
@@ -183,14 +260,24 @@ inline T phi(T n) {
 
 // ================= 整除分块 =================
 /**
- * 求 sum_{i=1}^{n} f(i)，且 i 在相同 floor(n/i) 的块内 f 恒定或可快速求和时使用。
- * 返回每个块的 (l, r)。复杂度 O(sqrt(n))。
+ * @brief 整除分块：按 \f$\lfloor n / i \rfloor\f$ 取值相同分块，用于 \f$\sum_{i=1}^{n} f(\lfloor n/i \rfloor)\f$ 类求和。
+ *
+ * 返回每个块的左右端点 (l, r)，块内 \f$\lfloor n/i \rfloor\f$ 恒定。复杂度 \f$O(\sqrt n)\f$。
+ * @param n 正整数
+ * @return 块区间列表
+ *
  * 用法：
  *   for (auto [l,r] : floor_blocks(n)) { ... floor(n/l) ... }
  */
 struct IntBlock {
   i64 l, r;
 };
+
+/**
+ * @brief 求所有 \f$\lfloor n/i \rfloor\f$ 取值相同的块 \f$[l, r]\f$。
+ * @param n 正整数
+ * @return 块列表（\f$O(\sqrt n)\f$ 个），块内 \f$\lfloor n/i \rfloor\f$ 相同
+ */
 inline std::vector<IntBlock> floor_blocks(i64 n) {
   std::vector<IntBlock> res;
   for (i64 l = 1; l <= n; ) {
@@ -203,7 +290,11 @@ inline std::vector<IntBlock> floor_blocks(i64 n) {
 }
 
 // ================= 数论求和工具 =================
-/// sum_{i=1}^n floor(n/i) 经典公式，O(sqrt(n))
+/**
+ * @brief 计算 \f$\sum_{i=1}^{n} \lfloor n / i \rfloor\f$ 的经典整除分块公式，复杂度 \f$O(\sqrt n)\f$。
+ * @param n 正整数
+ * @return \f$\sum_{i=1}^{n} \lfloor n / i \rfloor\f$
+ */
 inline i64 sum_floor(i64 n) {
   i64 s = 0;
   for (i64 l = 1; l <= n; ) {

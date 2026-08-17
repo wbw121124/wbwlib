@@ -1,0 +1,4 @@
+<map id="wbwlib::ds::DSU" name="wbwlib::ds::DSU">
+<area shape="rect" id="node1" title="标准并查集：路径压缩 + 按秩合并。" alt="" coords="22,5,142,183"/>
+<area shape="rect" id="node2" href="$classwbwlib_1_1ds_1_1_d_s_u_wave.html" title="维护连通块大小的并查集（路径压缩 + 按秩合并）。" alt="" coords="5,231,159,360"/>
+</map>

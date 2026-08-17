@@ -1,0 +1,7 @@
+digraph "wbwlib::str::Trie01&lt; T, BITS &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::str::Trie01\l\< T, BITS \>\n|- tr_\l|+ Trie01()\l+ insert()\l+ xor_max()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="模板化 01-Trie：值类型与位宽可自定义，支持插入与异或最大值查询。"];
+}

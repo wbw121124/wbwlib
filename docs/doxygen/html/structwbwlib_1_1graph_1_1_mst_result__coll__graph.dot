@@ -1,0 +1,7 @@
+digraph "wbwlib::graph::MstResult&lt; W &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{wbwlib::graph::MstResult\< W \>\n|+ total\l+ edges\l+ ok\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="最小生成树结果：总权值 + 树边 + 是否连通。"];
+}

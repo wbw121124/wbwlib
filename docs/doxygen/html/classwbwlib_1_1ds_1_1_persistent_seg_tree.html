@@ -1,0 +1,737 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::ds::PersistentSegTree&lt; T &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1ds.html">ds</a></li><li class="navelem"><a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html">PersistentSegTree</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classwbwlib_1_1ds_1_1_persistent_seg_tree-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::ds::PersistentSegTree&lt; T &gt; 模板类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>可持久化线段树（主席树）：版本化点更新 + 两版本差值的区间查询。  
+ <a href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="persistent-segtree_8hpp_source.html">persistent-segtree.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::ds::PersistentSegTree&lt; T &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwbwlib_1_1ds_1_1_persistent_seg_tree__coll__graph.png" border="0" usemap="#awbwlib_1_1ds_1_1_persistent_seg_tree_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1ds_1_1_persistent_seg_tree_3_01_t_01_4_coll__map" id="awbwlib_1_1ds_1_1_persistent_seg_tree_3_01_t_01_4_coll__map">
+<area shape="rect" title="可持久化线段树（主席树）：版本化点更新 + 两版本差值的区间查询。" alt="" coords="5,5,179,263"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1ds_1_1_persistent_seg_tree_1_1_node.html">Node</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a03ecfa07e614e9c03cec9d3f830a0bac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#a03ecfa07e614e9c03cec9d3f830a0bac">build</a> (int n)</td></tr>
+<tr class="memdesc:a03ecfa07e614e9c03cec9d3f830a0bac"><td class="mdescLeft">&#160;</td><td class="mdescRight">建立值域 [1, n] 的空树，roots 重置为仅含空版本。  <a href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#a03ecfa07e614e9c03cec9d3f830a0bac">更多...</a><br /></td></tr>
+<tr class="separator:a03ecfa07e614e9c03cec9d3f830a0bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c3294ec01d53bef2e38503faa93e6e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#a3c3294ec01d53bef2e38503faa93e6e1">update</a> (int prev, int pos, const T &amp;delta)</td></tr>
+<tr class="memdesc:a3c3294ec01d53bef2e38503faa93e6e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 prev 版本生成新版本：在 pos 处加 delta（累加语义）。  <a href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#a3c3294ec01d53bef2e38503faa93e6e1">更多...</a><br /></td></tr>
+<tr class="separator:a3c3294ec01d53bef2e38503faa93e6e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8773982b7915818211af6334f3cc89a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#af8773982b7915818211af6334f3cc89a">update_latest</a> (int pos, const T &amp;delta)</td></tr>
+<tr class="memdesc:af8773982b7915818211af6334f3cc89a"><td class="mdescLeft">&#160;</td><td class="mdescRight">便捷：对当前最新版本做点更新。  <a href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#af8773982b7915818211af6334f3cc89a">更多...</a><br /></td></tr>
+<tr class="separator:af8773982b7915818211af6334f3cc89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c1b167a6784eeed674054be10a6846d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#a2c1b167a6784eeed674054be10a6846d">query_kth</a> (int x, int y, int k) const</td></tr>
+<tr class="memdesc:a2c1b167a6784eeed674054be10a6846d"><td class="mdescLeft">&#160;</td><td class="mdescRight">求两版本差集内的第 k 小值域位置（1 基）。  <a href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#a2c1b167a6784eeed674054be10a6846d">更多...</a><br /></td></tr>
+<tr class="separator:a2c1b167a6784eeed674054be10a6846d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a215bfad02881508de38a3d07c487df15"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#a215bfad02881508de38a3d07c487df15">query_count</a> (int x, int y, int ql, int qr) const</td></tr>
+<tr class="memdesc:a215bfad02881508de38a3d07c487df15"><td class="mdescLeft">&#160;</td><td class="mdescRight">求两版本差集内、值域 [ql, qr] 中的元素个数。  <a href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#a215bfad02881508de38a3d07c487df15">更多...</a><br /></td></tr>
+<tr class="separator:a215bfad02881508de38a3d07c487df15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:aee2b70ecde5750a7451a7b234a458383"><td class="memItemLeft" align="right" valign="top">std::deque&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#aee2b70ecde5750a7451a7b234a458383">roots</a></td></tr>
+<tr class="memdesc:aee2b70ecde5750a7451a7b234a458383"><td class="mdescLeft">&#160;</td><td class="mdescRight">版本根集合（roots[0] 为空树）  <a href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#aee2b70ecde5750a7451a7b234a458383">更多...</a><br /></td></tr>
+<tr class="separator:aee2b70ecde5750a7451a7b234a458383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:acb8abbad9c4c44be5c6b70d247f43ece"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#acb8abbad9c4c44be5c6b70d247f43ece">newnode</a> ()</td></tr>
+<tr class="memdesc:acb8abbad9c4c44be5c6b70d247f43ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">新建节点（0 号恒为空叶子）  <a href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#acb8abbad9c4c44be5c6b70d247f43ece">更多...</a><br /></td></tr>
+<tr class="separator:acb8abbad9c4c44be5c6b70d247f43ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a618bc4e7a6d5d662989934661414ebed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#a618bc4e7a6d5d662989934661414ebed">upd</a> (int p, int l, int r, int pos, const T &amp;delta)</td></tr>
+<tr class="memdesc:a618bc4e7a6d5d662989934661414ebed"><td class="mdescLeft">&#160;</td><td class="mdescRight">递归建新版本：p 的拷贝在 pos 处加 delta  <a href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#a618bc4e7a6d5d662989934661414ebed">更多...</a><br /></td></tr>
+<tr class="separator:a618bc4e7a6d5d662989934661414ebed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab204389aa70471b84403b4ddb05a64b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#ab204389aa70471b84403b4ddb05a64b8">kth</a> (int x, int y, int l, int r, int k) const</td></tr>
+<tr class="memdesc:ab204389aa70471b84403b4ddb05a64b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">递归求两版本差集内第 k 小的值域位置（x, y 同结构）  <a href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#ab204389aa70471b84403b4ddb05a64b8">更多...</a><br /></td></tr>
+<tr class="separator:ab204389aa70471b84403b4ddb05a64b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb5a874cde8d37116bd99baa56267037"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#acb5a874cde8d37116bd99baa56267037">qcnt</a> (int x, int y, int l, int r, int ql, int qr) const</td></tr>
+<tr class="memdesc:acb5a874cde8d37116bd99baa56267037"><td class="mdescLeft">&#160;</td><td class="mdescRight">递归求两版本差集在值域 [ql, qr] 内的元素个数  <a href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#acb5a874cde8d37116bd99baa56267037">更多...</a><br /></td></tr>
+<tr class="separator:acb5a874cde8d37116bd99baa56267037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a97834567b9ce8a030c89b957804133d4"><td class="memItemLeft" align="right" valign="top">std::deque&lt; <a class="el" href="structwbwlib_1_1ds_1_1_persistent_seg_tree_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#a97834567b9ce8a030c89b957804133d4">pool_</a></td></tr>
+<tr class="separator:a97834567b9ce8a030c89b957804133d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaef9e161b6dc90b0f10b1c60233daab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html#aeaef9e161b6dc90b0f10b1c60233daab">n_</a></td></tr>
+<tr class="separator:aeaef9e161b6dc90b0f10b1c60233daab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><h3>template&lt;class T = i64&gt;<br />
+class wbwlib::ds::PersistentSegTree&lt; T &gt;</h3>
+
+<p>可持久化线段树（主席树）：版本化点更新 + 两版本差值的区间查询。 </p>
+<p>每次 update 生成新版本根；两版本对应位置的差即历史区间内元素的累计变化， 典型用于静态区间第 k 小/大。 </p><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>节点聚合值类型（默认 i64），需支持 += 与 -=。 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a03ecfa07e614e9c03cec9d3f830a0bac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03ecfa07e614e9c03cec9d3f830a0bac">&#9670;&nbsp;</a></span>build()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html">wbwlib::ds::PersistentSegTree</a>&lt; T &gt;::build </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>建立值域 [1, n] 的空树，roots 重置为仅含空版本。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>值域上界 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab204389aa70471b84403b4ddb05a64b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab204389aa70471b84403b4ddb05a64b8">&#9670;&nbsp;</a></span>kth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html">wbwlib::ds::PersistentSegTree</a>&lt; T &gt;::kth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>递归求两版本差集内第 k 小的值域位置（x, y 同结构） </p>
+
+</div>
+</div>
+<a id="acb8abbad9c4c44be5c6b70d247f43ece"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb8abbad9c4c44be5c6b70d247f43ece">&#9670;&nbsp;</a></span>newnode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html">wbwlib::ds::PersistentSegTree</a>&lt; T &gt;::newnode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>新建节点（0 号恒为空叶子） </p>
+
+</div>
+</div>
+<a id="acb5a874cde8d37116bd99baa56267037"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb5a874cde8d37116bd99baa56267037">&#9670;&nbsp;</a></span>qcnt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html">wbwlib::ds::PersistentSegTree</a>&lt; T &gt;::qcnt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ql</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>qr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>递归求两版本差集在值域 [ql, qr] 内的元素个数 </p>
+
+</div>
+</div>
+<a id="a215bfad02881508de38a3d07c487df15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a215bfad02881508de38a3d07c487df15">&#9670;&nbsp;</a></span>query_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html">wbwlib::ds::PersistentSegTree</a>&lt; T &gt;::query_count </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ql</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>qr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>求两版本差集内、值域 [ql, qr] 中的元素个数。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>较早版本根 </td></tr>
+    <tr><td class="paramname">y</td><td>较晚版本根 </td></tr>
+    <tr><td class="paramname">ql</td><td>值域左端点（1 基） </td></tr>
+    <tr><td class="paramname">qr</td><td>值域右端点（1 基） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>元素个数 </dd></dl>
+
+</div>
+</div>
+<a id="a2c1b167a6784eeed674054be10a6846d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c1b167a6784eeed674054be10a6846d">&#9670;&nbsp;</a></span>query_kth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html">wbwlib::ds::PersistentSegTree</a>&lt; T &gt;::query_kth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>求两版本差集内的第 k 小值域位置（1 基）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>较早版本根 </td></tr>
+    <tr><td class="paramname">y</td><td>较晚版本根 </td></tr>
+    <tr><td class="paramname">k</td><td>名次（1 基） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>值域位置（1 基，[1, n]） </dd></dl>
+
+</div>
+</div>
+<a id="a618bc4e7a6d5d662989934661414ebed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a618bc4e7a6d5d662989934661414ebed">&#9670;&nbsp;</a></span>upd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html">wbwlib::ds::PersistentSegTree</a>&lt; T &gt;::upd </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>delta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>递归建新版本：p 的拷贝在 pos 处加 delta </p>
+
+</div>
+</div>
+<a id="a3c3294ec01d53bef2e38503faa93e6e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c3294ec01d53bef2e38503faa93e6e1">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html">wbwlib::ds::PersistentSegTree</a>&lt; T &gt;::update </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>delta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从 prev 版本生成新版本：在 pos 处加 delta（累加语义）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prev</td><td>上一版本根（roots 中下标） </td></tr>
+    <tr><td class="paramname">pos</td><td>值域位置（1 基，须在 [1, n]） </td></tr>
+    <tr><td class="paramname">delta</td><td>增量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>新版本根，并自动追加到 roots </dd></dl>
+
+</div>
+</div>
+<a id="af8773982b7915818211af6334f3cc89a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8773982b7915818211af6334f3cc89a">&#9670;&nbsp;</a></span>update_latest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html">wbwlib::ds::PersistentSegTree</a>&lt; T &gt;::update_latest </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>delta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>便捷：对当前最新版本做点更新。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>值域位置（1 基） </td></tr>
+    <tr><td class="paramname">delta</td><td>增量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>新版本根 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="aeaef9e161b6dc90b0f10b1c60233daab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaef9e161b6dc90b0f10b1c60233daab">&#9670;&nbsp;</a></span>n_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html">wbwlib::ds::PersistentSegTree</a>&lt; T &gt;::n_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97834567b9ce8a030c89b957804133d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97834567b9ce8a030c89b957804133d4">&#9670;&nbsp;</a></span>pool_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::deque&lt;<a class="el" href="structwbwlib_1_1ds_1_1_persistent_seg_tree_1_1_node.html">Node</a>&gt; <a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html">wbwlib::ds::PersistentSegTree</a>&lt; T &gt;::pool_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee2b70ecde5750a7451a7b234a458383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee2b70ecde5750a7451a7b234a458383">&#9670;&nbsp;</a></span>roots</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = i64&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::deque&lt;int&gt; <a class="el" href="classwbwlib_1_1ds_1_1_persistent_seg_tree.html">wbwlib::ds::PersistentSegTree</a>&lt; T &gt;::roots</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>版本根集合（roots[0] 为空树） </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>wbwlib/datastruct/<a class="el" href="persistent-segtree_8hpp_source.html">persistent-segtree.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

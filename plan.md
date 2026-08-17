@@ -35,11 +35,12 @@ tests/
 ```
 
 ## 工程约定
-- 每个 `.hpp` 自包含：`#pragma once` + include-what-you-use。
+- 每个 `.hpp` 自包含：`#ifndef` include guard + include-what-you-use。
 - 子命名空间：`wbwlib::math / wbwlib::ds / wbwlib::str / wbwlib::graph / wbwlib::dp / wbwlib::geo / wbwlib::core / wbwlib::misc`，根命名空间 `wbwlib`。
 - 版本宏 `WBWLIB_VERSION`；错误策略默认 `assert`，可开 `WBWLIB_THROW`。
-- 中文注释：文件头（复杂度/依赖/用法/示例）+ 关键函数注释。
-- 全局函数风格，OI 惯例直接调用。
+- 中文注释：文件头（复杂度/依赖/用法/示例，均用 Doxygen 标准命令 `@par/@code/@attention/@note`）+ 关键函数注释（`@brief/@param/@return/@tparam`）+ MathJax 公式。
+- 数据结构类不写死：字符集（Trie/AC/SAM/PAM）、哈希模数（StringHash）、位宽（Trie01）等均为模板参数并带默认值，C++14 下默认用法与旧版完全兼容。
+- 文档：`npm run docs`（tools/build-docs.js 调 node_modules/doxygen）生成 `docs/doxygen/`；doxygen-awesome-css 主题 + 本地 MathJax（docs/mathjax/，不依赖 CDN）+ Graphviz dot 图（tools/graphviz/，输出 png 兼容 file:// 打开）+ Prism 补 bash/shell 高亮。
 
 ## 执行顺序
 1. `plan.md` + `README.md` + `core/*`

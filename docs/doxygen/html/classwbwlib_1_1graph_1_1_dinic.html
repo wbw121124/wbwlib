@@ -1,0 +1,642 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib::graph::Dinic&lt; F &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacewbwlib.html">wbwlib</a></li><li class="navelem"><a class="el" href="namespacewbwlib_1_1graph.html">graph</a></li><li class="navelem"><a class="el" href="classwbwlib_1_1graph_1_1_dinic.html">Dinic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classwbwlib_1_1graph_1_1_dinic-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">wbwlib::graph::Dinic&lt; F &gt; 模板类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>最大流：Dinic 算法（BFS 分层 + DFS 多路增广 + 当前弧优化）。  
+ <a href="classwbwlib_1_1graph_1_1_dinic.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="network-flow_8hpp_source.html">network-flow.hpp</a>&gt;</code></p>
+<div class="dynheader">
+wbwlib::graph::Dinic&lt; F &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwbwlib_1_1graph_1_1_dinic__coll__graph.png" border="0" usemap="#awbwlib_1_1graph_1_1_dinic_3_01_f_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="awbwlib_1_1graph_1_1_dinic_3_01_f_01_4_coll__map" id="awbwlib_1_1graph_1_1_dinic_3_01_f_01_4_coll__map">
+<area shape="rect" title="最大流：Dinic 算法（BFS 分层 + DFS 多路增广 + 当前弧优化）。" alt="" coords="5,5,177,247"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1graph_1_1_dinic_1_1_edge.html">Edge</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a5bbc175a4dee0f1cf7852f61c09de72c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_dinic.html#a5bbc175a4dee0f1cf7852f61c09de72c">Dinic</a> (int n)</td></tr>
+<tr class="memdesc:a5bbc175a4dee0f1cf7852f61c09de72c"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造 n 个点的空网络。  <a href="classwbwlib_1_1graph_1_1_dinic.html#a5bbc175a4dee0f1cf7852f61c09de72c">更多...</a><br /></td></tr>
+<tr class="separator:a5bbc175a4dee0f1cf7852f61c09de72c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1991f8e8140a3a169ddae2b59c27004b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_dinic.html#a1991f8e8140a3a169ddae2b59c27004b">add_edge</a> (int u, int v, F cap)</td></tr>
+<tr class="memdesc:a1991f8e8140a3a169ddae2b59c27004b"><td class="mdescLeft">&#160;</td><td class="mdescRight">加一条 u → v 容量为 cap 的有向边（自动加容量 0 的反向边）。  <a href="classwbwlib_1_1graph_1_1_dinic.html#a1991f8e8140a3a169ddae2b59c27004b">更多...</a><br /></td></tr>
+<tr class="separator:a1991f8e8140a3a169ddae2b59c27004b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b2b038b46cd1e5ec14e96df8262c64a"><td class="memItemLeft" align="right" valign="top">F&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_dinic.html#a3b2b038b46cd1e5ec14e96df8262c64a">maxflow</a> (int s, int t)</td></tr>
+<tr class="memdesc:a3b2b038b46cd1e5ec14e96df8262c64a"><td class="mdescLeft">&#160;</td><td class="mdescRight">求 s → t 的最大流：不断「分层 + 多路增广」直到 s 不可达 t， \(|f| = \sum_{e \in \delta^+(s)} f(e)\)。  <a href="classwbwlib_1_1graph_1_1_dinic.html#a3b2b038b46cd1e5ec14e96df8262c64a">更多...</a><br /></td></tr>
+<tr class="separator:a3b2b038b46cd1e5ec14e96df8262c64a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae166c13195fbad02fcc6f4f98f941606"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_dinic.html#ae166c13195fbad02fcc6f4f98f941606">mincut</a> (int s, int t)</td></tr>
+<tr class="memdesc:ae166c13195fbad02fcc6f4f98f941606"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小割：最大流结束后返回残量网络中 s 可达的点集（S 侧，含 s）。  <a href="classwbwlib_1_1graph_1_1_dinic.html#ae166c13195fbad02fcc6f4f98f941606">更多...</a><br /></td></tr>
+<tr class="separator:ae166c13195fbad02fcc6f4f98f941606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a24726b916d9da2215ee43f80aee80243"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_dinic.html#a24726b916d9da2215ee43f80aee80243">bfs</a> (int s, int t)</td></tr>
+<tr class="memdesc:a24726b916d9da2215ee43f80aee80243"><td class="mdescLeft">&#160;</td><td class="mdescRight">分层 BFS：只走剩余容量 &gt; 0 的边，构造层次图，判断 s 是否可达 t  <a href="classwbwlib_1_1graph_1_1_dinic.html#a24726b916d9da2215ee43f80aee80243">更多...</a><br /></td></tr>
+<tr class="separator:a24726b916d9da2215ee43f80aee80243"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5edd05013b9df156a5eb31e761766da"><td class="memItemLeft" align="right" valign="top">F&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_dinic.html#ac5edd05013b9df156a5eb31e761766da">dfs</a> (int u, int t, F f)</td></tr>
+<tr class="memdesc:ac5edd05013b9df156a5eb31e761766da"><td class="mdescLeft">&#160;</td><td class="mdescRight">沿层次图 DFS 单路增广：只走 level[v] = level[u] + 1 的边，并更新反向边容量  <a href="classwbwlib_1_1graph_1_1_dinic.html#ac5edd05013b9df156a5eb31e761766da">更多...</a><br /></td></tr>
+<tr class="separator:ac5edd05013b9df156a5eb31e761766da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d9c6561fb8a6e106cf8bb4966c7f331"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_dinic.html#a6d9c6561fb8a6e106cf8bb4966c7f331">build_cut</a> (int s, std::vector&lt; char &gt; &amp;vis)</td></tr>
+<tr class="memdesc:a6d9c6561fb8a6e106cf8bb4966c7f331"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 s 沿剩余容量 &gt; 0 的边 BFS，标记残量网络中 s 可达的点（最小割 S 侧）  <a href="classwbwlib_1_1graph_1_1_dinic.html#a6d9c6561fb8a6e106cf8bb4966c7f331">更多...</a><br /></td></tr>
+<tr class="separator:a6d9c6561fb8a6e106cf8bb4966c7f331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:aad02383ea808741218e820ea15fff0be"><td class="memItemLeft" align="right" valign="top">static F&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_dinic.html#aad02383ea808741218e820ea15fff0be">max_val</a> ()</td></tr>
+<tr class="memdesc:aad02383ea808741218e820ea15fff0be"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回类型 F 的安全上界（numeric_limits 最大值 / 4）  <a href="classwbwlib_1_1graph_1_1_dinic.html#aad02383ea808741218e820ea15fff0be">更多...</a><br /></td></tr>
+<tr class="separator:aad02383ea808741218e820ea15fff0be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a111d0badea0139fe818da94a62226f38"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="structwbwlib_1_1graph_1_1_dinic_1_1_edge.html">Edge</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_dinic.html#a111d0badea0139fe818da94a62226f38">g_</a></td></tr>
+<tr class="separator:a111d0badea0139fe818da94a62226f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5c9d50e15fb7a241603cbe20164a7ff"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_dinic.html#ab5c9d50e15fb7a241603cbe20164a7ff">level_</a></td></tr>
+<tr class="separator:ab5c9d50e15fb7a241603cbe20164a7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0fc39a679eeb47f29455ed12fc21507"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_dinic.html#ab0fc39a679eeb47f29455ed12fc21507">iter_</a></td></tr>
+<tr class="separator:ab0fc39a679eeb47f29455ed12fc21507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d5ae522568dd95426fabb1d14131943"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwbwlib_1_1graph_1_1_dinic.html#a5d5ae522568dd95426fabb1d14131943">n_</a></td></tr>
+<tr class="separator:a5d5ae522568dd95426fabb1d14131943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><h3>template&lt;class F&gt;<br />
+class wbwlib::graph::Dinic&lt; F &gt;</h3>
+
+<p>最大流：Dinic 算法（BFS 分层 + DFS 多路增广 + 当前弧优化）。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">F</td><td>流量类型（int / i64 等） </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a5bbc175a4dee0f1cf7852f61c09de72c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bbc175a4dee0f1cf7852f61c09de72c">&#9670;&nbsp;</a></span>Dinic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classwbwlib_1_1graph_1_1_dinic.html">wbwlib::graph::Dinic</a>&lt; F &gt;::<a class="el" href="classwbwlib_1_1graph_1_1_dinic.html">Dinic</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造 n 个点的空网络。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>点数（1 基） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a1991f8e8140a3a169ddae2b59c27004b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1991f8e8140a3a169ddae2b59c27004b">&#9670;&nbsp;</a></span>add_edge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1graph_1_1_dinic.html">wbwlib::graph::Dinic</a>&lt; F &gt;::add_edge </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>cap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>加一条 u → v 容量为 cap 的有向边（自动加容量 0 的反向边）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">u</td><td>起点（1 基） </td></tr>
+    <tr><td class="paramname">v</td><td>终点（1 基） </td></tr>
+    <tr><td class="paramname">cap</td><td>容量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a24726b916d9da2215ee43f80aee80243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24726b916d9da2215ee43f80aee80243">&#9670;&nbsp;</a></span>bfs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classwbwlib_1_1graph_1_1_dinic.html">wbwlib::graph::Dinic</a>&lt; F &gt;::bfs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>分层 BFS：只走剩余容量 &gt; 0 的边，构造层次图，判断 s 是否可达 t </p>
+
+</div>
+</div>
+<a id="a6d9c6561fb8a6e106cf8bb4966c7f331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d9c6561fb8a6e106cf8bb4966c7f331">&#9670;&nbsp;</a></span>build_cut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classwbwlib_1_1graph_1_1_dinic.html">wbwlib::graph::Dinic</a>&lt; F &gt;::build_cut </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从 s 沿剩余容量 &gt; 0 的边 BFS，标记残量网络中 s 可达的点（最小割 S 侧） </p>
+
+</div>
+</div>
+<a id="ac5edd05013b9df156a5eb31e761766da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5edd05013b9df156a5eb31e761766da">&#9670;&nbsp;</a></span>dfs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">F <a class="el" href="classwbwlib_1_1graph_1_1_dinic.html">wbwlib::graph::Dinic</a>&lt; F &gt;::dfs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>沿层次图 DFS 单路增广：只走 level[v] = level[u] + 1 的边，并更新反向边容量 </p>
+
+</div>
+</div>
+<a id="aad02383ea808741218e820ea15fff0be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad02383ea808741218e820ea15fff0be">&#9670;&nbsp;</a></span>max_val()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static F <a class="el" href="classwbwlib_1_1graph_1_1_dinic.html">wbwlib::graph::Dinic</a>&lt; F &gt;::max_val </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回类型 F 的安全上界（numeric_limits 最大值 / 4） </p>
+
+</div>
+</div>
+<a id="a3b2b038b46cd1e5ec14e96df8262c64a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b2b038b46cd1e5ec14e96df8262c64a">&#9670;&nbsp;</a></span>maxflow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">F <a class="el" href="classwbwlib_1_1graph_1_1_dinic.html">wbwlib::graph::Dinic</a>&lt; F &gt;::maxflow </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>求 s → t 的最大流：不断「分层 + 多路增广」直到 s 不可达 t， \(|f| = \sum_{e \in \delta^+(s)} f(e)\)。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>源点（1 基） </td></tr>
+    <tr><td class="paramname">t</td><td>汇点（1 基） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>最大流值 </dd></dl>
+
+</div>
+</div>
+<a id="ae166c13195fbad02fcc6f4f98f941606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae166c13195fbad02fcc6f4f98f941606">&#9670;&nbsp;</a></span>mincut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;char&gt; <a class="el" href="classwbwlib_1_1graph_1_1_dinic.html">wbwlib::graph::Dinic</a>&lt; F &gt;::mincut </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最小割：最大流结束后返回残量网络中 s 可达的点集（S 侧，含 s）。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>源点（1 基） </td></tr>
+    <tr><td class="paramname">t</td><td>汇点（1 基） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>S 侧点集标记数组（1 基） </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a111d0badea0139fe818da94a62226f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a111d0badea0139fe818da94a62226f38">&#9670;&nbsp;</a></span>g_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::vector&lt;<a class="el" href="structwbwlib_1_1graph_1_1_dinic_1_1_edge.html">Edge</a>&gt; &gt; <a class="el" href="classwbwlib_1_1graph_1_1_dinic.html">wbwlib::graph::Dinic</a>&lt; F &gt;::g_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0fc39a679eeb47f29455ed12fc21507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0fc39a679eeb47f29455ed12fc21507">&#9670;&nbsp;</a></span>iter_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; <a class="el" href="classwbwlib_1_1graph_1_1_dinic.html">wbwlib::graph::Dinic</a>&lt; F &gt;::iter_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5c9d50e15fb7a241603cbe20164a7ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5c9d50e15fb7a241603cbe20164a7ff">&#9670;&nbsp;</a></span>level_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; <a class="el" href="classwbwlib_1_1graph_1_1_dinic.html">wbwlib::graph::Dinic</a>&lt; F &gt;::level_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d5ae522568dd95426fabb1d14131943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d5ae522568dd95426fabb1d14131943">&#9670;&nbsp;</a></span>n_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classwbwlib_1_1graph_1_1_dinic.html">wbwlib::graph::Dinic</a>&lt; F &gt;::n_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>wbwlib/graph/<a class="el" href="network-flow_8hpp_source.html">network-flow.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

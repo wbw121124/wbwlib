@@ -1,0 +1,19 @@
+<map id="wbwlib/core/hash.hpp" name="wbwlib/core/hash.hpp">
+<area shape="rect" id="node1" title="抗哈希冲突的哈希器（用于 std::unordered_map / unordered_set）。" alt="" coords="273,5,421,33"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,233,70,261"/>
+<area shape="rect" id="node3" title=" " alt="" coords="452,81,530,109"/>
+<area shape="rect" id="node4" title=" " alt="" coords="553,81,663,109"/>
+<area shape="rect" id="node5" title=" " alt="" coords="687,81,791,109"/>
+<area shape="rect" id="node6" title=" " alt="" coords="94,233,146,261"/>
+<area shape="rect" id="node7" href="$base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="147,157,294,185"/>
+<area shape="rect" id="node12" href="$random_8hpp.html" title="随机工具：splitmix64、mt19937_64 封装、随机排列。" alt="" coords="266,81,428,109"/>
+<area shape="rect" id="node8" title=" " alt="" coords="379,233,440,261"/>
+<area shape="rect" id="node9" title=" " alt="" coords="464,233,528,261"/>
+<area shape="rect" id="node10" title=" " alt="" coords="170,233,249,261"/>
+<area shape="rect" id="node11" title=" " alt="" coords="272,233,355,261"/>
+<area shape="rect" id="node13" title=" " alt="" coords="399,157,473,185"/>
+<area shape="rect" id="node14" title=" " alt="" coords="498,157,558,185"/>
+<area shape="rect" id="node15" title=" " alt="" coords="583,157,644,185"/>
+<area shape="rect" id="node16" title=" " alt="" coords="668,157,732,185"/>
+<area shape="rect" id="node17" title=" " alt="" coords="318,157,376,185"/>
+</map>

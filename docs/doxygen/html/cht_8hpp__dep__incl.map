@@ -1,0 +1,5 @@
+<map id="wbwlib/dp/cht.hpp" name="wbwlib/dp/cht.hpp">
+<area shape="rect" id="node1" title="凸包优化（CHT）：单调队列版 + 动态 multiset 版。" alt="" coords="7,5,134,33"/>
+<area shape="rect" id="node2" href="$dp_8hpp.html" title="dp 模块聚合头：一次引入本模块全部头文件。" alt="" coords="9,81,132,109"/>
+<area shape="rect" id="node3" href="$wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="5,157,136,185"/>
+</map>

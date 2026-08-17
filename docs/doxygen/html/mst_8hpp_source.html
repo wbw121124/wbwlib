@@ -1,0 +1,230 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/graph/mst.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_eb5e8cb22b4df04bf6d97bd1e7f427e8.html">graph</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">mst.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="mst_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBWLIB_GRAPH_MST_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBWLIB_GRAPH_MST_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;queue&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base_8hpp.html">wbwlib/core/base.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="adjacency_8hpp.html">wbwlib/graph/adjacency.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewbwlib.html">wbwlib</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>graph {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1graph.html#ae1652ccee1daa3f17db9c40d578040f6">   29</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="namespacewbwlib_1_1graph.html#ae1652ccee1daa3f17db9c40d578040f6">mst_INF</a>() { <span class="keywordflow">return</span> (<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a>)4e18; }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> W&gt;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structwbwlib_1_1graph_1_1_mst_result.html">   36</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structwbwlib_1_1graph_1_1_mst_result.html">MstResult</a> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structwbwlib_1_1graph_1_1_mst_result.html#a259a1e71f039fcb5ca9b92a60cb28e88">   37</a></span>&#160;  <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="structwbwlib_1_1graph_1_1_mst_result.html#a259a1e71f039fcb5ca9b92a60cb28e88">total</a> = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structwbwlib_1_1graph_1_1_mst_result.html#acbd04f205c337a0845186a07c152c9dd">   38</a></span>&#160;  std::vector&lt;std::pair&lt;int, int&gt;&gt; <a class="code" href="structwbwlib_1_1graph_1_1_mst_result.html#acbd04f205c337a0845186a07c152c9dd">edges</a>;  </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structwbwlib_1_1graph_1_1_mst_result.html#ade0cd2a4787dacdcd02390c0d7ba5c57">   39</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structwbwlib_1_1graph_1_1_mst_result.html#ade0cd2a4787dacdcd02390c0d7ba5c57">ok</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> W&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1graph.html#a171f6d70cf3d9fede3df540032d331d4">   49</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;std::array&lt;int, 3&gt;&gt; <a class="code" href="namespacewbwlib_1_1graph.html#a171f6d70cf3d9fede3df540032d331d4">extract_edges</a>(<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1graph_1_1_w_adj.html">WAdj&lt;W&gt;</a>&amp; g) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  std::vector&lt;std::array&lt;int, 3&gt;&gt; e;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> u = 1; u &lt;= g.<a class="code" href="structwbwlib_1_1graph_1_1_w_adj.html#a30b4872dc580951253bb81dd317f1cfe">n</a>; ++u)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; p : g.<a class="code" href="structwbwlib_1_1graph_1_1_w_adj.html#a16d086e0e82fce6fbb6125ac9c11dc52">g</a>[u])</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordflow">if</span> (u &lt; p.first) e.push_back({u, p.first, (int)p.second});</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">return</span> e;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1graph.html#a0bc5a1ddadb1905b0579412f7042b79d">   63</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structwbwlib_1_1graph_1_1_mst_result.html">MstResult&lt;i64&gt;</a> <a class="code" href="namespacewbwlib_1_1graph.html#a0bc5a1ddadb1905b0579412f7042b79d">kruskal</a>(<span class="keywordtype">int</span> n,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                              <span class="keyword">const</span> std::vector&lt;std::array&lt;int, 3&gt;&gt;&amp; edges) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="structwbwlib_1_1graph_1_1_mst_result.html">MstResult&lt;i64&gt;</a> res;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  std::vector&lt;int&gt; fa(n + 1), rnk(n + 1, 0);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= n; ++i) fa[i] = i;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  std::function&lt;int(<span class="keywordtype">int</span>)&gt; find = [&amp;](<span class="keywordtype">int</span> x) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">while</span> (fa[x] != x) x = fa[x] = fa[fa[x]];</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  };</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">auto</span> es = edges;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  std::sort(es.begin(), es.end(),</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            [](<span class="keyword">const</span> std::array&lt;int, 3&gt;&amp; a, <span class="keyword">const</span> std::array&lt;int, 3&gt;&amp; b) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;              return a[2] &lt; b[2];</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            });</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">int</span> cnt = 0;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; e : es) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">int</span> u = find(e[0]), v = find(e[1]);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> (u == v) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    res.<a class="code" href="structwbwlib_1_1graph_1_1_mst_result.html#acbd04f205c337a0845186a07c152c9dd">edges</a>.push_back({e[0], e[1]});</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    res.<a class="code" href="structwbwlib_1_1graph_1_1_mst_result.html#a259a1e71f039fcb5ca9b92a60cb28e88">total</a> += e[2];</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> (rnk[u] &lt; rnk[v]) std::swap(u, v);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    fa[v] = u;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (rnk[u] == rnk[v]) ++rnk[u];</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span> (++cnt == n - 1) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  res.<a class="code" href="structwbwlib_1_1graph_1_1_mst_result.html#ade0cd2a4787dacdcd02390c0d7ba5c57">ok</a> = (cnt == n - 1);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1graph.html#ab3363f718062d4035008e2810aa79313">   97</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structwbwlib_1_1graph_1_1_mst_result.html">MstResult&lt;i64&gt;</a> <a class="code" href="namespacewbwlib_1_1graph.html#a0bc5a1ddadb1905b0579412f7042b79d">kruskal</a>(<span class="keyword">const</span> <a class="code" href="structwbwlib_1_1graph_1_1_w_adj.html">WAdj&lt;i64&gt;</a>&amp; g) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacewbwlib_1_1graph.html#a0bc5a1ddadb1905b0579412f7042b79d">kruskal</a>(g.<a class="code" href="structwbwlib_1_1graph_1_1_w_adj.html#a30b4872dc580951253bb81dd317f1cfe">n</a>, <a class="code" href="namespacewbwlib_1_1graph.html#a171f6d70cf3d9fede3df540032d331d4">extract_edges</a>(g));</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> W&gt;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="namespacewbwlib_1_1graph.html#a6f091e6ea933bd5cf6b68996a6dcc2a5">  109</a></span>&#160;<a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> <a class="code" href="namespacewbwlib_1_1graph.html#a6f091e6ea933bd5cf6b68996a6dcc2a5">prim</a>(<span class="keywordtype">int</span> n, <span class="keyword">const</span> <a class="code" href="structwbwlib_1_1graph_1_1_w_adj.html">WAdj&lt;W&gt;</a>&amp; g) {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> INF = <a class="code" href="namespacewbwlib_1_1graph.html#ae1652ccee1daa3f17db9c40d578040f6">mst_INF</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  std::vector&lt;i64&gt; key(n + 1, INF);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  std::vector&lt;char&gt; used(n + 1, 0);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keyword">typedef</span> std::pair&lt;i64, int&gt; P;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  std::priority_queue&lt;P, std::vector&lt;P&gt;, std::greater&lt;P&gt;&gt; pq;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  key[1] = 0;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  pq.push({0, 1});</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> total = 0;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">int</span> cnt = 0;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">while</span> (!pq.empty()) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">int</span> u = pq.top().second;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> d = pq.top().first;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    pq.pop();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">if</span> (used[u]) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    used[u] = 1;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    total += d;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    ++cnt;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; e : g.<a class="code" href="structwbwlib_1_1graph_1_1_w_adj.html#a16d086e0e82fce6fbb6125ac9c11dc52">g</a>[u])</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keywordflow">if</span> (!used[e.first] &amp;&amp; e.second &lt; key[e.first]) {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        key[e.first] = e.second;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        pq.push({key[e.first], e.first});</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">return</span> cnt == n ? total : -1;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;} <span class="comment">// namespace graph</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;} <span class="comment">// namespace wbwlib</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// WBWLIB_GRAPH_MST_HPP</span></div>
+<div class="ttc" id="aadjacency_8hpp_html"><div class="ttname"><a href="adjacency_8hpp.html">adjacency.hpp</a></div><div class="ttdoc">图表示约定：1 基邻接表 + 常用辅助。</div></div>
+<div class="ttc" id="abase_8hpp_html"><div class="ttname"><a href="base_8hpp.html">base.hpp</a></div><div class="ttdoc">wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1graph_html_a0bc5a1ddadb1905b0579412f7042b79d"><div class="ttname"><a href="namespacewbwlib_1_1graph.html#a0bc5a1ddadb1905b0579412f7042b79d">wbwlib::graph::kruskal</a></div><div class="ttdeci">MstResult&lt; i64 &gt; kruskal(int n, const std::vector&lt; std::array&lt; int, 3 &gt;&gt; &amp;edges)</div><div class="ttdoc">Kruskal 求最小生成树：边按权值升序，并查集判连通合并。</div><div class="ttdef"><b>Definition:</b> mst.hpp:63</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1graph_html_a171f6d70cf3d9fede3df540032d331d4"><div class="ttname"><a href="namespacewbwlib_1_1graph.html#a171f6d70cf3d9fede3df540032d331d4">wbwlib::graph::extract_edges</a></div><div class="ttdeci">std::vector&lt; std::array&lt; int, 3 &gt; &gt; extract_edges(const WAdj&lt; W &gt; &amp;g)</div><div class="ttdoc">从带权邻接表中抽出无向边集 {u,v,w}（只取 u&lt;v 的一份）。</div><div class="ttdef"><b>Definition:</b> mst.hpp:49</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1graph_html_a6f091e6ea933bd5cf6b68996a6dcc2a5"><div class="ttname"><a href="namespacewbwlib_1_1graph.html#a6f091e6ea933bd5cf6b68996a6dcc2a5">wbwlib::graph::prim</a></div><div class="ttdeci">i64 prim(int n, const WAdj&lt; W &gt; &amp;g)</div><div class="ttdoc">Prim（堆）求最小生成树总权值：从点 1 出发不断加入最小 key 的未选点。</div><div class="ttdef"><b>Definition:</b> mst.hpp:109</div></div>
+<div class="ttc" id="anamespacewbwlib_1_1graph_html_ae1652ccee1daa3f17db9c40d578040f6"><div class="ttname"><a href="namespacewbwlib_1_1graph.html#ae1652ccee1daa3f17db9c40d578040f6">wbwlib::graph::mst_INF</a></div><div class="ttdeci">i64 mst_INF()</div><div class="ttdoc">MST 使用的无穷大上界</div><div class="ttdef"><b>Definition:</b> mst.hpp:29</div></div>
+<div class="ttc" id="anamespacewbwlib_html"><div class="ttname"><a href="namespacewbwlib.html">wbwlib</a></div><div class="ttdef"><b>Definition:</b> base.hpp:68</div></div>
+<div class="ttc" id="anamespacewbwlib_html_a86ab7e3b77fa0c682d473301d8c617c6"><div class="ttname"><a href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">wbwlib::i64</a></div><div class="ttdeci">std::int64_t i64</div><div class="ttdoc">64 位有符号整数</div><div class="ttdef"><b>Definition:</b> base.hpp:98</div></div>
+<div class="ttc" id="astructwbwlib_1_1graph_1_1_mst_result_html"><div class="ttname"><a href="structwbwlib_1_1graph_1_1_mst_result.html">wbwlib::graph::MstResult</a></div><div class="ttdoc">最小生成树结果：总权值 + 树边 + 是否连通。</div><div class="ttdef"><b>Definition:</b> mst.hpp:36</div></div>
+<div class="ttc" id="astructwbwlib_1_1graph_1_1_mst_result_html_a259a1e71f039fcb5ca9b92a60cb28e88"><div class="ttname"><a href="structwbwlib_1_1graph_1_1_mst_result.html#a259a1e71f039fcb5ca9b92a60cb28e88">wbwlib::graph::MstResult::total</a></div><div class="ttdeci">i64 total</div><div class="ttdef"><b>Definition:</b> mst.hpp:37</div></div>
+<div class="ttc" id="astructwbwlib_1_1graph_1_1_mst_result_html_acbd04f205c337a0845186a07c152c9dd"><div class="ttname"><a href="structwbwlib_1_1graph_1_1_mst_result.html#acbd04f205c337a0845186a07c152c9dd">wbwlib::graph::MstResult::edges</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; int, int &gt; &gt; edges</div><div class="ttdoc">树边</div><div class="ttdef"><b>Definition:</b> mst.hpp:38</div></div>
+<div class="ttc" id="astructwbwlib_1_1graph_1_1_mst_result_html_ade0cd2a4787dacdcd02390c0d7ba5c57"><div class="ttname"><a href="structwbwlib_1_1graph_1_1_mst_result.html#ade0cd2a4787dacdcd02390c0d7ba5c57">wbwlib::graph::MstResult::ok</a></div><div class="ttdeci">bool ok</div><div class="ttdef"><b>Definition:</b> mst.hpp:39</div></div>
+<div class="ttc" id="astructwbwlib_1_1graph_1_1_w_adj_html"><div class="ttname"><a href="structwbwlib_1_1graph_1_1_w_adj.html">wbwlib::graph::WAdj</a></div><div class="ttdoc">带权邻接表（1 基）：g[u] 为 (邻点 v, 边权 w) 列表。</div><div class="ttdef"><b>Definition:</b> adjacency.hpp:35</div></div>
+<div class="ttc" id="astructwbwlib_1_1graph_1_1_w_adj_html_a16d086e0e82fce6fbb6125ac9c11dc52"><div class="ttname"><a href="structwbwlib_1_1graph_1_1_w_adj.html#a16d086e0e82fce6fbb6125ac9c11dc52">wbwlib::graph::WAdj::g</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; std::pair&lt; int, W &gt; &gt; &gt; g</div><div class="ttdef"><b>Definition:</b> adjacency.hpp:37</div></div>
+<div class="ttc" id="astructwbwlib_1_1graph_1_1_w_adj_html_a30b4872dc580951253bb81dd317f1cfe"><div class="ttname"><a href="structwbwlib_1_1graph_1_1_w_adj.html#a30b4872dc580951253bb81dd317f1cfe">wbwlib::graph::WAdj::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition:</b> adjacency.hpp:36</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

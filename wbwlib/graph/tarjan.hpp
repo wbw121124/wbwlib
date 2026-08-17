@@ -5,14 +5,18 @@
  * @file tarjan.hpp
  * @brief 强连通分量 / 割点 / 桥（Tarjan）。
  *
- * 依赖：wbwlib/core/base.hpp、wbwlib/graph/adjacency.hpp
+ * @par 依赖
+ * wbwlib/core/base.hpp、wbwlib/graph/adjacency.hpp
  *
- * 复杂度：O(V+E)。
+ * @par 复杂度
+ * O(V+E)。
  *
- * 用法：
+ * @par 示例
+ * @code{.cpp}
  *   int scc_cnt = tarjan_scc(g, scc_id);                // scc_id[1..n]，从 1 编号
  *   vector<int> is_cut = tarjan_cut(g);                 // 0/1
  *   vector<pair<int,int>> bri; tarjan_bridge(g, bri);   // 桥（u<v）
+ * @endcode
  */
 
 #include <vector>
@@ -24,7 +28,12 @@
 namespace wbwlib {
 namespace graph {
 
-/// 强连通分量（非递归标记），返回 SCC 总数
+/**
+ * @brief 求有向图强连通分量（非递归标记式 Tarjan）。
+ * @param g 无权邻接表（1 基）
+ * @param scc_id 输出参数，接收每个点所属 SCC 编号（1 基，从 1 编号）
+ * @return SCC 总数
+ */
 inline int tarjan_scc(const Adj& g, std::vector<int>& scc_id) {
   int n = (int)g.size() - 1;
   scc_id.assign(n + 1, 0);
@@ -59,7 +68,11 @@ inline int tarjan_scc(const Adj& g, std::vector<int>& scc_id) {
   return scc;
 }
 
-/// 割点：返回 0/1 值数组（1 基）
+/**
+ * @brief 求无向图割点：\f$low[v] \ge dfn[u]\f$ 且 u 非根，或根有 ≥2 个子树。
+ * @param g 无权邻接表（1 基）
+ * @return cut[1..n]：1 表示该点为割点
+ */
 inline std::vector<int> tarjan_cut(const Adj& g) {
   int n = (int)g.size() - 1;
   std::vector<int> dfn(n + 1, 0), low(n + 1, 0), cut(n + 1, 0);
@@ -85,7 +98,11 @@ inline std::vector<int> tarjan_cut(const Adj& g) {
   return cut;
 }
 
-/// 桥：结果存入 vector<pair<int,int>>（u<v 有序）
+/**
+ * @brief 求无向图桥：\f$low[v] > dfn[u]\f$ 时边 (u,v) 为桥。
+ * @param g 无权邻接表（1 基）
+ * @param bridges 输出参数，接收所有桥（端点 u<v 有序）
+ */
 inline void tarjan_bridge(const Adj& g, std::vector<std::pair<int, int>>& bridges) {
   int n = (int)g.size() - 1;
   std::vector<int> dfn(n + 1, 0), low(n + 1, 0);

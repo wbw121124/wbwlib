@@ -1,0 +1,199 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/math/combinatorics.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_3daf11f4f079b8f8f9a94cd388c9bdee.html">math</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">combinatorics.hpp 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>组合计数工具：阶乘/逆元预计算、组合数、排列数、Lucas、卡特兰、 两型斯特林数、错排数。  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="base_8hpp_source.html">wbwlib/core/base.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="modular_8hpp_source.html">wbwlib/math/modular.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+combinatorics.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="combinatorics_8hpp__incl.png" border="0" usemap="#awbwlib_2math_2combinatorics_8hpp" alt=""/></div>
+<map name="awbwlib_2math_2combinatorics_8hpp" id="awbwlib_2math_2combinatorics_8hpp">
+<area shape="rect" title="组合计数工具：阶乘/逆元预计算、组合数、排列数、Lucas、卡特兰、 两型斯特林数、错排数。" alt="" coords="211,5,415,33"/>
+<area shape="rect" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="229,249,376,277"/>
+<area shape="rect" href="modular_8hpp.html" title="模意义整数类 modint（固定模版）与动态模版。" alt="" coords="290,81,459,109"/>
+<area shape="rect" title=" " alt="" coords="5,325,66,353"/>
+<area shape="rect" title=" " alt="" coords="90,325,154,353"/>
+<area shape="rect" title=" " alt="" coords="178,325,242,353"/>
+<area shape="rect" title=" " alt="" coords="267,325,345,353"/>
+<area shape="rect" title=" " alt="" coords="369,325,451,353"/>
+<area shape="rect" title=" " alt="" coords="476,325,528,353"/>
+<area shape="rect" title=" " alt="" coords="340,165,411,193"/>
+<area shape="rect" href="number-theory_8hpp.html" title="数论基础：快速幂、快速乘、gcd/lcm、扩展欧几里得、逆元、CRT/EXCRT、欧拉定理、整除分块。" alt="" coords="436,157,577,201"/>
+<area shape="rect" title=" " alt="" coords="540,249,598,277"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="combinatorics_8hpp__dep__incl.png" border="0" usemap="#awbwlib_2math_2combinatorics_8hppdep" alt=""/></div>
+<map name="awbwlib_2math_2combinatorics_8hppdep" id="awbwlib_2math_2combinatorics_8hppdep">
+<area shape="rect" title="组合计数工具：阶乘/逆元预计算、组合数、排列数、Lucas、卡特兰、 两型斯特林数、错排数。" alt="" coords="5,5,210,33"/>
+<area shape="rect" href="math_8hpp.html" title="math 模块聚合头：一次引入本模块全部头文件。" alt="" coords="31,81,184,109"/>
+<area shape="rect" href="wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="42,157,173,185"/>
+</map>
+</div>
+</div>
+<p><a href="combinatorics_8hpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwbwlib_1_1math_1_1_comb.html">wbwlib::math::Comb&lt; M &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">组合数学预计算结构体：阶乘与阶乘逆元，O(1) 查询组合数/排列数。  <a href="structwbwlib_1_1math_1_1_comb.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacewbwlib"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib.html">wbwlib</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacewbwlib_1_1math"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html">wbwlib::math</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a2a1ea42fec3bd014e15693e86e136024"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:a2a1ea42fec3bd014e15693e86e136024"><td class="memTemplItemLeft" align="right" valign="top">M&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a2a1ea42fec3bd014e15693e86e136024">wbwlib::math::lucas_comb</a> (i64 n, i64 k, i64 p, const Comb&lt; M &gt; &amp;cb)</td></tr>
+<tr class="memdesc:a2a1ea42fec3bd014e15693e86e136024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lucas 定理求组合数 \(\binom{n}{k} \bmod p\)，p 为质数，用于 n, k 超过预计算范围。  <a href="namespacewbwlib_1_1math.html#a2a1ea42fec3bd014e15693e86e136024">更多...</a><br /></td></tr>
+<tr class="separator:a2a1ea42fec3bd014e15693e86e136024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06910c4b3c1f5d01eb21d830cf1374b9"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:a06910c4b3c1f5d01eb21d830cf1374b9"><td class="memTemplItemLeft" align="right" valign="top">M&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a06910c4b3c1f5d01eb21d830cf1374b9">wbwlib::math::catalan</a> (int n, const Comb&lt; M &gt; &amp;cb)</td></tr>
+<tr class="memdesc:a06910c4b3c1f5d01eb21d830cf1374b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">卡特兰数： \(Cat(n) = \frac{1}{n+1}\binom{2n}{n}\)。  <a href="namespacewbwlib_1_1math.html#a06910c4b3c1f5d01eb21d830cf1374b9">更多...</a><br /></td></tr>
+<tr class="separator:a06910c4b3c1f5d01eb21d830cf1374b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1de8db070152a63f2b2c7ba04f33003e"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:a1de8db070152a63f2b2c7ba04f33003e"><td class="memTemplItemLeft" align="right" valign="top">M&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a1de8db070152a63f2b2c7ba04f33003e">wbwlib::math::stirling2</a> (int n, int k)</td></tr>
+<tr class="memdesc:a1de8db070152a63f2b2c7ba04f33003e"><td class="mdescLeft">&#160;</td><td class="mdescRight">第二类斯特林数 \(S(n, k)\)：把 n 个有区别的球放入 k 个非空集合的方案数。  <a href="namespacewbwlib_1_1math.html#a1de8db070152a63f2b2c7ba04f33003e">更多...</a><br /></td></tr>
+<tr class="separator:a1de8db070152a63f2b2c7ba04f33003e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94268b4b8a69c2106612930188d4b515"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:a94268b4b8a69c2106612930188d4b515"><td class="memTemplItemLeft" align="right" valign="top">M&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a94268b4b8a69c2106612930188d4b515">wbwlib::math::stirling1</a> (int n, int k)</td></tr>
+<tr class="memdesc:a94268b4b8a69c2106612930188d4b515"><td class="mdescLeft">&#160;</td><td class="mdescRight">第一类斯特林数 \(S_1(n, k)\)：把 n 个元素排列成 k 个环的方案数。  <a href="namespacewbwlib_1_1math.html#a94268b4b8a69c2106612930188d4b515">更多...</a><br /></td></tr>
+<tr class="separator:a94268b4b8a69c2106612930188d4b515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a4d6aa48f0d1cf3ef3caff7c15a5c4b"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:a5a4d6aa48f0d1cf3ef3caff7c15a5c4b"><td class="memTemplItemLeft" align="right" valign="top">M&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1math.html#a5a4d6aa48f0d1cf3ef3caff7c15a5c4b">wbwlib::math::derangement</a> (int n)</td></tr>
+<tr class="memdesc:a5a4d6aa48f0d1cf3ef3caff7c15a5c4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">错排数：n 个元素全排列中没有任何一个元素留在原位的方案数。  <a href="namespacewbwlib_1_1math.html#a5a4d6aa48f0d1cf3ef3caff7c15a5c4b">更多...</a><br /></td></tr>
+<tr class="separator:a5a4d6aa48f0d1cf3ef3caff7c15a5c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>组合计数工具：阶乘/逆元预计算、组合数、排列数、Lucas、卡特兰、 两型斯特林数、错排数。 </p>
+<dl class="section user"><dt>依赖</dt><dd><a class="el" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。">wbwlib/core/base.hpp</a>, <a class="el" href="modular_8hpp.html" title="模意义整数类 modint（固定模版）与动态模版。">wbwlib/math/modular.hpp</a></dd></dl>
+<p>通用类型参数 M 为模整数类（wbwlib::math::modint&lt;MOD&gt; 或 modint_dyn）。 </p>
+</div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

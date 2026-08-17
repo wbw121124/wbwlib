@@ -1,0 +1,207 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>wbwlib: wbwlib/datastruct/li-chao-tree.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="../../mathjax/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="wbwlib-fix.css" rel="stylesheet" type="text/css"/>
+<link href="prism.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="prism.min.js"></script>
+<script type="text/javascript" src="prism-bash.min.js"></script>
+<script type="text/javascript">
+  DoxygenAwesomeDarkModeToggle.init();
+  DoxygenAwesomeFragmentCopyButton.init();
+  DoxygenAwesomeTabs.init();
+  document.addEventListener('DOMContentLoaded', function () {
+    var frags = document.querySelectorAll('div.fragment');
+    for (var i = 0; i < frags.length; ++i) {
+      var f = frags[i];
+      if (!f.querySelector('span') && window.Prism) {
+        try { Prism.highlightElement(f); } catch (e) { /* ignore */ }
+      }
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    var ae = document.activeElement;
+    var tag = ae ? ae.tagName : '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    var f = document.getElementById('MSearchField');
+    if (f) { e.preventDefault(); f.focus(); }
+  });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">wbwlib
+   </div>
+   <div id="projectbrief">C++14 header-only 算法竞赛库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_96c9ea494fd3b8ca8cb2b467f31d2656.html">wbwlib</a></li><li class="navelem"><a class="el" href="dir_8d69220e0774a19b26f749e5403d9fea.html">datastruct</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">li-chao-tree.hpp 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>李超线段树：维护直线族 y = k*x + b 的最值查询。  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &quot;<a class="el" href="base_8hpp_source.html">wbwlib/core/base.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+li-chao-tree.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="li-chao-tree_8hpp__incl.png" border="0" usemap="#awbwlib_2datastruct_2li-chao-tree_8hpp" alt=""/></div>
+<map name="awbwlib_2datastruct_2li-chao-tree_8hpp" id="awbwlib_2datastruct_2li-chao-tree_8hpp">
+<area shape="rect" title="李超线段树：维护直线族 y = k*x + b 的最值查询。" alt="" coords="76,5,209,49"/>
+<area shape="rect" title=" " alt="" coords="5,97,80,125"/>
+<area shape="rect" title=" " alt="" coords="104,97,181,125"/>
+<area shape="rect" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。" alt="" coords="205,97,352,125"/>
+<area shape="rect" title=" " alt="" coords="26,173,86,201"/>
+<area shape="rect" title=" " alt="" coords="110,173,175,201"/>
+<area shape="rect" title=" " alt="" coords="198,173,263,201"/>
+<area shape="rect" title=" " alt="" coords="287,173,366,201"/>
+<area shape="rect" title=" " alt="" coords="389,173,472,201"/>
+<area shape="rect" title=" " alt="" coords="496,173,549,201"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="li-chao-tree_8hpp__dep__incl.png" border="0" usemap="#awbwlib_2datastruct_2li-chao-tree_8hppdep" alt=""/></div>
+<map name="awbwlib_2datastruct_2li-chao-tree_8hppdep" id="awbwlib_2datastruct_2li-chao-tree_8hppdep">
+<area shape="rect" title="李超线段树：维护直线族 y = k*x + b 的最值查询。" alt="" coords="44,5,177,49"/>
+<area shape="rect" href="datastruct_8hpp.html" title="datastruct 模块聚合头：一次引入本模块全部头文件。" alt="" coords="5,97,216,125"/>
+<area shape="rect" href="wbwlib_8hpp.html" title="wbwlib 全量聚合头文件：按模块目录顺序引入全部头文件。" alt="" coords="45,173,176,201"/>
+</map>
+</div>
+</div>
+<p><a href="li-chao-tree_8hpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacewbwlib"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib.html">wbwlib</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacewbwlib_1_1ds"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds.html">wbwlib::ds</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ac54c8a5d0ed93c52bad5fe5d1a839970"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds.html#ac54c8a5d0ed93c52bad5fe5d1a839970">wbwlib::ds::if</a> (md)</td></tr>
+<tr class="separator:ac54c8a5d0ed93c52bad5fe5d1a839970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60e93e81f26950e59c58d112f43e928"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds.html#ad60e93e81f26950e59c58d112f43e928">wbwlib::ds::if</a> (L==R) return</td></tr>
+<tr class="separator:ad60e93e81f26950e59c58d112f43e928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40f5d0ff6047884408b5cb44a20b446"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds.html#ae40f5d0ff6047884408b5cb44a20b446">wbwlib::ds::if</a> (lf !=md)</td></tr>
+<tr class="separator:ae40f5d0ff6047884408b5cb44a20b446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d4bf2eea7fa35a8146322965f7ef40"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds.html#aa2d4bf2eea7fa35a8146322965f7ef40">wbwlib::ds::query</a> (i64 x) const</td></tr>
+<tr class="memdesc:aa2d4bf2eea7fa35a8146322965f7ef40"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询 x 处所有直线的最优值（按 Cmp 语义）。  <a href="namespacewbwlib_1_1ds.html#aa2d4bf2eea7fa35a8146322965f7ef40">更多...</a><br /></td></tr>
+<tr class="separator:aa2d4bf2eea7fa35a8146322965f7ef40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6d9401d0fddc6ab2f3dd2f49eb1f2d6"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds.html#ab6d9401d0fddc6ab2f3dd2f49eb1f2d6">wbwlib::ds::query</a> (i64 x, i64 L, i64 R, int id) const</td></tr>
+<tr class="memdesc:ab6d9401d0fddc6ab2f3dd2f49eb1f2d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">递归查询区间 [L, R] 上 x 的最优值。  <a href="namespacewbwlib_1_1ds.html#ab6d9401d0fddc6ab2f3dd2f49eb1f2d6">更多...</a><br /></td></tr>
+<tr class="separator:ab6d9401d0fddc6ab2f3dd2f49eb1f2d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02298f143c877facb645273dc4ba7ec3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds.html#a02298f143c877facb645273dc4ba7ec3">wbwlib::ds::nw_lt</a> (const Line &amp;a, const Line &amp;b, i64 x) const</td></tr>
+<tr class="memdesc:a02298f143c877facb645273dc4ba7ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">nw 是否比已有直线更优（按 Cmp 语义在 x 处）  <a href="namespacewbwlib_1_1ds.html#a02298f143c877facb645273dc4ba7ec3">更多...</a><br /></td></tr>
+<tr class="separator:a02298f143c877facb645273dc4ba7ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bb51f5ff563b22a82ee0f3d9164039a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds.html#a9bb51f5ff563b22a82ee0f3d9164039a">wbwlib::ds::good</a> (const T &amp;oldv, const T &amp;newv) const</td></tr>
+<tr class="memdesc:a9bb51f5ff563b22a82ee0f3d9164039a"><td class="mdescLeft">&#160;</td><td class="mdescRight">newv 是否优于 oldv（按 Cmp 语义）  <a href="namespacewbwlib_1_1ds.html#a9bb51f5ff563b22a82ee0f3d9164039a">更多...</a><br /></td></tr>
+<tr class="separator:a9bb51f5ff563b22a82ee0f3d9164039a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a18798d01b5f2073f2293ab56a067790f"><td class="memTemplParams" colspan="2">template&lt;class T  = i64, i64 XLO = 1, i64 XHI = 1000000, class Cmp  = std::greater&lt;void&gt;, int PoolN = 1 &lt;&lt; 20&gt; </td></tr>
+<tr class="memitem:a18798d01b5f2073f2293ab56a067790f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds.html#a18798d01b5f2073f2293ab56a067790f">wbwlib::ds::lf</a> = nw_lt(seg_[id], nw, L)</td></tr>
+<tr class="memdesc:a18798d01b5f2073f2293ab56a067790f"><td class="mdescLeft">&#160;</td><td class="mdescRight">李超线段树：维护直线族 \(y = k \cdot x + b\) 的最值查询。  <a href="namespacewbwlib_1_1ds.html#a18798d01b5f2073f2293ab56a067790f">更多...</a><br /></td></tr>
+<tr class="separator:a18798d01b5f2073f2293ab56a067790f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26acc4d8f8d8c3259b168d9783ff2bbf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds.html#a26acc4d8f8d8c3259b168d9783ff2bbf">wbwlib::ds::md</a> = nw_lt(seg_[id], nw, mid)</td></tr>
+<tr class="separator:a26acc4d8f8d8c3259b168d9783ff2bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d6e4f754df9f04c85725881cef61a1f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacewbwlib_1_1ds.html#a9d6e4f754df9f04c85725881cef61a1f">wbwlib::ds::else</a></td></tr>
+<tr class="separator:a9d6e4f754df9f04c85725881cef61a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>李超线段树：维护直线族 y = k*x + b 的最值查询。 </p>
+<dl class="section user"><dt>依赖</dt><dd><a class="el" href="base_8hpp.html" title="wbwlib 基础：版本号、特性探测宏、类型别名、enable_if 工具、错误策略。">wbwlib/core/base.hpp</a></dd></dl>
+<dl class="section user"><dt>复杂度</dt><dd>插入/查询 O(log R)。支持在值域区间上插入直线（矩形极简版）。</dd></dl>
+<dl class="section user"><dt>示例</dt><dd><div class="fragment"><div class="line">wbwlib::ds::LiChaoTree&lt;i64, 1, 1000000&gt; lct;      <span class="comment">// x 值域 [1, 1e6]，求最大值</span></div>
+<div class="line">lct.add_line(2, 3);        <span class="comment">// y = 2x + 3</span></div>
+<div class="line"><a class="code" href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">i64</a> best = lct.query(4);   <span class="comment">// max over lines at x=4</span></div>
+<div class="ttc" id="anamespacewbwlib_html_a86ab7e3b77fa0c682d473301d8c617c6"><div class="ttname"><a href="namespacewbwlib.html#a86ab7e3b77fa0c682d473301d8c617c6">wbwlib::i64</a></div><div class="ttdeci">std::int64_t i64</div><div class="ttdoc">64 位有符号整数</div><div class="ttdef"><b>Definition:</b> base.hpp:98</div></div>
+</div><!-- fragment --></dd></dl>
+<p>求最小值：模板 Find 传 std::less，query 返回最小时的 k*x+b 值。 </p>
+</div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
