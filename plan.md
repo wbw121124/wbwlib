@@ -61,7 +61,8 @@ tests/
 - [x] 6. dp/*、geo/*、misc/big-int
 - [x] 7. wbwlib.h 聚合 + wbwlib.hpp + tests/ 冒烟测试（333 checks 双标准通过）
 - [x] 8. crypto/*（md5、sm3、sm4、aes、zuc、rsa、ecc/ECDSA、sm2 国密）——全部经标准向量与交叉验证通过（FIPS-197、GB/T 32905/32907/33133、gmssl 对照）；聚合头 crypto.hpp + 测试小节已并入
-- [ ] 9. crypto/sm9（标识密码，双线性配对，最复杂）+ geo 3D 凸包
+- [x] 9a. geo 3D 凸包（convex-hull-3d.hpp + point3d.hpp）：增量法 O(n²)（Luogu P4724），面片逆时针定向、可见面删除 + 明暗交界边建新面、默认 ±1e-8 随机扰动防四点共面；与 O(n⁴) 暴力参考逐位一致；四面体/立方体/球面(欧拉 F=2V-4=596,面积≈4π)/退化全部通过
+- [ ] 9b. crypto/sm9（标识密码，双线性配对，最复杂）
 
 ### 已知待办（最终统一测试时处理）
 - 各文件仅通过 `-fsyntax-only` 语法检查；功能断言测试统一在 tests/ 阶段完成

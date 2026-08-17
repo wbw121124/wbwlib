@@ -16,8 +16,10 @@
 
 #include "wbwlib/geo/circle.hpp"
 #include "wbwlib/geo/convex-hull.hpp"
+#include "wbwlib/geo/convex-hull-3d.hpp"
 #include "wbwlib/geo/half-plane.hpp"
 #include "wbwlib/geo/point.hpp"
+#include "wbwlib/geo/point3d.hpp"
 #include "wbwlib/geo/polar.hpp"
 #include "wbwlib/geo/polygon.hpp"
 

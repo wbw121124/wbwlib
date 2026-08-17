@@ -859,8 +859,42 @@ static void test_geo() {
       {PointD(0, 0), PointD(2, 0), PointD(0, 2), PointD(1, 1)});
   CHECK_NEAR(mc.r, std::sqrt(2.0L), 1e-9);
   CHECK(cc.contains(PointD(1, 1)));
-  Circle c1(PointD(0, 0), 1.0L), c2(PointD(2, 0), 1.0L);
+Circle c1(PointD(0, 0), 1.0L), c2(PointD(2, 0), 1.0L);
   CHECK_EQ(circle_relation(c1, c2), 1);   // 外切
+
+  // 三维凸包
+  {
+    // 正四面体：3 个直角等腰三角形(0.5) + 等边三角形(√3/2)
+    std::vector<Point3D<i64>> pts = {{0, 0, 0}, {1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
+    ConvexHull3D<i64> h(pts, true);
+    CHECK_EQ((int)h.face_count(), 4);
+    CHECK_NEAR(h.surface_area(), 1.5L + std::sqrt(3.0L) / 2, 1e-6);
+    // 立方体八顶点（±1）：12 个三角形面，面积 24
+    std::vector<Point3D<i64>> cube;
+    for (int x = -1; x <= 1; x += 2)
+      for (int y = -1; y <= 1; y += 2)
+        for (int z = -1; z <= 1; z += 2) cube.push_back({x, y, z});
+    cube.push_back({0, 0, 0});  // 内部点不影响
+    ConvexHull3D<i64> h2(cube, true);
+    CHECK_EQ((int)h2.face_count(), 12);
+    CHECK_NEAR(h2.surface_area(), 24.0L, 1e-6);
+    // 单位球面随机方向 300 点：F=2V-4=596，面积 ≈ 4π
+    std::vector<Point3D<long double>> sph;
+    for (int i = 0; i < 300; ++i) {
+      long double z = 2.0L * (long double)(core::rng.next() % 1000001) / 1000000 - 1.0L;
+      long double th = (long double)(core::rng.next() % 1000000) * 6.283185307179586L / 1000000;
+      long double r = std::sqrt(1 - z * z);
+      sph.push_back({r * std::cos(th), r * std::sin(th), z});
+    }
+    ConvexHull3D<long double> h3(sph, true);
+    CHECK_EQ((int)h3.face_count(), 596);
+    CHECK_NEAR(h3.surface_area(), 4.0L * 3.141592653589793L, 0.4);
+    // 退化：全共线 / 全重合 → 0 面
+    std::vector<Point3D<i64>> line = {{0, 0, 0}, {1, 0, 0}, {2, 0, 0}};
+    CHECK_EQ((int)ConvexHull3D<i64>(line, false).face_count(), 0);
+    std::vector<Point3D<i64>> same = {{1, 1, 1}, {1, 1, 1}};
+    CHECK_EQ((int)ConvexHull3D<i64>(same, false).face_count(), 0);
+  }
 }
 
 static void test_misc() {
